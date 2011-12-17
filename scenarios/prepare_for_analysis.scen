@@ -1,0 +1,5 @@
+Util::SetGlobal language=en selector=src
+W2W::CopySentence source_language=en source_selector=ref
+
+Util::SetGlobal language=cs selector=src
+W2W::CopySentence source_language=cs source_selector=ref

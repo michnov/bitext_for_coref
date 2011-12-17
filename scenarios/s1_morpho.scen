@@ -1,0 +1,13 @@
+## Preparation for GIZA++
+Util::SetGlobal selector=src language=en
+W2A::EN::Tokenize
+W2A::EN::NormalizeForms
+W2A::EN::FixTokenization
+W2A::EN::TagMorce
+W2A::EN::FixTags
+W2A::EN::Lemmatize
+
+Util::SetGlobal selector=src language=cs
+W2A::CS::Tokenize
+W2A::CS::TagMorce
+W2A::CS::FixMorphoErrors
