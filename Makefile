@@ -41,8 +41,8 @@ data/analysed/${DATA_ID}/${DATA_SET}/giza.gz : data/analysed/${DATA_ID}/${DATA_S
 		| paste <(zcat $< | cut -f1 | sed 's/^.*\(wsj.*\)$$/data\/analysed\/${DATA_ID}\/${DATA_SET}\/\1/' | sed 's/treex/morpho\.treex/') - \
         | gzip > $@
 
-analyse_pcedt : data/${DATA_SET}.pcedt.analysed.list
-data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed.morpho.list data/analysed/${DATA_ID}/${DATA_SET}/giza.gz
+analyse_pcedt : data/${DATA_SET}.pcedt.analysed.parsed.list
+data/${DATA_SET}.${DATA_ID}.analysed.parsed.list : data/${DATA_SET}.${DATA_ID}.analysed.morpho.list data/analysed/${DATA_ID}/${DATA_SET}/giza.gz
 	treex ${CLUSTER_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.${DATA_ID}.analysed.morpho.list \
 	Align::A::InsertAlignmentFromFile from=data/analysed/${DATA_ID}/${DATA_SET}/giza.gz \
@@ -50,8 +50,15 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 			              selector=src language=cs to_selector=src to_language=en \
 	scenarios/s3_parsing.scen \
 	Write::Treex path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.parsed
-	ls data/analysed/${DATA_ID}/${DATA_SET}/*.parsed.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
+	ls data/analysed/${DATA_ID}/${DATA_SET}/*.parsed.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.parsed.list
 
+gold_system_pcedt : data/${DATA_SET}.pcedt.analysed.list
+data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed.parsed.list
+	treex ${CLUSTER_FLAGS} \
+	Read::Treex from=@data/${DATA_SET}.${DATA_ID}.analysed.parsed.list \
+	scenarios/align_src_ref.scen \
+	Write::Treex path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.final
+	ls data/analysed/${DATA_ID}/${DATA_SET}/*.final.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
 
 
