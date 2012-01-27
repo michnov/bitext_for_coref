@@ -57,7 +57,7 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 	treex ${CLUSTER_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.${DATA_ID}.analysed.parsed.list \
 	scenarios/align_src_ref.scen \
-	Write::Treex path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.final
+	Write::Treex clobber=1 path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.final
 	ls data/analysed/${DATA_ID}/${DATA_SET}/*.final.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
 

@@ -1,11 +1,9 @@
 Util::SetGlobal language=cs selector=ref
-#Align::A::MonolingualGreedy to_language=cs to_selector=src
-Align::A::AlignSameSentence to_language=cs to_selector=src
+Align::A::MonolingualGreedy to_language=cs to_selector=src
 Align::T::CopyAlignmentFromAlayer to_language=cs to_selector=src del_prev_align=0
 Align::T::AlignGeneratedNodes to_language=cs to_selector=src
 
 Util::SetGlobal language=en selector=ref
-#Align::A::MonolingualGreedy to_language=en to_selector=src
-Align::A::AlignSameSentence to_language=en to_selector=src
+Align::A::MonolingualGreedy to_language=en to_selector=src
 Align::T::CopyAlignmentFromAlayer to_language=en to_selector=src del_prev_align=0
 Align::T::AlignGeneratedNodes to_language=en to_selector=src
