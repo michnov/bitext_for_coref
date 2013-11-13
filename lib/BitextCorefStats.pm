@@ -245,9 +245,9 @@ sub print_cs_relpron_en_counterparts {
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
     return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
     my $en_ref_tnode_tlemma = undef;
-    $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     #$en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
