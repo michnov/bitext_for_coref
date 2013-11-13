@@ -183,7 +183,7 @@ sub _get_cs_ref_benef_role {
     my ($en_ref_tnode, $errors) = @_;
 
     my $en_ref_verb_par = $en_ref_tnode->get_parent();
-    while (defined $en_ref_verb_par && $en_ref_verb_par->formeme !~ /^v/) {
+    while (defined $en_ref_verb_par && (!defined $en_ref_verb_par->formeme || $en_ref_verb_par->formeme !~ /^v/)) {
         $en_ref_verb_par = $en_ref_verb_par->get_parent();
     }
     if (!defined $en_ref_verb_par) {
@@ -198,7 +198,7 @@ sub _get_cs_ref_benef_role {
     }
     my ($cs_ref_dative_child) = grep {
         my $anode = $_->get_lex_anode; 
-        if (defined $anode) {$anode->tag =~ /^....3/}
+        if (defined $anode) {$anode->tag =~ /^P...3/}
     } $cs_ref_verb_par->get_echildren({or_topological => 1});
     if (!defined $cs_ref_dative_child) {
         push @$errors, "NO_CS_REF_DATIVE_CHILD";
@@ -233,6 +233,11 @@ sub _get_cs_ref_perspron_directly {
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_tnode], [\%CS_REF_FILTER]);
     if (!defined $cs_ref_tnode) {
         push @$errors, "NO_CS_REF_TNODE";
+        return;
+    }
+    my $anode = $cs_ref_tnode->get_lex_anode();
+    if (!defined $anode || ($anode->tag !~ /^P/)) {
+        push @$errors, "NOPRON_CS_REF_TNODE";
         return;
     }
     return $cs_ref_tnode;
