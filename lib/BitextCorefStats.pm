@@ -58,6 +58,55 @@ sub is_perspron {
             ? 1 : 0;
 }
 
+sub access_via_eparents {
+    my ($tnode, $align_filters, $errors) = @_;
+
+    my @epars = $tnode->get_eparents({or_topological => 1});
+    my @aligned_pars = Treex::Tool::Align::Utils::aligned_transitively(\@epars, $align_filters);
+    if (!@aligned_pars) {
+        push @$errors, "NO_ALIGNED_PARENT";
+        return;
+    }
+    my @aligned_siblings = map {$_->get_echildren({or_topological => 1})} @aligned_pars;
+    return @aligned_siblings;
+}
+
+sub access_via_siblings {
+    my ($tnode, $align_filters, $errors) = @_;
+
+    my @sibs = $tnode->get_siblings();
+    if (!@sibs) {
+        push @$errors, "NO_SIBLINGS";
+        return;
+    }
+    my @aligned_sibs = Treex::Tool::Align::Utils::aligned_transitively(\@sibs, $align_filters);
+    if (!@aligned_sibs) {
+        push @$errors, "NO_ALIGNED_SIBLINGS";
+        return;
+    }
+    return @aligned_sibs;
+}
+
+sub filter_by_functor {
+    my ($nodes, $functor, $errors) = @_;
+    my ($functor_tnode) = grep {$_->functor eq $functor} @$nodes;
+    if (!defined $functor_tnode) {
+        push @$errors, "NO_FUNCTOR_TNODE";
+        return;
+    }
+    return $functor_tnode;
+}
+
+sub eparents_of_aligned_siblings {
+    my ($siblings, $errors) = @_;
+    my ($epar, @epars) = unique([map {$_->get_eparents({or_topological => 1})} @$siblings]);
+    if (@epars > 0) {
+        push @$errors, "MANY_SIBLINGS_PARENTS";
+        return;
+    }
+    return $epar;
+}
+
 sub process_tnode {
     my ($self, $tnode) = @_;
 
@@ -109,7 +158,10 @@ sub print_en_perspron_cs_counterparts {
         ($en_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_REF_FILTER]);
         return (undef, ["NO_EN_REF_TNODE"]) if (!defined $en_ref_tnode);
     }
-    my $result_node = $self->_get_cs_ref_perspron_directly($en_ref_tnode, $errors);
+    my $result_node;
+    $result_node = _get_cs_ref_perspron_directly($en_ref_tnode, $errors) if (!defined $result_node);
+    $result_node = _get_cs_ref_via_parent($en_ref_tnode, $errors) if (!defined $result_node);
+    $result_node = _get_cs_ref_via_siblings($en_ref_tnode, $errors) if (!defined $result_node);
     return (undef, $errors) if (!defined $result_node);
     
     my $anode = $result_node->get_lex_anode();
@@ -117,8 +169,28 @@ sub print_en_perspron_cs_counterparts {
     return substr($anode->tag, 0, 2);
 }
 
+sub _get_cs_ref_via_parent {
+    my ($en_ref_tnode, $errors) = @_;
+
+    my @cs_ref_sibs = access_via_eparents($en_ref_tnode, [\%CS_REF_FILTER], $errors);
+    return if (!@cs_ref_sibs);
+    my $cs_ref_tnode = filter_by_functor(\@cs_ref_sibs, $en_ref_tnode->functor, $errors);
+    return $cs_ref_tnode;
+}
+
+sub _get_cs_ref_via_siblings {
+    my ($en_ref_tnode, $errors) = @_;
+    my @cs_ref_sibs = access_via_siblings($en_ref_tnode, [\%CS_REF_FILTER], $errors);
+    return if (!@cs_ref_sibs);
+    my $cs_ref_par = eparents_of_aligned_siblings(\@cs_ref_sibs, $errors);
+    return if (!$cs_ref_par);
+    my @cs_ref_kids = $cs_ref_par->get_echildren({or_topological => 1});
+    my $cs_ref_tnode = filter_by_functor(\@cs_ref_kids, $en_ref_tnode->functor, $errors);
+    return $cs_ref_tnode;
+}
+
 sub _get_cs_ref_perspron_directly {
-    my ($self, $en_ref_tnode, $errors) = @_;
+    my ($en_ref_tnode, $errors) = @_;
 
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_tnode], [\%CS_REF_FILTER]);
     if (!defined $cs_ref_tnode) {
@@ -212,38 +284,34 @@ sub _get_en_ref_relpron {
     return ($en_ref_tnode->t_lemma, $en_ref_tnode);
 }
 
-sub _get_en_ref_coref_child {
-    my ($en_ref_par, $errors) = @_;
-    my @en_ref_coref_children = grep {scalar($_->get_coref_nodes) > 0} $en_ref_par->get_echildren({or_topological => 1});
-    if (@en_ref_coref_children == 0) {
+sub filter_by_coref {
+    my ($nodes, $errors) = @_;
+    my @en_ref_coref_nodes = grep {scalar($_->get_coref_nodes) > 0} @$nodes;
+    if (@en_ref_coref_nodes == 0) {
         push @$errors, "NO_EN_REF_COREF_CHILDREN";
         return;
     }
-    if (@en_ref_coref_children > 1) {
+    if (@en_ref_coref_nodes > 1) {
         push @$errors, "MANY_EN_REF_COREF_CHILDREN";
         return;
     }
-    return ($en_ref_coref_children[0]->t_lemma, $en_ref_coref_children[0]);
+    return ($en_ref_coref_nodes[0]->t_lemma, $en_ref_coref_nodes[0]);
 }
 
 sub _get_en_ref_functor_tnode {
     my ($cs_ref_tnode, $errors) = @_;
-    my ($cs_ref_par) = $cs_ref_tnode->get_eparents({or_topological => 1});
-    my ($en_ref_par) = Treex::Tool::Align::Utils::aligned_transitively([$cs_ref_par], [\%EN_REF_FILTER]);
-    if (!defined $en_ref_par) {
-        push @$errors, "NO_EN_REF_PAR";
-        return;
-    }
-    
-    my ($en_ref_functor_tnode) = grep {$_->functor eq $cs_ref_tnode->functor} $en_ref_par->get_echildren({or_topological => 1});
+
+    my @en_ref_sibs = access_via_eparents($cs_ref_tnode, [\%EN_REF_FILTER], $errors);
+    return if (!@en_ref_sibs);
+    my $en_ref_functor_tnode = filter_by_functor(\@en_ref_sibs, $cs_ref_tnode->functor, $errors);
+
     if (!defined $en_ref_functor_tnode) {
-        push @$errors, "NO_EN_REF_FUNCTOR_TNODE";
-        return _get_en_ref_coref_child($en_ref_par, $errors);
+        return filter_by_coref(\@en_ref_sibs, $errors);
     }
     my $tlemma = $en_ref_functor_tnode->t_lemma;
     if (!is_relat($en_ref_functor_tnode) && $tlemma ne "#Cor" && $tlemma ne "#PersPron") {
         push @$errors, "BAD_EN_REF_FUNCTOR_TNODE";
-        return _get_en_ref_coref_child($en_ref_par, $errors);
+        return filter_by_coref(\@en_ref_sibs, $errors);
     }
     #print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
     return ($en_ref_functor_tnode->t_lemma, $en_ref_functor_tnode);
@@ -282,21 +350,13 @@ sub _get_ante_attribute {
 
 sub _get_counterparts_via_siblings {
     my ($cs_ref_tnode, $errors) = @_;
-    my @cs_ref_siblings = $cs_ref_tnode->get_siblings();
-    if (!@cs_ref_siblings) {
-        push @$errors, "NO_CS_REF_SIBLINGS";
-        return;
-    }
-    my @en_ref_siblings = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_siblings, [\%EN_REF_FILTER]);
-    if (!@en_ref_siblings) {
-        push @$errors, "NO_EN_REF_SIBLINGS";
-        return;
-    }
-    my ($en_ref_par, @en_ref_pars) = unique([map {$_->get_parent} @en_ref_siblings]);
-    if (@en_ref_pars > 0) {
-        push @$errors, "MANY_EN_REF_PARS";
-        return;
-    }
+    
+    my @en_ref_siblings = access_via_siblings($cs_ref_tnode, [\%EN_REF_FILTER], $errors);
+    return if (!@en_ref_siblings);
+    
+    my $en_ref_par = eparents_of_aligned_siblings(\@en_ref_siblings, $errors);
+    return if (!defined $en_ref_par);
+    
     my $formeme = $en_ref_par->formeme;
     if (!defined $formeme) {
         push @$errors, "NOFORMEME_EN_REF_PAR";
