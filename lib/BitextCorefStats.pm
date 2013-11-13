@@ -49,8 +49,13 @@ sub is_relat {
 }
 
 sub is_perspron {
-    my ($tnode) = @_;
-    return ($tnode->t_lemma eq "#PersPron") && (!$tnode->get_attr('is_reflexive')) ? 1 : 0;
+    my ($tnode, $is_reflex, $is_3rd_person) = @_;
+    my $tnode_3rd_person = defined $tnode->gram_person && ($tnode->gram_person eq "3");
+    return 
+        ($tnode->t_lemma ne "#PersPron") &&
+        ($tnode->get_attr('is_reflexive') xor !$is_reflex) &&
+        ($tnode_3rd_person xor !$is_3rd_person)
+            ? 1 : 0;
 }
 
 sub process_tnode {
@@ -74,7 +79,11 @@ sub process_tnode {
 sub print_info {
     my ($self, $tnode, $name, $method) = @_;
 
-    my $result = $self->$method($tnode);
+    my ($result, $errors) = $self->$method($tnode);
+
+    if (!defined $result) {
+        $result = "ERR:" . (join ",", @$errors);
+    }
     
     print {$self->_file_handle} "$name\t";
     print {$self->_file_handle} $result;
@@ -85,7 +94,7 @@ sub print_info {
 sub print_en_perspron_stats {
     my ($self, $tnode) = @_;
 
-    return if (!is_perspron($tnode));
+    return if (!is_perspron($tnode, 0, 1));
     
     $self->print_info($tnode, "en_perspron_cs_counterparts", \&print_en_perspron_cs_counterparts);
 }
@@ -93,21 +102,30 @@ sub print_en_perspron_stats {
 sub print_en_perspron_cs_counterparts {
     my ($self, $tnode) = @_;
 
+    my $errors = [];
+
     my $en_ref_tnode = $tnode;
     if ($tnode->selector eq "src") {
         ($en_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_REF_FILTER]);
-        return "NO_EN_REF_TNODE" if (!defined $en_ref_tnode);
+        return (undef, ["NO_EN_REF_TNODE"]) if (!defined $en_ref_tnode);
     }
-    my $result = $self->_get_cs_ref_perspron_directly($en_ref_tnode);
-    return "<". $result .">";
+    my $result_node = $self->_get_cs_ref_perspron_directly($en_ref_tnode, $errors);
+    return (undef, $errors) if (!defined $result_node);
+    
+    my $anode = $result_node->get_lex_anode();
+    return "GENERATED" if (!defined $anode);
+    return substr($anode->pos, 0, 2);
 }
 
 sub _get_cs_ref_perspron_directly {
-    my ($self, $en_ref_tnode) = @_;
+    my ($self, $en_ref_tnode, $errors) = @_;
 
-    my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_tnode], [\%CS_REF_FILTER]);
-    return "NO_CS_REF_TNODE" if (!@cs_ref_tnodes);
-    return join " ", (map {$_->t_lemma} @cs_ref_tnodes);
+    my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_tnode], [\%CS_REF_FILTER]);
+    if (!defined $cs_ref_tnode) {
+        push @$errors, "NO_CS_REF_TNODE";
+        return;
+    }
+    return $cs_ref_tnode;
 }
 
 sub print_cs_relpron_stats {
@@ -143,6 +161,11 @@ sub print_cs_relpron_ante_agree {
     
     my @en_ref_projected_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [\%EN_REF_FILTER]);
     
+    print STDERR $tnode->get_address . "\n";
+    print STDERR join ", ", (map {$_->id} @en_ref_projected_antes);
+    print STDERR "\n";
+    print STDERR join ", ", (map {$_->id} @en_ref_antes);
+    print STDERR "\n";
     my @prf_counts = get_prf_counts(\@en_ref_projected_antes, \@en_ref_antes);
     return join " ", @prf_counts;
 }
@@ -150,7 +173,7 @@ sub print_cs_relpron_ante_agree {
 sub print_cs_relpron_tlemma {
     my ($self, $tnode) = @_;
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
-    return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
+    return (undef, ["NO_CS_REF_TNODE"]) if (!defined $cs_ref_tnode);
     my ($ante) = $cs_ref_tnode->get_coref_gram_nodes();
     return (defined $ante ? "COREF:" : "NONCOREF:") . $tnode->t_lemma;
 }
@@ -322,7 +345,7 @@ sub print_cs_relpron_en_counterparts {
     my $errors = [];
     
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
-    return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
+    return (undef, ["NO_CS_REF_TNODE"]) if (!defined $cs_ref_tnode);
     my ($result_str, $result_node);
     ($result_str, $result_node) = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $result_str);
     ($result_str, $result_node) = _get_counterparts_via_alayer($cs_ref_tnode, $errors) if (!defined $result_str);
@@ -331,12 +354,12 @@ sub print_cs_relpron_en_counterparts {
     ($result_str, $result_node) = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $result_str);
     
     #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    return (join ",", @$errors) if (!defined $result_str);
+    return (undef, $errors) if (!defined $result_str);
 
     $cs_ref_tnode->wild->{en_counterpart_type} = $result_str;
     $cs_ref_tnode->wild->{en_counterpart} = $result_node if (defined $result_node);
     
-    return "<$result_str>";
+    return $result_str;
 }
 
 sub print_cs_relpron_en_partic {
