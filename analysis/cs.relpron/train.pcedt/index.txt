@@ -5,6 +5,7 @@
         1) try to find it directly by the alignment of the Czech replron itself
             * aims at discovering mostly relative pronouns which failed to be revealed mostly due to NO_EN_REF_PAR error
             * error NO_EN_REF_TNODE if nothing aligned
+                * relative pronouns are usually considered auxilliary - "po te, co", "od te doby, co"
             * error NORELAT_EN_REF_TNODE if the aligned node is not a relpron
         2) get the child of an English node (most likely a verb) aligned with the Czech relpron's parent (likely a verb)
            that holds the same functor as the Czech relpron
@@ -70,7 +71,11 @@
     * calculate on:
         1) gold data
             * all
-                * analysis/cs.relpron/train.pcedt/ante_agree.all.scores (TRUE=en, PRED=cs)
+                * analysis/cs.relpron/train.pcedt/ante_agree.all.scores
+                    * TRUE=en, PRED=cs
+                    * ali/cs means (antecedents aligned) / (all czech relprons with an antecedent)
+                    * ali/en measn (antecedents aligned) / (all coreferential counterparts of czech relprons)
+
             * in English expressed as
         2) parsed data
             * all
