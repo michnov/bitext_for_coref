@@ -161,11 +161,11 @@ sub print_cs_relpron_ante_agree {
     
     my @en_ref_projected_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [\%EN_REF_FILTER]);
     
-    print STDERR $tnode->get_address . "\n";
-    print STDERR join ", ", (map {$_->id} @en_ref_projected_antes);
-    print STDERR "\n";
-    print STDERR join ", ", (map {$_->id} @en_ref_antes);
-    print STDERR "\n";
+    #print STDERR $tnode->get_address . "\n";
+    #print STDERR join ", ", (map {$_->id} @en_ref_projected_antes);
+    #print STDERR "\n";
+    #print STDERR join ", ", (map {$_->id} @en_ref_antes);
+    #print STDERR "\n";
     my @prf_counts = get_prf_counts(\@en_ref_projected_antes, \@en_ref_antes);
     return join " ", @prf_counts;
 }
