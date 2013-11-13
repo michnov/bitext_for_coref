@@ -55,20 +55,6 @@ sub process_tnode {
     #log_info $tnode->get_address . "\t" . $err_msg if (defined $err_msg);
 }
 
-sub print_svuj_en_counterpart {
-    my ($self, $tnode) = @_;
-
-    my $anode = $tnode->get_lex_anode();
-    return if (!defined $anode || $anode->lemma !~ /^svůj/);
-
-    my @en_src = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_SRC_FILTER]);
-    print {$self->_file_handle} "svuj_en_counterpart\t";
-    print {$self->_file_handle} join ",", (map {$_->t_lemma} @en_src);
-    print {$self->_file_handle} "\t";
-    print {$self->_file_handle} "(" . (join ", ", map {$_->get_address} @en_src) . ")";
-    print {$self->_file_handle} "\n";
-}
-
 sub print_cs_relpron_stats {
     my ($self, $tnode) = @_;
     
@@ -77,6 +63,7 @@ sub print_cs_relpron_stats {
     return if (!defined $indeftype || $indeftype ne "relat");
 
     $self->print_cs_relpron_scores($tnode);
+    $self->print_cs_relpron_en_counterparts($tnode);
 }
 
 # printing counts to compute pointwise scores (accuracy and precision, recall, F-score)
@@ -98,6 +85,17 @@ sub print_cs_relpron_scores {
     my @prf_counts = get_prf_counts(\@cs_ref_src_antes, \@cs_src_antes);
     print {$self->_file_handle} "cs_relpron_scores\t";
     print {$self->_file_handle} join " ", @prf_counts;
+    print {$self->_file_handle} "\t" . $tnode->get_address;
+    print {$self->_file_handle} "\n";
+}
+
+sub print_cs_relpron_en_counterparts {
+    my ($self, $tnode) = @_;
+    
+    my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
+    my @en_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_tnodes, [\%EN_REF_FILTER]);
+    print {$self->_file_handle} "cs_relpron_en_counterparts\t";
+    print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
     print {$self->_file_handle} "\t" . $tnode->get_address;
     print {$self->_file_handle} "\n";
 }
@@ -136,6 +134,20 @@ sub print_cs_relpron_en_partic {
     print {$self->_file_handle} join ",", (map {$_->t_lemma} @en_rel_partic_antes);
     print {$self->_file_handle} "\t";
     print {$self->_file_handle} "(" . (join ", ", map {$_->get_address} @en_rel_partic_antes) . ")";
+    print {$self->_file_handle} "\n";
+}
+
+sub print_svuj_en_counterpart {
+    my ($self, $tnode) = @_;
+
+    my $anode = $tnode->get_lex_anode();
+    return if (!defined $anode || $anode->lemma !~ /^svůj/);
+
+    my @en_src = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_SRC_FILTER]);
+    print {$self->_file_handle} "svuj_en_counterpart\t";
+    print {$self->_file_handle} join ",", (map {$_->t_lemma} @en_src);
+    print {$self->_file_handle} "\t";
+    print {$self->_file_handle} "(" . (join ", ", map {$_->get_address} @en_src) . ")";
     print {$self->_file_handle} "\n";
 }
 
