@@ -42,6 +42,12 @@ sub get_prf_counts {
     return (scalar @$true, scalar @$pred, scalar @inter);
 }
 
+sub is_relat {
+    my ($tnode) = @_;
+    my $indeftype = $tnode->gram_indeftype;
+    return (defined $indeftype && $indeftype eq "relat") ? 1 : 0;
+}
+
 sub process_tnode {
     my ($self, $tnode) = @_;
 
@@ -70,8 +76,7 @@ sub print_cs_relpron_stats {
     my ($self, $tnode) = @_;
     
     # searching for Czech relative pronouns
-    my $indeftype = $tnode->gram_indeftype;
-    return if (!defined $indeftype || $indeftype ne "relat");
+    return if (!is_relat($tnode));
 
     $self->print_info($tnode, "cs_relpron_tlemma", \&print_cs_relpron_tlemma);
     $self->print_info($tnode, "cs_relpron_scores", \&print_cs_relpron_scores);
@@ -113,12 +118,25 @@ sub _get_en_ref_relpron {
         push @$errors, "NO_EN_REF_TNODE";
         return;
     }
-    my $indeftype = $en_ref_tnode->gram_indeftype;
-    if (!defined $indeftype || $indeftype ne "relat") {
+    if (!is_relat($en_ref_tnode)) {
         push @$errors, "NORELAT_EN_REF_TNODE";
         return;
     }
     return $en_ref_tnode->t_lemma;
+}
+
+sub _get_en_ref_coref_child_tlemma {
+    my ($en_ref_par, $errors) = @_;
+    my @en_ref_coref_children = grep {scalar($_->get_coref_nodes) > 0} $en_ref_par->get_echildren({or_topological => 1});
+    if (@en_ref_coref_children == 0) {
+        push @$errors, "NO_EN_REF_COREF_CHILDREN";
+        return;
+    }
+    if (@en_ref_coref_children > 1) {
+        push @$errors, "MANY_EN_REF_COREF_CHILDREN";
+        return;
+    }
+    return $en_ref_coref_children[0]->t_lemma;
 }
 
 sub _get_en_ref_functor_tnode {
@@ -133,7 +151,12 @@ sub _get_en_ref_functor_tnode {
     my ($en_ref_functor_tnode) = grep {$_->functor eq $cs_ref_tnode->functor} $en_ref_par->get_echildren({or_topological => 1});
     if (!defined $en_ref_functor_tnode) {
         push @$errors, "NO_EN_REF_FUNCTOR_TNODE";
-        return;
+        return _get_en_ref_coref_child_tlemma($en_ref_par, $errors);
+    }
+    my $tlemma = $en_ref_functor_tnode->t_lemma;
+    if (!is_relat($en_ref_functor_tnode) && $tlemma ne "#Cor" && $tlemma ne "#PersPron") {
+        push @$errors, "BAD_EN_REF_FUNCTOR_TNODE";
+        return _get_en_ref_coref_child_tlemma($en_ref_par, $errors);
     }
     #print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
     return $en_ref_functor_tnode->t_lemma;
@@ -174,8 +197,7 @@ sub print_cs_relpron_en_partic {
     my ($self, $tnode) = @_;
 
     # searching for Czhech relative pronouns
-    my $indeftype = $tnode->gram_indeftype;
-    return if (!defined $indeftype || $indeftype ne "relat");
+    return if (!is_relat($tnode));
 
     # must not be aligned to anything
     # TODO: or aligned to something not relevant
