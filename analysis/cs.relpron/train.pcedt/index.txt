@@ -5,6 +5,12 @@
 
 * the accuracy (TODO: or P-R-F) of relative pronoun anaphora resolution in Czech:
     * all:
+        * analysis/cs.relpron/train.pcedt/scores.all
+        * true=0 
+            * analysis/cs.relpron/train.pcedt/nodes.0_ref.list
+            * for words like "jaky", "co", "kolik", "kdy" etc.
+            * in patterns like "riziko ztráty toho, co je ..."
+            * treats "Co." as a pronoun "co"
     * in English expressed as:
         1) relative pronoun
         2) participle
