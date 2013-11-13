@@ -60,9 +60,6 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 	Write::Treex clobber=1 path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.final
 	ls data/analysed/${DATA_ID}/${DATA_SET}/*.final.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
-
-
-
 #data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.list
 #	treex ${CLUSTER_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.pcedt.list \
