@@ -6,7 +6,7 @@ use Moose;
 use Treex::Core::Common;
 use Treex::Tool::Align::Utils;
 use Readonly;
-use Array::Utils qw/intersect/;
+use Array::Utils qw/intersect unique/;
 
 use Data::Dumper;
 
@@ -15,6 +15,12 @@ extends 'Treex::Block::Write::BaseTextWriter';
 Readonly::Hash my %EN_SRC_FILTER => (language => 'en', selector => 'src');
 Readonly::Hash my %CS_REF_FILTER => (language => 'cs', selector => 'ref');
 Readonly::Hash my %EN_REF_FILTER => (language => 'en', selector => 'ref');
+
+sub get_prf_counts {
+    my ($true, $pred) = @_;
+    my @inter = intersect(@$true, @$pred);
+    return (scalar @$true, scalar @$pred, scalar @inter);
+}
 
 sub process_tnode {
     my ($self, $tnode) = @_;
@@ -52,11 +58,22 @@ sub print_cs_relpron_stats {
     $self->print_cs_relpron_prf($tnode);
 }
 
+# printing counts to compute pointwise scores (accuracy and precision, recall, F-score)
+# for relative pronoun coreference resolution in Czech
 sub print_cs_relpron_prf {
     my ($self, $tnode) = @_;
+    
+    # true antecedents
+    my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
+    my @cs_ref_antes = unique( map {$_->get_coref_gram_nodes} @cs_ref_tnodes );
 
-    my @cs_antes = $tnode->get_coref_gram_nodes;
+    # predicted antecedents
+    my @cs_src_antes = $tnode->get_coref_gram_nodes;
 
+    my @prf_counts = get_prf_counts(\@cs_ref_antes, \@cs_src_antes);
+    print {$self->_file_handle} "cs_relpron_prf\t";
+    print {$self->_file_handle} join " ", @prf_counts;
+    print {$self->_file_handle} "\n";
 }
 
 sub print_cs_relpron_en_partic {
