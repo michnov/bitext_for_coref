@@ -1,4 +1,26 @@
 * Czech relative pronouns (gram_indeftype eq "relat") can be expressed in English by the following means:
+    * 'ref' zones are under investigation here
+        * but the set of instances is defined by being a relative pronoun in 'src' zone
+    * created as follows:
+        1) get the child of an English node (most likely a verb) aligned with the Czech relpron's parent (likely a verb)
+           that holds the same functor as the Czech relpron
+            * an approach that was found benefitial in case of searching for counterparts to "it"
+            * this can reveal also the generated nodes which are rarely aligned with something - #Cor in a coreference of control
+            * error NO_EN_REF_PAR if the parent is not aligned
+            * error NO_EN_REF_FUNCTOR_TNODE if no child having a desired functor
+            * error BAD_EN_REF_FUNCTOR_TNODE if a child with the desired functor is none of the following: relpron, #Cor, #PersPron
+        2) if NO_EN_REF_FUNCTOR_TNODE or BAD_EN_REF_FUNCTOR_TNODE, take the only child which is coreferential with something 
+            * error NO_EN_REF_COREF_CHILDREN if no coreferential child
+            * error MANY_EN_REF_COREF_CHILDREN if many coreferential children
+        3) try to find it directly by the alignment of the Czech replron itself
+            * aims at discovering mostly relative pronouns which failed to be revealed mostly due to NO_EN_REF_PAR error
+            * error NO_EN_REF_TNODE if nothing aligned
+            * error NORELAT_EN_REF_TNODE if the aligned node is not a relpron
+        4) searching for appositive patterns denoted <NO_VERB_APPOS>
+            * neither a relative pronoun nor an aligned verb present on the English side
+            * an #EmpVerb or APPOS appears as a parent among the counterparts of the relpron's siblings
+            * error NOEMPVERBAPPS_EN_REF_PARS if there is no such a parent 
+            
     1) relative pronoun (relative pronoun coreference)
     2) participle (coreference of control)
     3) TODO: ...
