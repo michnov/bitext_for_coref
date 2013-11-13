@@ -236,7 +236,7 @@ sub _get_cs_ref_perspron_directly {
         return;
     }
     my $anode = $cs_ref_tnode->get_lex_anode();
-    if (!defined $anode || ($anode->tag !~ /^P/)) {
+    if (!defined $anode || ($anode->tag !~ /^P[8SDP5]/)) {
         push @$errors, "NOPRON_CS_REF_TNODE";
         return;
     }
