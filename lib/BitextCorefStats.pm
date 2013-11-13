@@ -211,6 +211,10 @@ sub _get_counterparts_via_siblings {
         return;
     }
     my $formeme = $en_ref_par->formeme;
+    if (!defined $formeme) {
+        push @$errors, "NOFORMEME_EN_REF_PAR";
+        return;
+    }
     if ($formeme =~ /^n/) {
         return "<NOUN_ANTE_ATTR>";
     }
