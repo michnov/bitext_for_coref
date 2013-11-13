@@ -164,7 +164,7 @@ sub _get_en_ref_functor_tnode {
 
 sub _get_no_verb_appos {
     my ($cs_ref_tnode, $errors) = @_;   
-    my @cs_ref_sibs = $cs_ref_tnode->get_siblings;
+    my @cs_ref_sibs = ($cs_ref_tnode, $cs_ref_tnode->get_siblings);
     my @en_ref_sibs = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_sibs, [\%EN_REF_FILTER]);
     my @en_ref_pars = map {$_->get_parent} @en_ref_sibs;
     my @no_verb_appos = grep {$_->t_lemma eq "#EmpVerb" || $_->functor eq "APPS"} @en_ref_pars;
@@ -197,12 +197,12 @@ sub _get_counterparts_via_siblings {
     my ($cs_ref_tnode, $errors) = @_;
     my @cs_ref_siblings = $cs_ref_tnode->get_siblings();
     if (!@cs_ref_siblings) {
-        push @$errors, "NOSIBLINGS_CS_REF_TNODE";
+        push @$errors, "NO_CS_REF_SIBLINGS";
         return;
     }
     my @en_ref_siblings = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_siblings, [\%EN_REF_FILTER]);
     if (!@en_ref_siblings) {
-        push @$errors, "NOALIGN_CS_REF_SIBLINGS";
+        push @$errors, "NO_EN_REF_SIBLINGS";
         return;
     }
     my ($en_ref_par, @en_ref_pars) = unique([map {$_->get_parent} @en_ref_siblings]);
@@ -248,7 +248,7 @@ sub print_cs_relpron_en_counterparts {
     $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    #$en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
     return $en_ref_tnode_tlemma;
