@@ -193,6 +193,46 @@ sub _get_ante_attribute {
     return "<MANY_ANTE_ATTR>" if (scalar(@en_ref_ante_children) > 1);
 }
 
+sub _get_counterparts_via_siblings {
+    my ($cs_ref_tnode, $errors) = @_;
+    my @cs_ref_siblings = $cs_ref_tnode->get_siblings();
+    if (!@cs_ref_siblings) {
+        push @$errors, "NOSIBLINGS_CS_REF_TNODE";
+        return;
+    }
+    my @en_ref_siblings = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_siblings, [\%EN_REF_FILTER]);
+    if (!@en_ref_siblings) {
+        push @$errors, "NOALIGN_CS_REF_SIBLINGS";
+        return;
+    }
+    my ($en_ref_par, @en_ref_pars) = unique([map {$_->get_parent} @en_ref_siblings]);
+    if (@en_ref_pars > 0) {
+        push @$errors, "MANY_EN_REF_PARS";
+        return;
+    }
+    my $formeme = $en_ref_par->formeme;
+    if ($formeme =~ /^n/) {
+        return "<NOUN_ANTE_ATTR>";
+    }
+    if ($formeme =~ /^v/) {
+        my ($en_ref_relat_child) = grep {is_relat($_)} $en_ref_par->get_children();
+        if (defined $en_ref_relat_child) {
+            return $en_ref_relat_child->t_lemma;
+        }
+        my @en_ref_cor_children = grep {$_->t_lemma eq "#Cor"} $en_ref_par->get_children();
+        if (@en_ref_cor_children > 0) {
+            if (@en_ref_cor_children == 1) {
+                return "#Cor";
+            }
+            push @$errors, "MANYCOR_EN_REF_PAR";
+            return;
+        }
+        return "<EN_REF_PAR:" . $formeme .">";
+    }
+    push @$errors, "BADFORMEME_EN_REF_PAR";
+    return;
+}
+
 sub print_cs_relpron_en_counterparts {
     my ($self, $tnode) = @_;
 
@@ -200,10 +240,11 @@ sub print_cs_relpron_en_counterparts {
     
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
     return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
-    my $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors);
-    $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    my $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors);
+    #my $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors);
+    #$en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    #$en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
     return $en_ref_tnode_tlemma;
 }
