@@ -46,6 +46,10 @@
     - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1
         CS: dělníky, kteří jí byli vystaveni
         EN: workers exposed to it
+- hypotactic to paratactic
+    - data/analysed/pcedt/train/wsj_1744.final.treex.gz##15.t_tree-cs_src-s15-n798
+        CS: Vedení Chrysleru oznámilo, že linka opět zahájí produkci 20. listopadu, což se bude týkat 3300 dělníků placených od hodiny.
+        EN: Chrysler officials said the plant is scheduled to resume production on Nov. 20., and 3,300 hourly workers will be affected.
 - a clause connected by "that" suggests that it extends the phrase directly before the connective
     - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
         CS: >jednotka< newyorské společnosti Loews Corp., která vyrábí cigarety Kent
