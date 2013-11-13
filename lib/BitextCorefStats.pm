@@ -174,9 +174,9 @@ sub _get_no_verb_appos {
     }
     #my ($cs_ref_par) = $cs_ref_tnode->get_eparents({or_topological => 1});
     #if ($cs_ref_par->t_lemma ne "být") {
-    #    return "<NO_VERB_APPOS_NOBYT>";
+    #    return "NO_VERB_APPOS_NOBYT";
     #}
-    return "<NO_VERB_APPOS>";
+    return "NO_VERB_APPOS";
 }
 
 sub _get_ante_attribute {
@@ -188,9 +188,9 @@ sub _get_ante_attribute {
     }
     my @en_ref_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [\%EN_REF_FILTER]);
     my @en_ref_ante_children = map {$_->get_children()} @en_ref_antes;
-    return "<ONE_ANTE_ATTR>" if (scalar(@en_ref_ante_children) == 1);
-    return "<NO_ANTE_ATTR>" if (scalar(@en_ref_ante_children) == 0);
-    return "<MANY_ANTE_ATTR>" if (scalar(@en_ref_ante_children) > 1);
+    return "ONE_ANTE_ATTR" if (scalar(@en_ref_ante_children) == 1);
+    return "NO_ANTE_ATTR" if (scalar(@en_ref_ante_children) == 0);
+    return "MANY_ANTE_ATTR" if (scalar(@en_ref_ante_children) > 1);
 }
 
 sub _get_counterparts_via_siblings {
@@ -216,7 +216,7 @@ sub _get_counterparts_via_siblings {
         return;
     }
     if ($formeme =~ /^n/) {
-        return "<NOUN_ANTE_ATTR>";
+        return "NOUN_ANTE_ATTR";
     }
     if ($formeme =~ /^v/) {
         my ($en_ref_relat_child) = grep {is_relat($_)} $en_ref_par->get_children();
@@ -231,10 +231,25 @@ sub _get_counterparts_via_siblings {
             push @$errors, "MANYCOR_EN_REF_PAR";
             return;
         }
-        return "<EN_REF_PAR:" . $formeme .">";
+        return "EN_REF_PAR:" . $formeme;
     }
     push @$errors, "BADFORMEME_EN_REF_PAR";
     return;
+}
+
+sub _get_counterparts_via_alayer {
+    my ($cs_ref_tnode, $errors) = @_;
+    my $cs_ref_anode = $cs_ref_tnode->get_lex_anode();
+    my ($en_ref_anode) = Treex::Tool::Align::Utils::aligned_transitively([$cs_ref_anode], [\%EN_REF_FILTER]);
+    if (!defined $en_ref_anode) {
+        push @$errors, "NO_EN_REF_ANODE";
+        return;
+    }
+    if ($en_ref_anode->tag ne "WRB") {
+        push @$errors, "NOWRB_EN_REF_ANODE";
+        return;
+    }
+    return "ANODE: " . $en_ref_anode->lemma;
 }
 
 sub print_cs_relpron_en_counterparts {
@@ -246,12 +261,13 @@ sub print_cs_relpron_en_counterparts {
     return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
     my $en_ref_tnode_tlemma = undef;
     $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_counterparts_via_alayer($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
-    return $en_ref_tnode_tlemma;
+    return "<$en_ref_tnode_tlemma>";
 }
 
 sub print_cs_relpron_en_partic {
