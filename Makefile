@@ -1,21 +1,22 @@
 SHELL=/bin/bash
 
-DATA_SET = sample
+DATA_SET = train
 DATA_ID = pcedt
 
 JOBS_NUM = 50
 
 ifeq (${DATA_SET}, train)
-JOBS_NUM = 50
+JOBS_NUM = 100
 endif
 
-ifneq (${DATA_SET}, sample)
-CLUSTER_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
+LRC=1
+ifeq (${LRC}, 1)
+LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
 endif
 
 morpho_pcedt : data/${DATA_SET}.pcedt.analysed.morpho.list
 data/${DATA_SET}.${DATA_ID}.analysed.morpho.list : data/${DATA_SET}.${DATA_ID}.list
-	treex ${CLUSTER_FLAGS} \
+	treex ${LRC_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.pcedt.list \
 	Util::Eval language=en zone='$$zone->set_selector("ref");' \
 	Util::Eval language=cs zone='$$zone->set_selector("ref");' \
@@ -43,7 +44,7 @@ data/analysed/${DATA_ID}/${DATA_SET}/giza.gz : data/analysed/${DATA_ID}/${DATA_S
 
 analyse_pcedt : data/${DATA_SET}.pcedt.analysed.parsed.list
 data/${DATA_SET}.${DATA_ID}.analysed.parsed.list : data/${DATA_SET}.${DATA_ID}.analysed.morpho.list data/analysed/${DATA_ID}/${DATA_SET}/giza.gz
-	treex ${CLUSTER_FLAGS} \
+	treex ${LRC_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.${DATA_ID}.analysed.morpho.list \
 	Align::A::InsertAlignmentFromFile from=data/analysed/${DATA_ID}/${DATA_SET}/giza.gz \
 	           inputcols=gdfa_int_left_right_revgdfa_therescore_backscore \
@@ -54,14 +55,14 @@ data/${DATA_SET}.${DATA_ID}.analysed.parsed.list : data/${DATA_SET}.${DATA_ID}.a
 
 gold_system_pcedt : data/${DATA_SET}.pcedt.analysed.list
 data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed.parsed.list
-	treex ${CLUSTER_FLAGS} \
+	treex ${LRC_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.${DATA_ID}.analysed.parsed.list \
 	scenarios/align_src_ref.scen \
 	Write::Treex clobber=1 path=data/analysed/${DATA_ID}/${DATA_SET} stem_suffix=.final
 	ls data/analysed/${DATA_ID}/${DATA_SET}/*.final.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
 #data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.list
-#	treex ${CLUSTER_FLAGS} \
+#	treex ${LRC_FLAGS} \
 	Read::Treex from=@data/${DATA_SET}.pcedt.list \
 	Util::Eval language=en zone='$$zone->set_selector("ref");' \
 	Util::Eval language=cs zone='$$zone->set_selector("ref");' \
@@ -70,3 +71,12 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 	scenarios/analysis.cs.scen \
 	Write::Treex path=data/analysed/${DATA_ID}/${DATA_SET}
 #	ls data/analysed/${DATA_ID}/${DATA_SET}/*.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
+
+bitext_coref_stats :
+	treex $(LRC_FLAGS) -Ssrc -Lcs \
+		Read::Treex from=@data/$(DATA_SET).$(DATA_ID).analysed.list \
+		My::BitextCorefStats to='.' substitute='{^.*train/(.*)}{tmp/stats/$$1.txt}'
+	find tmp/stats -path "*.txt" -exec cat {} \; > stats/bitext_coref_stats
+	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all
+	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2,3 | grep "^0" | cut -f2 > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/nodes.0_ref.list
+	cat stats/bitext_coref_stats | grep "^cs_relpron_en_counterparts" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/en_counterparts.freq
