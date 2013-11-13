@@ -52,7 +52,7 @@ sub is_perspron {
     my ($tnode, $is_reflex, $is_3rd_person) = @_;
     my $tnode_3rd_person = defined $tnode->gram_person && ($tnode->gram_person eq "3");
     return 
-        ($tnode->t_lemma ne "#PersPron") &&
+        ($tnode->t_lemma eq "#PersPron") &&
         ($tnode->get_attr('is_reflexive') xor !$is_reflex) &&
         ($tnode_3rd_person xor !$is_3rd_person)
             ? 1 : 0;
@@ -114,7 +114,7 @@ sub print_en_perspron_cs_counterparts {
     
     my $anode = $result_node->get_lex_anode();
     return "GENERATED" if (!defined $anode);
-    return substr($anode->pos, 0, 2);
+    return substr($anode->tag, 0, 2);
 }
 
 sub _get_cs_ref_perspron_directly {
