@@ -81,4 +81,5 @@ bitext_coref_stats :
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2,3 | grep "^0" | cut -f2 > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/nodes.0_ref.list
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_en_counterparts" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/en_counterparts.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_tlemma" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/tlemma.freq
-	cat stats/bitext_coref_stats | grep "^cs_relpron_ante_agree" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.all.scores
+	#cat stats/bitext_coref_stats | grep "^cs_relpron_ante_agree" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.all.scores
+	cat stats/bitext_coref_stats | grep "^en_perspron_cs_counterparts" | cut -f2 | distr > analysis/en.perspron/$(DATA_SET).$(DATA_ID)/cs.counterparts.freq

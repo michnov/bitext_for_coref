@@ -48,10 +48,16 @@ sub is_relat {
     return (defined $indeftype && $indeftype eq "relat") ? 1 : 0;
 }
 
+sub is_perspron {
+    my ($tnode) = @_;
+    return ($tnode->t_lemma eq "#PersPron") && (!$tnode->get_attr('is_reflexive')) ? 1 : 0;
+}
+
 sub process_tnode {
     my ($self, $tnode) = @_;
 
     $self->print_cs_relpron_stats($tnode);
+    $self->print_en_perspron_stats($tnode);
     #my $err_msg;
     
     #$err_msg = $self->print_svuj_en_counterpart($tnode);
@@ -72,6 +78,34 @@ sub print_info {
     print {$self->_file_handle} "\n";
 }
 
+sub print_en_perspron_stats {
+    my ($self, $tnode) = @_;
+
+    return if (!is_perspron($tnode));
+    
+    $self->print_info($tnode, "en_perspron_cs_counterparts", \&print_en_perspron_cs_counterparts);
+}
+
+sub print_en_perspron_cs_counterparts {
+    my ($self, $tnode) = @_;
+
+    my $en_ref_tnode = $tnode;
+    if ($tnode->selector eq "src") {
+        ($en_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_REF_FILTER]);
+        return "NO_EN_REF_TNODE" if (!defined $en_ref_tnode);
+    }
+    my $result = $self->_get_cs_ref_perspron_directly($en_ref_tnode);
+    return "<". $result .">";
+}
+
+sub _get_cs_ref_perspron_directly {
+    my ($self, $en_ref_tnode) = @_;
+
+    my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_tnode], [\%CS_REF_FILTER]);
+    return "NO_CS_REF_TNODE" if (!@cs_ref_tnodes);
+    return join " ", (map {$_->t_lemma} @cs_ref_tnodes);
+}
+
 sub print_cs_relpron_stats {
     my ($self, $tnode) = @_;
     
@@ -82,6 +116,8 @@ sub print_cs_relpron_stats {
     $self->print_info($tnode, "cs_relpron_scores", \&print_cs_relpron_scores);
     $self->print_info($tnode, "cs_relpron_en_counterparts", \&print_cs_relpron_en_counterparts);
     $self->print_info($tnode, "cs_relpron_ante_agree", \&print_cs_relpron_ante_agree);
+
+    # TODO: stats for 'src' features
 }
 
 sub print_cs_relpron_ante_agree {
