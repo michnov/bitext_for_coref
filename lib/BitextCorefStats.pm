@@ -86,12 +86,16 @@ sub print_cs_relpron_scores {
     
     # true antecedents
     my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
-    my @cs_ref_antes = unique( [Treex::Tool::Align::Utils::aligned_transitively( [map {$_->get_coref_gram_nodes} @cs_ref_tnodes], [\%CS_SRC_FILTER] )]);
+    my @cs_ref_antes = unique( [map {$_->get_coref_gram_nodes} @cs_ref_tnodes] );
+    my @cs_ref_src_antes = unique( [Treex::Tool::Align::Utils::aligned_transitively( \@cs_ref_antes, [\%CS_SRC_FILTER] )]);
+    if (!@cs_ref_src_antes) {
+        @cs_ref_src_antes = @cs_ref_antes;
+    }
 
     # predicted antecedents
     my @cs_src_antes = $tnode->get_coref_gram_nodes;
 
-    my @prf_counts = get_prf_counts(\@cs_ref_antes, \@cs_src_antes);
+    my @prf_counts = get_prf_counts(\@cs_ref_src_antes, \@cs_src_antes);
     print {$self->_file_handle} "cs_relpron_scores\t";
     print {$self->_file_handle} join " ", @prf_counts;
     print {$self->_file_handle} "\t" . $tnode->get_address;

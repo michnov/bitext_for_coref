@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use List::Util qw/max/;
+
 sub acc {
     my ($ok, $all) = @_;
     return $all != 0 ? $ok / $all : 0;
@@ -42,21 +44,17 @@ sub prf_strict {
         return (1, 1, 1) if ($true > 0);
         return (0, 0, 0);
     }
-    if ($true == 0) {
-        if ($true == $pred) {
-            return (0, 0, 0);
-        }
-        return (0, 1, 0);
-    }
-    return (1, 0, 0);
+    return (map {$_ > 0} ($true, $pred), 0);
+    #if ($true == 0) {
+    #    return (0, 1, 0);
+    #}
+    #return (1, 0, 0);
 }
 
 sub prf_lenient {
     my ($true, $pred, $both) = @_;
     return (1, 1, 1) if ($both > 0);
-    return (1, 0, 0) if ($true > 0);
-    return (0, 1, 0) if ($pred > 0);
-    return (0, 0, 0);
+    return (map {$_ > 0} ($true, $pred), 0);
 }
 
 sub prf_weighted {
@@ -77,55 +75,78 @@ sub update_prf {
     $acc_counts->{both} += $both;
 }
 
+sub get_count_offset {
+    my (@counts) = @_;
+    my $max = 0;
+    foreach my $count (@counts) {
+        $max = max(values %$count, $max);
+    }
+    my $offset = 10 + 2*length($max);
+    return $offset;
+}
+
 sub print_header {
-    print "   \tSTRICT    \tLENIENT    \tWEIGHTED\n";
+    my ($offset) = @_;
+    print " "x3;
+    printf "\t%*s", -$offset, "STRICT";
+    printf "\t%*s", -$offset, "LENIENT";
+    printf "\t%*s", -$offset, "WEIGHTED";
+    print "\n";
 }
 
 sub print_acc {
-    my ($acc_strict_counts, $acc_lenient_counts, $acc_weighted_counts) = @_;
+    my ($offset, $acc_strict_counts, $acc_lenient_counts, $acc_weighted_counts) = @_;
     my $acc;
-    print "ACC\t";
+    my $col_str;
+    print "ACC";
     
     $acc = acc($acc_strict_counts->{ok}, $acc_strict_counts->{all});
-    printf "%.2f%% (%d/%d)", $acc * 100, $acc_strict_counts->{ok}, $acc_strict_counts->{all};
-    print "\t";
+    $col_str = sprintf "%.2f%% (%d/%d)", $acc * 100, $acc_strict_counts->{ok}, $acc_strict_counts->{all};
+    printf "\t%*s", -$offset, $col_str;
     $acc = acc($acc_lenient_counts->{ok}, $acc_lenient_counts->{all});
-    printf "%.2f%% (%d/%d)", $acc * 100, $acc_lenient_counts->{ok}, $acc_lenient_counts->{all};
-    print "\t";
+    $col_str = sprintf "%.2f%% (%d/%d)", $acc * 100, $acc_lenient_counts->{ok}, $acc_lenient_counts->{all};
+    printf "\t%*s", -$offset, $col_str;
     $acc = acc($acc_weighted_counts->{ok}, $acc_weighted_counts->{all});
-    printf "%.2f%% (%d/%d)", $acc * 100, $acc_weighted_counts->{ok}, $acc_weighted_counts->{all};
+    $col_str = sprintf "%.2f%% (%d/%d)", $acc * 100, $acc_weighted_counts->{ok}, $acc_weighted_counts->{all};
+    printf "\t%*s", -$offset, $col_str;
     print "\n";
 }
 
 sub print_prf {
-    my ($prf_strict_counts, $prf_lenient_counts, $prf_weighted_counts) = @_;
+    my ($offset, $prf_strict_counts, $prf_lenient_counts, $prf_weighted_counts) = @_;
+
+    my $col_str;
     
     my ($ps, $rs, $fs) = prf($prf_strict_counts->{true}, $prf_strict_counts->{pred}, $prf_strict_counts->{both});
     my ($pl, $rl, $fl) = prf($prf_lenient_counts->{true}, $prf_lenient_counts->{pred}, $prf_lenient_counts->{both});
     my ($pw, $rw, $fw) = prf($prf_weighted_counts->{true}, $prf_weighted_counts->{pred}, $prf_weighted_counts->{both});
     
-    print "PRE\t";
-    printf "%.2f%% (%d/%d)", $ps * 100, $prf_strict_counts->{both}, $prf_strict_counts->{pred};
-    print "\t";
-    printf "%.2f%% (%d/%d)", $pl * 100, $prf_lenient_counts->{both}, $prf_lenient_counts->{pred};
-    print "\t";
-    printf "%.2f%% (%d/%d)", $pw * 100, $prf_weighted_counts->{both}, $prf_weighted_counts->{pred};
+    print "PRE";
+    $col_str = sprintf "%.2f%% (%d/%d)", $ps * 100, $prf_strict_counts->{both}, $prf_strict_counts->{pred};
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%% (%d/%d)", $pl * 100, $prf_lenient_counts->{both}, $prf_lenient_counts->{pred};
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%% (%d/%d)", $pw * 100, $prf_weighted_counts->{both}, $prf_weighted_counts->{pred};
+    printf "\t%*s", -$offset, $col_str;
     print "\n";
     
-    print "REC\t";
-    printf "%.2f%% (%d/%d)", $rs * 100, $prf_strict_counts->{both}, $prf_strict_counts->{true};
-    print "\t";
-    printf "%.2f%% (%d/%d)", $rl * 100, $prf_lenient_counts->{both}, $prf_lenient_counts->{true};
-    print "\t";
-    printf "%.2f%% (%d/%d)", $rw * 100, $prf_weighted_counts->{both}, $prf_weighted_counts->{true};
+    print "REC";
+    $col_str = sprintf "%.2f%% (%d/%d)", $rs * 100, $prf_strict_counts->{both}, $prf_strict_counts->{true};
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%% (%d/%d)", $rl * 100, $prf_lenient_counts->{both}, $prf_lenient_counts->{true};
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%% (%d/%d)", $rw * 100, $prf_weighted_counts->{both}, $prf_weighted_counts->{true};
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%% (%d/%d)", $rw * 100, $prf_weighted_counts->{both}, $prf_weighted_counts->{true};
     print "\n";
     
-    print "F-M\t";
-    printf "%.2f%%      ", $fs * 100;
-    print "\t";
-    printf "%.2f%%      ", $fl * 100;
-    print "\t";
-    printf "%.2f%%      ", $fw * 100;
+    print "F-M";
+    $col_str = sprintf "%.2f%%", $fs * 100;
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%%", $fl * 100;
+    printf "\t%*s", -$offset, $col_str;
+    $col_str = sprintf "%.2f%%", $fw * 100;
+    printf "\t%*s", -$offset, $col_str;
     print "\n";
     
     #printf "%.2f%% %.2f%% %.2f%% (%d/%d/%d)", $p * 100, $r * 100, $f * 100, $prf_strict_counts->{true}, $prf_strict_counts->{pred}, $prf_strict_counts->{both};
@@ -155,7 +176,9 @@ while (my $line = <STDIN>) {
     update_prf(prf_weighted(@score_counts), \%prf_weighted_counts);
 }
 
+my $offset = get_count_offset(\%acc_lenient_counts, \%prf_lenient_counts);
 
-print_header();
-print_acc(\%acc_strict_counts, \%acc_lenient_counts, \%acc_weighted_counts);
-print_prf(\%prf_strict_counts, \%prf_lenient_counts, \%prf_weighted_counts);
+
+print_header($offset);
+print_acc($offset, \%acc_strict_counts, \%acc_lenient_counts, \%acc_weighted_counts);
+print_prf($offset, \%prf_strict_counts, \%prf_lenient_counts, \%prf_weighted_counts);
