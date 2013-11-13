@@ -158,24 +158,53 @@ sub print_en_perspron_cs_counterparts {
         ($en_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%EN_REF_FILTER]);
         return (undef, ["NO_EN_REF_TNODE"]) if (!defined $en_ref_tnode);
     }
+    my $result = "";
     my $result_node;
     $result_node = _get_cs_ref_perspron_directly($en_ref_tnode, $errors) if (!defined $result_node);
     $result_node = _get_cs_ref_via_parent($en_ref_tnode, $errors) if (!defined $result_node);
     $result_node = _get_cs_ref_via_siblings($en_ref_tnode, $errors) if (!defined $result_node);
-    return (undef, $errors) if (!defined $result_node);
+    if (!defined $result_node) {
+        $result_node = _get_cs_ref_benef_role($en_ref_tnode, $errors);
+        $result = "BENEF:" if (defined $result_node);
+    }
+
+    if (!defined $result_node) {
+        my $anode = $tnode->get_lex_anode();
+        return (undef, $errors) if (!defined $anode);
+        return "EN_ONLY:" . $anode->tag;
+    }
     
-    my $anode = $result_node->get_lex_anode();
-    return "GENERATED" if (!defined $anode);
-    return substr($anode->tag, 0, 2);
+    my $result_anode = $result_node->get_lex_anode();
+    return "GENERATED" if (!defined $result_anode);
+    return $result . substr($result_anode->tag, 0, 2);
 }
 
-sub _get_cs_ref_via_parent {
+sub _get_cs_ref_benef_role {
     my ($en_ref_tnode, $errors) = @_;
 
-    my @cs_ref_sibs = access_via_eparents($en_ref_tnode, [\%CS_REF_FILTER], $errors);
-    return if (!@cs_ref_sibs);
-    my $cs_ref_tnode = filter_by_functor(\@cs_ref_sibs, $en_ref_tnode->functor, $errors);
-    return $cs_ref_tnode;
+    my $en_ref_verb_par = $en_ref_tnode->get_parent();
+    while (defined $en_ref_verb_par && $en_ref_verb_par->formeme !~ /^v/) {
+        $en_ref_verb_par = $en_ref_verb_par->get_parent();
+    }
+    if (!defined $en_ref_verb_par) {
+        push @$errors, "NO_EN_REF_VERB_ANCESTOR";
+        return;
+    }
+
+    my ($cs_ref_verb_par) = Treex::Tool::Align::Utils::aligned_transitively([$en_ref_verb_par], [\%CS_REF_FILTER]);
+    if (!defined $cs_ref_verb_par) {
+        push @$errors, "NO_CS_REF_VERB_PAR";
+        return;
+    }
+    my ($cs_ref_dative_child) = grep {
+        my $anode = $_->get_lex_anode; 
+        if (defined $anode) {$anode->tag =~ /^....3/}
+    } $cs_ref_verb_par->get_echildren({or_topological => 1});
+    if (!defined $cs_ref_dative_child) {
+        push @$errors, "NO_CS_REF_DATIVE_CHILD";
+        return;
+    }
+    return $cs_ref_dative_child;
 }
 
 sub _get_cs_ref_via_siblings {
@@ -186,6 +215,15 @@ sub _get_cs_ref_via_siblings {
     return if (!$cs_ref_par);
     my @cs_ref_kids = $cs_ref_par->get_echildren({or_topological => 1});
     my $cs_ref_tnode = filter_by_functor(\@cs_ref_kids, $en_ref_tnode->functor, $errors);
+    return $cs_ref_tnode;
+}
+
+sub _get_cs_ref_via_parent {
+    my ($en_ref_tnode, $errors) = @_;
+
+    my @cs_ref_sibs = access_via_eparents($en_ref_tnode, [\%CS_REF_FILTER], $errors);
+    return if (!@cs_ref_sibs);
+    my $cs_ref_tnode = filter_by_functor(\@cs_ref_sibs, $en_ref_tnode->functor, $errors);
     return $cs_ref_tnode;
 }
 
