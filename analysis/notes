@@ -1,0 +1,82 @@
+========================= ENGLISH =================================
+
+------------------------- CONTROL ----------------------------
+
+- additional arguments should be added to a predicate in past participles
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
+
+
+------------------ PERSONAL PRONOUN ----------------------------
+
+- predicate changes to a Czech noun
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##2
+        EN: once it enters the lungs
+        CS: po vstupu do plic
+- a pronoun is replaced by an equivalent expression in Czech
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##2
+        EN: even brief exposures to it causing symptoms
+        CS: i krátké vystavení se krokydolitu způsobuje příznaky
+- turns into a Czech reflexive pronoun
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
+        EN: Lorillard Inc. ... stopped using crocidolite in its Micronite cigarette filters
+        CS: Společnost Lorillard Inc. ... přestala používat krokydolit ve filtrech svých cigaret Micronite
+
+
+
+------------------ RELATIVE PRONOUN ----------------------------
+
+- check how grammatemes are set
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##20
+        EN: fibers such as crocidolite that/sg are classified/pl
+
+
+========================= CZECH =================================
+
+------------------------- CONTROL ----------------------------
+
+- missing unexpressed arguments of the predicate
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
+        CS: přestala používat krokydolit 
+
+---------------------- RELATIVE PRONOUN ------------------------
+
+- insist on agreement between a relative pronoun and its antecedent
+- this can be expressed by a past participle in English, which is easier to reveal
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1
+        CS: dělníky, kteří jí byli vystaveni
+        EN: workers exposed to it
+- a clause connected by "that" suggests that it extends the phrase directly before the connective
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
+        CS: >jednotka< newyorské společnosti Loews Corp., která vyrábí cigarety Kent
+        EN: the unit of New York-based Loews Corp. that makes Kent cigarettes
+        - this case can be 100%-correctly resolved neither by human
+    - SPECULATIVE
+
+------------------ PERSONAL PRONOUN ----------------------------
+
+- the agreement in gender can be misleading
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1
+- a stronger coupling with a subject in English can be taken advatage of
+- a missing English personal pronoun in a subject position for a verb in coordination 
+    suggests the subject of the other verb as an antecedent
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##11
+        EN: asbestos was used in making paper for the filters and replaced with a different type of filter.
+        CS: azbest byl používán při výrobě papíru pro filtry a byl nahrazen jiným typem filtru.
+- there doesn't have to be an English counterpart
+    - data/analysed/pcedt/train/wsj_0004.final.treex.gz##7
+        EN: because those managers
+        CS: protože jejich správci
+
+------------------ PERSONAL PRONOUN RECONSTRUCTION ----------------------------
+
+- the aligned subject of an English verb may prevent adding a generated perspron for the czech verb
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##13
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##15
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##21
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##24
+
+------------------ REFLEXIVE PRONOUN ----------------------------
+
+- "vystaveni se <> zpusobuje" wrongly parsed as (zpusobovat (vystaveni (<>)) (se))
+    - data/analysed/pcedt/train/wsj_0003.final.treex.gz##2

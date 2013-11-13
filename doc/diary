@@ -1,0 +1,10 @@
+9.10.2013
+----------------------
+- moved all files in coref_bitext from tectomt_svn to tectomt(_git)
+- inspecting autoamtically parsed (src) PCEDT documents and making a statistics: analysis/notes
+    - unexpressed arguments of verbs in en_src are missing
+        - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1, exposed, used
+        - TODO: they should be filled in even by a naive rule
+    - Czech relative pronoun coreference resolver does not check agreement in gender and number
+        - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1, kteri
+        - TODO: fix it
