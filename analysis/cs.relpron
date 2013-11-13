@@ -1,0 +1,33 @@
+* Czech relative pronouns (gram_indeftype eq "relat") can be expressed in English by the following means:
+    1) relative pronoun (relative pronoun coreference)
+    2) participle (coreference of control)
+    3) TODO: ...
+
+* the accuracy (TODO: or P-R-F) of relative pronoun anaphora resolution in Czech:
+    * all:
+    * in English expressed as:
+        1) relative pronoun
+        2) participle
+        3) TODO: ...
+
+* the accuracy of resolution by projection via alignment from English
+    * all:
+    * in English expressed as:
+        1) relative pronoun
+        2) participle
+        3) TODO: ...
+        
+* the agreement on the antecedents between the languages:
+    * best calculated by pointwise precision, recall (accuracy should very similar for relpron anaphora):
+        CS: CA1 CA2 <---- CF
+                 |
+        EN:     EA1 <---- EF
+        Precision = 1/1
+        Recall = 1/2
+    * calculate on:
+        1) gold data
+            * all
+            * in English expressed as
+        2) parsed data
+            * all
+            * in English expressed as

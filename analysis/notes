@@ -52,6 +52,10 @@
         EN: the unit of New York-based Loews Corp. that makes Kent cigarettes
         - this case can be 100%-correctly resolved neither by human
     - SPECULATIVE
+- English and Czech relative pronouns can differ in their antecedent
+    - data/analysed/pcedt/train/wsj_0261.final.treex.gz##4
+        CS: Roztrhaný černý pořadač, přetékající recepty nashromážděnými za 18 let, který držel pohromadě gumičkami
+        EN: The tattered black binder, bulging with 18 years' worth of recipes held together by rubber bands
 
 ------------------ PERSONAL PRONOUN ----------------------------
 
