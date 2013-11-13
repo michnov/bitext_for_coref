@@ -55,6 +55,17 @@ sub process_tnode {
     #log_info $tnode->get_address . "\t" . $err_msg if (defined $err_msg);
 }
 
+sub print_info {
+    my ($self, $tnode, $name, $method) = @_;
+
+    my $result = $self->$method($tnode);
+    
+    print {$self->_file_handle} "$name\t";
+    print {$self->_file_handle} $result;
+    print {$self->_file_handle} "\t" . $tnode->get_address;
+    print {$self->_file_handle} "\n";
+}
+
 sub print_cs_relpron_stats {
     my ($self, $tnode) = @_;
     
@@ -62,8 +73,17 @@ sub print_cs_relpron_stats {
     my $indeftype = $tnode->gram_indeftype;
     return if (!defined $indeftype || $indeftype ne "relat");
 
-    $self->print_cs_relpron_scores($tnode);
-    $self->print_cs_relpron_en_counterparts($tnode);
+    $self->print_info($tnode, "cs_relpron_tlemma", \&print_cs_relpron_tlemma);
+    $self->print_info($tnode, "cs_relpron_scores", \&print_cs_relpron_scores);
+    $self->print_info($tnode, "cs_relpron_en_counterparts", \&print_cs_relpron_en_counterparts);
+}
+
+sub print_cs_relpron_tlemma {
+    my ($self, $tnode) = @_;
+    my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
+    return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
+    my ($ante) = $cs_ref_tnode->get_coref_gram_nodes();
+    return (defined $ante ? "COREF:" : "NONCOREF:") . $tnode->t_lemma;
 }
 
 # printing counts to compute pointwise scores (accuracy and precision, recall, F-score)
@@ -83,21 +103,71 @@ sub print_cs_relpron_scores {
     my @cs_src_antes = $tnode->get_coref_gram_nodes;
 
     my @prf_counts = get_prf_counts(\@cs_ref_src_antes, \@cs_src_antes);
-    print {$self->_file_handle} "cs_relpron_scores\t";
-    print {$self->_file_handle} join " ", @prf_counts;
-    print {$self->_file_handle} "\t" . $tnode->get_address;
-    print {$self->_file_handle} "\n";
+    return join " ", @prf_counts;
+}
+
+sub _get_en_ref_relpron {
+    my ($cs_ref_tnode, $errors) = @_;
+    my ($en_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$cs_ref_tnode], [\%EN_REF_FILTER]);
+    if (!defined $en_ref_tnode) {
+        push @$errors, "NO_EN_REF_TNODE";
+        return;
+    }
+    my $indeftype = $en_ref_tnode->gram_indeftype;
+    if (!defined $indeftype || $indeftype ne "relat") {
+        push @$errors, "NORELAT_EN_REF_TNODE";
+        return;
+    }
+    return $en_ref_tnode->t_lemma;
+}
+
+sub _get_en_ref_functor_tnode {
+    my ($cs_ref_tnode, $errors) = @_;
+    my ($cs_ref_par) = $cs_ref_tnode->get_eparents({or_topological => 1});
+    my ($en_ref_par) = Treex::Tool::Align::Utils::aligned_transitively([$cs_ref_par], [\%EN_REF_FILTER]);
+    if (!defined $en_ref_par) {
+        push @$errors, "NO_EN_REF_PAR";
+        return;
+    }
+    
+    my ($en_ref_functor_tnode) = grep {$_->functor eq $cs_ref_tnode->functor} $en_ref_par->get_echildren({or_topological => 1});
+    if (!defined $en_ref_functor_tnode) {
+        push @$errors, "NO_EN_REF_FUNCTOR_TNODE";
+        return;
+    }
+    #print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
+    return $en_ref_functor_tnode->t_lemma;
+}
+
+sub _get_no_verb_appos {
+    my ($cs_ref_tnode, $errors) = @_;   
+    my @cs_ref_sibs = $cs_ref_tnode->get_siblings;
+    my @en_ref_sibs = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_sibs, [\%EN_REF_FILTER]);
+    my @en_ref_pars = map {$_->get_parent} @en_ref_sibs;
+    my @no_verb_appos = grep {$_->t_lemma eq "#EmpVerb" || $_->functor eq "APPS"} @en_ref_pars;
+    if (!@no_verb_appos) {
+        push @$errors, "NOEMPVERBAPPS_EN_REF_PARS";
+        return;
+    }
+    #my ($cs_ref_par) = $cs_ref_tnode->get_eparents({or_topological => 1});
+    #if ($cs_ref_par->t_lemma ne "být") {
+    #    return "<NO_VERB_APPOS_NOBYT>";
+    #}
+    return "<NO_VERB_APPOS>";
 }
 
 sub print_cs_relpron_en_counterparts {
     my ($self, $tnode) = @_;
+
+    my $errors = [];
     
-    my @cs_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
-    my @en_ref_tnodes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_tnodes, [\%EN_REF_FILTER]);
-    print {$self->_file_handle} "cs_relpron_en_counterparts\t";
-    print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
-    print {$self->_file_handle} "\t" . $tnode->get_address;
-    print {$self->_file_handle} "\n";
+    my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
+    return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
+    my $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors);
+    $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
+    return $en_ref_tnode_tlemma;
 }
 
 sub print_cs_relpron_en_partic {
