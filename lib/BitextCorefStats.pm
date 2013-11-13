@@ -81,6 +81,30 @@ sub print_cs_relpron_stats {
     $self->print_info($tnode, "cs_relpron_tlemma", \&print_cs_relpron_tlemma);
     $self->print_info($tnode, "cs_relpron_scores", \&print_cs_relpron_scores);
     $self->print_info($tnode, "cs_relpron_en_counterparts", \&print_cs_relpron_en_counterparts);
+    $self->print_info($tnode, "cs_relpron_ante_agree", \&print_cs_relpron_ante_agree);
+}
+
+sub print_cs_relpron_ante_agree {
+    my ($self, $tnode) = @_;
+    
+    my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
+    return "0 0 0" if (!defined $cs_ref_tnode);
+
+    my @en_ref_antes = ();
+    my $en_ref_tnode = $cs_ref_tnode->wild->{en_counterpart};
+    if (defined $en_ref_tnode && $en_ref_tnode->get_layer eq "t") {
+        @en_ref_antes = $en_ref_tnode->get_coref_nodes();
+    }
+    #return "NO_EN_REF_TNODE" if (!defined $cs_ref_tnode->wild->{en_counterpart});
+    #return "NO_EN_REF_ANTES" if (!@en_ref_antes);
+
+    my @cs_ref_antes = $cs_ref_tnode->get_coref_nodes();
+    return sprintf("%d %d 0", scalar @en_ref_antes, scalar @cs_ref_antes) if (!@cs_ref_antes || !@en_ref_antes);
+    
+    my @en_ref_projected_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [\%EN_REF_FILTER]);
+    
+    my @prf_counts = get_prf_counts(\@en_ref_projected_antes, \@en_ref_antes);
+    return join " ", @prf_counts;
 }
 
 sub print_cs_relpron_tlemma {
@@ -122,10 +146,10 @@ sub _get_en_ref_relpron {
         push @$errors, "NORELAT_EN_REF_TNODE";
         return;
     }
-    return $en_ref_tnode->t_lemma;
+    return ($en_ref_tnode->t_lemma, $en_ref_tnode);
 }
 
-sub _get_en_ref_coref_child_tlemma {
+sub _get_en_ref_coref_child {
     my ($en_ref_par, $errors) = @_;
     my @en_ref_coref_children = grep {scalar($_->get_coref_nodes) > 0} $en_ref_par->get_echildren({or_topological => 1});
     if (@en_ref_coref_children == 0) {
@@ -136,7 +160,7 @@ sub _get_en_ref_coref_child_tlemma {
         push @$errors, "MANY_EN_REF_COREF_CHILDREN";
         return;
     }
-    return $en_ref_coref_children[0]->t_lemma;
+    return ($en_ref_coref_children[0]->t_lemma, $en_ref_coref_children[0]);
 }
 
 sub _get_en_ref_functor_tnode {
@@ -151,15 +175,15 @@ sub _get_en_ref_functor_tnode {
     my ($en_ref_functor_tnode) = grep {$_->functor eq $cs_ref_tnode->functor} $en_ref_par->get_echildren({or_topological => 1});
     if (!defined $en_ref_functor_tnode) {
         push @$errors, "NO_EN_REF_FUNCTOR_TNODE";
-        return _get_en_ref_coref_child_tlemma($en_ref_par, $errors);
+        return _get_en_ref_coref_child($en_ref_par, $errors);
     }
     my $tlemma = $en_ref_functor_tnode->t_lemma;
     if (!is_relat($en_ref_functor_tnode) && $tlemma ne "#Cor" && $tlemma ne "#PersPron") {
         push @$errors, "BAD_EN_REF_FUNCTOR_TNODE";
-        return _get_en_ref_coref_child_tlemma($en_ref_par, $errors);
+        return _get_en_ref_coref_child($en_ref_par, $errors);
     }
     #print {$self->_file_handle} (join " ", map {$_->t_lemma} @en_ref_tnodes);
-    return $en_ref_functor_tnode->t_lemma;
+    return ($en_ref_functor_tnode->t_lemma, $en_ref_functor_tnode);
 }
 
 sub _get_no_verb_appos {
@@ -226,7 +250,7 @@ sub _get_counterparts_via_siblings {
         my @en_ref_cor_children = grep {$_->t_lemma eq "#Cor"} $en_ref_par->get_children();
         if (@en_ref_cor_children > 0) {
             if (@en_ref_cor_children == 1) {
-                return "#Cor";
+                return ($en_ref_cor_children[0]->t_lemma, $en_ref_cor_children[0]);
             }
             push @$errors, "MANYCOR_EN_REF_PAR";
             return;
@@ -249,7 +273,7 @@ sub _get_counterparts_via_alayer {
         push @$errors, "NOWH_EN_REF_ANODE";
         return;
     }
-    return "ANODE: " . $en_ref_anode->lemma;
+    return ($en_ref_anode->lemma, $en_ref_anode);
 }
 
 sub print_cs_relpron_en_counterparts {
@@ -259,15 +283,20 @@ sub print_cs_relpron_en_counterparts {
     
     my ($cs_ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [\%CS_REF_FILTER]);
     return "NO_CS_REF_TNODE" if (!defined $cs_ref_tnode);
-    my $en_ref_tnode_tlemma = undef;
-    $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_counterparts_via_alayer($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    my ($result_str, $result_node);
+    ($result_str, $result_node) = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $result_str);
+    ($result_str, $result_node) = _get_counterparts_via_alayer($cs_ref_tnode, $errors) if (!defined $result_str);
+    ($result_str, $result_node) = _get_en_ref_functor_tnode($cs_ref_tnode, $errors) if (!defined $result_str);
+    ($result_str, $result_node) = _get_counterparts_via_siblings($cs_ref_tnode, $errors) if (!defined $result_str);
+    ($result_str, $result_node) = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $result_str);
+    
     #$en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
-    return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
-    return "<$en_ref_tnode_tlemma>";
+    return (join ",", @$errors) if (!defined $result_str);
+
+    $cs_ref_tnode->wild->{en_counterpart_type} = $result_str;
+    $cs_ref_tnode->wild->{en_counterpart} = $result_node if (defined $result_node);
+    
+    return "<$result_str>";
 }
 
 sub print_cs_relpron_en_partic {
