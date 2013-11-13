@@ -70,6 +70,7 @@
     * calculate on:
         1) gold data
             * all
+                * analysis/cs.relpron/train.pcedt/ante_agree.all.scores (TRUE=en, PRED=cs)
             * in English expressed as
         2) parsed data
             * all
