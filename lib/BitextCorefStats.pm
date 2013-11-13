@@ -254,7 +254,7 @@ sub _get_no_verb_appos {
     my @cs_ref_sibs = ($cs_ref_tnode, $cs_ref_tnode->get_siblings);
     my @en_ref_sibs = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_sibs, [\%EN_REF_FILTER]);
     my @en_ref_pars = map {$_->get_parent} @en_ref_sibs;
-    my @no_verb_appos = grep {$_->t_lemma eq "#EmpVerb" || $_->functor eq "APPS"} @en_ref_pars;
+    my @no_verb_appos = grep {(defined $_->t_lemma && $_->t_lemma eq "#EmpVerb") || (defined $_->functor && $_->functor eq "APPS")} @en_ref_pars;
     if (!@no_verb_appos) {
         push @$errors, "NOEMPVERBAPPS_EN_REF_PARS";
         return;
