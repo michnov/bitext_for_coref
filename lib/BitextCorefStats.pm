@@ -179,6 +179,20 @@ sub _get_no_verb_appos {
     return "<NO_VERB_APPOS>";
 }
 
+sub _get_ante_attribute {
+    my ($cs_ref_tnode, $errors) = @_;
+    my @cs_ref_antes = $cs_ref_tnode->get_coref_nodes();
+    if (!@cs_ref_antes) {
+        push @$errors, "NO_CS_REF_ANTE";
+        return;
+    }
+    my @en_ref_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [\%EN_REF_FILTER]);
+    my @en_ref_ante_children = map {$_->get_children()} @en_ref_antes;
+    return "<ONE_ANTE_ATTR>" if (scalar(@en_ref_ante_children) == 1);
+    return "<NO_ANTE_ATTR>" if (scalar(@en_ref_ante_children) == 0);
+    return "<MANY_ANTE_ATTR>" if (scalar(@en_ref_ante_children) > 1);
+}
+
 sub print_cs_relpron_en_counterparts {
     my ($self, $tnode) = @_;
 
@@ -189,6 +203,7 @@ sub print_cs_relpron_en_counterparts {
     my $en_ref_tnode_tlemma = _get_en_ref_functor_tnode($cs_ref_tnode, $errors);
     $en_ref_tnode_tlemma = _get_en_ref_relpron($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     $en_ref_tnode_tlemma = _get_no_verb_appos($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
+    $en_ref_tnode_tlemma = _get_ante_attribute($cs_ref_tnode, $errors) if (!defined $en_ref_tnode_tlemma);
     return (join ",", @$errors) if (!defined $en_ref_tnode_tlemma);
     return $en_ref_tnode_tlemma;
 }
