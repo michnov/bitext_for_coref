@@ -2,24 +2,39 @@
     * 'ref' zones are under investigation here
         * but the set of instances is defined by being a relative pronoun in 'src' zone
     * created as follows:
-        1) get the child of an English node (most likely a verb) aligned with the Czech relpron's parent (likely a verb)
+        1) try to find it directly by the alignment of the Czech replron itself
+            * aims at discovering mostly relative pronouns which failed to be revealed mostly due to NO_EN_REF_PAR error
+            * error NO_EN_REF_TNODE if nothing aligned
+            * error NORELAT_EN_REF_TNODE if the aligned node is not a relpron
+        2) get the child of an English node (most likely a verb) aligned with the Czech relpron's parent (likely a verb)
            that holds the same functor as the Czech relpron
             * an approach that was found benefitial in case of searching for counterparts to "it"
             * this can reveal also the generated nodes which are rarely aligned with something - #Cor in a coreference of control
             * error NO_EN_REF_PAR if the parent is not aligned
             * error NO_EN_REF_FUNCTOR_TNODE if no child having a desired functor
             * error BAD_EN_REF_FUNCTOR_TNODE if a child with the desired functor is none of the following: relpron, #Cor, #PersPron
-        2) if NO_EN_REF_FUNCTOR_TNODE or BAD_EN_REF_FUNCTOR_TNODE, take the only child which is coreferential with something 
+        3) if NO_EN_REF_FUNCTOR_TNODE or BAD_EN_REF_FUNCTOR_TNODE, take the only child which is coreferential with something 
             * error NO_EN_REF_COREF_CHILDREN if no coreferential child
             * error MANY_EN_REF_COREF_CHILDREN if many coreferential children
-        3) try to find it directly by the alignment of the Czech replron itself
-            * aims at discovering mostly relative pronouns which failed to be revealed mostly due to NO_EN_REF_PAR error
-            * error NO_EN_REF_TNODE if nothing aligned
-            * error NORELAT_EN_REF_TNODE if the aligned node is not a relpron
-        4) searching for appositive patterns denoted <NO_VERB_APPOS>
+        4) accesing the English counterparts through siblings
+            * error NO_EN_REF_SIBLINGS if nothing aligned to siblings
+            * error NO_EN_REF_SIBLINGS if siblings' counterpart have many parents
+            * error NOFORMEME_EN_REF_PAR if parent has no formeme
+            * if parent's formeme is a noun: <NOUN_ANTE_ATTR>: turns into the attribute of the noun (the antecedent)
+            * if parent's formeme is a verb and it has a single relpron or #Cor node
+            * error MANYCOR_EN_REF_PAR: many #cor nodes
+            * error BADFORMEME_EN_REF_PAR if parent's formeme is neither n.* nor v.* (with the assumptions mentioned above)
+            * the parent is a noun => 
+        5) searching for appositive patterns denoted <NO_VERB_APPOS>
             * neither a relative pronoun nor an aligned verb present on the English side
-            * an #EmpVerb or APPOS appears as a parent among the counterparts of the relpron's siblings
-            * error NOEMPVERBAPPS_EN_REF_PARS if there is no such a parent 
+            * an #EmpVerb or APPOS appears as a parent among the counterparts of the relpron and its siblings
+            * error NOEMPVERBAPPS_EN_REF_PARS if there is no such a parent
+
+    * 8/10 NORELAT_EN_REF_TNODE,NO_EN_REF_PAR,NOALIGN_CS_REF_SIBLINGS errors are patterns like (data/analysed/pcedt/train/wsj_1186.final.treex.gz)
+        EN: at $11.25 a share, up $1.125
+        CS: za 11.25 dolaru na akcii, což bylo navýšení o 1125 dolaru
+        => include the counterpart of the replron (usually "up") in appos search
+        => <NO_VERB_APPOS> grabbing 6% of all cases
             
     1) relative pronoun (relative pronoun coreference)
     2) participle (coreference of control)
