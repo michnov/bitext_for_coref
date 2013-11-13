@@ -73,8 +73,10 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 #	ls data/analysed/${DATA_ID}/${DATA_SET}/*.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
 bitext_coref_stats :
-	treex $(LRC_FLAGS) -Ssrc -Lcs \
+	treex $(LRC_FLAGS) \
 		Read::Treex from=@data/$(DATA_SET).$(DATA_ID).analysed.list \
+		Util::SetGlobal selector=all \
+		Util::SetGlobal language=all \
 		My::BitextCorefStats to='.' substitute='{^.*train/(.*)}{tmp/stats/$$1.txt}'
 	find tmp/stats -path "*.txt" -exec cat {} \; > stats/bitext_coref_stats
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all

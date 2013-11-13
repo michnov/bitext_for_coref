@@ -56,8 +56,12 @@ sub is_perspron {
 sub process_tnode {
     my ($self, $tnode) = @_;
 
-    $self->print_cs_relpron_stats($tnode);
-    $self->print_en_perspron_stats($tnode);
+    if ($tnode->language eq "cs" && $tnode->selector eq "src") {
+        $self->print_cs_relpron_stats($tnode);
+    }
+    if ($tnode->language eq "en" && $tnode->selector eq "src") {
+        $self->print_en_perspron_stats($tnode);
+    }
     #my $err_msg;
     
     #$err_msg = $self->print_svuj_en_counterpart($tnode);
