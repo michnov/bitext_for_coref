@@ -245,8 +245,8 @@ sub _get_counterparts_via_alayer {
         push @$errors, "NO_EN_REF_ANODE";
         return;
     }
-    if ($en_ref_anode->tag ne "WRB") {
-        push @$errors, "NOWRB_EN_REF_ANODE";
+    if ($en_ref_anode->tag !~ /^W/) {
+        push @$errors, "NOWH_EN_REF_ANODE";
         return;
     }
     return "ANODE: " . $en_ref_anode->lemma;
