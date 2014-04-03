@@ -55,7 +55,7 @@ sub _build_align_records {
         }
     }
     close $f;
-    print STDERR Dumper($align_rec);
+    #print STDERR Dumper($align_rec);
     return $align_rec;
 }
 
