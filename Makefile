@@ -92,7 +92,7 @@ bitext_coref_stats :
 en_perspron_stats :
 	-treex $(LRC_FLAGS) -Len -Ssrc \
 		Read::Treex from=@$(DATA_DIR)/list \
-		My::BitextCorefStats::EnPerspron align_selector=$(ALIGN_SELECTOR) to='.' substitute='{^.*train/(.*)}{tmp/stats/en_perspron/$$1.txt}'
+		My::BitextCorefStats::EnPerspron align_selector=$(ALIGN_SELECTOR) to='.' substitute='{^.*/([^\/]*)}{tmp/stats/en_perspron/$$1.txt}'
 	find tmp/stats/en_perspron -path "*.txt" -exec cat {} \; > tmp/stats/en_perspron.all
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2,3 | grep "^0" | cut -f2 > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/nodes.0_ref.list
