@@ -17,29 +17,31 @@ my $CS_REF_FILTER = { language => 'cs', selector => 'ref' };
 my $EN_REF_FILTER = { language => 'en', selector => 'ref' };
 
 sub process_tnode {
-    my ($self, $src_tnode) = @_;
+    my ($self, $tnode) = @_;
     log_fatal "Language must be 'cs'" if ($self->language ne 'cs');
-    log_fatal "Selector must be 'src'" if ($self->selector ne 'src');
     
-    return if (!Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($src_tnode));
+    return if (!Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($tnode));
 
-    my $address = $src_tnode->get_address;
+    my $address = $tnode->get_address;
     my ($result, $errors);
 
+    ($result, $errors) = $self->print_coref_cover($tnode);
+    $self->print_info("coref_cover", $address, $result, $errors);
+
     # starting point is cs_src
-    ($result, $errors) = $self->print_cs_relpron_scores($src_tnode);
-    $self->print_info("cs_relpron_scores", $address, $result, $errors);
+    #($result, $errors) = $self->print_cs_relpron_scores($tnode);
+    #$self->print_info("cs_relpron_scores", $address, $result, $errors);
     
-    my ($ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$src_tnode], [$CS_REF_FILTER]);
+    #my ($ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$src_tnode], [$CS_REF_FILTER]);
     
     # starting point is cs_ref
-    ($result, $errors) = $self->print_cs_relpron_tlemma($ref_tnode);
-    $self->print_info("cs_relpron_tlemma", $address, $result, $errors);
+    #($result, $errors) = $self->print_cs_relpron_tlemma($tnode);
+    #$self->print_info("cs_relpron_tlemma", $address, $result, $errors);
     
-    ($result, $errors) = $self->print_cs_relpron_en_counterparts($ref_tnode);
-    $self->print_info("cs_relpron_en_counterparts", $address, $result, $errors);
+    ($result, $errors) = $self->print_en_counterparts($tnode);
+    $self->print_info("en_counterparts", $address, $result, $errors);
     
-    ($result, $errors) = $self->print_cs_relpron_ante_agree($ref_tnode);
+    ($result, $errors) = $self->print_cs_relpron_ante_agree($tnode);
     $self->print_info("cs_relpron_ante_agree", $address, $result, $errors);
 
     #my $err_msg;
@@ -51,12 +53,17 @@ sub process_tnode {
     #log_info $tnode->get_address . "\t" . $err_msg if (defined $err_msg);
 }
 
-sub print_cs_relpron_tlemma {
-    my ($self, $cs_ref_tnode) = @_;
-    return (undef, ["NO_CS_REF_TNODE"]) if (!defined $cs_ref_tnode);
-    my ($ante) = $cs_ref_tnode->get_coref_gram_nodes();
-    return (defined $ante ? "COREF:" : "NONCOREF:") . $cs_ref_tnode->t_lemma;
+sub print_coref_cover {
+    my ($self, $cs_tnode) = @_;
+    return ($cs_tnode->get_coref_nodes() ? "COREF" : "NONCOREF");
 }
+
+#sub print_cs_relpron_tlemma {
+#    my ($self, $cs_tnode) = @_;
+#    #return (undef, ["NO_CS_REF_TNODE"]) if (!defined $cs_ref_tnode);
+#    my ($ante) = $cs_tnode->get_coref_gram_nodes();
+#    return (defined $ante ? "COREF:" : "NONCOREF:") . $cs_ref_tnode->t_lemma;
+#}
 
 # printing counts to compute pointwise scores (accuracy and precision, recall, F-score)
 # for relative pronoun coreference resolution in Czech
@@ -78,7 +85,7 @@ sub print_cs_relpron_scores {
     return join " ", @prf_counts;
 }
 
-sub print_cs_relpron_en_counterparts {
+sub print_en_counterparts {
     my ($self, $cs_tnode) = @_;
     
     return (undef, ["NO_CS_TNODE"]) if (!defined $cs_tnode);
