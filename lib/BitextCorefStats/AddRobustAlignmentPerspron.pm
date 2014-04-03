@@ -80,7 +80,8 @@ sub filter_self {
 
     my @filtered = grep {
         my $anode = $_->get_lex_anode();
-        defined $anode && $anode->tag =~ /^P[8SDP5]/
+        #defined $anode && $anode->tag =~ /^P[8SDP5]/
+        defined $anode && $anode->tag =~ /^P[^47]/
     } @$aligned;
     if (!@filtered) {
         push @$errors, "NOPRON_CS_REF_TNODE";
