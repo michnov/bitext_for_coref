@@ -14,7 +14,7 @@ sub process_tnode {
         
     my ($trg_anaphs, $trg_anaphs_types) = Treex::Tool::Align::Utils::get_aligned_nodes_by_filter(
         $src_tnode,
-        {language => $self->trg_language, selector => $self->selector}
+        {language => $self->trg_language, selector => $self->selector, rel_types => ['supervised', '.*']}
     );
     return if (!@$trg_anaphs);
 
@@ -24,14 +24,14 @@ sub process_tnode {
         my $src_ante_with_align = $src_ante;
         my ($trg_antes, $trg_antes_types) = Treex::Tool::Align::Utils::get_aligned_nodes_by_filter(
             $src_ante_with_align,
-            {language => $self->trg_language, selector => $self->selector}
+            {language => $self->trg_language, selector => $self->selector, rel_types => ['supervised', '.*']}
         );
         while (!@$trg_antes) {
             ($src_ante_with_align) = $src_ante_with_align->get_coref_gram_nodes;
             last if (!defined $src_ante_with_align);
             ($trg_antes, $trg_antes_types) = Treex::Tool::Align::Utils::get_aligned_nodes_by_filter(
                 $src_ante_with_align,
-                {language => $self->trg_language, selector => $self->selector}
+                {language => $self->trg_language, selector => $self->selector, rel_types => ['supervised', '.*']}
             );
         }
         push @trg_all_antes, @$trg_antes;
