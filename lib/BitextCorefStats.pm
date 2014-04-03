@@ -73,4 +73,14 @@ sub eparents_of_aligned_siblings {
     return $epar;
 }
 
+sub parents_of_aligned_siblings {
+    my ($siblings, $errors) = @_;
+    my ($par, @pars) = unique([map {$_->get_parent} @$siblings]);
+    if (@pars > 0) {
+        push @$errors, "MANY_SIBLINGS_PARENTS";
+        return;
+    }
+    return $par;
+}
+
 1;

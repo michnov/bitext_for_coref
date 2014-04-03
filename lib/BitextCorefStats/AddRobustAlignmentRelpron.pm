@@ -77,6 +77,7 @@ sub access_via_alayer {
     }
     # the node is not t-aligned => it doesn't have a lexical counterpart on the t-layer
     my @aligned_tnodes = map {$_->get_referencing_nodes('a/aux.rf')} @aligned_anodes;
+    #log_info "NO_AUX: " . $tnode->get_address;
     return @aligned_tnodes;
 }
 
@@ -97,6 +98,7 @@ sub filter_anodes {
     }
     my $anodes_str = join ",", (map {$_->id} @filtered_a);
     push @$errors, "WH_PRON_ANODE=$anodes_str";
+    #print STDERR "FILTER_ANODES: " . $filtered_a[0]->get_address . "\n" if (@filtered_a);
     return @filtered_t;
 }
 
@@ -107,6 +109,7 @@ sub filter_self {
         push @$errors, "NORELAT_EN_REF_TNODE";
         return;
     }
+    #print STDERR "FILTER_SELF: " . $filtered[0]->get_address . "\n" if (@filtered);
     return @filtered;
 }
 
@@ -145,9 +148,13 @@ sub filter_by_coref {
 sub filter_siblings {
     my ($aligned, $tnode, $errors) = @_;
     
-    my $par = Treex::Block::My::BitextCorefStats::eparents_of_aligned_siblings($aligned, $errors);
+    my $par = Treex::Block::My::BitextCorefStats::parents_of_aligned_siblings($aligned, $errors);
     return if (!$par);
-    
+   
+    if (defined $par->functor && $par->functor eq "APPS") {
+        push @$errors, "EMPVERB_APPOS";
+        return $par;
+    }
     my $formeme = $par->formeme;
     if (!defined $formeme) {
         push @$errors, "NOFORMEME_EN_REF_PAR";
