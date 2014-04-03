@@ -156,7 +156,7 @@ sub filter_siblings {
     return if (!$par);
    
     if (defined $par->functor && $par->functor eq "APPS") {
-        push @$errors, "EMPVERB_APPOS";
+        push @$errors, "APPOS_SIBLINGS";
         return $par;
     }
     my $formeme = $par->formeme;
@@ -165,7 +165,9 @@ sub filter_siblings {
         return;
     }
     if ($formeme =~ /^n/) {
-        push @$errors, "NOUN_ANTE_ATTR";
+        push @$errors, "ALIGN=ANTE";
+        my $child_info = join " ", map {$_->functor . "." . $_->formeme} @$aligned;
+        push @$errors, "N $child_info";
         return $par;
     }
     if ($formeme =~ /^v/) {
@@ -176,16 +178,12 @@ sub filter_siblings {
         return $relat_child if (defined $relat_child);
         
         my @cor_children = grep {$_->t_lemma eq "#Cor"} $par->get_children();
-        if (@cor_children == 0) {
-            push @$errors, "NO_COR_CHILDREN=" . $formeme;
-            #return "EN_REF_PAR:" . $formeme;
-            return;
-        }
-        if (@cor_children > 1) {
-            push @$errors, "MANY_COR_CHILDREN";
-            return;
-        }
-        return $cor_children[0];
+        return $cor_children[0] if (@cor_children == 1);
+
+        push @$errors, "ALIGN=ANTE";
+        my $child_info = join " ", map {$_->functor . "." . $_->formeme} @$aligned;
+        push @$errors, "V $child_info";
+        return $par;
     }
     push @$errors, "BADFORMEME_EN_REF_PAR";
     return;
@@ -205,17 +203,34 @@ sub select_via_self_siblings {
 sub filter_appos {
     my ($aligned, $tnode, $errors) = @_;
     my @pars = map {$_->get_parent} @$aligned;
-    my @no_verb_appos = grep {(defined $_->t_lemma && $_->t_lemma eq "#EmpVerb") || (defined $_->functor && $_->functor eq "APPS")} @pars;
-    if (!@no_verb_appos) {
-        push @$errors, "NO_EMPVERB_APPOS";
+    my @emp_verb = grep {defined $_->t_lemma && $_->t_lemma eq "#EmpVerb"} @pars;
+    my @appos = grep {defined $_->functor && $_->functor eq "APPS"} @pars;
+    if (@appos) {
+        push @$errors, "APPOS_DIRECT";
+        return $appos[0];
+    }
+    if (@emp_verb) {
+        my $emp_verb_par = $emp_verb[0]->get_parent;
+        if (defined $emp_verb_par->functor && $emp_verb_par->functor eq "APPS") {
+            push @$errors, "APPOS_EMPVERB";
+            return $emp_verb_par;
+        }
+        if (defined $emp_verb_par->formeme && $emp_verb_par->formeme =~ /^([nv])/) {
+            my $pos = uc($1);
+        
+            push @$errors, "ALIGN=ANTE";
+            push @$errors, $pos. " " .$emp_verb[0]->functor. "." .$emp_verb[0]->formeme;
+            return $emp_verb_par;
+        }
+        push @$errors, "EMPVERB_BAD_FORMEME";
         return;
     }
     #my ($cs_ref_par) = $cs_ref_tnode->get_eparents({or_topological => 1});
     #if ($cs_ref_par->t_lemma ne "být") {
     #    return "NO_VERB_APPOS_NOBYT";
     #}
-    push @$errors, "EMPVERB_APPOS";
-    return $no_verb_appos[0];
+    push @$errors, "NO_EMPVERB_APPOS";
+    return;
 }
 
 sub _is_coref_gram_to_grandpar {

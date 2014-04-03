@@ -95,19 +95,16 @@ sub print_cs_relpron_en_counterparts {
             #return "ANODE:" . join ",", (map {$_->lemma} @assoc_anodes);
             return join ",", (map {$_->lemma} @assoc_anodes);
         }
-        my ($no_cor_child_str) = grep {$_ =~ /^NO_COR_CHILDREN/} @$robust_align_err;
-        if ($no_cor_child_str) {
-            $no_cor_child_str =~ s/^NO_COR_CHILDREN=//;
-            return "EN_REF_PAR:" . $no_cor_child_str;
-        }
-        return "NOUN_ANTE_ATTR" if any {$_ eq "NOUN_ANTE_ATTR"} @$robust_align_err;
-        return "EMPVERB_APPOS" if any {$_ eq "EMPVERB_APPOS"} @$robust_align_err;
+        return "V" if any {$_ =~ /^V /} @$robust_align_err;
+        return "N" if any {$_ =~ /^N /} @$robust_align_err;
+        return "APPOS" if any {$_ =~ /^APPOS/} @$robust_align_err;
     }
     if (@en_tnodes) {
         return join ",", (map {$_->t_lemma} @en_tnodes);
     }
     else {
-        return join ",", @$robust_align_err;
+        return "UNKNOWN";
+        #return join ",", @$robust_align_err;
     }
 }
 
