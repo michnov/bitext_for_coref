@@ -48,22 +48,25 @@ sub print_en_perspron_cs_counterparts {
 
     my $sieves = [ 'self', 'eparents', 'siblings', \&access_via_ancestor ];
     my $filters = [ \&filter_self, \&filter_eparents, \&filter_siblings, \&filter_ancestor ];
-    my ($result_node, $errors) = Treex::Tool::Align::Utils::aligned_robust($en_tnode, $self->align_filters, $sieves, $filters);
+    my ($result_nodes, $errors) = Treex::Tool::Align::Utils::aligned_robust($en_tnode, $self->align_filters, $sieves, $filters);
 
     my $result = "";
     if (grep {$_ eq "BENEF_FOUND"} @$errors) {
         $result = "BENEF:";
     }
 
-    if (!defined $result_node) {
+    if (!defined $result_nodes) {
         my $anode = $tnode->get_lex_anode();
         return (undef, $errors) if (!defined $anode);
         return "EN_ONLY:" . $anode->tag;
     }
-    
-    my $result_anode = $result_node->get_lex_anode();
-    return "GENERATED" if (!defined $result_anode);
-    return $result . substr($result_anode->tag, 0, 2);
+    #$Data::Dumper::Maxdepth = 1;
+    #print STDERR Dumper($result_nodes);
+    $result .= join ",", map {
+        my $result_anode = $_->get_lex_anode();
+        defined $result_anode ? substr($result_anode->tag, 0, 2) : "GENERATED";
+    } @$result_nodes;
+    return $result;
 }
 
 sub access_via_ancestor {
