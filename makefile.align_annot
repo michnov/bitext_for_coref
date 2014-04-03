@@ -17,7 +17,18 @@ ifeq (${LRC}, 1)
 LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
 endif
 
-#=================================== ANNOTATION ==================================
+#=========================================== VARIABLES =====================================================
+
+ALIGN_ANNOT_LANG=en
+ALIGN_ANNOT_TYPE=$(ALIGN_ANNOT_LANG)_perspron
+
+ifeq ($(ALIGN_ANNOT_LANG),en)
+ALIGN_ANNOT_LANG2=cs
+else
+ALIGN_ANNOT_LANG2=en
+endif
+
+#=================================== PREPARE DATA FOR MANUAL ANNOTATION ==================================
 
 add_robust_ali :
 	-treex $(LRC_FLAGS) -Sref \
@@ -31,15 +42,7 @@ add_robust_ali :
 	find tmp/robust_ali -path "*.streex" | sort | sed 's/^.*\///' > tmp/robust_ali/list
 
 #ALIGN_ANNOT_LIST=cs_relpron.is_relat.ref.shuffled.1-200.list
-ALIGN_ANNOT_LIST=annot/en_perspron/is_relat.ref.sec19.list
-ALIGN_ANNOT_TYPE=$(shell echo $(ALIGN_ANNOT_LIST) | cut -d'/' -f2)
-ALIGN_ANNOT_LANG=$(shell echo $(ALIGN_ANNOT_TYPE) | cut -d'_' -f1)
-
-ifeq ($(ALIGN_ANNOT_LANG),en)
-ALIGN_ANNOT_LANG2=cs
-else
-ALIGN_ANNOT_LANG2=en
-endif
+ALIGN_ANNOT_LIST=annot/$(ALIGN_ANNOT_TYPE)/is_relat.ref.sec19.list
 
 prepare_align_annot :
 	-treex $(LRC_FLAGS) -L$(ALIGN_ANNOT_LANG) -Sref \
@@ -47,3 +50,16 @@ prepare_align_annot :
 		My::AnnotAlignWrite align_lang=$(ALIGN_ANNOT_LANG2) to='.' substitute='{^.*/([^\/]*)}{tmp/annot/$(ALIGN_ANNOT_TYPE)/$$1}' extension='.txt'
 	find tmp/annot/$(ALIGN_ANNOT_TYPE) -path "*.txt" -exec cat {} \; > tmp/annot/$(ALIGN_ANNOT_TYPE).all
 
+
+#================================ IMPORTING THE MANUAL ANNOTATION BACK TO THE TREEBANK =======================
+
+GOLD_ANNOT_FILE=annot/$(ALIGN_ANNOT_TYPE)/subset_to_remove
+#GOLD_ANNOT_FILE=annot/$(ALIGN_ANNOT_TYPE)/align.ref.sec19.misko.annot
+GOLD_ANNOT_TREES_DIR=tmp/annot/$(ALIGN_ANNOT_TYPE)/trees_manual_annot
+
+import_align :
+	-treex $(LRC_FLAGS) -L$(ALIGN_ANNOT_LANG) -Sref \
+		Read::Treex from=@$(DATA_DIR)/list \
+		My::AlignmentLoader from=$(GOLD_ANNOT_FILE) align_language=$(ALIGN_ANNOT_LANG2) \
+		My::ProjectAlignment trg_selector=src \
+		Write::Treex path=$(GOLD_ANNOT_TREES_DIR)
