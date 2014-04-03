@@ -115,6 +115,10 @@ sub filter_self {
 
 sub filter_eparents {
     my ($aligned, $tnode, $errors) = @_;
+
+    my @refer_to_grandpar_tnodes = grep {_is_coref_gram_to_grandpar($_)} @$aligned;
+    return @refer_to_grandpar_tnodes if (@refer_to_grandpar_tnodes);
+
     my @functor_tnodes = Treex::Block::My::BitextCorefStats::filter_by_functor($aligned, $tnode->functor, $errors);
 
     if (!@functor_tnodes) {
@@ -133,7 +137,7 @@ sub filter_eparents {
 
 sub filter_by_coref {
     my ($nodes, $errors) = @_;
-    my @coref_nodes = grep {scalar($_->get_coref_nodes) > 0} @$nodes;
+    my @coref_nodes = grep {scalar($_->get_coref_gram_nodes) > 0} @$nodes;
     if (@coref_nodes == 0) {
         push @$errors, "NO_EN_REF_COREF_CHILDREN";
         return;
@@ -165,10 +169,12 @@ sub filter_siblings {
         return $par;
     }
     if ($formeme =~ /^v/) {
+        my @refer_to_grandpar_tnodes = grep {_is_coref_gram_to_grandpar($_)} $par->get_children;
+        return @refer_to_grandpar_tnodes if (@refer_to_grandpar_tnodes);
+
         my ($relat_child) = grep {Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($_)} $par->get_children();
-        if (defined $relat_child) {
-            return $relat_child;
-        }
+        return $relat_child if (defined $relat_child);
+        
         my @cor_children = grep {$_->t_lemma eq "#Cor"} $par->get_children();
         if (@cor_children == 0) {
             push @$errors, "NO_COR_CHILDREN=" . $formeme;
@@ -210,6 +216,17 @@ sub filter_appos {
     #}
     push @$errors, "EMPVERB_APPOS";
     return $no_verb_appos[0];
+}
+
+sub _is_coref_gram_to_grandpar {
+    my ($tnode) = @_;
+    my $grandpar = $tnode;
+    for (my $i = 0; $i < 2; $i++) {
+        $grandpar = $grandpar->get_parent;
+        return 0 if (!defined $grandpar);
+    }
+    my @coref_gram = $tnode->get_coref_gram_nodes();
+    return any {$_ == $grandpar} @coref_gram;
 }
 
 
