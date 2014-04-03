@@ -57,12 +57,12 @@ sub print_info {
 
 sub filter_by_functor {
     my ($nodes, $functor, $errors) = @_;
-    my ($functor_tnode) = grep {$_->functor eq $functor} @$nodes;
-    if (!defined $functor_tnode) {
+    my @functor_tnodes = grep {$_->functor eq $functor} @$nodes;
+    if (!@functor_tnodes) {
         push @$errors, "NO_FUNCTOR_TNODE";
         return;
     }
-    return $functor_tnode;
+    return @functor_tnodes;
 }
 
 sub eparents_of_aligned_siblings {

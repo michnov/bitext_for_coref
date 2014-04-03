@@ -34,9 +34,11 @@ sub process_tnode {
     my $sieves = [ 'self', 'eparents', 'siblings', \&access_via_ancestor ];
     my $filters = [ \&filter_self, \&filter_eparents, \&filter_siblings, \&filter_ancestor ];
 
-    my ($result_node, $errors) = Treex::Tool::Align::Utils::aligned_robust($tnode, [ $self->_align_zone ], $sieves, $filters);
-    if (defined $result_node) {
-        Treex::Tool::Align::Utils::add_aligned($tnode, $result_node, $self->type);
+    my ($result_nodes, $errors) = Treex::Tool::Align::Utils::aligned_robust($tnode, [ $self->_align_zone ], $sieves, $filters);
+    if (defined $result_nodes) {
+        foreach (@$result_nodes) {
+            Treex::Tool::Align::Utils::add_aligned($tnode, $_, $self->type);
+        }
     }
 }
 
@@ -76,19 +78,21 @@ sub access_via_ancestor {
 sub filter_self {
     my ($aligned, $tnode, $errors) = @_;
 
-    my $aligned_first = shift @$aligned;
-    my $anode = $aligned_first->get_lex_anode();
-    if (!defined $anode || ($anode->tag !~ /^P[8SDP5]/)) {
+    my @filtered = grep {
+        my $anode = $_->get_lex_anode();
+        defined $anode && $anode->tag !~ /^P[8SDP5]/
+    } @$aligned;
+    if (!@filtered) {
         push @$errors, "NOPRON_CS_REF_TNODE";
         return;
     }
-    return $aligned_first;
+    return @filtered;
 }
 
 sub filter_eparents {
     my ($aligned, $tnode, $errors) = @_;
-    my $filtered = Treex::Block::My::BitextCorefStats::filter_by_functor($aligned, $tnode->functor, $errors);
-    return $filtered;
+    my @filtered = Treex::Block::My::BitextCorefStats::filter_by_functor($aligned, $tnode->functor, $errors);
+    return @filtered;
 }
 
 sub filter_siblings {
@@ -96,24 +100,24 @@ sub filter_siblings {
     my $par = Treex::Block::My::BitextCorefStats::eparents_of_aligned_siblings($aligned, $errors);
     return if (!$par);
     my @kids = $par->get_echildren({or_topological => 1});
-    my $filtered = Treex::Block::My::BitextCorefStats::filter_by_functor(\@kids, $tnode->functor, $errors);
-    return $filtered;
+    my @filtered = Treex::Block::My::BitextCorefStats::filter_by_functor(\@kids, $tnode->functor, $errors);
+    return @filtered;
 }
 
 sub filter_ancestor {
     my ($aligned, $tnode, $errors) = @_;
 
-    my ($aligned_dative_child) = grep {
+    my @aligned_dative_childs = grep {
         my $anode = $_->get_lex_anode; 
         if (defined $anode) {$anode->tag =~ /^P...3/}
     } @$aligned;
     
-    if (!defined $aligned_dative_child) {
+    if (!@aligned_dative_childs) {
         push @$errors, "NO_CS_REF_DATIVE_CHILD";
         return;
     }
     push @$errors, "BENEF_FOUND";
-    return $aligned_dative_child;
+    return @aligned_dative_child;
 }
 
 1;
