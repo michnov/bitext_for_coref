@@ -34,18 +34,22 @@ sub _get_coap_members {
 
 sub _get_ref_antes {
     my ($self, $ref_tnode) = @_;
-    return () if (!defined $ref_tnode);
+    return [] if (!defined $ref_tnode);
     my @all_antes = $ref_tnode->get_coref_chain();
+    return [] if (!@all_antes);
     my @all_nodes = $self->_sent_window->nodes_in_surroundings( 
         $ref_tnode, -$self->prev_sents_num, 0, {preceding_only => 1}  
     );
     my @antes_window = grep {my $ante = $_; any {$_ == $ante} @all_nodes} @all_antes;
-    return @antes_window;
+    return undef if (!@antes_window);
+    return \@antes_window;
 }
 
 # src tnodes are already filtered candidates
 sub process_tnode {
     my ($self, $src_tnode) = @_;
+
+    return if ($src_tnode->is_root);
 
     return if (!$self->_anaph_cands_filter->is_candidate( $src_tnode ));
 
@@ -56,17 +60,17 @@ sub process_tnode {
         [ {selector => "ref", language => $src_tnode->language} ]
     );
 
-    log_info $src_tnode->get_address;
     my ($ref_tnode) = Treex::Tool::Align::Utils::aligned_transitively(
         [ $src_tnode ],
         [ {selector => "ref", language => $src_tnode->language} ]
     );
-    my @ref_antes = $self->_get_ref_antes($ref_tnode);
+    my $ref_antes = $self->_get_ref_antes($ref_tnode);
+    return if (!defined $ref_antes);
+    log_info "ADDRESS: ".$src_tnode->get_address;
 
-    my @both_antes = grep {my $ref_ante = $_; any {$_ == $ref_ante} @ref_src_antes} @ref_antes;
+    my @both_antes = grep {my $ref_ante = $_; any {$_ == $ref_ante} @ref_src_antes} @$ref_antes;
 
-    log_info $src_tnode->get_address;
-    printf {$self->_file_handle} "%d %d %d\n", scalar @ref_antes, scalar @src_antes, scalar @both_antes;
+    printf {$self->_file_handle} "%d %d %d\n", scalar @$ref_antes, scalar @src_antes, scalar @both_antes;
 }
 
 1;
