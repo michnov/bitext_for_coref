@@ -106,12 +106,18 @@ LANGUAGE=cs
 
 DATA_EXTRACT_DIR=/home/mnovak/projects/czeng_coref
 
+ifeq ($(DATA_ID),pcedt)
+DATA_ID_FOR_EXTRACT = pcedt_bi
+endif
+
 extract_data :
 	$(MAKE) -C $(DATA_EXTRACT_DIR) train_table \
-		DATA_SOURCE=$(DATA_ID) \
+		DATA_SOURCE=$(DATA_ID_FOR_EXTRACT) \
 		DATA_SET=$(DATA_SET) \
 		ANOT=analysed \
-		LANGUAGE=$(LANGUAGE)
+		LANGUAGE=$(LANGUAGE) \
+		DATA_TABLE_SCENARIO=/home/mnovak/projects/coref_bitext/scenarios/before_data_table.scen \
+		LRC=$(LRC)
 
 #----------------------------- train, test, eval ----------------------------------
 
