@@ -30,7 +30,7 @@ ifeq ($(DATA_ID),pcedt)
 DATA_ID_FOR_EXTRACT = pcedt_bi
 endif
 
-COREF_PRINTER_PARAMS=aligned_feats=0
+COREF_PRINTER_PARAMS=aligned_feats=1
 
 extract_data :
 	$(MAKE) -C $(DATA_EXTRACT_DIR) train_table \
