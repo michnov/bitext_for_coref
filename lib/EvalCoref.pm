@@ -1,5 +1,7 @@
 package Treex::Block::My::EvalCoref;
 
+# TODO: this should probably do the same thing as Treex::Block::Eval::Coref - unify it
+
 use Moose;
 use Treex::Core::Common;
 use List::MoreUtils qw/any/;
