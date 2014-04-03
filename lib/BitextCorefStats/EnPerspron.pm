@@ -71,11 +71,15 @@ sub print_en_perspron_cs_counterparts {
         return (undef, $errors) if (!defined $anode);
         return "EN_ONLY:" . $anode->tag;
     }
-    $result .= join ",", map {
-        my $result_anode = $_->get_lex_anode();
-        defined $result_anode ? substr($result_anode->tag, 0, 2) : "GENERATED";
-    } @$result_nodes;
-    return $result;
+    #$result .= join ",", map {
+    #    my $result_anode = $_->get_lex_anode();
+    #    defined $result_anode ? substr($result_anode->tag, 0, 2) : "GENERATED";
+    #} @$result_nodes;
+    my $result_anode = $result_nodes->[0]->get_lex_anode();
+    if (!defined $result_anode) {
+        return "GENERATED";
+    }
+    return $result . substr($result_anode->tag, 0, 2);
 }
 
 
