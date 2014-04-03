@@ -50,3 +50,18 @@ Statistics on PCEDT-train "gold" (i.e. analysed + gold coreference) data:
         - 1 ellipsis of the antecedent
             - data/analysed/pcedt/train/0001/wsj_1819.final.treex.gz##37.EnglishT-wsj_1819-s37-t10
                 EN: He said the decision was the first in which a federal appeals court has ruled whether administrative government proceedings qualify as litigation .
+* inspecting "that IN AuxC"
+    - 3957 occurences
+    - mostly marked because of wrong parsing
+    - 302 doesn't have a child in a-tree
+        - 259 of them are coreferential
+* inspecting "where WRB NR"
+    - 102 non-coreferential
+        - most of them free relative clauses
+
+- given the statistics we propose and implement a new rule (Treex::Tool::Coreference::NodeFilter::RelPron):
+    1) its tag is ~ ^W (WP, WRB, WDT, DT, WP$)
+    2) its lemma is "that", its tag is "IN" and does not have a child
+
+    - selecting 8430 nodes
+    - covering 6437 out of 6501 (non-PRP) grammatically coreferential nodes in "en_ref"
