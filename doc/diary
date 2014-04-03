@@ -48,3 +48,11 @@
 ---------------------
 - fixed the ML framework bug
     - tmp files are named after process id $$, not the current date
+
+20.2.2014
+---------------------
+- ML framework
+    - printing out featset description instead of a full list in the HTML stats
+    - featset can be qualified with a name
+    - possible to reference to already defined featset
+        - TODO: a named featset without using it in experiments
