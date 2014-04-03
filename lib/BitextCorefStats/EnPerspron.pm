@@ -3,6 +3,7 @@ package Treex::Block::My::BitextCorefStats::EnPerspron;
 use Moose;
 use Treex::Tool::Align::Utils;
 use Treex::Core::Common;
+use Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron;
 
 extends 'Treex::Block::My::BitextCorefStats';
 
@@ -46,8 +47,18 @@ sub print_en_perspron_cs_counterparts {
         return (undef, ["NO_EN_REF_TNODE"]) if (!defined $en_tnode);
     }
 
-    my $sieves = [ 'self', 'eparents', 'siblings', \&access_via_ancestor ];
-    my $filters = [ \&filter_self, \&filter_eparents, \&filter_siblings, \&filter_ancestor ];
+    my $sieves = [ 
+        'self', 
+        'eparents',
+        'siblings',
+        \&Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron::access_via_ancestor
+    ];
+    my $filters = [ 
+        \&Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron::filter_self, 
+        \&Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron::filter_eparents,
+        \&Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron::filter_siblings, 
+        \&Treex::Block::My::BitextCorefStats::AddRobustAlignmentPerspron::filter_ancestor
+    ];
     my ($result_nodes, $errors) = Treex::Tool::Align::Utils::aligned_robust($en_tnode, $self->align_filters, $sieves, $filters);
 
     my $result = "";
@@ -69,68 +80,5 @@ sub print_en_perspron_cs_counterparts {
     return $result;
 }
 
-sub access_via_ancestor {
-    my ($tnode, $align_filters, $errors) = @_;
-
-    my $verb_par = $tnode->get_parent();
-    while (defined $verb_par && (!defined $verb_par->formeme || $verb_par->formeme !~ /^v/)) {
-        $verb_par = $verb_par->get_parent();
-    }
-    if (!defined $verb_par) {
-        push @$errors, "NO_EN_REF_VERB_ANCESTOR";
-        return;
-    }
-
-    my @aligned_verb_par = Treex::Tool::Align::Utils::aligned_transitively([$verb_par], $align_filters);
-    if (!@aligned_verb_par) {
-        push @$errors, "NO_CS_REF_VERB_PAR";
-        return;
-    }
-    return @aligned_verb_par;
-}
-
-sub filter_self {
-    my ($aligned, $tnode, $errors) = @_;
-
-    my $aligned_first = shift @$aligned;
-    my $anode = $aligned_first->get_lex_anode();
-    if (!defined $anode || ($anode->tag !~ /^P[8SDP5]/)) {
-        push @$errors, "NOPRON_CS_REF_TNODE";
-        return;
-    }
-    return $aligned_first;
-}
-
-sub filter_eparents {
-    my ($aligned, $tnode, $errors) = @_;
-    my $filtered = Treex::Block::My::BitextCorefStats::filter_by_functor($aligned, $tnode->functor, $errors);
-    return $filtered;
-}
-
-sub filter_siblings {
-    my ($aligned, $tnode, $errors) = @_;
-    my $par = Treex::Block::My::BitextCorefStats::eparents_of_aligned_siblings($aligned, $errors);
-    return if (!$par);
-    my @kids = $par->get_echildren({or_topological => 1});
-    my $filtered = Treex::Block::My::BitextCorefStats::filter_by_functor(\@kids, $tnode->functor, $errors);
-    return $filtered;
-}
-
-sub filter_ancestor {
-    my ($aligned, $tnode, $errors) = @_;
-
-    my $aligned_first = shift @$aligned;
-    my ($aligned_dative_child) = grep {
-        my $anode = $_->get_lex_anode; 
-        if (defined $anode) {$anode->tag =~ /^P...3/}
-    } $aligned_first->get_echildren({or_topological => 1});
-    
-    if (!defined $aligned_dative_child) {
-        push @$errors, "NO_CS_REF_DATIVE_CHILD";
-        return;
-    }
-    push @$errors, "BENEF_FOUND";
-    return $aligned_dative_child;
-}
 
 1;
