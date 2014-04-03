@@ -18,7 +18,7 @@ endif
 
 LRC=1
 ifeq (${LRC}, 1)
-LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
+LRC_FLAGS = -p --qsub '-hard -l mem_free=3G -l act_mem_free=3G -l h_vmem=3G' --jobs ${JOBS_NUM}
 endif
 
 morpho_pcedt : data/${DATA_SET}.pcedt.analysed.morpho.list
@@ -76,7 +76,7 @@ $(DATA_DIR)/$(DATA_NEXT_VERSION)/list : $(DATA_DIR)/$(DATA_VERSION)/list
 		Read::Treex from=@$< \
 		Util::Eval anode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$anode, {language => "en", selector => "src"});' \
 		Util::Eval tnode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$tnode, {language => "en", selector => "src"});' \
-		Align::A::AlignMGiza from_language=cs from_selector=src to_language=en to_selector=src dir_or_sym=intersection,grow-diag-final-and model_from_share=cs-en \
+		Align::A::AlignMGiza from_language=cs from_selector=src to_language=en to_selector=src dir_or_sym=intersection,grow-diag-final-and model_from_share=cs-en cpu_cores=1 \
 		My::AlignmentEconomic \
 		Align::T::CopyAlignmentFromAlayer selector=src language=cs to_selector=src to_language=en \
 		Align::T::AlignCzechPersprons selector=src language=cs to_selector=src to_language=en \
