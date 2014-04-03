@@ -7,20 +7,21 @@ DATA_ID = pcedt
 DATA_VERSION := $(shell cat data/analysed/$(DATA_ID)/$(DATA_SET)/last_id 2> /dev/null || echo 0000)
 DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)/$(DATA_VERSION)
 
-#JOBS_NUM = 50
-#
-#ifeq (${DATA_SET}, train)
-#JOBS_NUM = 100
-#endif
-#
+JOBS = 50
+
 LRC=1
-#ifeq (${LRC}, 1)
-#LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
-#endif
+ifeq (${LRC}, 1)
+LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS}
+endif
 
 #==================================== ML =========================================
 
 LANGUAGE=en
+ifeq ($(LANGUAGE),en)
+ALIGNED_LANGUAGE=cs
+else
+ALIGNED_LANGUAGE=en
+endif
 
 #----------------------------- data extraction -----------------------------------
 
@@ -42,6 +43,20 @@ extract_data :
 		COREF_PRINTER_PARAMS=$(COREF_PRINTER_PARAMS) \
 		LRC=$(LRC) \
 		DESC="$(DESC)"
+
+#----------------------------- coreference projection ----------------------------
+
+ML_FRAMEWORK=/home/mnovak/projects/ml_framework
+
+projection_eval :
+	mkdir -p tmp/projection_eval
+	-treex $(LRC_FLAGS) -Len -Ssrc \
+		Read::Treex from=@$(DATA_DIR)/list \
+		A2T::StripCoref type=text language=$(LANGUAGE) \
+		My::ProjectCoreference language=$(ALIGNED_LANGUAGE) trg_language=$(LANGUAGE) \
+		My::EvalCoref language=$(LANGUAGE) to='.' substitute='{^.*/([^\/]*)}{tmp/projection_eval/$$1.$(DATA_SET).txt}'
+	find tmp/projection_eval -path "*.$(DATA_SET).txt" | sort | xargs cat > tmp/projection_eval/$(DATA_SET).all
+	cat tmp/projection_eval/$(DATA_SET).all | $(ML_FRAMEWORK)/scripts/eval.pl --acc --prf
 
 #============================ STANFORD COREF =======================================
 
