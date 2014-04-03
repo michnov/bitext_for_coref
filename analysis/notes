@@ -60,6 +60,11 @@
     - data/analysed/pcedt/train/wsj_0261.final.treex.gz##4
         CS: Roztrhaný černý pořadač, přetékající recepty nashromážděnými za 18 let, který držel pohromadě gumičkami
         EN: The tattered black binder, bulging with 18 years' worth of recipes held together by rubber bands
+- it can be expressed by an adjectival which is hard to be directly translated to Czech, so it must be reformulated using a relative pronoun
+    - wsj_0003.final.treex.gz##4
+        CS: New England Journal of Medicine, v časopise, který k problému pravděpodobně znovu přiláká pozornost.
+        EN: New England Journal of Medicine, a forum likely to bring new attention to the problem.
+    
 
 ------------------ PERSONAL PRONOUN ----------------------------
 
