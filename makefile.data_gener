@@ -1,10 +1,14 @@
 SHELL=/bin/bash
 
+DATE := $(shell date +%Y-%m-%d_%H-%M-%S)
+TMT_VERSION := $(shell echo `git rev-parse --abbrev-ref HEAD`:`git rev-parse HEAD | cut -c 1-10`)
+
 DATA_SET = train
 DATA_ID = pcedt
 
-DATA_VERSION := $(shell cat data/analysed/$(DATA_ID)/$(DATA_SET)/last_id 2> /dev/null || echo 0000)
-DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)/$(DATA_VERSION)
+DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)
+DATA_VERSION := $(shell cat $(DATA_DIR)/last_id 2> /dev/null || echo 0000)
+DATA_NEXT_VERSION := $(shell expr $(DATA_VERSION) + 1 | perl -ne 'printf "%.4d", $$_;' )
 
 JOBS_NUM = 50
 
@@ -65,3 +69,18 @@ data/${DATA_SET}.${DATA_ID}.analysed.list : data/${DATA_SET}.${DATA_ID}.analysed
 	ls data/analysed/${DATA_ID}/${DATA_SET}/*.final.treex.gz > data/${DATA_SET}.${DATA_ID}.analysed.list
 
 
+fix_alignment : $(DATA_DIR)/$(DATA_NEXT_VERSION)/list
+$(DATA_DIR)/$(DATA_NEXT_VERSION)/list : $(DATA_DIR)/$(DATA_VERSION)/list
+	mkdir -p $(DATA_DIR)/$(DATA_NEXT_VERSION)
+	-treex $(LRC_FLAGS) -Lcs -Ssrc \
+		Read::Treex from=@$< \
+		Util::Eval anode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$anode, {language => "en", selector => "src"});' \
+		Util::Eval tnode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$tnode, {language => "en", selector => "src"});' \
+		Align::A::AlignMGiza from_language=cs from_selector=src to_language=en to_selector=src dir_or_sym=intersection,grow-diag-final-and model_from_share=cs-en \
+		My::AlignmentEconomic \
+		Align::T::CopyAlignmentFromAlayer selector=src language=cs to_selector=src to_language=en \
+		Align::T::AlignCzechPersprons selector=src language=cs to_selector=src to_language=en \
+		Write::Treex path=$(DATA_DIR)/$(DATA_NEXT_VERSION)
+	find $(DATA_DIR)/$(DATA_NEXT_VERSION) -name '*.final.treex.gz' | sort > $@
+	echo -e "$(DATA_NEXT_VERSION)\t$(DATE)\t$(TMT_VERSION)\treplacing old alignment with cs-en (inter,gdfa) alignment by MGiza trained on CzEng 1.0" >> $(DATA_DIR)/history
+	echo $(DATA_NEXT_VERSION) > $(DATA_DIR)/last_id		
