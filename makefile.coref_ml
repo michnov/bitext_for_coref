@@ -13,7 +13,7 @@ DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)/$(DATA_VERSION)
 #JOBS_NUM = 100
 #endif
 #
-#LRC=1
+LRC=1
 #ifeq (${LRC}, 1)
 #LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
 #endif
