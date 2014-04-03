@@ -90,8 +90,8 @@ filter_alignment : $(DATA_DIR)/$(DATA_VERSION)/list
 	mkdir -p $(DATA_DIR)/$(DATA_NEXT_VERSION)
 	-treex $(LRC_FLAGS) -Lcs -Ssrc \
 		Read::Treex from=@$< \
-		Util::Eval anode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$anode, {language => "en", selector => "src", rel_types => ["!left", "!right", "!revgdfa", ".*"]});' \
-		Util::Eval tnode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$tnode, {language => "en", selector => "src", rel_types => ["!left", "!right", "!revgdfa", ".*"]});' \
+		Util::Eval anode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$anode, {language => "en", selector => "src", rel_types => ["!int", "!([^v]|^)gdfa", "!rule-based", ".*"]});' \
+		Util::Eval tnode='use Treex::Tool::Align::Utils; Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($$tnode, {language => "en", selector => "src", rel_types => ["!int", "!([^v]|^)gdfa", "!rule-based", ".*"]});' \
 		Write::Treex path=$(DATA_DIR)/$(DATA_NEXT_VERSION)
 	find $(DATA_DIR)/$(DATA_NEXT_VERSION) -name '*.final.treex.gz' | sort | sed 's/^.*\///' > $(DATA_DIR)/$(DATA_NEXT_VERSION)/list
 	echo -e "$(DATA_NEXT_VERSION)\t$(DATE)\t$(TMT_VERSION)\tremoving left, right and revgdfa links from the original alignments calculated on train and dev portions of PCEDT" >> $(DATA_DIR)/history
