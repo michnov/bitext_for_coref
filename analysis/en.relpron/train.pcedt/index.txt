@@ -1,0 +1,52 @@
+SELECTING ENGLISH RELATIVE PRONOUNS:
+
+- so far, 'gram/indeftype' is set to nodes that satisfy the following assumptions:
+    1) their a-lex node has one of these tags: WP, WRB, WDT, DT, WP$
+    2) it is an anaphor of grammatical coreference
+- however, the assumption 2 is based on the coreference relation we're trying to reveal
+- => we have to find another definition using just the annotation of morhology and syntax
+
+Statistics on PCEDT-train "gold" (i.e. analysed + gold coreference) data:
+* distribution of lemmas, tags and afuns among grammatically coreferential anaphors (only those expressed on the surface), 
+   excluding PRP and PRP$ tags (personal and reflexive pronouns)
+        CMD: treex  --p --jobs 100 -Len -Sref Read::Treex from=@data/analysed/pcedt/train/0001/list 
+                Util::Eval tnode='
+                    my @coref = $tnode->get_coref_gram_nodes; 
+                    if (@coref) {
+                        my $anode = $tnode->get_lex_anode;
+                        if (defined $anode) {
+                            print "LEMMA+TAG+AFUN: " . $anode->lemma . " " . $anode->tag . " ". $anode->afun . "\n";
+                        }
+                    }' > analysis/en.relpron/train.pcedt/coref_gram.anaph.lemma_tag_afun
+             cat analysis/en.relpron/train.pcedt/coref_gram.anaph.lemma_tag_afun | cut -d' ' -f2,3,4 | grep -v PRP | distr
+        RES:
+            29.04   29.04   2.78    1888    that WDT Sb
+            25.49   54.53   5.56    1657    which WDT Sb
+            23.18   77.71   8.33    1507    who WP Sb
+            4.85    82.56   11.11   315 which WDT Adv
+            4.46    87.02   13.89   290 that IN AuxC
+            3.49    90.51   16.67   227 where WRB NR
+            2.48    92.99   19.44   161 when WRB NR
+            2.17    95.15   22.22   141 which WDT Obj
+            1.23    96.39   25.00   80  whose WP$ Sb
+            0.51    96.89   27.78   33  that DT Sb
+            0.49    97.39   30.56   32  that WDT Obj
+            0.46    97.85   33.33   30  who WP Obj
+            0.25    98.09   36.11   16  what WP Obj
+            0.23    98.32   38.89   15  what WP Sb
+            0.22    98.54   41.67   14  which WDT Atr
+            0.17    98.71   44.44   11  who WP Adv
+            0.17    98.88   47.22   11  how WRB NR
+            0.15    99.03   50.00   10  that DT Obj
+
+* inspecting "which WDT Adv"
+    - 349 occurences
+    - in all cases, "which" is dependant on a preposition (tags IN or TO)
+    - 27 non-coreferential
+        - 21 errors
+        - 5 free relative clauses (fused relative pronoun) [http://en.wikipedia.org/wiki/Relative_pronoun]
+            - data/analysed/pcedt/train/0001/wsj_0719.final.treex.gz##37.EnglishT-wsj_0719-s37-t25
+                EN: ...when it comes to deciding in which market to transact a trade.
+        - 1 ellipsis of the antecedent
+            - data/analysed/pcedt/train/0001/wsj_1819.final.treex.gz##37.EnglishT-wsj_1819-s37-t10
+                EN: He said the decision was the first in which a federal appeals court has ruled whether administrative government proceedings qualify as litigation .
