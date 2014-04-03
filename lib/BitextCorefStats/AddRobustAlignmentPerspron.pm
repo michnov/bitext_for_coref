@@ -117,7 +117,7 @@ sub filter_ancestor {
         return;
     }
     push @$errors, "BENEF_FOUND";
-    return @aligned_dative_child;
+    return @aligned_dative_childs;
 }
 
 1;

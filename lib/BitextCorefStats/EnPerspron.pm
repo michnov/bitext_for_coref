@@ -71,8 +71,6 @@ sub print_en_perspron_cs_counterparts {
         return (undef, $errors) if (!defined $anode);
         return "EN_ONLY:" . $anode->tag;
     }
-    #$Data::Dumper::Maxdepth = 1;
-    #print STDERR Dumper($result_nodes);
     $result .= join ",", map {
         my $result_anode = $_->get_lex_anode();
         defined $result_anode ? substr($result_anode->tag, 0, 2) : "GENERATED";
