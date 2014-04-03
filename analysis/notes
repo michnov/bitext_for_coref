@@ -17,6 +17,11 @@
     - data/analysed/pcedt/train/wsj_0003.final.treex.gz##2
         EN: even brief exposures to it causing symptoms
         CS: i krátké vystavení se krokydolitu způsobuje příznaky
+    - wsj_1929.final.streex##9.EnglishT-wsj_1929-s9-t24
+        - neccessary to use an NP anaphor in Czech, since the future tense covers the gender
+        - using the pronoun, it would match to the subject "politbyro"
+        EN: If Politburo does ...to permit Mr. Krenz to ..., <he> will face ...
+        CS: Pokud se politbyro ..., aby Krenzovi umožnilo ..., bude <Krenz> stát ...
 - turns into a Czech reflexive pronoun
     - data/analysed/pcedt/train/wsj_0003.final.treex.gz##3
         EN: Lorillard Inc. ... stopped using crocidolite in its Micronite cigarette filters
