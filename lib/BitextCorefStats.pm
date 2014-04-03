@@ -6,12 +6,12 @@ use Readonly;
 
 extends 'Treex::Block::Write::BaseTextWriter';
 
-has align_selector => (is => 'ro', isa => 'Str', default => 'ref', required => 1);
-
-Readonly::Hash my %CS_SRC_FILTER => (language => 'cs', selector => 'src');
-Readonly::Hash my %EN_SRC_FILTER => (language => 'en', selector => 'src');
-Readonly::Hash my %CS_REF_FILTER => (language => 'cs', selector => 'ref');
-Readonly::Hash my %EN_REF_FILTER => (language => 'en', selector => 'ref');
+use constant {
+    CS_SRC_FILTER => {language => 'cs', selector => 'src'},
+    EN_SRC_FILTER => {language => 'en', selector => 'src'},
+    CS_REF_FILTER => {language => 'cs', selector => 'ref'},
+    EN_REF_FILTER => {language => 'en', selector => 'ref'},
+};
 
 sub unique {
     my ($a) = @_;
@@ -41,9 +41,7 @@ sub get_prf_counts {
 
 
 sub print_info {
-    my ($self, $tnode, $name, $method) = @_;
-
-    my ($result, $errors) = $self->$method($tnode);
+    my ($self, $name, $address, $result, $errors) = @_;
 
     if (!defined $result) {
         $result = "ERR:" . (join ",", @$errors);
@@ -51,7 +49,7 @@ sub print_info {
     
     print {$self->_file_handle} "$name\t";
     print {$self->_file_handle} $result;
-    print {$self->_file_handle} "\t" . $tnode->get_address;
+    print {$self->_file_handle} "\t" . $address;
     print {$self->_file_handle} "\n";
 }
 
