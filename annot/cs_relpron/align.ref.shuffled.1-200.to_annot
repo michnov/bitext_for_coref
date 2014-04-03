@@ -1,0 +1,1400 @@
+tmp/robust_ali/wsj_0690.final.streex##20.T-wsj0690-001-p1s19a15
+"Ztráta varovných signálů hypoglykémie je složitý problém, který velmi pravděpodobně není způsoben jen použitým typem inzulínu," uvedla americká asociace. 
+``A loss of the warning symptoms of hypoglycemia is a complex problem that is very unlikely to be due simply to the type of insulin used ,'' the American association said .
+Ztráta varovných signálů hypoglykémie je složitý problém <který> velmi pravděpodobně způsoben #Neg.RHEM jen použitým typem inzulínu uvedla americká asociace
+#Gen.ADDR loss warning symptoms hypoglycemia is complex problem <that> is very unlikely be due simply type insulin #Gen.ACT used #Cor.PAT American association said
+ERR:
+
+tmp/robust_ali/wsj_1497.final.streex##1.T-wsj1497-001-p1s0a41
+I když vítám dopis Nicholase McInnese z 18. září, v němž nabízí opravy vaší tabulky "Celosvětová daňová revoluce" (redakční stránka, 29. srpna), jsem překvapen, že opomenul ostatní chyby, které některé z nás zasahují osobně. 
+While welcoming Nicholas McInnes's Sept. 18 letter offering corrections to your ``World-Wide Tax Revolution'' table -LRB-editorial page, Aug. 29-RRB-, I am surprised that he neglected other errors that , for some of us, strike close to home.
+jsem #PersPron.ACT #PersPron.ACT vítám dopis Nicholase McInnese 18 září #PersPron.ACT #Gen.ADDR němž nabízí opravy vaší tabulky Celosvětová daňová revoluce redakční stránka 29 srpna překvapen #PersPron.ACT opomenul ostatní chyby <které> některé nás zasahují osobně
+welcoming #Cor.ACT Nicholas McInnes Sept. 18 letter #Cor.ACT offering #Gen.ADDR corrections #EmpVerb.PAR your World-Wide Tax Revolution table editorial page Aug. 29 I surprised he neglected other errors <that> some us strike close home
+ERR:
+
+tmp/robust_ali/wsj_1579.final.streex##2.T-wsj1579-001-p1s1a12
+Rozhodnutí vyplynulo z uplatnění předkupního práva v dřívější smlouvě, kterou námořnictvo se společností Avondale uzavřelo. 
+The award results from the Navy's exercising of an option in an earlier contract it awarded Avondale .
+#PersPron.PAT #PersPron.ACT Rozhodnutí vyplynulo #PersPron.ACT uplatnění předkupního práva dřívější smlouvě <kterou> námořnictvo společností Avondale uzavřelo
+award results Navy exercising option earlier contract it <#Cor.PAT> awarded Avondale
+ERR:
+
+tmp/robust_ali/wsj_1050.final.streex##3.T-wsj1050-001-p1s2a7
+V novém návrhu, který usiluje o nápravu, se uvádí, že kromě 7 dolarů za akcii v hotovosti nabídne společnost StatesWest podíl nových 6% konvertibilních prioritních akcií společnosti StatesWest v hodnotě 3 dolarů za akcii. 
+The new letter purports to do this, saying that in addition to $7 a share in cash, StatesWest would offer one share of new 6% convertible preferred stock of StatesWest it values at $3 a share.
+#Gen.ACT novém návrhu <který> usiluje nápravu uvádí #PersPron.ADDR 7 dolarů akcii hotovosti nabídne společnost StatesWest podíl nových 6 % konvertibilních prioritních akcií společnosti StatesWest hodnotě 3 dolarů akcii
+new letter purports #Cor.ACT do this saying #Cor.ACT #Gen.ADDR addition $ 7 share cash StatesWest offer #Gen.ADDR one share new 6 % convertible preferred stock StatesWest it values #Cor.PAT $ 3 share
+ERR:
+
+tmp/robust_ali/wsj_0653.final.streex##8.T-wsj0653-001-p1s7a16
+Společnost Rally's také uvedla, že sestavila komisi tří členů představenstva, kteří nejsou spojeni ani s Pattersonovou ani se Sugarmanovou skupinou, aby provedla rozbor situace. 
+Rally's also said it formed a committee of three directors, who aren't associated with either the Patterson or Sugarman groups, to analyze the situation.
+Společnost #Forn.ID Rally ' s také uvedla #PersPron.ACT sestavila komisi tří členů představenstva #Gen.ACT <kteří> spojeni #Neg.RHEM #PersPron.ACT Pattersonovou skupinou ani Sugarmanovou skupinou provedla rozbor situace
+#Gen.ADDR Rally said also it formed committee three directors #Gen.ACT <who> n't associated Patterson or Sugarman groups analyze #Cor.ACT situation
+ERR:
+
+tmp/robust_ali/wsj_0802.final.streex##2.T-wsj0802-001-p1s1a33
+Tato bankovní holdingová společnost se sídlem v Los Angeles minulý pátek prozradila, že si v této arizonské bance vzala obrovskou rezervu na úvěrové ztráty ve výši 350 milionů dolarů, což byl následek zhoršujícího se trhu s nemovitostmi ve státě. 
+The Los Angeles-based bank holding company disclosed last Friday that it had taken a huge $350 million provision for loan losses at the Arizona bank, the result of the state's worsening real-estate market.
+#Gen.ADDR Tato bankovní holdingová společnost sídlem #Forn.LOC Los Angeles minulý pátek prozradila #PersPron.ACT této arizonské bance vzala obrovskou rezervu úvěrové ztráty , výši 350 milionů dolarů <což> byl následek zhoršujícího trhu nemovitostmi státě
+Los Angeles-based #Forn.RSTR bank #Gen.PAT holding #Cor.ACT company disclosed #Gen.ADDR last Friday it taken huge $ 350 million provision loan losses <,> Arizona bank result state #Cor.ACT worsening real-estate market
+ERR:
+
+tmp/robust_ali/wsj_1288.final.streex##1.T-wsj1288-001-p1s0a16
+Japonská velká čtyřka společností s cennými papíry zveřejnila nekonsolidované výsledky za první pololetí, jež odrážejí slabší výkonnost v důsledku pomalejšího obratu na Tokijské burze cenných papírů během července a srpna. 
+Japan's Big Four securities firms posted first-half unconsolidated results that mirrored softer performance as a result of slower turnover on the Tokyo Stock Exchange during July and August.
+Japonská velká čtyřka společností papíry cennými zveřejnila nekonsolidované výsledky pololetí první <jež> odrážejí slabší výkonnost pomalejšího obratu burze Tokijské papírů cenných července a srpna
+Japan Big Four securities firms posted first-half #Cor.PAT unconsolidated #Gen.ACT results <that> mirrored softer performance result slower turnover Tokyo Stock Exchange July and August
+ERR:
+
+tmp/robust_ali/wsj_1304.final.streex##1.T-wsj1304-001-p1s0a16
+Společnost Inco Ltd. oznámila 35% pokles čistého zisku ve třetím čtvrtletí, což je výkon v souladu s očekáváním analytiků. 
+Inco Ltd. posted a 35% decline in third-quarter net income, a performance that was in line with analysts' expectations.
+Společnost #Forn.ID Inco Ltd . oznámila 35 % pokles čistého zisku třetím čtvrtletí , <což> je výkon #PersPron.PAT očekáváním analytiků
+Inco Ltd. posted <,> 35 % decline third-quarter net income performance that was line analysts expectations
+ERR:
+
+tmp/robust_ali/wsj_0184.final.streex##13.T-wsj0184-001-p1s12a33
+Mluvčí společnosti uvedl, že nikdy neslyšel, že by návrh tohoto balíčku opatření pro předčasný odchod do důchodu byl uspíšen tlakem akcionářů nebo potencionálními zájemci o koupi této společnosti, která se příležitostně stává předmětem spekulací o převzetí. 
+An Upjohn spokesman said he had ``heard nothing'' to suggest the early retirement package was spurred by shareholder pressure or a potential bidder for the company, which occasionally has been the target of takeover speculation.
+Mluvčí společnosti uvedl #Neg.RHEM #PersPron.ACT nikdy neslyšel návrh tohoto balíčku opatření předčasný odchod důchodu uspíšen tlakem akcionářů nebo potencionálními zájemci koupi této společnosti <která> příležitostně stává předmětem spekulací #Gen.ACT převzetí #PersPron.PAT
+Upjohn spokesman said #Gen.ADDR he heard nothing #Cor.ACT suggest #Gen.ADDR early retirement package spurred shareholder pressure or potential bidder company <which> occasionally been target takeover speculation
+ERR:
+
+tmp/robust_ali/wsj_0430.final.streex##14.T-wsj0430-001-p1s13a13
+V sázce bylo vyrovnání ve výši 80000 dolarů, týkající se toho, kdo by měl zaplatit jakou část nákladů za úklid na místě bývalé čerpací stanice, kde vytekly podzemní palivové nádrže a zamořily půdu. 
+At stake was an $80,000 settlement involving who should pay what share of cleanup costs at the site of a former gas station, where underground fuel tanks had leaked and contaminated the soil .
+sázce bylo vyrovnání výši 80000 dolarů týkající <kdo> zaplatit jakou část nákladů úklid místě bývalé čerpací stanice kde vytekly #Oblfm.DIR1 podzemní palivové nádrže a zamořily půdu
+stake was $ 80,000 settlement #Cor.ACT involving <who> pay what share cleanup costs site former gas station where underground fuel tanks leaked and contaminated soil
+ERR:
+
+tmp/robust_ali/wsj_0524.final.streex##19.T-wsj0524-001-p1s18a7
+Také je suverénní silou, která v roce 1997 tuto britskou kolonii převezme. 
+It is also the sovereign power that, come 1997, will take over this British colony.
+#PersPron.ACT Také je suverénní silou <která> roce 1997 tuto britskou kolonii převezme
+It is also sovereign <that> power come 1997 take this British colony
+ERR:
+
+tmp/robust_ali/wsj_0210.final.streex##26.T-wsj0210-001-p1s25a28
+A banka Industrial Bank of Japan založila londýnskou pobočku s cennými papíry, která prodává japonské akcie nejaponským institucím v zahraničí, což je krok, který vyprovokoval hněv makléřských firem. 
+And Industrial Bank of Japan started up a London securities subsidiary that sells Japanese stocks to non-Japanese institutions overseas, a move that stirred the anger of the stock brokerage firms.
+A banka Industrial #Forn.ID Bank of Japan založila londýnskou pobočku cennými papíry která prodává japonské akcie nejaponským institucím zahraničí , což je krok <který> vyprovokoval hněv makléřských firem
+And Industrial Bank Japan started London securities subsidiary that sells Japanese stocks non-Japanese institutions overseas , move <that> stirred anger stock brokerage firms
+ERR:
+
+tmp/robust_ali/wsj_0203.final.streex##20.T-wsj0203-001-p1s19a14
+Společnosti by byly nuceny ve svých výročních výkazech zveřejnit jména činitelů, kteří hlášení neodevzdali včas. 
+Companies would be compelled to publish in annual proxy statements the names of insiders who fail to file reports on time.
+#PersPron.ACT Společnosti nuceny svých výročních výkazech #Cor.ACT zveřejnit jména činitelů #Neg.RHEM <kteří> #PersPron.PAT #PersPron.ACT hlášení neodevzdali #Oblfm.LOC včas
+Companies compelled #Gen.ACT #Cor.ACT publish annual proxy statements names insiders <who> fail #Cor.ACT file reports time
+ERR:
+
+tmp/robust_ali/wsj_0109.final.streex##1.T-wsj0109-001-p1s0a20
+R. Gordon McGovern byl odvolán z funkce prezidenta a šéfa výkonných pracovníků firmy Campbell Soup Co., což je dosud nejsilnější důkaz vlády, kterou hodlají třímat členové rodiny Dorranceů při přebudovávání problémové potravinářské společnosti. 
+R. Gordon McGovern was forced out as Campbell Soup Co.'s president and chief executive officer, the strongest evidence yet of the power that Dorrance family members intend to wield in reshaping the troubled food company.
+, #Gen.ACT R. Gordon McGovern odvolán funkce prezidenta a šéfa výkonných pracovníků firmy #Forn.ID Campbell Soup Co . <což> je dosud nejsilnější důkaz vlády kterou třímat členové rodiny Dorranceů přebudovávání #PersPron.ACT problémové potravinářské společnosti
+R. Gordon McGovern forced #Gen.ACT , Campbell Soup Co. president and chief executive officer <#EmpVerb.PRED> strongest evidence yet power that Dorrance family members intend wield #Cor.ACT reshaping #Cor.ACT troubled food company
+ERR:
+
+tmp/robust_ali/wsj_1790.final.streex##13.T-wsj1790-001-p1s12a13
+Přesvědčuje klienty, aby zahájili "detoxifikační" fázi, ve které zredukují společenské a jiné neproduktivní činnosti a vyhradí si čas pro sebe. 
+She urges client couples to begin a ``detoxification'' period, purging social and other nonproductive activities and setting time apart for themselves.
+#PersPron.ACT Přesvědčuje klienty #PersPron.ACT zahájili detoxifikační fázi <které> zredukují společenské a jiné neproduktivní činnosti #PersPron.ACT a vyhradí si čas sebe
+She urges client couples #Cor.ACT begin detoxification period #Cor.ACT purging social and other nonproductive activities and setting time themselves
+ERR:
+
+tmp/robust_ali/wsj_1389.final.streex##22.T-wsj1389-001-p1s21a10
+"Nejčastěji se využívají na zvelebení domácnosti, což podle všeho zvyšuje hodnotu majetku," říká Durkin. 
+``The most frequent use is home improvement, which presumably improves the value of the property,'' Mr. Durkin says .
+#Gen.ACT Nejčastěji využívají #PersPron.PAT #Gen.ACT zvelebení domácnosti , <což> všeho zvyšuje hodnotu majetku #Gen.ADDR říká Durkin
+frequent use is home improvement <which> presumably improves value property Mr. Durkin says #Gen.ADDR
+ERR:
+
+tmp/robust_ali/wsj_1305.final.streex##42.T-wsj1305-001-p1s41a4
+Dohoda, kterou podepsal, aby získal důvěrné údaje společnosti UAL, mu však brání konat určité nepřátelské kroky. 
+However, he is restricted from making certain hostile moves by an agreement he signed to obtain confidential UAL data.
+Dohoda #PersPron.ACT <kterou> podepsal #PersPron.ACT získal důvěrné údaje společnosti UAL #Cor.ACT mu však brání konat určité nepřátelské kroky
+However he restricted #Cor.ACT making certain hostile moves agreement he signed <#Cor.PAT> #Cor.ACT obtain confidential UAL data
+ERR:
+
+tmp/robust_ali/wsj_1789.final.streex##4.T-wsj1789-001-p1s3a16
+Guzman Cabrera nyní čelí obviněním, že je patolízal do stejné míry, do jaké byl La Quina podvodník. 
+Now, Mr. Guzman Cabrera is facing accusations that he's as much a company man as La Quina was a crook.
+Guzman Cabrera nyní čelí #Gen.ADDR #Gen.ACT obviněním je #PersPron.ACT patolízal stejné míry <jaké> byl Quina podvodník
+Now Mr. Guzman Cabrera facing accusations he 's as much company man La Quina #Forn.ACT was crook
+ERR:
+
+tmp/robust_ali/wsj_0245.final.streex##9.T-wsj0245-001-p1s8a23
+Mluvčí společnosti Coca-Cola uvedl, že je příliš brzo na to říci, jaká bude struktura společného podniku, ani kolik společnost do transakce investuje. 
+A Coca-Cola spokesman said it is too early to say how the joint venture would be structured , or how much the company would invest in the transaction.
+Mluvčí společnosti #Forn.ID Coca - Cola uvedl je příliš #Gen.ADDR #PersPron.ACT brzo říci jaká bude struktura společného podniku ani <kolik> společnost transakce investuje
+Coca-Cola spokesman said #Gen.ADDR it is too early #Gen.ACT say #Gen.ADDR how joint venture #Gen.ACT structured or <how> much company invest transaction
+ERR:
+
+tmp/robust_ali/wsj_0989.final.streex##43.T-wsj0989-001-p1s42a5
+Společnost Hyundai Motor America, která bojuje se stížnostmi na kvalitu, klesajícím obratem a zmatku v řízení, včera odhalila svoji reklamní strategii pro rok 1990 pod názvem "Máme větší smysl než kdy jindy". 
+Hyundai Motor America, fighting quality complaints, declining sales and management turmoil, yesterday unveiled its 1990 ad strategy, tagged ``We're Making More Sense Than Ever.''
+Společnost #Forn.ID Hyundai Motor America <která> bojuje stížnostmi kvalitu klesajícím obratem a zmatku řízení #Gen.ACT #PersPron.PAT včera odhalila svoji reklamní strategii rok 1990 názvem #PersPron.ACT Máme větší Máme smysl #PersPron.ACT smysl kdy jindy
+Hyundai Motor America <#Cor.ACT> fighting quality complaints #Cor.ACT declining sales and management turmoil yesterday unveiled its 1990 ad strategy tagged #Cor.ACT #Cor.PAT We Making More Sense #PersPron.ACT Making Sense Ever
+ERR:
+
+tmp/robust_ali/wsj_1246.final.streex##1.T-wsj1246-001-p1s0a11
+Dva japonští vědci uvedli, že objevili protilátku, která při laboratorních experimentech ve zkumavce zabíjí buňky napadené AIDS, avšak zdravé buňky zachovává. 
+Two Japanese scientists said they discovered an antibody that, in laboratory test-tube experiments, kills AIDS-infected cells while preserving healthy cells.
+Dva japonští vědci uvedli #PersPron.ACT objevili protilátku <která> laboratorních experimentech zkumavce zabíjí buňky napadené #Idph.ACT AIDS avšak zdravé buňky zachovává
+Two Japanese scientists said #Gen.ADDR they discovered antibody laboratory test-tube experiments kills <that> AIDS-infected cells preserving #Cor.ACT healthy cells
+ERR:
+
+tmp/robust_ali/wsj_0554.final.streex##41.T-wsj0554-001-p1s40a23
+Firma Wells, Rich, Greene jmenovala Cheryl Heller výkonnou viceprezidentskou a tvůrčím partnerem ve své skupině vytvářející image, která se soustřeďuje na styl a vizuálně orientovanou propagaci. 
+Wells, Rich, Greene named Cheryl Heller as an executive vice president and creative partner in its image group, which concentrates on fashion and visually oriented advertising.
+Firma #Forn.ID Wells , Rich , Greene jmenovala Cheryl Heller výkonnou viceprezidentskou a tvůrčím partnerem své skupině vytvářející image <která> soustřeďuje styl a vizuálně orientovanou propagaci
+Wells Rich Greene , named Cheryl Heller executive vice president and creative partner its image group <which> concentrates fashion and #Gen.ACT oriented #Cor.PAT visually advertising
+ERR:
+
+tmp/robust_ali/wsj_0477.final.streex##17.T-wsj0477-001-p1s16a26
+Představitelé společnosti Allianz nechtěli své plány podrobně komentovat, uvedli, že společnost Allianz v současné době vlastní mezi 5 a 10 % společnosti Navigation Mixte, což je zjevný nárůst 5% podílu, který dříve oznámili představitelé společnosti Navigation Mixte. 
+While Allianz officials weren't willing to comment in any detail on their plans, they said Allianz currently holds between 5% and 10% of Navigation Mixte, an apparent increase from the 5% stake that Navigation Mixte officials had earlier announced .
+Představitelé společnosti Allianz své plány podrobně komentovat #Neg.RHEM , Allianz společnost době současné uvedli vlastní 5 a % 10 Navigation společnosti , #Forn.ID Mixte což je zjevný nárůst 5 % podílu <který> oznámili dříve představitelé společnosti Navigation #Forn.ID Mixte
+#Gen.ADDR Allianz officials were n't #Cor.ACT willing #Cor.ACT comment any detail their plans they said Allianz currently holds 5 % and between 10 % Navigation , Mixte apparent increase 5 % stake #Gen.ADDR Navigation Mixte officials earlier announced <that>
+ERR:
+
+tmp/robust_ali/wsj_1156.final.streex##9.T-wsj1156-001-p1s8a13
+Uvedl, že v zahraničí si dobře vedl přípravek Eprex, který užívají anemičtí pacienti docházející na dialýzu, a Prepulsid, gastrointestinální lék. 
+Eprex, used by dialysis patients who are anemic, and Prepulsid, a gastro-intestinal drug, did well overseas, he said .
+#PersPron.ACT Uvedl zahraničí dobře vedl přípravek Eprex <který> užívají anemičtí pacienti docházející dialýzu a Prepulsid , gastrointestinální lék
+Eprex #Cor.PAT used dialysis patients <who> are anemic and Prepulsid , gastro-intestinal drug did well overseas he said #Gen.ADDR
+ERR:
+
+tmp/robust_ali/wsj_0553.final.streex##26.T-wsj0553-001-p1s25a10
+Spolu s rychlým růstem sklidil i inflaci, což nepochybně utvrdilo premiérku v platnosti předpovědí sira Alana. 
+He reaped inflation along with rapid growth, no doubt validating Sir Alan's predictions in the Prime Minister's mind.
+#PersPron.ACT rychlým růstem sklidil i inflaci , <což> nepochybně utvrdilo premiérku platnosti předpovědí sira Alana
+He reaped inflation rapid growth <#Cor.ACT> doubt validating Sir Alan predictions Prime Minister mind
+ERR:
+
+tmp/robust_ali/wsj_0628.final.streex##22.T-wsj0628-001-p1s21a37
+Asociace NMTBA uvedla, že zářijové objednávky na obráběcí centra, soustruhy, frézy, brusky, vyvrtávací a další stroje, které řezáním mění tvar kovových částí, činily celkem 192.9 milionu dolarů, což je o 28 % méně než loňských 266.5 milionu dolarů, ale ze srpnových 156.3 milionu dolarů to je 23% vzrůst. 
+September orders for machining centers, lathes, milling machines, grinders, boring mills and other machines that shape metal by cutting totaled $192.9 million, down 28% from $266.5 million a year earlier, but a 23% increase from August's $156.3 million, NMTBA said .
+Asociace NMTBA uvedla zářijové objednávky , obráběcí centra soustruhy frézy brusky vyvrtávací a další stroje které řezáním #PersPron.PAT #PersPron.ACT mění tvar kovových částí činily , celkem 192.9 milionu dolarů <což> je 28 % méně je #Some.PAT loňských 266.5 milionu dolarů ale srpnových 156.3 milionu dolarů to je 23 % vzrůst
+#Gen.ADDR September orders machining centers lathes milling machines grinders boring mills and other machines shape that metal #Gen.PAT #Cor.ACT cutting totaled $ 192.9 million , #EmpVerb.EXT down 28 % $ 266.5 million year earlier but 23 % increase August $ 156.3 million NMTBA said
+ERR:
+
+tmp/robust_ali/wsj_1152.final.streex##5.T-wsj1152-001-p1s4a6
+Můžeme jen hádat, kdo bude další bludnou duší, z níž se stane odsouzená celebrita Ameriky. 
+We can only wonder who will be the next lost soul chosen to be America's Celebrity Convict.
+#PersPron.ACT jen hádat <kdo> bude další bludnou duší níž stane odsouzená celebrita Ameriky
+We only wonder <who> be next lost soul #Gen.ACT chosen #Cor.PAT #Cor.ACT be America Celebrity Convict
+ERR:
+
+tmp/robust_ali/wsj_0351.final.streex##56.T-wsj0351-001-p1s55a29
+Upisovatelé u společnosti First Boston Corp. uvedli, že dluhopisy kreditních karet společnosti J. C. Penney jsou první s průměrnou životností 10 let, což je o mnoho déle než předchozí podobné emise. 
+Underwriters at First Boston Corp. said the J.C. Penney credit-card securities are the first with a 10-year average life, which is much longer than previous such issues.
+Upisovatelé společnosti #Forn.ID First Boston Corp . uvedli dluhopisy kreditních karet společnosti #Forn.ID J . C . Penney jsou první #EmpNoun.PAT průměrnou životností 10 let , <což> je mnoho déle je předchozí podobné emise
+Underwriters First Boston Corp. said #Gen.ADDR J.C. Penney credit-card securities are first 10-year average life <which> is much longer previous such issues
+ERR:
+
+tmp/robust_ali/wsj_0405.final.streex##41.T-wsj0405-001-p1s40a18
+V Japoncích stále přetrvává nepříjemný pocit z prudké mezinárodní reakce na prodej utajovaných vojenských technologií Sovětům před dvěma roky, který provedla přidružená společnost japonské firmy Toshiba Corp., proto se mnoho Japonců snaží vyhnout zdání, že jakýmkoli způsobem pomáhají Sovětům. 
+Still stinging from the international backlash over the sale two years ago of sensitive military technology to the Soviets by a subsidiary of Japan's Toshiba Corp., many Japanese are eager to avoid appearing to help the Soviets in any way.
+Japoncích stále přetrvává nepříjemný pocit prudké mezinárodní reakce prodej utajovaných vojenských technologií Sovětům dvěma roky <který> provedla přidružená společnost japonské firmy Toshiba #Forn.ID Corp , proto . mnoho Japonců snaží #Cor.ACT vyhnout zdání #PersPron.ACT jakýmkoli způsobem pomáhají Sovětům
+Still stinging #Cor.ACT international backlash sale two years sensitive military technology Soviets subsidiary Japan Toshiba Corp. many Japanese are eager #Cor.ACT avoid appearing #Gen.PAT #Cor.ACT help #Gen.PAT Soviets any way
+ERR:
+
+tmp/robust_ali/wsj_1599.final.streex##21.T-wsj1599-001-p1s20a17
+Společnost však sdělila, že jejich výši nelze určit dříve, než bude známo, kolik manažerů se rozhodne do důchodu odejít. 
+But the company said the amount can't be determined until it knows how many managers opt to retire.
+#Gen.ADDR Společnost však sdělila #Neg.RHEM #Cor.ACT jejich výši nelze #Benef.BEN určit dříve bude známo <kolik> manažerů rozhodne #Oblfm.DIR1 #Cor.ACT důchodu odejít
+But company said #Gen.ADDR amount n't determined #Gen.ACT it knows <how> many managers opt #Cor.ACT retire
+ERR:
+
+tmp/robust_ali/wsj_0609.final.streex##5.T-wsj0609-001-p1s4a20
+Je to právo vetovat rozpočtové položky, postup, který prezidentovi umožní z nějakého velkého návrhu zákona o výdajích, který již prošel Kongresem, odstranit jednotlivé položky, aniž by vetoval celý zákon. 
+It's the line-item veto, a procedure that would allow the president to kill individual items in a big spending bill passed by Congress without vetoing the entire bill.
+Je to právo #Gen.ACT vetovat rozpočtové položky , postup který prezidentovi umožní nějakého velkého návrhu zákona výdajích <který> již prošel Kongresem odstranit jednotlivé položky #PersPron.ACT aniž #Neg.CM vetoval celý zákon
+It 's line-item veto , procedure that allow president kill individual items big spending bill passed <#Cor.PAT> Congress #Cor.ACT vetoing entire bill
+ERR:
+
+tmp/robust_ali/wsj_0417.final.streex##1.T-wsj0417-001-p1s0a30
+Skupina michiganských investorů nabídla, že za 68 milionů dolarů koupí churavějící detroitské noviny Free Press patřící společnosti Knight-Ridder Inc., ale zatím neobjasnila, kdo bude nabídku financovat. 
+A group of Michigan investors has offered to buy Knight-Ridder Inc.'s ailing Detroit Free Press for $68 million but has left unclear how the offer will be financed .
+#Gen.ADDR Skupina michiganských investorů nabídla #PersPron.ACT 68 milionů dolarů koupí churavějící detroitské noviny #Forn.ID Free Press patřící společnosti Knight - #Forn.ID Ridder Inc . #Neg.RHEM #Gen.ADDR ale zatím neobjasnila <kdo> nabídku financovat
+group Michigan investors offered #Gen.ADDR #Cor.ACT buy Knight-Ridder Inc. ailing #Cor.ACT Detroit Free Press $ 68 million but left unclear offer financed <how> #Gen.ACT
+ERR:
+
+tmp/robust_ali/wsj_1515.final.streex##28.T-wsj1515-001-p1s27a11
+Avšak toto povýšení patrně nezmění styl řízení, který Andersson popisuje jako "vedení vojska, nikoli jako řízení z křesla s doutníkem v ruce a čekání na to, až mi někdo přinese nějaké nápady". 
+But the promotion isn't likely to alter a management style Mr. Andersson describes as ``being the driving force leading the troops, not managing by sitting back with a cigar waiting for people to bring me ideas.''
+#Neg.RHEM Avšak #PersPron.PAT #Gen.ACT toto povýšení patrně nezmění styl řízení #PersPron.PAT #PersPron.ACT <který> Andersson popisuje #Equal.MANN popisuje #PersPron.ACT , vedení #Gen.ACT vojska nikoli řízení #PersPron.PAT #Gen.ACT popisuje křesla doutníkem ruce a #Gen.ACT čekání mi někdo přinese nějaké nápady
+But is n't likely promotion alter management style Mr. Andersson describes <#Cor.PAT> , #Cor.ACT being driving #Cor.ACT force #Cor.ACT leading troops not managing #Gen.PAT sitting #Cor.ACT cigar #Cor.ACT waiting people bring me ideas
+ERR:
+
+tmp/robust_ali/wsj_1175.final.streex##3.T-wsj1175-001-p1s2a26
+Společnost Buell nedávno uvedla, že v souvislosti s prodejem a zastavením několika linek v jednom podniku bude muset ve svém čtvrtém čtvrtletí, které končí v úterý, zaplatit poplatky po zdanění ve výši 3.6 milionu dolarů. 
+Buell recently said it would incur an aftertax charge of about $3.6 million in its fourth quarter ending Tuesday, in connection with the sale and discontinuance of several lines at a plant.
+Společnost Buell nedávno uvedla prodejem a #PersPron.ACT zastavením několika linek jednom podniku svém čtvrtém čtvrtletí <které> končí úterý #PersPron.ACT zaplatit poplatky #Gen.PAT #Gen.ACT zdanění výši 3.6 milionu dolarů
+Buell recently said #Gen.ADDR it incur aftertax charge about $ 3.6 million its fourth quarter <#Cor.ACT> ending Tuesday sale and discontinuance several lines plant
+ERR:
+
+tmp/robust_ali/wsj_1847.final.streex##40.T-wsj1847-001-p1s39a7
+Vzhledem k pokrytectví, s nímž Kongres řeší skandály kolem HUD, s tím nesouhlasíme. 
+Having seen the hypocrisy with which Congress has addressed the HUD scandals , we disagree.
+pokrytectví <nímž> Kongres řeší skandály HUD #Neg.RHEM #PersPron.ACT nesouhlasíme tím
+#Gen.ADDR seen #Cor.ACT hypocrisy <which> Congress addressed HUD scandals we disagree
+ERR:
+
+tmp/robust_ali/wsj_0788.final.streex##4.T-wsj0788-001-p1s3a31
+Komplexní návrh zákona, který předložili senátoři Patrick Leahy (demokrat, stát Vermont), Richard Lugar (republikán, stát Indiana) a Bob Kerrey (demokrat, stát Nebraska), obsahuje široké spektrum opatření, která by ovlivnila financování a úřední moc Komise pro termínové obchody s komoditami (CFTC) a která by též zásadně by změnila způsob regulování této sféry. 
+The complex bill, introduced by Sens. Patrick Leahy -LRB-D., Vt.-RRB-, Richard Lugar -LRB-R., Ind.-RRB-, and Bob Kerrey -LRB-D., Neb.-RRB-, covers a wide range of provisions that would affect the funding and authority of the Commodity Futures Trading Commission and would profoundly change the way the industry is regulated .
+Komplexní návrh zákona #Gen.ADDR který předložili senátoři Patrick Leahy demokrat , stát Vermont Richard Lugar republikán stát Indiana , a Bob Kerrey demokrat , stát Nebraska obsahuje široké spektrum opatření #Gen.PAT #PersPron.ACT <která> ovlivnila #Gen.PAT #Gen.ACT financování a úřední moc Komise termínové obchody komoditami ( #Idph.RSTR CFTC a která též zásadně změnila způsob regulování #Gen.ACT této sféry
+complex bill introduced #Gen.ADDR #Cor.PAT Sens. Patrick Leahy -LRB- D. Vt. Richard Lugar -LRB- R. Ind. and Bob Kerrey -LRB- D. Neb. covers wide range provisions <that> affect funding and authority Commodity Futures Trading Commission and profoundly change way #Gen.ACT industry regulated
+ERR:
+
+tmp/robust_ali/wsj_0758.final.streex##28.T-wsj0758-001-p1s27a24
+Neexistuje snad žádný starší baseballový fanda, který by si jasně nepamatoval tento homerun Bobbyho Thomsona, a který nemůže říct, kde byl, když poslouchal rozhlasové vysílání známého Russe Hodgese - právě to, které končilo tím, že Hodges stále dokola křičel: "Giants mají vlajku, Giants mají vlajku!" 
+There can't be an older baseball fan alive who doesn't clearly remember that Bobby Thomson homer, who can't tell you where he was when he heard the famous Russ Hodges radio broadcast -- the one that concluded with Mr. Hodges shouting, over and over, ``The Giants win the pennant, the Giants win the pennant !''
+#Neg.RHEM Neexistuje snad žádný starší baseballový fanda #Neg.RHEM který jasně nepamatoval tento homerun Bobbyho Thomsona a #Neg.RHEM #Gen.ADDR který říct #PersPron.ACT <kde> byl #PersPron.ACT poslouchal rozhlasové vysílání známého Russe Hodgese - vysílání právě to které končilo Hodges stále dokola křičel #Forn.ACT Giants mají , vlajku #Forn.ACT Giants mají vlajku
+n't be older baseball fan alive who n't clearly remember Bobby Thomson homer , who n't tell you <where> he was he heard famous Russ Hodges radio broadcast -- one that concluded Mr. Hodges shouting over and over Giants win pennant , Giants win pennant
+ERR:
+
+tmp/robust_ali/wsj_1286.final.streex##29.T-wsj1286-001-p1s28a10
+Naše vzdělávání však měli v rukou ti ostatní, kteří byli pouze schopní a svědomití. 
+But our education proceeded at the hands of those others, who were merely competent and conscientious.
+Naše vzdělávání #Gen.PAT však měli rukou ti ostatní <kteří> byli pouze schopní a svědomití
+But our education proceeded hands those others <who> were merely competent and conscientious
+ERR:
+
+tmp/robust_ali/wsj_0358.final.streex##5.T-wsj0358-001-p1s4a13
+Spotřebitelský úřad také žaloval pokračující strategii společnosti Newmark & Lewis, kdy se chlubí "novými nižšími cenami", když se údajně od 1. června ceny nesnížily. 
+The consumer agency also disputed Newmark&Lewis's continuing strategy of advertising ``new lower prices'' when allgedly there haven't been price reductions since June 1.
+Spotřebitelský úřad také žaloval pokračující strategii společnosti #Forn.ID Newmark & #PersPron.ACT Lewis <kdy> chlubí novými nižšími cenami #Neg.RHEM údajně 1 června ceny nesnížily
+consumer agency also disputed Newmark & Lewis #Cor.ACT continuing strategy <#Cor.ACT> advertising new lower prices allgedly n't been price reductions June 1
+ERR:
+
+tmp/robust_ali/wsj_1201.final.streex##36.T-wsj1201-001-p1s35a7
+Technici znovu zvažují návrhy, které v minulosti učinili ohledně rekapitalizace, ty předpokládají vyplácení speciálních dividend akcionářům a poskytnutí menšinového podílu zaměstnancům. 
+The machinists are reviewing proposals they made in the past for recapitalizations that would pay a special shareholder dividend and give employees a minority stake.
+, Technici znovu zvažují návrhy #PersPron.ACT <které> minulosti učinili rekapitalizace ty předpokládají #Gen.ACT vyplácení speciálních dividend akcionářům a #Gen.ACT poskytnutí menšinového podílu zaměstnancům
+machinists reviewing proposals they made <#Cor.CPHR> past recapitalizations that pay special shareholder dividend and give employees minority stake
+ERR:
+
+tmp/robust_ali/wsj_1398.final.streex##1.T-wsj1398-001-p1s0a17
+Chlapci, co švihem zápěstí roztáčejí káču, vrhači létacích talířů i PR týpci, co mají pořád napilno, ti mají všichni společný cíl, snaží se dát tomu správnou rotaci. 
+With a Twist of the Wrist Boys with tops, and Frisbee tossers, And P.R. types with bees in their bonnet, Have a goal in common, all of them try To put the right spin on it.
+Chlapci co švihem zápěstí roztáčejí káču , vrhači létacích talířů i PR týpci #Idph.RSTR <co> mají pořád napilno , ti mají všichni společný cíl , snaží #Cor.ACT dát tomu správnou rotaci
+Twist Wrist Boys tops and Frisbee tossers And P.R. types <bees> their bonnet Have goal common , all them try #Cor.ACT put right spin it
+ERR:
+
+tmp/robust_ali/wsj_0484.final.streex##4.T-wsj0484-001-p1s3a11
+Minulý týden společnost svolala tříčlenný výbor ředitelů, kteří nejsou propojeni se žádnou stranou, aby analyzovali situaci. 
+The company last week assembled a three-member committee of directors aligned with neither side to analyze the situation.
+Minulý týden společnost svolala výbor tříčlenný ředitelů <kteří> nejsou #Neg.RHEM propojeni stranou žádnou #PersPron.ACT analyzovali situaci
+company last week assembled three-member committee <directors> aligned #Gen.ACT #Cor.PAT neither side analyze #Cor.ACT situation
+ERR:
+
+tmp/robust_ali/wsj_0112.final.streex##12.T-wsj0112-001-p1s11a26
+Tvůrci se navíc domnívali, že národ potřebuje jednotnou výkonnou moc, která bude nezávislá a bude mít prostředky, aby realizovala to, co konfederační kongres na základě Konfederačních článků zvládal nepříliš dobře. 
+Moreover, the framers believed that the nation needed a unitary executive with the independence and resources to perform the executive functions that the Confederation Congress had performed poorly under the Articles of Confederation .
+Tvůrci navíc domnívali národ potřebuje jednotnou výkonnou moc která bude nezávislá a mít prostředky #PersPron.ACT realizovala <co> konfederační kongres Konfederačních článků zvládal nepříliš dobře
+Moreover framers believed nation needed unitary executive independence and resources perform #Cor.ACT executive functions Confederation Congress performed <that> poorly Articles Confederation
+ERR:
+
+tmp/robust_ali/wsj_0681.final.streex##30.T-wsj0681-001-p1s29a7
+Výbuch vystřízlivěl investory, kterým začal trochu růst hřebínek, říká Jarrett. 
+The pop sobered up investors who had been getting a little too ebullient, says Mr. Jarrett.
+#Gen.ADDR Výbuch vystřízlivěl <kterým> říká investory #Cor.ACT růst začal trochu hřebínek Jarrett
+#Gen.ADDR pop sobered investors <who> getting little too ebullient says Mr. Jarrett
+ERR:
+
+tmp/robust_ali/wsj_0598.final.streex##34.T-wsj0598-001-p1s33a21
+Navíc, bude-li Fed pevně držet, bude možná schopen konečně snížit inflaci, čímž udělá krok k cíli, kterým je nulová inflace a který předseda Fedu přijal minulý týden při výpovědi před Kongresem. 
+Moreover, if the Fed holds tight, it may be able gradually to reduce inflation, moving toward the zero-inflation goal that the Fed chairman embraced in testimony to Congress last week.
+#PersPron.ACT Navíc Fed pevně držet bude , možná schopen #Cor.ACT konečně snížit inflaci <čímž> udělá krok cíli kterým je nulová inflace a který předseda Fedu přijal minulý týden výpovědi Kongresem
+Moreover Fed holds #Gen.PAT tight it be able gradually reduce <#Cor.ACT> inflation moving #Cor.ACT zero-inflation goal Fed chairman embraced that testimony Congress last week
+ERR:
+
+tmp/robust_ali/wsj_0984.final.streex##71.T-wsj0984-001-p1s70a35
+Tito státníci by si mohli nechat poradit od Williama Robinsona, autora knihy "The English Flower Garden (Anglické květinové zahrady)" - zahradnické bible už od roku 1883 -, který, jak se zdá, na Jennifer Bartlettovou myslel, když napsal: "Kvůli okrasnému umělci, který v zahradě aplikoval své 'návrhy', naši zahradníci bohužel trpí už léta... 
+These statesmen might take counsel from William Robinson, author of ``The English Flower Garden'' -- the gardener's bible since 1883 -- who seems to have had a Jennifer Bartlett in mind when he wrote: ``Unhappily, our gardeners for ages have suffered at the hands of the decorative artist when applying his `designs' to the garden ....
+Tito státníci #Gen.PAT si nechat poradit Williama Robinsona , autora knihy ( The English Flower Garden #Forn.ID Anglické květinové zahrady - zahradnické bible už roku 1883 <který> #PersPron.PAT #Gen.ACT zdá Jennifer Bartlettovou myslel #PersPron.ACT napsal okrasnému umělci který zahradě aplikoval své návrhy naši zahradníci bohužel trpí už léta
+These statesmen take counsel William Robinson , author English Flower Garden -- gardener bible 1883 <who> seems #Cor.ACT had Jennifer Bartlett mind he wrote Unhappily our gardeners ages suffered hands decorative artist #PersPron.ACT applying his designs garden
+ERR:
+
+tmp/robust_ali/wsj_1725.final.streex##3.T-wsj1725-001-p1s2a17
+Pokuta a pozastavení činnosti, které byly oznámeny v srpnu, jsou nejpřísnějšími sankcemi, které Newyorská komoditní burza vůbec kdy nařídila vůči některému ze svých členů. 
+The fine and suspension, announced in August, are the stiffest sanctions the Comex has ever ordered against one of its members.
+Pokuta a pozastavení #PersPron.ACT činnosti #PersPron.ACT které oznámeny #Gen.ADDR srpnu jsou nejpřísnějšími sankcemi <které> Newyorská komoditní burza vůbec kdy nařídila #PersPron.ADDR některému členů svých členů
+fine and suspension announced #Cor.EFF #Gen.ADDR #Gen.ACT August are stiffest sanctions <#Cor.PAT> Comex ever ordered one its members
+ERR:
+
+tmp/robust_ali/wsj_0534.final.streex##3.T-wsj0534-001-p1s2a27
+Až do té doby, uvedla firma Conseco, akcie zůstávají převoditelné na kmenové akcie s kurzem 1439 kmenové akcie za každou prioritní akcii, což je ekvivalentní převodní ceně 17.50 dolaru za kmenovou akcii. 
+Until then, Conseco said the stock remains convertible into common stock at the rate of 1.439 shares of common stock for each share of preferred stock, which is equivalent to a conversion price of $17.50 a common share.
+Až té doby uvedla firma Conseco akcie zůstávají převoditelné kmenové akcie kurzem , 1439 kmenové akcie každou prioritní akcii <což> je ekvivalentní převodní ceně 17.50 dolaru kmenovou akcii
+#Gen.ADDR then Conseco said stock remains convertible common stock rate 1.439 shares common stock each share #Gen.ACT preferred #Cor.PAT stock <which> is equivalent conversion price $ 17.50 common share
+ERR:
+
+tmp/robust_ali/wsj_1652.final.streex##7.T-wsj1652-001-p1s6a14
+Akcie společnosti skončily v kompozitním obchodování na Newyorské burze cenných papírů na 48375 dolaru, což je zvýšení o 25 centů. 
+The company's stock ended at $48.375, up 25 cents in New York Stock Exchange composite trading.
+Akcie společnosti skončily #Gen.PAT #Gen.ACT kompozitním obchodování Newyorské burze cenných papírů 48375 dolaru , <což> je #Gen.ACT zvýšení 25 centů
+company stock ended $ 48.375 , <#EmpVerb.PAT> up 25 cents New York Stock Exchange composite trading
+ERR:
+
+tmp/robust_ali/wsj_1850.final.streex##22.T-wsj1850-001-p1s21a18
+Obě zmíněné evropské letecké společnosti provozují velký počet nákladních letadel Boeing 747 a 747 Combis, která na hlavní palubě převážejí náklad i pasažéry. 
+Both European airlines operate extensive fleets of Boeing 747 freighters and 747 Combis, aircraft that carry both freight and passengers on the main deck.
+Obě zmíněné evropské letecké společnosti provozují velký počet nákladních letadel Boeing 747 a letadel 747 Combis #Oblfm.DIR3 #Oblfm.DIR1 <která> hlavní palubě převážejí náklad i pasažéry
+Both European airlines operate extensive fleets Boeing 747 freighters and 747 Combis , aircraft <that> carry freight and passengers main deck
+ERR:
+
+tmp/robust_ali/wsj_1286.final.streex##40.T-wsj1286-001-p1s39a21
+Chceme-li hovořit vážně o americkém vzdělávání, víme přesně, co dělat - a co nedělat, což je stejně důležité. 
+If we wish to be serious about American education, we know exactly what to do -- and, just as important, what not to do .
+#PersPron.ACT #PersPron.ACT hovořit vážně #Gen.ACT americkém vzdělávání #Gen.PAT víme přesně co dělat a #PersPron.ACT #Neg.RHEM co nedělat , <což> je stejně důležité
+we wish be #Cor.ACT serious American education we know exactly what do #Gen.ACT and <#EmpVerb.PAR> just important what not do #Gen.ACT
+ERR:
+
+tmp/robust_ali/wsj_1709.final.streex##9.T-wsj1709-001-p1s8a45
+Výsledky za letošních devět měsíců zahrnují příjmy z prodeje Schlumbergerova podniku na obranné systémy ve výši 13 milionů dolarů, což činí pět centů na akcii, a odměny od společnosti IranU.S. Claims Tribunal ve výši 22 milionů dolarů, což činí devět centů na akcii. 
+This year's nine-month results include gains of $13 million, or five cents a share, from the sale of Schlumberger's defense systems business, and $22 million, or nine cents a share, from an award by the IranU.S. Claims Tribunal.
+Výsledky letošních devět měsíců zahrnují příjmy prodeje Schlumbergerova podniku , obranné systémy výši 13 milionů dolarů což činí pět centů akcii a odměny společnosti IranU . S . #Forn.ID Claims Tribunal výši , 22 milionů dolarů <což> činí devět centů akcii
+This year nine-month results include gains $ 13 million or five cents share sale Schlumberger defense systems business and gains $ 22 million <or> nine cents share award IranU.S Claims Tribunal
+ERR:
+
+tmp/robust_ali/wsj_1302.final.streex##25.T-wsj1302-001-p1s24a32
+Paní Atkinsová, jež získala členství v Lloydově společnosti v roce 1981 jako zvláštní odměnu od bývalého zaměstnavatele, patří k disidentské skupině pana Nuttinga v syndikátu Outhwaite, který byl těžce postižen zajištěním pojistných událostí spojených s azbestem. 
+Ms. Atkins, whose Lloyd's membership was a bonus from a former employer in 1981, belongs to Mr. Nutting's dissident group on the Outhwaite syndicate, which has been hard hit by asbestos reinsurance claims.
+Paní Atkinsová jež získala členství Lloydově společnosti roce 1981 zvláštní odměnu bývalého zaměstnavatele patří disidentské skupině pana Nuttinga syndikátu Outhwaite <který> těžce postižen #PersPron.ACT zajištěním pojistných událostí spojených azbestem
+Ms. Atkins whose Lloyd membership was bonus former employer 1981 belongs Mr. Nutting dissident group Outhwaite syndicate <which> hard hit asbestos reinsurance claims
+ERR:
+
+tmp/robust_ali/wsj_1303.final.streex##13.T-wsj1303-001-p1s12a28
+Několik pozorovatelů považuje Dozenovo jmenování za pokus firmy Daiwa zvýšit zisky svých mezinárodních provozů, zatímco připravují firmu na následky pokračující deregulace japonského domácího trhu, což by mělo znamenat zvýšenou konkurenci. 
+Several observers interpreted Mr. Dozen's appointment as an attempt by Daiwa to make its international operations more profitable while preparing the firm for the effects of the continuing deregulation of Japan's domestic markets, which should mean increased competition.
+Několik pozorovatelů považuje Dozenovo #Forn.PAT #Gen.ACT jmenování #PersPron.EFF pokus firmy Daiwa #Cor.ACT zvýšit zisky svých mezinárodních provozů #PersPron.ACT připravují firmu následky pokračující deregulace japonského domácího trhu , <což> znamenat zvýšenou konkurenci
+Several observers interpreted Mr. Dozen appointment attempt Daiwa #Cor.ACT make its international operations profitable preparing #Cor.ACT firm effects continuing deregulation Japan domestic markets <which> mean increased competition
+ERR:
+
+tmp/robust_ali/wsj_0113.final.streex##6.T-wsj0113-001-p1s5a20
+Mnohé zemědělce před špatným rokem zachránila příležitost žádat náhradu velkého množství obilí a dalších plodin, kvůli jehož pěstování si od vlády vzali půjčku na základě zvýhodněného úvěrového programu. 
+What saved many farmers from a bad year was the opportunity to reclaim large quantities of grain and other crops that they had ``mortgaged'' to the government under price-support loan programs.
+Mnohé zemědělce špatným rokem zachránila příležitost #PersPron.ACT žádat náhradu velkého množství obilí a dalších plodin #PersPron.ACT #PersPron.ACT <jehož> pěstování vlády vzali půjčku zvýhodněného úvěrového programu
+What saved many farmers bad year was opportunity #Gen.ACT reclaim large quantities grain and other crops they mortgaged <that> government price-support loan programs
+ERR:
+
+tmp/robust_ali/wsj_1520.final.streex##2.T-wsj1520-001-p1s1a18
+Úřad pro hodnocení technologií právě oznámil, že ze 4.4 miliardy dolarů, které byly v rámci programu dosud vynaloženy, je 60 % věnováno na administrativu, řízení a výzkum. 
+Of the $4.4 billion spent so far on the program, 60% is going for administrative costs, management and research, the Office of Technology Assessment just reported .
+#Gen.ADDR Úřad #Gen.ACT hodnocení technologií právě oznámil #Gen.ADDR #PersPron.ACT 4.4 miliardy dolarů #PersPron.ACT <které> programu dosud vynaloženy 60 % věnováno administrativu řízení #PersPron.PAT #PersPron.ACT a výzkum
+$ 4.4 billion #Gen.ACT spent <#Cor.PAT> so far program 60 % going #Gen.PAT administrative costs management and research Office Technology Assessment just reported #Gen.ADDR
+ERR:
+
+tmp/robust_ali/wsj_1626.final.streex##4.T-wsj1626-001-p1s3a26
+Představitelé společnosti později uvedli, že podle společnosti British Airways její účast na odkupu společnosti UAL skončila minulý pátek, kdy skupina organizující odkup, která zahrnuje také management společnosti UAL a svaz pilotů, nezískala finance na transakci za 6.79 miliardy dolarů. 
+Company officials said later that British Airways believes its involvement in the UAL buy-out ended last Friday when the buy-out group, which also includes UAL's management and pilot union, failed to obtain financing for the $6.79 billion transaction .
+Představitelé společnosti později uvedli společnosti #Forn.ID British Airways její účast odkupu společnosti UAL skončila minulý pátek #Neg.RHEM kdy skupina organizující odkup <která> zahrnuje také management společnosti UAL a svaz pilotů nezískala finance transakci 6.79 miliardy dolarů
+Company officials said #Gen.ADDR later British Airways believes its involvement UAL buy-out ended last Friday buy-out group <which> also includes UAL management and pilot union failed #Cor.ACT obtain financing $ 6.79 billion transaction
+ERR:
+
+tmp/robust_ali/wsj_0367.final.streex##22.T-wsj0367-001-p1s21a15
+Zatímco obrat společnosti letěl prudce nahoru, "byl zde stále systém, který by se pravděpodobně hodil pro obrat mezi 10 a 20 miliony dolarů". 
+While the company's sales were soaring, ``We still had a system that was probably appropriate for $10 million to $20 million in sales.''
+obrat společnosti letěl prudce nahoru byl zde stále systém <který> pravděpodobně hodil obrat 10 a 20 miliony dolarů
+company sales soaring We still had system <that> was probably appropriate to $ 10 million $ 20 million sales
+ERR:
+
+tmp/robust_ali/wsj_0692.final.streex##5.T-wsj0692-001-p1s4a27
+Zvážíme-li, že pětiletý obranný plán stojí více než 1.6 biliónu dolarů, pak už je na čase, abychom vytvořili strategii, která bude ve Washingtonu fungovat. 
+With a five-year defense plan costing more than $1.6 trillion, it's about time we put together a defense strategy that works in Washington .
+#PersPron.ACT Zvážíme pětiletý obranný plán stojí více biliónu 1.6 dolarů pak už je čase #PersPron.ACT vytvořili strategii <která> Washingtonu fungovat
+five-year defense plan #Cor.ACT costing more $ 1.6 trillion it 's about time we put defense strategy <that> works Washington
+ERR:
+
+tmp/robust_ali/wsj_1768.final.streex##1.T-wsj1768-001-p1s0a23
+Společnost Canadian Pacific Ltd. uvedla, že předložila návrh na získání 44% podílu společnosti Soo Line Corp., který ještě nevlastní, za 19.50 dolaru na akcii, neboli přibližně 81.9 milionu dolarů, po tom, co na začátku tohoto roku pro svůj většinový podíl nenašla kupce. 
+Canadian Pacific Ltd. said it proposed acquiring the 44% of Soo Line Corp. it doesn't already own for $19.50 a share, or about $81.9 million, after failing to find a buyer for its majority stake earlier this year.
+Společnost Canadian #Forn.ID Pacific Ltd . uvedla #Gen.ADDR #PersPron.ACT předložila návrh #PersPron.ACT získání 44 % podílu společnosti #Forn.ID Soo Line Corp . #Neg.RHEM <který> ještě nevlastní #PersPron.ACT 19.50 dolaru akcii neboli přibližně 81.9 milionu dolarů #Neg.RHEM #PersPron.ACT začátku tohoto roku svůj většinový podíl nenašla kupce
+#Gen.ADDR Canadian Pacific Ltd. said it proposed acquiring #PersPron.ACT 44 % Soo Line Corp. it n't already own <#Cor.PAT> $ 19.50 share or $ 81.9 about million failing #PersPron.ACT find #Cor.ACT buyer its majority stake earlier this year
+ERR:
+
+tmp/robust_ali/wsj_1464.final.streex##11.T-wsj1464-001-p1s10a24
+Například skupina dlouhodobých státních obligací, které sledovala společnost Merrill Lynch & Co., v prvním čtvrtletí přinesla celkový výnos 1 %, v druhém čtvrtletí 12.45 % a ve třetím čtvrtletí -0.06 %. 
+For example, a group of long-term Treasury bonds tracked by Merrill Lynch&Co. produced a total return of 1% in the first quarter, 12.45% in the second quarter and -0.06% in the third quarter.
+Například skupina dlouhodobých státních obligací které sledovala společnost #Forn.ID Merrill Lynch & <Co> . prvním čtvrtletí přinesla celkový výnos 1 % druhém čtvrtletí přinesla výnos 12.45 % a třetím čtvrtletí přinesla výnos -0.06
+example group long-term Treasury bonds tracked #Cor.PAT Merrill Lynch & Co. produced total return 1 % first quarter produced return 12.45 % second quarter and produced return -0.06 % third quarter
+ERR:
+
+tmp/robust_ali/wsj_1037.final.streex##10.T-wsj1037-001-p1s9a28
+Společnost Hitachi Zosen Corp., stavitel lodí, který se ještě před několika lety topil v dluzích, bude stavět továrnu na strojní zařízení, což představuje její první expanzi za posledních 14 let. 
+Hitachi Zosen Corp., a shipbuilder buried in debt just a few years ago, will build a machinery plant, its first expansion in 14 years.
+, Společnost #Forn.ID Hitachi Zosen Corp . , stavitel lodí který ještě několika lety topil dluzích stavět továrnu strojní zařízení <což> představuje její první expanzi posledních 14 let
+Hitachi Zosen #Forn.NE Corp. , shipbuilder #Cor.PAT buried #Gen.ACT debt just few years build machinery plant <,> its first expansion 14 years
+ERR:
+
+tmp/robust_ali/wsj_1952.final.streex##11.T-wsj1952-001-p1s10a23
+Zpráva tiskové agentury Associated Press o pondělním příkazu k sekvestraci, který podepsal prezident Bush, však přesně vystihla pohrdání, které dává Kongres najevo ohledně pojetí právně závazné povinnosti: 
+However, the Associated Press's account of the Monday sequester order signed by President Bush neatly captured the contempt Congress shows toward the notion of a legally binding commitment:
+Zpráva tiskové agentury Associated #Forn.ID Press pondělním příkazu sekvestraci který podepsal prezident Bush však přesně vystihla pohrdání #PersPron.PAT #PersPron.ACT #Gen.ADDR <které> dává Kongres najevo pojetí #Gen.ACT právně závazné povinnosti
+However Associated Press account Monday sequester order signed #Cor.PAT President Bush neatly captured contempt Congress shows #Cor.CPHR notion legally binding commitment
+ERR:
+
+tmp/robust_ali/wsj_1405.final.streex##2.T-wsj1405-001-p1s1a31
+Poradce prezidenta Bushe pro národní bezpečnost, generálporučík Brent Scowcroft, nastoupil do úřadu při lednovém plánu na snížení počtu zaměstnanců NSC a zvýšení jejich disciplinovanosti oproti tomu, jací byli během Reaganovy vlády. 
+President Bush's national security adviser, Lt. Gen. Brent Scowcroft, came into office in January intent on making the NSC staff leaner and more disciplined than it had been during the Reagan administration.
+Poradce prezidenta Bushe národní bezpečnost #Gen.ACT generálporučík Brent Scowcroft nastoupil , úřadu lednovém plánu snížení počtu zaměstnanců #Idph.RSTR NSC a #Gen.ACT zvýšení jejich disciplinovanosti <jací> byli #PersPron.ACT Reaganovy vlády
+President Bush national security adviser Lt. Gen. , Brent Scowcroft came office January intent making #Gen.ACT NSC staff leaner and disciplined it been #Some.PAT Reagan administration
+ERR:
+
+tmp/robust_ali/wsj_0586.final.streex##28.T-wsj0586-001-p1s27a25
+Ceny ve Frankfurtu uzavřely v pátek opět níže, což je za posledních pěr dní již čtvrtý pokles a vyvrcholení týdne, ve kterém index DAX poklesl o 4 %. 
+Frankfurt prices closed lower again Friday, the fourth decline in the past five days and the culmination of a week that saw the DAX index lose 4%.
+Ceny Frankfurtu uzavřely pátek opět níže , což je posledních pěr dní již čtvrtý pokles a vyvrcholení týdne <kterém> index DAX poklesl 4 %
+Frankfurt prices closed , lower again Friday fourth decline past five days and culmination week <that> saw DAX index lose 4 %
+ERR:
+
+tmp/robust_ali/wsj_0446.final.streex##20.T-wsj0446-001-p1s19a27
+Jedním z důvodů, proč se americký farmaceutický průmysl pilulce RU-486 vyhýbá, je riziko vrozených vad a související soudní spory, k nimiž jistě bude docházet. 
+A risk of birth defects, a sure source of lawsuits, is one reason the U.S. pharmaceutical industry is steering clear of RU-486 .
+Jedním důvodů proč americký vyhýbá průmysl farmaceutický je pilulce RU 486 riziko vad vrozených a související spory soudní <nimiž> docházet jistě
+risk birth defects , sure <source> lawsuits is one reason U.S. pharmaceutical industry steering RU-486
+ERR:
+
+tmp/robust_ali/wsj_1457.final.streex##26.T-wsj1457-001-p1s25a36
+"Lidé ve 30. letech nebyli tak šťastní," říká Thomas Lessner, další místní profesor a životopisec legendárního Fiorella LaGuardii, starosty, který sjednotil město a vybudoval koalici, kterou chce Giuliani napodobit. 
+``People weren't so happy in the 1930s,'' says Thomas Lessner, another local professor and the biographer of the legendary Fiorello LaGuardia, the city's fusion mayor who built a coalition Mr. Giuliani hopes to emulate .
+#Neg.RHEM #Gen.ADDR Lidé 30 letech nebyli tak šťastní říká Thomas Lessner další , místní profesor a životopisec legendárního Fiorella LaGuardii , starosty který #Rcp.ADDR sjednotil město a vybudoval koalici <kterou> Giuliani napodobit
+People were n't so happy 1930s says #Gen.ADDR Thomas Lessner , another local professor and biographer legendary Fiorello LaGuardia , city fusion mayor who built coalition Mr. Giuliani hopes #Cor.ACT emulate <#Cor.PAT>
+ERR:
+
+tmp/robust_ali/wsj_1166.final.streex##14.T-wsj1166-001-p1s13a6
+Makléřské firmy, které vyjednávají míry s bankami a spořitelnami, jejichž vkladní certifikáty prodávají, mají obvykle pocit, že musí klientům nabídnout více, než mohou dostat z krátkodobých státních obligací nebo přímo od bank a pojišťoven. 
+The brokerage firms, which negotiate rates with the banks and thrifts whose CDs they sell , generally feel they have to offer clients more than they can get on T-bills or from banks and thrifts directly.
+Makléřské firmy <které> vyjednávají míry bankami a spořitelnami #Gen.ADDR #PersPron.ACT jejichž vkladní certifikáty prodávají mají obvykle pocit #PersPron.ACT klientům nabídnout více #PersPron.ACT dostat #Gen.PAT krátkodobých státních obligací nebo přímo bank a pojišťoven
+brokerage firms <which> negotiate rates banks and thrifts whose CDs they sell generally feel they offer clients more they get #PersPron.PAT T-bills or banks and thrifts directly
+ERR:
+
+tmp/robust_ali/wsj_0470.final.streex##3.T-wsj0470-001-p1s2a41
+Ačkoli jednání o vypořádání již byla ukončena, zdá se, že právní zástupci obou stran včera znovu začali jednat ve snaze vyřešit záležitost do čtvrtka, kdy má soudce rozhodnout o žádosti společnosti Warner o soudní zákaz, který by oběma producentům zabránil převzít vedení společnosti Columbia. 
+Although settlement talks had been dropped , attorneys for the two sides apparently began talking again yesterday in an attempt to settle the matter before Thursday, when a judge is expected to rule on Warner's request for an injunction that would block the two producers from taking over the management of Columbia .
+#Rcp.ADDR #PersPron.ACT #Gen.ACT #Gen.ACT jednání #Rcp.PAT #PersPron.ACT vypořádání již ukončena zdá právní zástupci obou stran včera znovu začali #Gen.PAT #Rcp.ADDR #Cor.ACT jednat snaze #PersPron.ACT vyřešit záležitost čtvrtka kdy soudce rozhodnout žádosti společnosti Warner soudní zákaz <který> oběma producentům #Cor.ACT zabránil převzít vedení #Gen.ACT společnosti Columbia
+#Gen.ACT settlement talks dropped attorneys two sides apparently began talking #Gen.PAT #Cor.ACT again yesterday attempt settle #PersPron.ACT matter Thursday judge expected #Gen.ACT rule Warner request injunction <that> block two producers taking #Cor.ACT management Columbia
+ERR:
+
+tmp/robust_ali/wsj_0089.final.streex##16.T-wsj0089-001-p1s15a23
+Podle celonárodního průzkumu z loňského roku téměř třetina kostelních zvonů v Anglii už o nedělích nezní, protože není nikdo, kdo by na ně zvonil. 
+According to a nationwide survey taken a year ago, nearly a third of England's church bells are no longer rung on Sundays because there is no one to ring them.
+celonárodního průzkumu loňského roku téměř třetina kostelních zvonů Anglii už nedělích nezní #Neg.RHEM #Neg.RHEM není nikdo <kdo> ně zvonil
+nationwide survey taken #Cor.CPHR #Gen.ACT year nearly third England church bells no longer rung #Gen.ACT Sundays is no one <#Cor.ACT> ring them
+ERR:
+
+tmp/robust_ali/wsj_0022.final.streex##16.T-wsj0022-001-p1s15a21
+Společnost IBM, čelní výrobce počítačů ve světě, nabídla svůj první osobní počítač až v srpnu 1981, kdy na trh vstoupilo mnoho dalších společností. 
+IBM, the world leader in computers, didn't offer its first PC until August 1981 as many other companies entered the market.
+Společnost IBM , čelní výrobce počítačů světě #Gen.ADDR nabídla svůj první osobní počítač až srpnu 1981 <kdy> trh vstoupilo mnoho dalších společností
+IBM , world leader computers n't offer #Gen.ADDR its first PC August 1981 many other companies entered market
+ERR:
+
+tmp/robust_ali/wsj_1843.final.streex##2.T-wsj1843-001-p1s1a27
+Podle Zprávy o peněžních fondech z informačního bulletinu společnosti IBC/Donoghue z Hollinstonu ve státě Massachusetts aktiva peněžních fondů v tomto týdnu, který skončil úterkem, prudce stoupla o 4.5 miliardy dolarů na rekordních 384.4 miliardy dolarů. 
+Money-fund assets soared $4.5 billion in the week ended Tuesday, to a record $348.4 billion, according to IBC\/Donoghue's Money Fund Report, a Holliston, Mass.-based newsletter.
+Zprávy peněžních fondech informačního bulletinu společnosti #Forn.ID IBC / Donoghue Hollinstonu státě Massachusetts aktiva peněžních fondů tomto týdnu <který> skončil úterkem prudce stoupla 4.5 miliardy dolarů rekordních 384.4 miliardy dolarů
+Money-fund assets soared $ 4.5 billion week ended <#Cor.PAT> Tuesday record $ 348.4 billion IBC\/Donoghue Money Fund Report , Holliston Mass.-based newsletter
+ERR:
+
+tmp/robust_ali/wsj_1820.final.streex##5.T-wsj1820-001-p1s4a24
+Obě strany nyní jednají o tom, kdo bude spravovat budovu, z níž odejde 6000 zaměstnanců obchodní skupiny společnosti Sears, kteří se přestěhují jinam. 
+The parties are currently negotiating over who would manage the building, which will be emptied of 6,000 employees from Sears' merchandise group, which is moving elsewhere.
+Obě strany nyní jednají #Rcp.ADDR kdo spravovat budovu níž odejde 6000 zaměstnanců obchodní skupiny společnosti Sears #Oblfm.DIR1 přestěhují <kteří> jinam
+parties currently negotiating #Rcp.ADDR who manage building which emptied #Gen.ACT 6,000 employees Sears merchandise group <which> moving elsewhere
+ERR:
+
+tmp/robust_ali/wsj_0265.final.streex##9.T-wsj0265-001-p1s8a17
+Mluvčí uvedl, že společnost HealthVest v říjnu zaplatila dvěma ze tří bank, jimž dlužila úroky, a se třetí bankou jedná. 
+A spokesman said HealthVest has paid two of the three banks it owed interest to in October and is in negotiations with the third bank.
+Mluvčí uvedl společnost HealthVest říjnu zaplatila #PersPron.PAT dvěma tří bank #PersPron.ACT <jimž> dlužila úroky a #Gen.PAT #PersPron.ACT třetí bankou jedná
+#Gen.ADDR spokesman said HealthVest paid #Gen.PAT banks two three banks <#Cor.ADDR> it owed interest October and is negotiations third bank
+ERR:
+
+tmp/robust_ali/wsj_0950.final.streex##6.T-wsj0950-001-p1s5a27
+Třída H společnosti GM, která představuje dividendový podíl na výnosu firmy Hughes, uzavřela při kompozitním obchodování na Newyorské burze na 29 dolarech, což je zvýšení o 25 centů. 
+GM Class H, which represents a dividend interest in Hughes earnings, closed at $29, up 25 cents in Big Board composite trading.
+Třída H společnosti GM která představuje dividendový podíl výnosu firmy Hughes uzavřela #Gen.PAT #PersPron.ACT kompozitním obchodování Newyorské burze 29 dolarech , <což> je #PersPron.ACT zvýšení 25 centů
+GM Class H which represents dividend interest Hughes earnings closed $ 29 <,> up 25 cents Big Board composite trading
+ERR:
+
+tmp/robust_ali/wsj_0584.final.streex##46.T-wsj0584-001-p1s45a36
+Leon ze společnosti Bear Stearns přemýšlel o tom, že by společnost McCaw mohla chtít získat čas a uvažovat o podání protimonopolní žaloby na společnost BellSouth u státního soudce ministerstva spravedlnosti Herolda Greena, který dohlíží na uplatňování soudního smíru, podle kterého byl v roce 1984 rozdělen systém telefonních společností. 
+Mr. Leon of Bear Stearns speculated that McCaw, in an attempt to buy time, might consider filing an antitrust suit against BellSouth with the Justice Department and U.S. District Judge Harold Greene, who oversees enforcement of the consent decree that broke up the Bell system in 1984.
+Leon společnosti Bear #Forn.ID Stearns přemýšlel společnost McCaw získat čas a uvažovat #PersPron.ACT podání protimonopolní žaloby společnost BellSouth státního soudce ministerstva spravedlnosti Herolda Greena <který> dohlíží #Gen.ACT uplatňování soudního smíru #Gen.ACT kterého roce 1984 rozdělen systém telefonních společností
+Mr. Leon Bear Stearns speculated McCaw attempt #PersPron.ACT buy #Cor.ACT time consider filing #Cor.ACT antitrust suit BellSouth Justice Department and U.S. District Judge Harold Greene <who> oversees enforcement consent decree that broke Bell system 1984
+ERR:
+
+tmp/robust_ali/wsj_0989.final.streex##25.T-wsj0989-001-p1s24a30
+"Pokud dostanou 50 balíčků něčeho, otevřou jeden, zjistí, co to je, 48 z nich zahodí a dva pošlou lidem nebo oddělením, o nichž si myslí, že jim patří," říká mluvčí. 
+``If they get 50 packets of something, they open one, see what it says , throw 48 away and send two to people or departments they think are appropriate,'' a spokesman says .
+#PersPron.ACT #PersPron.ACT dostanou 50 balíčků něčeho otevřou jeden zjistí co to je 48 nich zahodí a dva pošlou lidem nebo oddělením #PersPron.ACT <nichž> myslí #PersPron.ACT jim patří #Gen.ADDR říká mluvčí
+they get 50 packets something they open one see what it says #Gen.ADDR throw 48 and send two people or departments they think are #PersPron.ACT appropriate spokesman says #Gen.ADDR
+ERR:
+
+tmp/robust_ali/wsj_1603.final.streex##77.T-wsj1603-001-p1s76a9
+Zahraniční publikace na to reagovaly články, které prohlašovaly, že je to nejbohatší žena ve Vietnamu. 
+Foreign publications have responded with articles declaring her Vietnam's richest woman.
+Zahraniční publikace to reagovaly články <které> prohlašovaly je to nejbohatší žena Vietnamu
+Foreign publications responded #Gen.PAT articles <#Cor.ACT> declaring her Vietnam richest woman
+ERR:
+
+tmp/robust_ali/wsj_0693.final.streex##19.T-wsj0693-001-p1s18a7
+Nahradil jej John Major, který v pátek vyjádřil touhu po silné libře a podpořil poměrně vysoké britské úrokové sazby, o kterých řekl, že na snižování inflace "pracují přesně podle plánu". 
+He was succeeded by John Major, who Friday expressed a desire for a firm pound and supported the relatively high British interest rates that he said ``are working exactly as intended'' in reducing inflation.
+Nahradil jej John Major <který> pátek vyjádřil touhu silné libře a podpořil poměrně vysoké britské úrokové sazby #Gen.ADDR #PersPron.ACT kterých řekl #Gen.ACT snižování inflace #PersPron.ACT pracují přesně plánu
+He succeeded John Major <who> Friday expressed desire firm pound and supported relatively high British interest rates #Gen.ADDR he said that working exactly #Equal.MANN #Cor.PAT #Gen.ACT intended reducing #PersPron.ACT inflation
+ERR:
+
+tmp/robust_ali/wsj_1752.final.streex##2.T-wsj1752-001-p1s1a44
+Společnost Storage z města Louisville v Coloradu, která vyrábí zařízení na ukládání dat pro sálové počítače, sdělila, že obrovský nárůst čistého zisku odráží "silné tržby" za páskové produkty, konkrétně za systém 4400 Automated Cartridge System, který se stará o knihovnu kazetových pásek. 
+Storage, Louisville, Colo., which makes data-storage devices for mainframe computers, said the huge increase in net reflects ``strong sales'' of its tape products, particularly the 4400 Automated Cartridge System, which holds a library of tape cartridges.
+#Gen.ADDR Storage Společnost Louisville města Coloradu která vyrábí #Gen.ACT ukládání zařízení dat počítače sdělila sálové obrovský nárůst čistého zisku odráží silné tržby páskové produkty , konkrétně 4400 systém #Forn.ID Automated Cartridge System <který> stará knihovnu pásek kazetových
+#Gen.ADDR Storage Louisville Colo. which makes data-storage devices mainframe computers said huge increase net reflects strong sales its tape products , particularly 4400 Automated Cartridge System <which> holds library tape cartridges
+ERR:
+
+tmp/robust_ali/wsj_0351.final.streex##82.T-wsj0351-001-p1s81a16
+Japonská vztažná emise č. 111, splatná v roce 1998, skončila na obrazovkách brokerů na 95.90, což je snížení o 0.02 bodu, s výnosem 5435 %. 
+Japan's benchmark No. 111 issue due 1998 ended on brokers' screens at 95.90, down 0.02 point, to yield 5.435%.
+Japonská vztažná emise č 111 splatná roce 1998 skončila obrazovkách brokerů 95.90 , <což> je #Gen.ACT snížení 0.02 bodu výnosem 5435 %
+Japan benchmark No. 111 issue due 1998 ended brokers screens 95.90 , <#EmpVerb.PAT> down 0.02 point #Cor.ACT yield #Gen.ADDR 5.435 %
+ERR:
+
+tmp/robust_ali/wsj_0449.final.streex##24.T-wsj0449-001-p1s23a13
+Jenže včera Michael Carpenter uvedl, že velcí institucionální investoři, které blíže nespecifikoval, "nám sdělili, že nebudou obchodovat s firmami", jež i nadále provádějí indexové arbitráže na vlastní účet. 
+But yesterday, Mr. Carpenter said big institutional investors, which he wouldn't identify , ``told us they wouldn't do business with firms'' that continued to do index arbitrage for their own accounts.
+Jenže včera Carpenter Michael uvedl velcí investoři institucionální sdělili #Neg.RHEM #PersPron.ACT nespecifikoval <které> nám blíže #PersPron.ACT obchodovat #Gen.PAT #Neg.RHEM firmami jež i provádějí nadále arbitráže indexové vlastní účet
+But yesterday Mr. Carpenter said #Gen.ADDR big institutional investors <which> he n't identify told us they n't do business firms that continued #Cor.ACT do index arbitrage their own accounts
+ERR:
+
+tmp/robust_ali/wsj_0810.final.streex##9.T-wsj0810-001-p1s8a15
+To je způsobeno hlavně platbami společnosti Allianz za většinu 50% podílu, který podle dohody převzala v pojišťovacích provozech společnosti Navigation Mixte. 
+That is due mostly to payments from Allianz for most of the 50% stake it has agreed to acquire in Navigation Mixte's insurance business.
+To způsobeno hlavně platbami společnosti Allianz většinu 50 % podílu #PersPron.ACT <který> dohody převzala pojišťovacích provozech společnosti #Forn.ID Navigation Mixte
+That is due mostly payments Allianz most 50 % stake it agreed <#Cor.PAT> acquire #Cor.ACT Navigation Mixte insurance business
+ERR:
+
+tmp/robust_ali/wsj_1366.final.streex##41.T-wsj1366-001-p1s40a19
+A co je nejdůležitější, Senát zmařil kontroverzní plán Bushovy administrativy na financování této pomoci, který byl později částečně obnoven. 
+Most importantly, the Senate traded away the Bush administration's controversial plan to finance the bailout, which was partly reinstated later.
+A co je nejdůležitější , Senát zmařil kontroverzní plán Bushovy administrativy #Gen.ACT financování této pomoci #Gen.ACT <který> později částečně obnoven
+importantly Senate traded Bush administration controversial plan #Cor.ACT finance bailout <which> partly #Gen.ACT reinstated later
+ERR:
+
+tmp/robust_ali/wsj_1037.final.streex##10.T-wsj1037-001-p1s9a11
+Společnost Hitachi Zosen Corp., stavitel lodí, který se ještě před několika lety topil v dluzích, bude stavět továrnu na strojní zařízení, což představuje její první expanzi za posledních 14 let. 
+Hitachi Zosen Corp., a shipbuilder buried in debt just a few years ago, will build a machinery plant, its first expansion in 14 years.
+, Společnost #Forn.ID Hitachi Zosen Corp . , stavitel lodí <který> ještě několika lety topil dluzích stavět továrnu strojní zařízení což představuje její první expanzi posledních 14 let
+Hitachi Zosen #Forn.NE Corp. , shipbuilder <#Cor.PAT> buried #Gen.ACT debt just few years build machinery plant , its first expansion 14 years
+ERR:
+
+tmp/robust_ali/wsj_1490.final.streex##40.T-wsj1490-001-p1s39a37
+Kromě požadavku na dalšího investora s vlastním kapitálem v hotovosti tato další proměnlivá hlediska zahrnují: samotné piloty, kteří mohou potopit nabídky soupeřů vyhrožováním stávkou, odborová organizace mechaniků, což je dlouhodobý rival pilotů, který pomáhal potopit jednání s piloty, a regulátoři z Washingtonu, jejichž odpor k cizím investicím do aerolinií pomáhal zavalit jednání pochybnostmi. 
+In addition to the need for another cash equity investor, the other moving parts include: the pilots themselves, who can scuttle rival deals by threatening to strike; the machinists union, the pilots' longtime rivals who helped scuttle the pilots' deal; and regulators in Washington, whose opposition to foreign airline investment helped throw the deal into doubt.
+požadavku dalšího investora vlastním kapitálem hotovosti tato další proměnlivá hlediska zahrnují samotné piloty kteří potopit nabídky soupeřů #PersPron.ACT vyhrožováním stávkou odborová organizace mechaniků , což je dlouhodobý rival pilotů #Gen.ADDR <který> pomáhal #Cor.ACT potopit #Gen.PAT #Gen.ACT jednání piloty a regulátoři Washingtonu #Gen.ADDR jejichž odpor cizím investicím aerolinií pomáhal #Cor.ACT zavalit #Gen.PAT #PersPron.ADDR #Gen.ACT jednání pochybnostmi
+addition need another cash equity investor other moving #Cor.ACT parts include pilots themselves who scuttle rival deals threatening #Cor.ACT #Cor.ACT strike machinists union , pilots longtime rivals <who> helped #Gen.ADDR #Cor.ACT scuttle pilots deal and regulators Washington whose opposition foreign airline investment helped #Gen.ADDR throw #Cor.ACT deal doubt
+ERR:
+
+tmp/robust_ali/wsj_0464.final.streex##19.T-wsj0464-001-p1s18a9
+Tento problém obzvlášť poškozuje mimoburzovní trh, což je tradiční základna pro malé investory. 
+The problem has been particularly damaging to the OTC market, traditionally a base for the small investor.
+Tento problém obzvlášť poškozuje mimoburzovní trh , <což> je tradiční základna investory malé
+problem been particularly damaging OTC market <#EmpVerb.DESCR> traditionally base small investor
+ERR:
+
+tmp/robust_ali/wsj_0270.final.streex##2.T-wsj0270-001-p1s1a28
+Akcionáři kalifornské společnosti Santa Ana, která poskytuje pojištění budov, schválili tvorbu těchto akcií třídy B, jež budou obchodovány na celostátním mimoburzovním trhu a o nichž společnost prohlásila, že budou užity pro akvizice a další všeobecné účely společnosti. 
+Shareholders of the Santa Ana, Calif., title-insurance company approved the creation of this second class of stock, which will be traded on the national over-the-counter market and which the company said would be used for acquisitions and other general corporate purposes.
+Akcionáři kalifornské společnosti #Forn.ID Santa Ana #Gen.ADDR která poskytuje #Gen.ACT pojištění budov schválili tvorbu těchto akcií třídy B #Gen.ADDR #Gen.ACT jež obchodovány celostátním mimoburzovním trhu a <nichž> společnost prohlásila #PersPron.PAT #PersPron.ACT užity akvizice a další všeobecné účely společnosti
+Shareholders Santa Ana #Forn.LOC Calif. title-insurance company approved creation this second class stock #Gen.ACT which traded national over-the-counter market and <which> company said #PersPron.EFF #Gen.ADDR used acquisitions and other general corporate purposes
+ERR:
+
+tmp/robust_ali/wsj_0093.final.streex##6.T-wsj0093-001-p1s5a24
+Deník ho obvinil z toho, že je vedoucím zastáncem "mírového vývoje", což je okázalá fráze vystihující to, co Čína považuje za politiku zemí Západu ke svádění socialistických zemí ke kapitalismu. 
+The paper accused him of being a leading proponent of ``peaceful evolution,'' a catch phrase to describe what China believes is the policy of Western countries to seduce socialist nations into the capitalist sphere .
+Deník ho obvinil , je #PersPron.ACT vedoucím zastáncem mírového vývoje což je okázalá fráze vystihující <co> Čína považuje politiku zemí Západu svádění #PersPron.ACT socialistických zemí kapitalismu
+paper accused him being #Cor.ACT leading #Gen.PAT #Cor.ACT proponent peaceful evolution , catch phrase describe #Cor.ACT <what> China believes is policy Western countries #Cor.ACT seduce socialist nations capitalist sphere
+ERR:
+
+tmp/robust_ali/wsj_0108.final.streex##51.T-wsj0108-001-p1s50a13
+V době, kdy má každá vládní agentura informační mašinérii, která vám zasílá materiály, ať už chcete nebo ne, to působí divně. 
+In an era when every government agency has a public-relations machine that sends you stuff whether you want it or not , this does seem odd.
+době kdy má každá vládní agentura informační mašinérii <která> vám zasílá materiály už nebo #PersPron.ACT #PersPron.PAT chcete chcete ne to působí divně
+era when every government agency has public-relations machine <that> sends you stuff you want it or want not this seem odd
+ERR:
+
+tmp/robust_ali/wsj_0258.final.streex##13.T-wsj0258-001-p1s12a7
+Pro společnost Mips, která v tomto roce očekává tržby 100 milionů dolarů, jsou spojenci zvučných jmen, jako je společnost Control Data, nezbytní pro nalákání softwarových vývojářů pro architekturu RISC. 
+For Mips, which expects revenue of $100 million this year, big-name allies such as Control Data are essential to attract software developers to the company's RISC architecture.
+společnost Mips <která> tomto roce očekává tržby 100 milionů dolarů jsou spojenci zvučných jmen jako je spojenci společnost #Forn.ID Control Data nezbytní nalákání #PersPron.ACT softwarových vývojářů architekturu RISC
+Mips <which> expects revenue $ 100 million this year big-name allies as Control Data are essential #Cor.ACT attract software developers company RISC architecture
+ERR:
+
+tmp/robust_ali/wsj_1501.final.streex##7.T-wsj1501-001-p1s6a14
+Její cenné papíry uzavíraly při národním mimoburzovním obchodování na 38 dolarech, což je nárůst o 1875 dolaru. 
+Its stock closed at $38, up $1.875, in national over-the-counter trading.
+Její cenné papíry uzavíraly #Gen.PAT #Gen.ACT národním mimoburzovním obchodování 38 dolarech , <což> je nárůst 1875 dolaru
+Its stock closed $ 38 up $ 1.875 <,> national over-the-counter trading
+ERR:
+
+tmp/robust_ali/wsj_1619.final.streex##32.T-wsj1619-001-p1s31a20
+Zdá se, že úspěch financování společnosti NWA a neúspěch jednání o UAL rovněž zdůrazňuje důležitost nové role, kterou při financování převzetí hrají japonské banky. 
+The success of the NWA financing, and the failure of the UAL deal, also seem to highlight the important new role in takeover financing being played by Japanese banks.
+#Gen.ACT Zdá úspěch #Gen.ACT financování společnosti NWA a neúspěch #Gen.ADDR #Gen.ACT jednání #Idph.PAT UAL rovněž zdůrazňuje důležitost nové role <kterou> #Gen.ACT financování #Gen.ACT převzetí #Gen.PAT hrají japonské banky
+success NWA financing and failure UAL deal also seem #Cor.ACT highlight important new role takeover financing played <#Cor.DPHR> Japanese banks
+ERR:
+
+tmp/robust_ali/wsj_1802.final.streex##22.T-wsj1802-001-p1s21a15
+K možným zdržením patří, že se prodeje Saks a Marshall Field - které podle očekávání měly být nabídnuty k prodeji brzy po kritické vánoční sezóně - mohou protáhnout do druhého čtvrtletí nebo druhého pololetí. 
+Among possible delays, the sales of Saks and Marshall Field -- which were expected to be on the block soon after the crucial Christmas season -- may slide into the second quarter or second half.
+#Gen.ACT možným zdržením patří prodeje Saks a #Forn.RSTR Marshall Field #Gen.ADDR #Gen.ACT <které> #Gen.PAT #Gen.ACT očekávání nabídnuty prodeji brzy kritické vánoční sezóně protáhnout druhého čtvrtletí nebo druhého pololetí
+possible delays #PersPron.ACT sales Saks and Marshall Field #Gen.ACT expected slide <which> be block soon crucial Christmas season second quarter or second half
+ERR:
+
+tmp/robust_ali/wsj_1947.final.streex##1.T-wsj1947-001-p1s0a21
+(Během roku, kdy oslaví sté výročí, bude Wall Street Journal přinášet události z minulého století, které jsou mezníky americké obchodní historie.) 
+-LRB-During its centennial year, The Wall Street Journal will report events of the past century that stand as milestones of American business history.-RRB-
+#PersPron.ACT roku kdy oslaví sté výročí Wall Street #Forn.ACT Journal přinášet události minulého století <které> jsou mezníky americké obchodní historie
+its centennial year Wall Street Journal report #Gen.ADDR events past century <that> stand milestones American business history
+ERR:
+
+tmp/robust_ali/wsj_0528.final.streex##7.T-wsj0528-001-p1s6a16
+"Kmenová učebna", pořad o vedoucím pracovníkovi tmavé pleti v reklamě, který přenechá zasedací místnost správní rady třídě čtvrťáků, ve zkoušce sledovanosti propadá. 
+``Homeroom,'' a show about a black ad executive who gives up the boardroom for a fourth-grade classroom, is flunking the ratings test.
+Kmenová učebna , pořad vedoucím pracovníkovi tmavé pleti reklamě <který> přenechá zasedací místnost správní rady třídě čtvrťáků zkoušce sledovanosti propadá
+Homeroom show black ad executive <who> gives boardroom fourth-grade classroom flunking , ratings test
+ERR:
+
+tmp/robust_ali/wsj_0552.final.streex##32.T-wsj0552-001-p1s31a17
+Aramidové vlákno Twaron firmy Akzo je s odstupem druhé za Kevlarem společnosti Du Pont, který na trhu dominuje. 
+Akzo's Twaron aramid fiber is a distant second to Du Pont Co.'s Kevlar, which dominates the market.
+Aramidové vlákno Twaron firmy Akzo je odstupem druhé Kevlarem společnosti #Forn.ID Du Pont <který> trhu dominuje
+Akzo Twaron aramid fiber is distant second Du Pont #Forn.NE Co. Kevlar <which> dominates market
+ERR:
+
+tmp/robust_ali/wsj_0072.final.streex##19.T-wsj0072-001-p1s18a25
+"Vždy je tu možnost, že přijde recese," dodal Guffey, "ale když se mě zeptáte, jaké je procento pravděpodobnosti, odhadoval bych, že daleko méně než 50 %. 
+``There is always a chance of recession,'' added Mr. Guffey, ``but if you ask me to put a percentage on it, I would think it's well below a 50% chance.
+Vždy je tu možnost přijde recese dodal Guffey ale mě zeptáte #PersPron.ACT <jaké> je procento pravděpodobnosti odhadoval #PersPron.ACT je #PersPron.ACT daleko méně 50 %
+is always chance recession added Mr. Guffey but you ask me #Cor.ACT put percentage <it> I think it 's well 50 % chance
+ERR:
+
+tmp/robust_ali/wsj_1497.final.streex##1.T-wsj1497-001-p1s0a16
+I když vítám dopis Nicholase McInnese z 18. září, v němž nabízí opravy vaší tabulky "Celosvětová daňová revoluce" (redakční stránka, 29. srpna), jsem překvapen, že opomenul ostatní chyby, které některé z nás zasahují osobně. 
+While welcoming Nicholas McInnes's Sept. 18 letter offering corrections to your ``World-Wide Tax Revolution'' table -LRB-editorial page, Aug. 29-RRB-, I am surprised that he neglected other errors that , for some of us, strike close to home.
+jsem #PersPron.ACT #PersPron.ACT vítám dopis Nicholase McInnese 18 září #PersPron.ACT #Gen.ADDR <němž> nabízí opravy vaší tabulky Celosvětová daňová revoluce redakční stránka 29 srpna překvapen #PersPron.ACT opomenul ostatní chyby které některé nás zasahují osobně
+welcoming #Cor.ACT Nicholas McInnes Sept. 18 letter <#Cor.ACT> offering #Gen.ADDR corrections #EmpVerb.PAR your World-Wide Tax Revolution table editorial page Aug. 29 I surprised he neglected other errors that some us strike close home
+ERR:
+
+tmp/robust_ali/wsj_0405.final.streex##11.T-wsj0405-001-p1s10a15
+"Prostřednictvím sovětského vesmírného programu Kosmos jsme získali technologie, které nelze nikde jinde najít." 
+``We have obtained through the development of Cosmos -LCB- the Soviet space program -RCB- technologies you don't see anywhere else.''
+#PersPron.ACT sovětského vesmírného programu Kosmos získali technologie #Neg.RHEM #Cor.ACT <které> nelze #Benef.BEN nikde jinde najít
+We obtained development Cosmos -LCB- Soviet space program technologies you n't see #Cor.PAT anywhere else
+ERR:
+
+tmp/robust_ali/wsj_1846.final.streex##6.T-wsj1846-001-p1s5a36
+V úterý schválil památnou rezoluci navrženou senátorem Bobem Dolem, která označuje 24. duben 1990 za "Státní svátek památky 75. výročí genocidy Arménů v letech 1915-1923", k níž došlo pod nadvládou válečnické Osmanské říše. 
+On Tuesday it approved Senator Bob Dole's proposed commemorative resolution designating April 24, 1990, as the ``National Day of Remembrance of the 75th Anniversary of the Armenian Genocide of 1915-1923,'' suffered at the hands of the warring Ottoman Empire.
+#PersPron.ACT úterý schválil památnou rezoluci navrženou senátorem Bobem Dolem která označuje 24 duben 1990 Státní svátek památky 75 výročí genocidy Arménů letech 1915 - 1923 <níž> došlo nadvládou válečnické Osmanské říše
+Tuesday it approved Senator Bob Dole #Cor.ACT #Cor.PAT proposed commemorative resolution #Cor.ACT designating April 24 1990 National Day Remembrance 75th Anniversary Armenian Genocide 1915-1923 1915-1923 1915-1923 #Cor.PAT suffered #Gen.ACT hands #Cor.ACT warring #Gen.PAT Ottoman Empire
+ERR:
+
+tmp/robust_ali/wsj_0553.final.streex##15.T-wsj0553-001-p1s14a19
+I když sir Alan nepochybně ve všem ostatním s Lawsonem souhlasí, je jinak zarytý monetarista, který je ochotný obětovat život při prosazování pohyblivých kurzů. 
+While no doubt agreeing with Mr. Lawson on everything else, Sir Alan is a dyed-in-the-wool monetarist, inclined to defend floating rates to the death.
+sir Alan nepochybně všem ostatním Lawsonem souhlasí je #PersPron.ACT jinak zarytý monetarista <který> je ochotný #Cor.ACT obětovat život #PersPron.ACT prosazování pohyblivých kurzů
+#Cor.ACT doubt agreeing Mr. Lawson everything else Sir Alan is dyed-in-the-wool monetarist <#Cor.ACT> inclined defend #Cor.ACT #Gen.EFF #Cor.ACT floating rates death
+ERR:
+
+tmp/robust_ali/wsj_1379.final.streex##14.T-wsj1379-001-p1s13a33
+Oddělení doporučuje obyvatelům, aby když už musí pěstovat ságové palmy, je pěstovali v zahradě za domem, a vybízejí pěstitelské školky, aby si dávaly pozor na kohokoli, kdo jim zkouší nějaké vnutit. 
+The department is advising residents to plant Sagos, if they must , in the back yard and telling nurseries to be on the lookout for anyone trying to palm one off.
+Oddělení doporučuje obyvatelům už #PersPron.ACT pěstovat ságové palmy #PersPron.ACT je pěstovali zahradě domem a vybízejí pěstitelské školky #PersPron.ACT si dávaly pozor kohokoli <kdo> #Cor.ACT jim zkouší nějaké vnutit
+department advising residents plant Sagos they plant #PersPron.PAT back yard and telling nurseries #Cor.ACT be lookout anyone <#Cor.ACT> trying #Cor.ACT palm one
+ERR:
+
+tmp/robust_ali/wsj_0314.final.streex##44.T-wsj0314-001-p1s43a23
+To se týká výměnných obchodů a škrtů, které se příčí stávajícímu zákazníkovi, a dokonce i tvůrci koncepce toho, co je 'nutné'." 
+This involves trade-offs and -LCB- it -RCB- cuts against the grain of existing consumer and even provider conceptions of what is `necessary.'''
+týká To výměnných obchodů a škrtů které příčí stávajícímu zákazníkovi a dokonce i tvůrci koncepce <co> je toho nutné
+This involves trade-offs and it cuts grain #Cor.ACT existing consumer and even provider conceptions <what> is necessary
+ERR:
+
+tmp/robust_ali/wsj_0617.final.streex##49.T-wsj0617-001-p1s48a7
+Nově vzniklá firma, která se dostane mezi 10 největších v Texasu, bude fungovat pod názvem Jackson & Walker. 
+The consolidated firm, which would rank among the 10 largest in Texas, would operate under the name Jackson&Walker.
+Nově vzniklá firma <která> dostane 10 největších Texasu fungovat názvem Jackson #Forn.ID & Walker
+consolidated firm <which> rank 10 largest Texas operate name Jackson & Walker
+ERR:
+
+tmp/robust_ali/wsj_1101.final.streex##24.T-wsj1101-001-p1s23a24
+Představitelé navíc uvádějí, že Izrael neposkytl přesvědčivé důkazy o tom, že by tyto činy nařídil Fatah nebo jiná skupina, kterou řídí Arafat. 
+In addition, the officials say Israel hasn't presented convincing evidence these acts were ordered by Fatah or by any group Mr. Arafat controls .
+Představitelé navíc uvádějí #Neg.RHEM #PersPron.ADDR neposkytl Izrael přesvědčivé důkazy #Gen.ADDR nařídil tyto činy Fatah nebo jiná skupina <kterou> řídí Arafat
+addition officials say #Gen.ADDR Israel n't presented convincing evidence these acts ordered #Gen.ADDR Fatah or any group Mr. Arafat controls <#Cor.PAT>
+ERR:
+
+tmp/robust_ali/wsj_0592.final.streex##2.T-wsj0592-001-p1s1a9
+Ale to je možná ta poslední věc, kterou potřebuje. 
+That may be the last thing she needs .
+Ale to je možná ta poslední věc #PersPron.ACT <kterou> potřebuje
+That be last thing <#Cor.PAT> she needs
+ERR:
+
+tmp/robust_ali/wsj_0525.final.streex##10.T-wsj0525-001-p1s9a9
+Bez firem z Wall Street, které obchodující na své vlastní účty, by v oblasti arbitráží akciových indexů mohlo ve skutečnosti být podstatně více příležitostí pro velké fondy. 
+In fact, without Wall Street firms trading for their own accounts, the stock-index arbitrage trading opportunities for the big funds may be all the more abundant.
+firem #Forn.DIR1 Wall Street <které> obchodující #Gen.PAT #Gen.ADDR své vlastní účty arbitráží akciových indexů skutečnosti být podstatně více příležitostí velké fondy
+fact Wall Street firms <#Cor.ACT> trading #Gen.PAT their own accounts stock-index arbitrage trading opportunities big funds be all abundant
+ERR:
+
+tmp/robust_ali/wsj_1440.final.streex##8.T-wsj1440-001-p1s7a14
+Stejně jako mnohé růstové emise na mimoburzovním trhu mají tržní hodnotu - která se určuje jako cena cenných papírů vynásobená akciemi v oběhu - zhruba 100 až 500 milionů dolarů. 
+Like many OTC growth issues, they have market values -- as measured by stock price times shares outstanding -- of roughly $100 million to $500 million.
+#PersPron.ACT mnohé emise Stejně mají růstové mají #PersPron.PAT trhu mimoburzovním tržní #Gen.ACT hodnotu <která> určuje #Gen.ACT #Equal.MANN určuje cenných papírů cena vynásobená akciemi oběhu zhruba 100 až milionů 500 dolarů
+many OTC growth issues they have market values #Gen.ACT measured #Cor.PAT stock price times shares outstanding roughly $ 100 million to $ 500 million
+ERR:
+
+tmp/robust_ali/wsj_0742.final.streex##12.T-wsj0742-001-p1s11a34
+Jedna skupina tvrdí, že termínové obchody přispívají k nestabilitě trhu, druzí trvají na tom, že termínové obchody jsou vedlejším projevem spekulace, která zlehčuje hlavní funkci akciových trhů, jíž je získávání kapitálu. 
+One group says the futures contribute to stock market volatility; the other contends that futures are a sideshow of speculation that detracts from the stock market's basic function of raising capital.
+Jedna skupina tvrdí termínové obchody přispívají , nestabilitě trhu druzí trvají termínové obchody jsou vedlejším projevem spekulace která zlehčuje hlavní funkci akciových trhů <jíž> je #Gen.ACT získávání kapitálu
+One group says #Gen.ADDR futures contribute stock market volatility ; #Gen.ADDR other contends futures are sideshow speculation that detracts stock market basic <function> raising #Cor.ACT capital
+ERR:
+
+tmp/robust_ali/wsj_1615.final.streex##27.T-wsj1615-001-p1s26a38
+Na podzim to bude rok, co podle průzkumu, který tehdy provedl Eagletonův institut Rutgersovy univerzity, dali voliči z New Jersey mladší 30 let v 56 % přednost Georgi Bushovi před Michaelem Dukakisem, který získal 39 %. 
+A year ago this fall, New Jersey voters under 30 favored George Bush by 56% to 39% over Michael Dukakis, according to a survey then by Rutgers University's Eagleton Institute.
+to podzim bude rok který tehdy průzkumu provedl Eagletonův dali institut Rutgersovy univerzity New #Forn.DIR1 voliči Jersey mladší let 30 56 % přednost Michaelem Dukakisem Bushovi Georgi získal <který> % 39
+year this fall New Jersey voters 30 favored George Bush 56 % 39 % Michael Dukakis survey then Rutgers University Eagleton Institute
+ERR:
+
+tmp/robust_ali/wsj_1723.final.streex##36.T-wsj1723-001-p1s35a7
+Mezi akciemi, na které makléři tlačili, byl Sears, který uzavřel na 107 pencích (1.70 dolaru) za akcii, což je o 3 více. 
+Among the stocks featured in the market-makers' squeeze was Sears, which closed at 107 pence -LRB-$1.70-RRB- a share, up 3.
+akciemi <které> makléři tlačili #Gen.PAT byl Sears který uzavřel 107 pencích ( #EmpVerb.LOC 1.70 dolaru akcii což je , 3 více
+stocks featured #Cor.PAT #Gen.ACT market-makers squeeze was Sears which closed 107 pence -LRB- $ 1.70 share , 3 up
+ERR:
+
+tmp/robust_ali/wsj_0575.final.streex##1.T-wsj0575-001-p1s0a8
+Společnost Control Data Corp., která sotva před pár měsíci finančně krvácela, se domnívá, že se uzdraví dostatečně brzy na to, aby zvážila znovuodkoupení veřejného dluhu. 
+Control Data Corp., which just months ago was hemorrhaging financially, thinks it will be healthy enough soon to consider repurchasing public debt.
+Control Data Corp #Forn.ID . <která> Společnost sotva pár měsíci krvácela domnívá finančně #PersPron.ACT uzdraví brzy dostatečně #PersPron.ACT zvážila znovuodkoupení #Cor.ACT dluhu veřejného
+Control Data Corp. <which> just months hemorrhaging financially thinks it be healthy enough soon #Cor.ACT consider repurchasing #Cor.ACT public debt
+ERR:
+
+tmp/robust_ali/wsj_1390.final.streex##3.T-wsj1390-001-p1s2a37
+"Je velmi málo společností, které se mohou pyšnit tak úzce propojenou skupinou," říká Robert A. Brawer, 52letý nedávno jmenovaný prezident, nastupující po Beatrice Colemanové, své tchyni, která zůstává předsedkyní. 
+``There are very few companies that can boast of such a close-knit group,'' says Robert A. Brawer, 52 years old, recently named president, succeeding Beatrice Coleman, his mother-in-law, who remains chairman.
+#Gen.ADDR Je velmi málo společností které pyšnit tak úzce propojenou skupinou říká Robert A Brawer , 52letý 52letý nedávno jmenovaný prezident nastupující Beatrice Colemanové , své tchyni <která> zůstává předsedkyní
+are very few companies that boast such close-knit group says #Gen.ADDR Robert A. Brawer 52 years old recently named #Cor.PAT #Gen.ACT president succeeding #Cor.ACT Beatrice Coleman , his mother-in-law <who> remains chairman
+ERR:
+
+tmp/robust_ali/wsj_1154.final.streex##43.T-wsj1154-001-p1s42a10
+Každý z nich přispěl částí na příkaz Verdiho, kterého problematická organizace málem předčasně uvrhla do hrobu. 
+Each of them contributed a section at the behest of Verdi, who was nearly driven to his own early grave by the troublesome arrangements.
+#PersPron.PAT Každý nich přispěl částí příkaz Verdiho <kterého> problematická organizace málem předčasně uvrhla hrobu
+Each them contributed #PersPron.ADDR section behest Verdi <who> nearly driven his own early grave troublesome arrangements
+ERR:
+
+tmp/robust_ali/wsj_1547.final.streex##7.T-wsj1547-001-p1s6a14
+Představitelé v Oaklandu uvedli, že kritický stav 57letého přístavního dělníka, který strávil čtyři dny uvězněný v sutinách, se mírně zlepšil. 
+In Oakland, officials said the 57-year-old longshoreman who spent four days entombed in rubble was in critical condition with slight improvement.
+Představitelé Oaklandu uvedli kritický 57letého 57letého stav přístavního dělníka <který> zlepšil strávil mírně čtyři dny uvězněný sutinách
+Oakland officials said #Gen.ADDR 57-year-old longshoreman <who> spent four days #Gen.ACT entombed #Cor.PAT rubble was critical condition slight improvement
+ERR:
+
+tmp/robust_ali/wsj_0010.final.streex##20.T-wsj0010-001-p1s19a12
+Avšak nyní se již těší na své zimní zasedání - které se bude konat v únoru v Boca. 
+But for now, they're looking forward to their winter meeting -- Boca in February.
+Avšak nyní již těší #PersPron.ACT své zimní zasedání <které> konat únoru #Forn.LOC Boca
+But now they looking their winter meeting <#EmpVerb.RSTR> Boca February
+ERR:
+
+tmp/robust_ali/wsj_0112.final.streex##55.T-wsj0112-001-p1s54a20
+Když to neudělá, pomůže zhmotnit ve 48. Listu federalistů Madisonem sepsané obavy z legislativy, která "ve všech směrech rozšiřuje své pole působnosti a strhuje všechny druhy moci do svého dravého víru". 
+If he does not, he will help realize Madison's fear in The Federalist No. 48 of a legislature ``everywhere extending the sphere of its activity and drawing all powers into its impetuous vortex.''
+#Neg.RHEM #Gen.ADDR #PersPron.ACT #PersPron.ACT to neudělá pomůže #Cor.ACT zhmotnit 48 Listu federalistů Madisonem sepsané obavy legislativy <která> všech směrech rozšiřuje své pole působnosti a #PersPron.ACT strhuje všechny druhy moci svého dravého víru
+he #VerbPron.COND not he help #Gen.ADDR realize #Cor.ACT Madison fear Federalist No. 48 legislature everywhere extending sphere its activity and drawing all powers its impetuous vortex
+ERR:
+
+tmp/robust_ali/wsj_0609.final.streex##6.T-wsj0609-001-p1s5a20
+Ať si o té myšlence myslí kdokoli cokoli, je to mnohem více než rozpočtový trik, kterým se zdá být na první pohled. 
+Whatever one thinks of the idea, it's far more than the budgetary gimmick it may seem at first glance.
+té myšlence myslí kdokoli cokoli je to mnohem více je #Some.PAT rozpočtový trik #PersPron.PAT #Gen.ACT <kterým> zdá být #PersPron.ACT první pohled
+Whatever one thinks idea it 's more far budgetary gimmick it seem #Cor.PAT first glance
+ERR:
+
+tmp/robust_ali/wsj_1586.final.streex##11.T-wsj1586-001-p1s10a15
+Sedmapadesátiletý Rosen se však domnívá, že dovoz tomuto odvětví, v němž pracuje po většinu svého života, dodal nové síly. 
+Mr. Rosen, though, believes imports have reinvigorated the industry in which he has worked for most of his 57 years .
+Sedmapadesátiletý Rosen však domnívá dovoz tomuto odvětví #PersPron.ACT <němž> pracuje většinu svého života dodal nové síly
+Mr. Rosen though believes imports reinvigorated industry <which> he worked most his 57 years
+ERR:
+
+tmp/robust_ali/wsj_0177.final.streex##1.T-wsj0177-001-p1s0a19
+Společnost Komatsu Ltd., známý integrovaný výrobce stavebních strojů, oznámila zisk za první čtvrtletí, který nezdaněný byl 32 procentní. 
+Komatsu Ltd., a large integrated maker of construction machinery, posted a 32% unconsolidated gain in first-half pretax profit.
+#Gen.ADDR Společnost #Forn.ID Komatsu Ltd . , známý integrovaný výrobce stavebních strojů oznámila zisk první čtvrtletí <který> nezdaněný byl 32 procentní
+Komatsu Ltd. , large #Cor.PAT integrated #Gen.ADDR #Gen.ACT maker construction machinery posted 32 % unconsolidated gain first-half pretax profit
+ERR:
+
+tmp/robust_ali/wsj_0267.final.streex##89.T-wsj0267-001-p1s88a8
+Tento incident nebyl jediný případ, kdy soudce docílil zvláštního zacházení ze strany místní banky. 
+The incident wasn't the only time the judge got special treatment from his local bank .
+#Neg.RHEM Tento incident nebyl jediný případ <kdy> soudce docílil #PersPron.PAT zacházení zvláštního banky místní
+incident was n't only time judge got special treatment #Cor.PAT his local bank
+ERR:
+
+tmp/robust_ali/wsj_1542.final.streex##1.T-wsj1542-001-p1s0a27
+Úřad pro kontrolu potravin a léků (FDA) uvedl, že společnost American Home Products Corp. souhlasila se stažením jistých generických léků, které vyrobila její jednotka Quantum Pharmics z Amityville ve státě New York. 
+The Food and Drug Administration said American Home Products Corp. agreed to recall certain generic drugs that were produced by its Quantum Pharmics unit in Amityville, N.Y.
+Úřad kontrolu potravin a ( léků #Idph.ACT FDA American uvedl Home #Forn.ID společnost Products souhlasila Corp . #PersPron.ACT stažením jistých generických léků <které> vyrobila její Quantum #Forn.ID jednotka Pharmics Amityville #Forn.DIR1 státě #Forn.ID New York
+Food and Drug Administration said #Gen.ADDR American Home Products Corp. agreed #Cor.ACT recall #Gen.ORIG certain generic drugs <that> produced its Quantum Pharmics unit Amityville N.Y
+ERR:
+
+tmp/robust_ali/wsj_1549.final.streex##48.T-wsj1549-001-p1s47a25
+"Musel jsem sem přijít, abych si ty stěny přečetl," říká doktor, "protože to jsou informace, ke kterým se v novinách dosud nedostanu." 
+``I have to come here to read the walls,'' says the doctor, ``because it's information I still can't get through the newspapers.''
+#PersPron.ACT #Gen.ADDR sem přijít #PersPron.ACT si říká přečetl stěny ty doktor to jsou #Neg.RHEM #PersPron.ACT informace nedostanu <kterým> novinách dosud
+I come here read #Cor.ACT walls says #PersPron.EFF #Gen.ADDR doctor it 's information I still n't get <#Cor.PAT> newspapers
+ERR:
+
+tmp/robust_ali/wsj_0326.final.streex##1.T-wsj0326-001-p1s0a27
+Společnost Philip Morris Cos. spouští mohutnou firemní reklamní kampaň, která umístí jméno tabákového gigantu do televizních reklam poprvé od začátku padesátých let, kdy v televizi zastavila reklamu na svou stejně pojmenovanou cigaretovou značku. 
+Philip Morris Cos. is launching a massive corporate advertising campaign that will put the tobacco giant's name in TV commercials for the first time since the early 1950s, when it stopped advertising its namesake cigarette brand on television .
+Společnost #Forn.ID Philip Morris Cos . spouští mohutnou firemní reklamní kampaň která umístí jméno tabákového gigantu televizních reklam poprvé začátku padesátých let #PersPron.ACT <kdy> televizi zastavila reklamu svou stejně pojmenovanou cigaretovou značku
+Philip Morris Cos. launching massive corporate advertising campaign that put tobacco giant name TV commercials first time early 1950s <when> it stopped advertising #Cor.ACT its namesake cigarette brand television
+ERR:
+
+tmp/robust_ali/wsj_1875.final.streex##35.T-wsj1875-001-p1s34a6
+Ve chvíli, kdy se v roce 1983 stal nejmladším členem politbyra, získal Krenz přezdívku "korunní princ", narážku na všeobecně zastávaný názor, že byl pečlivě vybraným Honeckerovým nástupcem. 
+Since joining the Politburo in 1983 as its youngest member, Mr. Krenz had acquired the nickname ``crown prince,'' a reference to the widely held view that he was the hand-picked successor to Mr. Honecker.
+chvíli #PersPron.ACT <kdy> roce 1983 stal nejmladším členem politbyra získal Krenz přezdívku korunní princ , narážku všeobecně zastávaný názor #PersPron.ACT byl pečlivě vybraným Honeckerovým nástupcem
+joining <#Cor.ACT> Politburo 1983 its youngest member Mr. Krenz acquired nickname crown prince , reference widely held view he was hand-picked successor Mr. Honecker
+ERR:
+
+tmp/robust_ali/wsj_0085.final.streex##14.T-wsj0085-001-p1s13a22
+Společnost NCNB Corp. z Charlotte v Severní Karolíně představila nedávno svůj Program finančních kontaktů zaměřený na mladé lidi, kteří právě startují svou kariéru. 
+NCNB Corp. of Charlotte, N.C., recently introduced its Financial Connections Program aimed at young adults just starting careers.
+Společnost #Forn.ID NCNB Corp #Forn.DIR1 . Charlotte Severní Karolíně představila nedávno svůj Program finančních kontaktů zaměřený mladé lidi <kteří> právě startují svou kariéru
+NCNB Corp. Charlotte N.C. recently introduced its Financial Connections Program aimed #Cor.PAT #Gen.ACT young adults just <#Cor.ACT> starting careers
+ERR:
+
+tmp/robust_ali/wsj_1317.final.streex##46.T-wsj1317-001-p1s45a25
+"Ken byl můj klíčový kontakt," řekl J. Nicholas Hahn, prezident a generální ředitel společnosti Cotton Inc., která reprezentuje pěstitele bavlny. 
+``Ken was my key contact,'' said J. Nicholas Hahn, president and chief executive officer of Cotton Inc., which represents cotton producers.
+#Gen.ADDR Ken byl můj klíčový kontakt řekl J Nicholas Hahn , prezident a generální ředitel společnosti Cotton #Forn.ID Inc . <která> reprezentuje pěstitele bavlny
+Ken was my key contact said #Gen.ADDR J. Nicholas , Hahn president and chief executive officer Cotton Inc. <which> represents cotton producers
+ERR:
+
+tmp/robust_ali/wsj_0589.final.streex##25.T-wsj0589-001-p1s24a10
+Podívejte se na značku Oil of Olay, kterou společnost P&G získala v roce 1985, když patřila společnosti Richardson-Vicks International. 
+Consider Oil of Olay, which P&G acquired as part of Richardson-Vicks International in 1985.
+#PersPron.ACT Podívejte značku #Forn.ID Oil of Olay <kterou> společnost #Forn.ID P & G získala roce 1985 #PersPron.ACT patřila společnosti #Forn.ID Richardson - Vicks International
+#PersPron.ACT Consider Oil Olay <which> P&G acquired part Richardson-Vicks International 1985
+ERR:
+
+tmp/robust_ali/wsj_1453.final.streex##26.T-wsj1453-001-p1s25a12
+"To je problém, který přináší snaha příliš se zajistit," řekl Brouwer. 
+``That's the problem with trying to hedge too much,'' said Mr. Brouwer.
+#Gen.ADDR To je problém #Gen.ACT <který> přináší snaha příliš zajistit #PersPron.PAT řekl Brouwer
+That 's <problem> trying #Gen.ACT #Cor.ACT hedge too much said #Gen.ADDR Mr. Brouwer
+ERR:
+
+tmp/robust_ali/wsj_0934.final.streex##15.T-wsj0934-001-p1s14a32
+Moskva již tiše přiznala, že rubl za mnoho nestojí, když v srpnu oznámila, že bude sovětským zemědělcům platit v tvrdé měně za obilí a jiné plodiny, kterých vypěstují nad státem naplánované kvóty. 
+Moscow has already tacitly admitted that the ruble isn't worth much, announcing in August that it will pay Soviet farmers in hard currency for grain and other produce that they grow in excess of state-plan quotas.
+Moskva již tiše přiznala #Neg.RHEM rubl mnoho nestojí #EmpNoun.PAT #Gen.ADDR #PersPron.ACT srpnu oznámila #PersPron.ACT sovětským zemědělcům platit #Gen.PAT tvrdé měně obilí a jiné plodiny #PersPron.ACT <kterých> vypěstují státem naplánované kvóty
+Moscow already tacitly admitted ruble is n't worth much #Cor.ACT announcing #Gen.ADDR August it pay #Oblfm.PAT Soviet farmers hard currency grain and other produce <that> they grow excess state-plan quotas
+ERR:
+
+tmp/robust_ali/wsj_1768.final.streex##7.T-wsj1768-001-p1s6a6
+Společnost Canadian Pacific, která má podíly v dopravě, telekomunikacích, lesních produktech, energetice a nemovitostech, na jaře nakonec stáhla svůj většinový balík z trhu. 
+Canadian Pacific, which has interests in transportation, telecommunications, forest products, energy and real estate, finally took its majority block off the market this spring.
+Společnost #Forn.ID Canadian Pacific <která> má podíly dopravě telekomunikacích lesních produktech energetice a nemovitostech jaře nakonec stáhla svůj většinový balík trhu
+Canadian Pacific <which> has interests transportation telecommunications forest products energy and real estate finally took its majority block market this spring
+ERR:
+
+tmp/robust_ali/wsj_0562.final.streex##7.T-wsj0562-001-p1s6a5
+Společnosti, které v současnosti obchodují s rychlostí coby součástí svých služeb, školí manažery ve vedení a zapojení se do týmů, které zvyšují rychlost a zdokonalují kvalitu v každodenním provozu. 
+Companies that actually market speed as part of their service train their managers to lead and participate in teams that increase speed and improve quality in everyday operations.
+Společnosti #Gen.ADDR <které> současnosti obchodují rychlostí součástí svých služeb školí manažery vedení #PersPron.ACT #PersPron.PAT a zapojení se týmů které zvyšují rychlost a zdokonalují kvalitu každodenním provozu
+Companies <that> actually market speed part their service train their managers #Cor.ACT lead and participate teams #PersPron.PAT that increase speed and improve quality everyday operations
+ERR:
+
+tmp/robust_ali/wsj_1189.final.streex##17.T-wsj1189-001-p1s16a19
+"Pokud máme někde venku lidi, kteří jsou na hypotečním trhu odmítáni nesprávně a nespravedlivě," řekl senátor Donald Riegle (demokrat za Michigan), předseda bankovního výboru, "pak je to věc, která vyžaduje nápravu teď, nikoli za šest měsíců nebo za šest let či za 26 let." 
+``If we've got folks out there who are being turned away in the mortgage market improperly and unfairly,'' said Sen. Donald Riegle -LRB-D., Mich.-RRB-, chairman of the banking committee, ``then that is a matter that needs remedy now, not six months from now, or six years from now, or 26 years from now.''
+#Gen.ADDR #PersPron.ACT máme někde venku lidi <kteří> hypotečním trhu odmítáni #PersPron.ACT nesprávně a nespravedlivě řekl senátor Donald Riegle ( demokrat Michigan , předseda bankovního výboru pak je to věc která vyžaduje nápravu teď nikoli , vyžaduje šest měsíců šest let či 26 let
+we got folks out there <who> turned #Gen.ACT mortgage market improperly and unfairly said #PersPron.EFF #Gen.ADDR Sen. Donald Riegle D. , Mich. , chairman banking #Unsp.PAT #Unsp.ACT committee then that is matter that needs remedy now , not six months now six years now or 26 years now
+ERR:
+
+tmp/robust_ali/wsj_0085.final.streex##31.T-wsj0085-001-p1s30a10
+Jsou schopnější dostat se k těm segmentům, které se v důsledku deregulace objevily koncem 70. let. 
+They are better able to get to those segments in the wake of the deregulation that began in the late 1970s.
+#PersPron.ACT Jsou schopnější #Cor.ACT dostat těm segmentům <které> deregulace objevily 70 let
+They are better able get #PersPron.ACT those segments wake deregulation <that> began late 1970s
+ERR:
+
+tmp/robust_ali/wsj_1567.final.streex##19.T-wsj1567-001-p1s18a11
+To se také týká téměř všech ztrát, které lze připsat čiré neschopnosti nekvalifikovaných plánovačů. 
+So do just about all the losses that could be attributed to the sheer incompetence of unqualified planners.
+To také týká téměř všech ztrát #Cor.ACT lze #Benef.BEN <které> připsat čiré neschopnosti plánovačů nekvalifikovaných
+So #VerbPron.PRED about all losses <that> attributed #Gen.ACT sheer incompetence unqualified planners
+ERR:
+
+tmp/robust_ali/wsj_1825.final.streex##3.T-wsj1825-001-p1s2a16
+Po loňském úsilí zmařeném suchem je úroda hojná: vláda odhaduje produkci kukuřice na 7.45 miliardy bušlů, což je o 51 % více než loni na podzim. 
+The harvest arrives in plenty after last year's drought-ravaged effort: The government estimates corn output at 7.45 billion bushels, up 51% from last fall.
+loňském úsilí zmařeném suchem je úroda hojná : vláda odhaduje , produkci kukuřice 7.45 miliardy bušlů <což> je je #Some.PAT #PersPron.ACT 51 % více loni podzim
+harvest arrives plenty last year drought-ravaged effort : government estimates corn output 7.45 billion bushels <,> up 51 % last fall
+ERR:
+
+tmp/robust_ali/wsj_1822.final.streex##8.T-wsj1822-001-p1s7a12
+Podle současných zákonů je nahromaděný úrok odčitatelný pro společnost, která pohledávku vydává. 
+Under current rules, that accrued interest is deductible by the company issuing the debt.
+současných zákonů je nahromaděný úrok odčitatelný společnost <která> pohledávku vydává
+current rules that #Gen.ACT accrued #Cor.PAT interest is deductible company <#Cor.ACT> issuing debt
+ERR:
+
+tmp/robust_ali/wsj_1373.final.streex##8.T-wsj1373-001-p1s7a15
+Společnost očekává, že se tyto čipy budou nakonec používat v zařízeních, která napodobují celou řadu počítačových paměťových zařízení včetně disketových mechanik a pevných disků. 
+The company expects the chips eventually to be used in devices that mimic a whole range of computer memory equipment, including floppy-disk and hard-disk drives.
+Společnost očekává tyto čipy nakonec používat #Gen.ACT zařízeních <která> napodobují celou řadu počítačových paměťových zařízení disketových mechanik a pevných disků
+company expects chips eventually used #Gen.ACT devices <that> mimic whole range computer memory equipment floppy-disk and hard-disk drives
+ERR:
+
+tmp/robust_ali/wsj_0374.final.streex##52.T-wsj0374-001-p1s51a15
+Aby byly indexy přímo srovnatelné, všechny vychází ze závěrky roku 1969, která se rovná 100. 
+To make them directly comparable, each index is based on the close of 1969 equaling 100.
+byly indexy přímo srovnatelné všechny vychází indexy závěrky roku 1969 <která> rovná 100
+#Gen.ACT make them directly comparable each index based #PersPron.ACT close 1969 equaling <#Cor.ACT> 100
+ERR:
+
+tmp/robust_ali/wsj_0533.final.streex##13.T-wsj0533-001-p1s12a17
+Nezávisle na tom prohlásil nejvyšší soud v Ontariu, že na neurčito odloží výnos v soudní při, kterou zahájila univerzita v Torontu proti firmě Connaught v souvislosti s nabídkou firmy Merieux. 
+Separately, the Ontario Supreme Court said it will postpone indefinitely a ruling on the lawsuit launched by the University of Toronto against Connaught in connection with the Merieux bid.
+Nezávisle tom prohlásil nejvyšší soud Ontariu neurčito odloží #PersPron.ACT výnos při soudní <kterou> zahájila univerzita Torontu firmě Connaught nabídkou firmy Merieux
+Separately #Gen.ADDR Ontario Supreme Court said it postpone indefinitely ruling lawsuit launched <#Cor.PAT> University Toronto Connaught Merieux bid
+ERR:
+
+tmp/robust_ali/wsj_1322.final.streex##1.T-wsj1322-001-p1s0a7
+Trh s dluhopisy, jenž někdy prosperuje ze špatných zpráv, tleskal včerejšímu výprodeji akciového trhu a postřehům, že ekonomika slábne. 
+The bond market, which sometimes thrives on bad news, cheered yesterday's stock market sell-off and perceptions that the economy is growing weaker.
+Trh dluhopisy <jenž> někdy prosperuje špatných zpráv tleskal včerejšímu výprodeji akciového trhu a postřehům ekonomika slábne
+bond market <which> sometimes thrives bad news cheered yesterday stock market sell-off and perceptions economy growing weaker
+ERR:
+
+tmp/robust_ali/wsj_1219.final.streex##6.T-wsj1219-001-p1s5a16
+Ministerstvo rovněž uvádí, že usiluje o "trojnásobek náhrady škod způsobených vládě, které dosud nebyly přesně stanoveny, plus penále". 
+The department also said it seeks ``three times the government's damages, which are presently undetermined, plus penalties.''
+Ministerstvo rovněž uvádí #PersPron.ACT usiluje trojnásobek náhrady škod způsobených vládě plus #Gen.ACT penále <které> stanoveny #Neg.RHEM dosud přesně
+department #Gen.ADDR also said it seeks three times government damages <which> are presently undetermined plus penalties
+ERR:
+
+tmp/robust_ali/wsj_1366.final.streex##17.T-wsj1366-001-p1s16a16
+Pochází ze stejné politické linie jako Wright Patman, texaský populista dráždící banky, který do roku 1974 předsedal Bankovnímu výboru. 
+He comes from the same political line as Wright Patman, a bank-baiting Texas populist who chaired the Banking Committee until 1974.
+#PersPron.ACT Pochází stejné Pochází #Oblfm.DIR1 politické linie Wright Patman , texaský populista dráždící banky <který> roku 1974 předsedal Bankovnímu výboru
+He comes same #PersPron.DIR1 comes political line Wright Patman , bank-baiting Texas populist <who> chaired Banking Committee 1974
+ERR:
+
+tmp/robust_ali/wsj_0990.final.streex##30.T-wsj0990-001-p1s29a20
+Kromě toho si poradci Bílého domu myslí, že existuje mnoho dalších důležitých opatření, která demokraté nutně potřebují schválit - jako například omezení kontroverzního katastrofického plánu zdravotní péče pro starší občany -, což by mohlo prezidentovi při jednáních s demokraty poskytnout páku. 
+In addition, White House aides think that there are numerous other important measures Democrats badly wanted passed -- such as the scaling back of a controversial catastrophic health-care plan for the elderly -- that might provide the president leverage in cutting deals with Democrats.
+toho poradci Bílého domu myslí existuje mnoho dalších důležitých opatření #Cor.ACT <která> demokraté nutně potřebují schválit jako například #Gen.ACT omezení kontroverzního katastrofického plánu zdravotní péče starší - občany což #Gen.PAT #PersPron.ACT prezidentovi jednáních demokraty poskytnout páku
+addition White House aides think are numerous other important measures Democrats badly wanted #Gen.ACT passed <#Cor.PAT> as scaling back controversial catastrophic health-care plan elderly that provide president #Cor.ACT leverage #Cor.ACT cutting deals Democrats
+ERR:
+
+tmp/robust_ali/wsj_0909.final.streex##54.T-wsj0909-001-p1s53a16
+Anne Burfordová, bývalá vedoucí Agentury na ochranu životního prostředí (EPA), která rezignovala pod tlakem v roce 1983 během slovní přestřelky s Kongresem, byla v této konfrontaci knokautována, přestože nebyla nikdy obviněna z úředního pochybení. 
+Anne Burford, the former EPA chief who resigned under fire in 1983 during a flap with Congress, was kayoed in the confrontation, even though she was never charged with official wrondgoing.
+Anne Burfordová , bývalá vedoucí Agentury ochranu životního prostředí ( EPA #Gen.PAT <která> rezignovala tlakem roce 1983 slovní přestřelky Kongresem #PersPron.ACT této konfrontaci knokautována #PersPron.ADDR #Gen.ACT nikdy obviněna #Neg.RHEM úředního pochybení #PersPron.ACT
+#Gen.ACT Anne Burford , former EPA chief <who> resigned fire 1983 flap Congress kayoed confrontation #Gen.ACT she never charged official wrondgoing
+ERR:
+
+tmp/robust_ali/wsj_0771.final.streex##45.T-wsj0771-001-p1s44a14
+Obecněji řečeno Boren doufá, že Panama připraví Washingtonu šok, díky němuž se zbaví strachu z použití vojenské síly. 
+More broadly, Mr. Boren hopes that Panama will shock Washington out of its fear of using military power.
+#Gen.EFF #Gen.ADDR #Gen.ACT Obecněji řečeno Boren doufá Panama připraví Washingtonu šok #PersPron.ACT <němuž> zbaví strachu #PersPron.ACT použití vojenské síly
+broadly Mr. Boren hopes Panama shock Washington its fear #Cor.ACT using military power
+ERR:
+
+tmp/robust_ali/wsj_0022.final.streex##2.T-wsj0022-001-p1s1a6
+TŘI POČÍTAČE, KTERÉ ZMĚNILY tvář práce s počítači, byly uvedeny na trh v roce 1977. 
+THREE COMPUTERS THAT CHANGED the face of personal computing were launched in 1977.
+#Gen.ACT TŘI POČÍTAČE <KTERÉ> ZMĚNILY tvář práce počítači uvedeny trh roce 1977
+THREE COMPUTERS <THAT> CHANGED face personal computing launched #Gen.ACT 1977
+ERR:
+
+tmp/robust_ali/wsj_1929.final.streex##6.T-wsj1929-001-p1s5a25
+Krenz má podobnou profesní dráhu jako Erich Honecker: Oba strávili roky dozorem nad organizací Freie Deutsche Jugend, skupinou mladých lidí, která je hlavním nástrojem komunistického režimu při důrazné přeměně mladých Němců v socialistické občany. 
+Mr. Krenz has followed much the same career path as Mr. Honecker: Both spent years overseeing the Freie Deutsche Jugend, the youth group that is the communist regime's principal tool for stamping young Germans into socialist citizens.
+Krenz má podobnou má #PersPron.PAT profesní dráhu Erich Honecker : Oba strávili roky dozorem organizací #Forn.ID Freie Deutsche Jugend , skupinou mladých lidí <která> je hlavním nástrojem komunistického režimu důrazné přeměně mladých Němců socialistické občany
+Mr. Krenz followed much same career path Mr. Honecker : Both spent years overseeing #Cor.ACT Freie Deutsche Jugend , youth group <that> is communist regime principal tool stamping #Cor.ACT young Germans socialist citizens
+ERR:
+
+tmp/robust_ali/wsj_1478.final.streex##2.T-wsj1478-001-p1s1a6
+Tento úřad, který je součástí Ministerstva financí a nástupcem Federální bankovní rady pro domácí úvěry, uvedl, že toto bylo první oznámení sankcí od chvíle, kdy letošní zákon o pomoci spořitelním institucím nařídil, že všechny takovéto kroky regulátorů federálního bankovnictví musejí být zveřejněny. 
+The office, a Treasury Department unit that is the successor to the Federal Home Loan Bank Board, said this was the first announcement of an enforcement action since this year's thrift-bailout legislation ordered that all such actions by federal banking regulators be made public.
+Tento úřad <který> je součástí Ministerstva financí a nástupcem Federální bankovní rady domácí úvěry uvedl toto bylo #PersPron.ACT první oznámení #Gen.ADDR sankcí chvíle #PersPron.ADDR kdy letošní zákon pomoci spořitelním institucím nařídil #PersPron.ACT všechny takovéto kroky regulátorů federálního bankovnictví zveřejněny
+office , Treasury Department unit <that> is successor Federal Home Loan Bank Board said #Gen.ADDR this was first announcement enforcement action this year thrift-bailout legislation ordered #Gen.ADDR all such actions federal banking regulators made #Gen.ACT public
+ERR:
+
+tmp/robust_ali/wsj_1936.final.streex##38.T-wsj1936-001-p1s37a14
+Hra se soustředí na Teddyho návrat domů s manželkou Ruth, se kterou je již šest let. 
+The play concerns Teddy's homecoming with his wife of six years, Ruth.
+Hra soustředí Teddyho návrat domů manželkou Ruth #PersPron.ACT <kterou> je již šest let
+play concerns Teddy homecoming , his <wife> six years Ruth
+ERR:
+
+tmp/robust_ali/wsj_1493.final.streex##19.T-wsj1493-001-p1s18a16
+To by ji mělo učinit přitažlivou pro sítě, jako je společnost Interpublic, která již má v New Yorku zdravé zastoupení. 
+That would would make it appealing to a network such as Interpublic that already has a healthy New York presence.
+To ji učinit přitažlivou sítě jako je sítě společnost #Forn.ID Interpublic <která> již má #Forn.LOC New Yorku zdravé zastoupení
+That make it appealing network as Interpublic already <that> has healthy New York presence
+ERR:
+
+tmp/robust_ali/wsj_1904.final.streex##4.T-wsj1904-001-p1s3a28
+Komise zjistila, že pokud by se britská vláda pokusila zabránit fúzi, společnost Rhone-Poulenc by pravděpodobně odpověděla uzavřením své továrny na salicyláty, kterou společnost Monsanto provozuje ve Walesu, čímž by problém dostala mimo působnost britské jurisdikce. 
+The commission found that if the British government attempted to block the merger, Rhone-Poulenc would likely respond by closing the salicylates plant Monsanto operates in Wales, removing the matter from U.K. jurisdiction.
+Komise #Gen.PAT zjistila Rhone #Forn.ID společnost Poulenc vláda britská pokusila #Cor.ACT zabránit fúzi odpověděla #PersPron.PAT pravděpodobně #PersPron.ACT své uzavřením , továrny salicyláty <kterou> provozuje společnost Monsanto Walesu čímž dostala problém působnost jurisdikce britské
+commission found British government attempted #Cor.ACT block merger Rhone-Poulenc likely respond #PersPron.PAT #Cor.ACT closing salicylates plant Monsanto operates <#Cor.PAT> Wales removing #Cor.ACT matter U.K. jurisdiction
+ERR:
+
+tmp/robust_ali/wsj_0760.final.streex##12.T-wsj0760-001-p1s11a17
+Společnost Norton měla provozní zisk 76.8 milionu dolarů, neboli 3.66 dolaru na akcii, což je zvýšení o 11 % z 69.5 milionu dolarů, neboli 3.31 dolaru na akcii. 
+Norton had operating profit of $76.8 million, or $3.66 a share, up 11% from $69.5 million, or $3.31 a share.
+Společnost Norton měla provozní zisk 76.8 milionu dolarů neboli 3.66 dolaru akcii , <což> je #Gen.ACT zvýšení 11 % 69.5 milionu dolarů neboli 3.31 dolaru akcii
+Norton had operating profit $ 76.8 million or $ 3.66 share , <#EmpVerb.RSTR> up 11 % $ 69.5 million or $ 3.31 share
+ERR:
+
+tmp/robust_ali/wsj_0983.final.streex##2.T-wsj0983-001-p1s1a22
+Tito lidé investovali do "spekulačních" společných investičních fondů rizikových obligací, což jsou veřejně obchodované fondy, u nichž je zvykem půjčovat si za účelem nákupu dalších rizikových obligací. 
+These people invested in ``leveraged'' junk bond mutual funds, the publicly traded funds that make a habit of taking out loans to buy extra junk.
+#PersPron.PAT Tito lidé investovali spekulačních společných investičních fondů rizikových obligací , což jsou veřejně obchodované fondy <nichž> je #Benef.BEN zvykem #PersPron.PAT #Cor.ACT půjčovat si účelem nákupu dalších rizikových obligací
+These people invested #Gen.PAT leveraged junk bond mutual funds , publicly traded #Cor.PAT #Gen.ACT funds <that> make habit taking #Gen.ACT loans #Cor.ACT buy extra junk
+ERR:
+
+tmp/robust_ali/wsj_1446.final.streex##28.T-wsj1446-001-p1s27a5
+Garcia, který zastupuje 18. volební obvod v New Yorku, který zahrnuje i Bronx, řekl, že se ještě nerozhodl, zda rezignuje. 
+Mr. Garcia, who represents New York's 18th congressional district, which includes the Bronx, said he hasn't decided whether he will resign.
+#Gen.ADDR Garcia <který> zastupuje 18 volební obvod #Forn.LOC New Yorku který zahrnuje i Bronx řekl #Neg.RHEM #PersPron.ACT ještě nerozhodl #Gen.PAT #PersPron.ACT rezignuje
+Mr. Garcia <who> represents New York 18th congressional district which includes Bronx said #Gen.ADDR he n't decided he resign
+ERR:
+
+tmp/robust_ali/wsj_1504.final.streex##1.T-wsj1504-001-p1s0a10
+Bob Stone se potil nad dopisem, v němž ho ředitel podmínečně se zkušební dobou propouští za porušení kázně. 
+Bob Stone stewed over a letter from his manager putting him on probation for insubordination.
+Bob Stone potil dopisem <němž> ho ředitel podmínečně zkušební dobou propouští #PersPron.ACT porušení kázně
+Bob Stone stewed letter his manager #Cor.ACT putting him probation insubordination
+ERR:
+
+tmp/robust_ali/wsj_1453.final.streex##34.T-wsj1453-001-p1s33a13
+Minulé pondělí začal "kupovat vysoce kvalitní podniky na vzestupu, kterých se lidé zbavovali za diskontní ceny." 
+Last Monday, he started ``buying the high-quality growth companies that people were throwing away at discount prices.''
+#PersPron.ACT Minulé pondělí začal #Cor.ACT kupovat vysoce kvalitní podniky vzestupu <kterých> lidé zbavovali diskontní ceny
+Last Monday he started buying #Cor.ACT high-quality growth companies <that> people throwing discount prices
+ERR:
+
+tmp/robust_ali/wsj_0765.final.streex##107.T-wsj0765-001-p1s106a22
+Rudolph Giuliani zjišťuje, že si Dinkins během mnoha let strávených ve veřejném životě vybudoval velmi dobrou pověst, díky níž dosud voliči přehlíželi určité jeho nedostatky. 
+Mr. Giuliani is finding that Mr. Dinkins, in his many years in public life, has built up considerable good will that so far has led many voters to overlook certain failings.
+Rudolph Giuliani zjišťuje si Dinkins mnoha let vybudoval strávených životě veřejném velmi dobrou pověst <níž> dosud přehlíželi voliči určité nedostatky jeho
+Mr. Giuliani finding Mr. Dinkins his many years public life built considerable good will <that> so far led many voters overlook #Cor.ACT certain failings
+ERR:
+
+tmp/robust_ali/wsj_1377.final.streex##6.T-wsj1377-001-p1s5a9
+Vedle takových dloudobě známých názvů, jakými jsou značky Chevrolet, Ford a Dodge, jsou firemní značky, které neexistují déle než tři roky: značky Acura, Sterling, Hyundai. 
+Alongside such long-familiar names as Chevrolet, Ford and Dodge are nameplates that didn't exist until three years ago: Acura, Sterling, Hyundai.
+takových dloudobě známých názvů <jakými> jsou značky Chevrolet Ford a Dodge jsou firemní značky #Neg.RHEM které neexistují déle tři roky : značky Acura Sterling , Hyundai
+such long-familiar names as Chevrolet Ford and Dodge are nameplates that n't exist three years <:> Acura Sterling , Hyundai
+ERR:
+
+tmp/robust_ali/wsj_1665.final.streex##5.T-wsj1665-001-p1s4a15
+Společnost uvedla, že očekává zvýšení obratu díky celé řadě nových produktů, včetně basketbalových bot, které se po nafouknutí "pumpičkou" lépe přizpůsobit noze. 
+The company said it expects sales to improve due to a number of new products, including a ``pump'' basketball shoe that can be inflated to better fit the foot.
+Společnost uvedla #PersPron.ACT očekává zvýšení obratu celé řadě nových produktů basketbalových bot <které> nafouknutí pumpičkou lépe přizpůsobit noze
+company said #Gen.ADDR it expects sales improve number new products pump basketball shoe <that> inflated #Gen.ACT better #Cor.ACT fit foot
+ERR:
+
+tmp/robust_ali/wsj_1311.final.streex##56.T-wsj1311-001-p1s55a8
+Obrat činil 12 miliard dolarů, což je pokles o 13 % z 13.8 miliardy dolarů. 
+Sales were $12 billion, off 13% from $13.8 billion.
+Obrat činil 12 miliard dolarů , <což> je pokles 13 % 13.8 miliardy dolarů
+Sales were $ 12 billion off 13 % $ 13.8 billion
+ERR:
+
+tmp/robust_ali/wsj_0950.final.streex##8.T-wsj0950-001-p1s7a32
+Pokles příjmu ve firmě GM Hughes Electronics je znamením těžkých časů, které nastanou v obranných provozech firmy Hughes Aircraft Co. i v severoamerických automobilových provozech společnosti GM, které jsou hlavními zákazníky firmy Delco Electronics Corp., části jednotky GM Hughes. 
+The earnings drop at GM Hughes Electronics is a sign of tough times at both the defense operations of Hughes Aircraft Co. and GM's North American automotive operations, which are a primary customer for the Delco Electronics Corp. side of the GM Hughes unit.
+Pokles příjmu firmě GM #Forn.ID Hughes Electronics je znamením těžkých časů které nastanou obranných provozech firmy Hughes #Forn.ID Aircraft Co . i severoamerických automobilových provozech společnosti GM <které> jsou hlavními zákazníky firmy Delco #Forn.ID Electronics Corp . , části jednotky GM #Forn.ID Hughes
+earnings drop GM Hughes Electronics is sign tough times defense operations Hughes Aircraft Co. and GM North American automotive operations <which> are primary customer Delco Electronics Corp. side GM Hughes unit
+ERR:
+
+tmp/robust_ali/wsj_0542.final.streex##2.T-wsj0542-001-p1s1a5
+Nabídka, kterou dva nezávislí členové správní rady firmy Telerate odmítli jako nepostačující, měla původně přestat platit v pátek o půlnoci. 
+The offer, which Telerate's two independent directors have rejected as inadequate, previously had been scheduled to expire at midnight Friday.
+Nabídka <kterou> dva nezávislí členové správní rady firmy Telerate odmítli nepostačující původně přestat #Cor.ACT platit pátek půlnoci
+#Gen.ACT offer <which> Telerate two independent directors rejected inadequate previously scheduled expire midnight Friday
+ERR:
+
+tmp/robust_ali/wsj_0085.final.streex##25.T-wsj0085-001-p1s24a9
+V roce 1973 zavedla společnost Wells Fargo & Co. ze San Franciska Zlatý účet, která obsahoval zdarma vedení běžného účtu, kreditní kartu, bezpečnostní schránku a cestovní šeky za měsíční poplatek 3 dolary. 
+In 1973, Wells Fargo&Co. of San Francisco launched the Gold Account, which included free checking, a credit card, safe-deposit box and travelers checks for a $3 monthly fee.
+roce 1973 zavedla společnost Wells Fargo #Forn.ID & <Co> . #Forn.DIR1 San Franciska Zlatý účet která obsahoval zdarma vedení #Gen.ACT běžného účtu kreditní kartu bezpečnostní schránku a cestovní šeky měsíční poplatek 3 dolary
+1973 Wells Fargo & Co. #Forn.LOC San Francisco launched Gold Account which included free checking credit card safe-deposit box and travelers checks $ 3 monthly fee
+ERR:
+
+tmp/robust_ali/wsj_0111.final.streex##1.T-wsj0111-001-p1s0a24
+Robert L. Bernstein, předseda správní rady a prezident Random House Inc., oznámil svou rezignaci a odchod z nakladatelství, které řídil 23 let. 
+Robert L. Bernstein, chairman and president of Random House Inc., announced his resignation from the publishing house he has run for 23 years.
+Robert L. Bernstein předseda správní rady a prezident #Forn.RSTR . Random House Inc oznámil , svou rezignaci a odchod nakladatelství #PersPron.ACT <které> řídil 23 let
+Robert L. Bernstein , chairman and president Random House Inc. announced #Gen.ADDR his resignation publishing house he run <#Cor.PAT> 23 years
+ERR:
+
+tmp/robust_ali/wsj_1890.final.streex##5.T-wsj1890-001-p1s4a6
+Tato banka, která má rezervy na ztráty rovné asi polovině svých dlouhodobých a střednědobých úvěrů méně rozvinutým zemím, uvedla, že podle jejího názoru nejsou další rezervy zapotřebí. 
+The bank, which has loss reserves equal to about half its long-term and medium-term loans to less-developed nations, said it doesn't think additional reserves are required .
+Tato banka <která> má rezervy ztráty rovné asi polovině svých dlouhodobých a střednědobých úvěrů méně rozvinutým zemím uvedla #Neg.RHEM jejího názoru nejsou další rezervy zapotřebí
+#Gen.ADDR bank <which> has loss reserves equal about half its long-term and medium-term loans less-developed nations said it n't think #Gen.ACT additional reserves required
+ERR:
+
+tmp/robust_ali/wsj_0359.final.streex##33.T-wsj0359-001-p1s32a13
+"Sletíme dolů," říká tento nápaditý pozorovatel trhu, který měl před několika lety mnoho příznivců. 
+``We are going to explode lower,'' says the flamboyant market seer, who had a huge following a few years back.
+#Gen.ADDR #PersPron.ACT Sletíme dolů říká tento nápaditý pozorovatel trhu <který> měl několika lety mnoho příznivců
+We explode lower says #Gen.ADDR flamboyant market seer <who> had huge following few years
+ERR:
+
+tmp/robust_ali/wsj_0250.final.streex##22.T-wsj0250-001-p1s21a28
+Kennedy řekl, že demokraté "hodně ustoupili" co se týče velikosti růstu, ale uvedl ústupky Bílého domu ohledně mzdy v období zaučení, které to "zmírňují", jak řekl. 
+Mr. Kennedy suggested Democrats ``yielded a great deal'' on the size of the increase, but he cited concessions from the White House on the training wage, which he said make it ``less harsh.''
+#Gen.ADDR Kennedy řekl demokraté hodně ustoupili #PersPron.PAT co týče velikosti růstu ale uvedl ústupky Bílého domu mzdy zaučení #PersPron.ACT #PersPron.PAT #Gen.EFF <které> to zmírňují #PersPron.EFF #Gen.ADDR #PersPron.ACT řekl
+Mr. Kennedy suggested #Gen.ADDR Democrats yielded #Gen.PAT great deal size increase but he cited concessions White House training wage <which> he said #PersPron.EFF #Gen.ADDR make it less harsh
+ERR:
+
+tmp/robust_ali/wsj_0589.final.streex##51.T-wsj0589-001-p1s50a27
+Například prodej pracího prostředku Tide na počátku letošního roku prudce vzrostl poté, co společnost P&G uvedla na trh verzi obsahující bělidlo, které nepoškodí žádné barvy ani materiál. 
+Sales of its Tide detergent soared earlier this year, for example, after P&G introduced a version that includes a bleach safe for all colors and fabrics.
+Například prodej pracího prostředku Tide počátku letošního roku prudce vzrostl společnost #Forn.ID P & G uvedla trh verzi obsahující bělidlo #Neg.RHEM <které> nepoškodí žádné barvy ani materiál
+Sales its Tide detergent soared earlier this year example P&G introduced version <that> includes bleach safe all colors and fabrics
+ERR:
+
+tmp/robust_ali/wsj_1294.final.streex##18.T-wsj1294-001-p1s17a14
+Nezávislé odhady produkce v těchto odvětvích včetně jednoho pro banky, který učinilo Ministerstva práce, ukazují, že se zdá, že produktivita v peněžnictví a službách rostla mezi lety 1948 a 1988 v průměru nejméně o 1.5 % za rok. 
+Independent estimates of output in those industries, including one by the Department of Labor for banking, suggests that productivity in finance and services appears to have risen by an average of at least 1.5% a year between 1948 and 1988.
+#Gen.ADDR Nezávislé odhady produkce těchto odvětvích jednoho banky <který> učinilo Ministerstva práce ukazují #Gen.ACT zdá produktivita peněžnictví a službách rostla lety 1948 a 1988 průměru nejméně 1.5 % rok
+Independent estimates output those industries <one> Department Labor banking suggests #Gen.ADDR productivity finance and services appears #Gen.PAT risen average least 1.5 % year 1948 and 1988
+ERR:
+
+tmp/robust_ali/wsj_0591.final.streex##16.T-wsj0591-001-p1s15a10
+Stížnosti se zaměřují na arbitráž akciových indexů, která v současnosti činí asi polovinu obchodování řízeného programem. 
+The focus of the outcry has been stock-index arbitrage, which accounts for about half the program trading that goes on.
+Stížnosti zaměřují arbitráž akciových indexů <která> současnosti činí asi polovinu #Gen.PAT #Gen.ACT obchodování řízeného programem
+focus outcry been stock-index arbitrage <which> accounts about half program trading that goes
+ERR:
+
+tmp/robust_ali/wsj_0666.final.streex##35.T-wsj0666-001-p1s34a12
+Někteří s nadšením sledují spotřebitelsky orientované papírenské společnosti, které nakupují celulózu od výrobců tohoto polotovaru a měly by těžit z očekávaného snížení cen celulózy. 
+Some take a warm view of consumer-oriented paper companies, which buy pulp from the commodity producers and should benefit from the expected declines in pulp prices.
+Někteří #PersPron.ACT nadšením sledují spotřebitelsky orientované papírenské společnosti <které> nakupují celulózu výrobců tohoto polotovaru a těžit #Gen.ACT očekávaného snížení cen celulózy
+Some take warm view consumer-oriented paper companies <which> buy pulp commodity producers and benefit expected declines pulp prices
+ERR:
+
+tmp/robust_ali/wsj_0436.final.streex##3.T-wsj0436-001-p1s2a8
+Právě ohromný dluh společnosti Revco, který pochází ze zadluženého odkupu z roku 1986 v hodnotě 1.3 miliardy dolarů, ji donutil vyhledat ochranu podle kapitoly 11 federálního konkurzního řádu. 
+It was Revco's huge debt from its $1.3 billion leveraged buy-out in 1986 that forced it to seek protection under Chapter 11 of the federal Bankruptcy Code.
+Právě ohromný dluh společnosti Revco <který> pochází zadluženého odkupu roku 1986 hodnotě 1.3 miliardy dolarů #Cor.ACT ji donutil vyhledat ochranu kapitoly 11 federálního konkurzního řádu
+Revco huge <debt> its $ 1.3 billion #Gen.ACT leveraged #Cor.PAT buy-out 1986 forced it #Cor.ACT seek protection Chapter 11 federal Bankruptcy Code
+ERR:
+
+tmp/robust_ali/wsj_1274.final.streex##17.T-wsj1274-001-p1s16a9
+Kalifornské vinařské závody, které těží ze snížených obchodních bariér a federálních marketingových dotací, agresivně expandují do Japonska a také do Kanady a Velké Británie. 
+California wineries, benefiting from lowered trade barriers and federal marketing subsidies, are expanding aggressively into Japan, as well as Canada and Great Britain.
+Kalifornské vinařské závody <které> těží snížených obchodních bariér a federálních marketingových dotací agresivně expandují Japonska a také Kanady a Velké Británie
+California wineries <#Cor.ACT> benefiting #Cor.PAT lowered #Gen.ACT trade barriers and federal marketing subsidies expanding aggressively Japan as Canada and Great Britain
+ERR:
+
+tmp/robust_ali/wsj_1004.final.streex##22.T-wsj1004-001-p1s21a41
+Za předpokladu, že se tyto problémy dají překonat, by však rentgenové paprsky měly dovolit výrobu čipů, které by se mohly blížit miliardě bitů informací - 250krát více, než je obsaženo ve čtyřmegabitových čipech, které právě přicházejí na trh, a milionkrát víc, než bylo možné v polovině 70. let. 
+But, assuming those problems can be overcome , they should allow for memory chips that could approach one billion bits of information -- 250 times as much as is contained in the four-megabit chips that are just reaching the market and a million times what was possible in the mid-1970s.
+#Gen.ACT předpokladu překonat problémy tyto dovolit #Gen.ADDR však paprsky rentgenové výrobu čipů které blížit miliardě bitů informací 250krát 250krát více #EmpVerb.PAR #PersPron.ACT je obsaženo a čtyřmegabitových čipech <které> přicházejí právě trh milionkrát víc #PersPron.ACT bylo možné polovině let 70
+But those problems #Gen.ACT overcome they allow memory chips that approach one billion bits information -- #EmpVerb.PAT 250 times as much #Gen.ACT contained #PersPron.PAT four-megabit chips <that> just reaching market and million times what was possible mid-1970s
+ERR:
+
+tmp/robust_ali/wsj_1916.final.streex##25.T-wsj1916-001-p1s24a41
+Odpovědnost za zřícení mostu a silnice bude záviset na tom, zda vláda věnovala výstavbě a udržování těchto staveb "přiměřenou péči", tvrdí John Messina, prvník z Tacomy ve Washingtonu zabývající se újmou na zdraví, který se specializuje na případy návrhů a udržování silnic. 
+Liability in the bridge and road collapses will revolve around whether government took ``reasonable care'' to build and maintain the structures, says John Messina, a Tacoma, Wash., personal-injury attorney who specializes in highway design and maintenance cases.
+Odpovědnost zřícení mostu a silnice záviset vláda věnovala výstavbě a #Gen.ACT udržování těchto staveb přiměřenou péči tvrdí John Messina , prvník Tacomy Washingtonu zabývající újmou zdraví <který> specializuje případy návrhů a #Gen.ACT udržování silnic
+Liability bridge and road collapses revolve government took reasonable care #Cor.ACT build and maintain structures says #Gen.ADDR John Messina , Tacoma Wash. personal-injury attorney <who> specializes highway design and maintenance cases
+ERR:
+
+tmp/robust_ali/wsj_0763.final.streex##6.T-wsj0763-001-p1s5a12
+Tento soukromý soudní spor vyvolali tři duševně postižení lidé, kteří žijí v domě s pečovatelskou službou v oblasti Moon. 
+The private suit was brought by three mentally retarded people who live in a group home in Moon.
+Tento soukromý soudní spor vyvolali #Oblfm.LOC tři duševně postižení lidé <kteří> žijí domě pečovatelskou službou oblasti Moon
+private suit brought #Gen.PAT three mentally retarded people <who> live group home Moon
+ERR:
+
+tmp/robust_ali/wsj_0999.final.streex##14.T-wsj0999-001-p1s13a24
+Ve Spojených státech stanovuje a sleduje limity radiace Komise pro řízení jaderných záležitostí (NRC), která uděluje licence reaktorům, které topaz zpracovávají. 
+In the U.S., radiation limits are set and monitored by the Nuclear Regulatory Commission, which licenses reactors that process the topaz.
+Spojených státech stanovuje a sleduje limity radiace Komise řízení #Gen.ACT jaderných záležitostí ( #Idph.ACT NRC která uděluje licence reaktorům <které> topaz zpracovávají
+U.S. radiation limits set #Gen.EFF and monitored Nuclear Regulatory Commission which licenses reactors <that> process topaz
+ERR:
+
+tmp/robust_ali/wsj_0526.final.streex##3.T-wsj0526-001-p1s2a7
+To druhé vychází z představy, kterou má mnoho lidí v televizní síti, že jejich jedinou nadějí, aby od nich divák nepřeběhl ke kabelovému vysílání, je plnit vysílání stále více a více naturalistickými scénami. 
+The latter comes from the perception , on the part of many people in network TV, that their only hope of keeping viewers from defecting to cable is to fill the airwaves with an increasingly raw sensationalism.
+To druhé vychází představy <kterou> má mnoho lidí televizní síti #Neg.RHEM je #Cor.ACT jejich jedinou nadějí nich divák nepřeběhl kabelovému vysílání #Gen.PAT #PersPron.ACT plnit vysílání #Gen.PAT #Gen.ACT stále více a více naturalistickými scénami
+latter comes perception <part> many people network TV their only hope keeping #PersPron.ACT viewers defecting #PersPron.DIR1 #Cor.ACT cable is fill #PersPron.ACT airwaves increasingly raw sensationalism
+ERR:
+
+tmp/robust_ali/wsj_0772.final.streex##6.T-wsj0772-001-p1s5a32
+Vzpomněl jsem si, jak je pro někoho zvenku těžké, aby ho přijali zavedení, zabydlení obyvatelé a jaké léčky čekají na člověka s nekonvenčními názory ve společnostech, které jsou odedávna zvyklé na neměnné, "bezpečné" způsoby myšlení a jednání. 
+I remembered how hard it was for an outsider to become accepted by long-established, stake-holding residents, and what pitfalls awaited an original thinker in societies that were long accustomed to unchanging, ``safe'' ways of thought and action.
+#PersPron.ACT Vzpomněl je někoho zvenku těžké ho přijali , zavedení zabydlení obyvatelé a jaké léčky čekají člověka nekonvenčními názory společnostech <které> jsou odedávna zvyklé neměnné bezpečné #Gen.ACT způsoby , myšlení a jednání
+I remembered how hard was outsider accepted long-established stake-holding residents and what pitfalls awaited original thinker societies <that> were long accustomed unchanging safe ways thought and action
+ERR:
+
+tmp/robust_ali/wsj_1460.final.streex##4.T-wsj1460-001-p1s3a18
+Společnost Ferranti uvedla, že bude přinucena z těchto fiktivních smluv odepsat 185 milionů liber, čímž sníží čistou hodnotu svých aktiv o více než polovinu. 
+Ferranti has said that it would be forced to write off # 185 million against the phantom contracts, reducing its net asset value by more than half.
+Společnost Ferranti uvedla #PersPron.ADDR #Gen.ACT přinucena #Cor.ACT těchto fiktivních smluv odepsat 185 milionů , liber #PersPron.ACT <čímž> sníží čistou hodnotu svých aktiv více než polovinu
+Ferranti said #Gen.ADDR it forced #Gen.ACT #Cor.ACT write # 185 million phantom contracts reducing <#Cor.ACT> its net asset value more half
+ERR:
+
+tmp/robust_ali/wsj_0764.final.streex##18.T-wsj0764-001-p1s17a9
+Všechny země, v nichž se užívají drogy, se musí společně dohodnout na boji a trestání uživatelů a prodejců drog. 
+All drug-consuming countries must jointly decide to combat and punish the consumers and distributors of drugs.
+Všechny země #Gen.ACT <nichž> užívají drogy společně dohodnout #Rcp.ADDR boji a trestání #PersPron.ACT uživatelů a prodejců drog
+All drug-consuming countries jointly decide #Cor.ACT combat and punish consumers and distributors drugs
+ERR:
+
+tmp/robust_ali/wsj_1631.final.streex##44.T-wsj1631-001-p1s43a20
+Larry Biehl, finanční manažer v kalifornském San Mateo, z toho viní příchod programového obchodování, ve kterém jsou počítače velkých institucionálních investorů naprogramovány, aby koupily či prodaly velké bloky akcií, pokud převáží jisté tržní podmínky. 
+Larry Biehl, a money manager in San Mateo, Calif., blames that on the advent of program trading, in which computers used by big institutional investors are programmed to buy and sell big blocks when certain market conditions prevail .
+Larry Biehl , finanční manažer kalifornském San #Forn.LOC Mateo toho viní příchod #Gen.PAT #Gen.ACT programového obchodování <kterém> počítače velkých institucionálních investorů naprogramovány #Gen.ACT #PersPron.ACT koupily či prodaly #Gen.ADDR velké bloky akcií převáží jisté tržní podmínky
+Larry Biehl , money manager San Mateo #Forn.LOC Calif. blames that advent program trading <which> computers used #Cor.PAT big institutional investors programmed #Gen.ACT #Cor.ACT buy and sell big blocks certain market conditions prevail
+ERR:
+
+tmp/robust_ali/wsj_0258.final.streex##24.T-wsj0258-001-p1s23a14
+Počítač používá jeden procesor, takže v porovnání s konkurenčními stroji, které používají několik procesorů, je jej jednodušší programovat. 
+The machine uses a single processor, which makes it easier to program than competing machines using several processors.
+Počítač používá jeden procesor takže konkurenčními stroji <které> používají několik procesorů je #Benef.BEN #Cor.ACT jej jednodušší programovat
+machine uses single processor , which makes #Cor.ACT program it easier #Benef.BEN #EmpVerb.CPR program #Gen.ACT #Cor.ACT competing #PersPron.ADDR #Gen.PAT machines <#Cor.ACT> using several processors
+ERR:
+
+tmp/robust_ali/wsj_1017.final.streex##21.T-wsj1017-001-p1s20a31
+189 demokratů, kteří včera podpořili přehlasování, lze srovnat se 175, kteří před dvěma týdny původně podpořili výjimku při znásilnění a incestu, a se 136, kteří podobně hlasovali loni. 
+The 189 Democrats who supported the override yesterday compare with 175 who initially backed the rape-and-incest exemption two weeks ago and 136 last year on a similar vote.
+#Cor.ACT #Benef.BEN 189 demokratů kteří včera podpořili přehlasování #PersPron.PAT #PersPron.ACT lze srovnat 175 kteří dvěma týdny původně podpořili výjimku znásilnění #PersPron.PAT #Gen.ACT a incestu a 136 <kteří> podobně hlasovali loni
+189 Democrats who supported override yesterday compare 175 who initially backed rape-and-incest exemption two weeks and 136 last year similar vote
+ERR:
+
+tmp/robust_ali/wsj_0283.final.streex##39.T-wsj0283-001-p1s38a9
+Píseň americké zpěvačky Tracy Chapmanové, která vychvaluje uvězněného černošského vůdce Nelsona Mandelu, byla ve státním rádiu a televizi Jihoafrické republiky zakázána. 
+A song by American singer Tracy Chapman praising jailed black leader Nelson Mandela was banned from South African state radio and television.
+#Gen.ADDR #Unsp.ACT Píseň americké zpěvačky Tracy Chapmanové <která> vychvaluje uvězněného černošského vůdce Nelsona Mandelu státním rádiu a televizi Jihoafrické republiky zakázána
+song American singer Tracy Chapman praising <#Cor.ACT> jailed black leader Nelson Mandela #Gen.ACT banned South African state radio and television
+ERR:
+
+tmp/robust_ali/wsj_0345.final.streex##43.T-wsj0345-001-p1s42a10
+Čistý zisk byl menší než před rokem, kdy příjmy posílil zisk z restrukturalizace důchodového plánu. 
+Net income was down from a year ago, when a gain from the restructuring of a retirement plan boosted earnigs .
+Čistý zisk byl menší byl menší #PersPron.ACT rokem <kdy> příjmy posílil zisk restrukturalizace důchodového plánu
+Net income was down year <when> gain restructuring retirement plan boosted earnigs
+ERR:
+
+tmp/robust_ali/wsj_0765.final.streex##90.T-wsj0765-001-p1s89a12
+Avšak Nathan Leventhal, prezident společnosti Lincoln Center, který stál v čele Dinkinsova týmu pro přechodné období, je mnohem konzervativnější, stejně jako výkonný ředitel realitní společnosti, další člen blízkého kruhu poradců. 
+But Lincoln Center President Nathan Leventhal, who would head a Dinkins transition team, is more mainstream, as is real-estate executive Anthony Gliedman, another insider.
+Avšak Nathan Leventhal , prezident společnosti #Forn.ID Lincoln Center <který> stál Dinkinsova týmu je přechodné období mnohem konzervativnější jako konzervativnější je stejně výkonný ředitel společnosti , realitní další člen blízkého kruhu poradců
+But Lincoln Center President Nathan Leventhal <who> head Dinkins transition team is mainstream is mainstream real-estate executive Anthony Gliedman , another insider
+ERR:
+
+tmp/robust_ali/wsj_1875.final.streex##15.T-wsj1875-001-p1s14a16
+Honeckerův potupný pád završuje téměř dvě desetiletí vlády železné ruky, během níž Honecker, kterému je dnes 77 let, vybudoval z Východního Německa ekonomicky nejvyspělejší stát sovětského bloku. 
+Mr. Honecker's ignoble fall culminates nearly two decades of iron-handed leadership during which Mr. Honecker, now 77 years old, built East Germany into the most economically advanced nation in the Soviet bloc .
+Honeckerův potupný pád završuje téměř dvě desetiletí vlády železné ruky <níž> Honecker kterému je dnes 77 let vybudoval Východního Německa ekonomicky nejvyspělejší stát sovětského bloku
+Mr. Honecker ignoble fall culminates nearly two decades iron-handed leadership <which> Mr. Honecker now 77 years old built East Germany economically advanced nation Soviet bloc
+ERR:
+
+tmp/robust_ali/wsj_1010.final.streex##23.T-wsj1010-001-p1s22a16
+Pan Freeman řekl, že poradci odborové organizace mechaniků plánují tento týden schůzku, kde se pokusí vypracovat návrh určité formy rekapitalizace, která by mohla zahrnovat speciální dividendu pro akcionáře, zaměstnanecký podíl a možná investici do akciového kapitálu od spřáteleného investora. 
+Mr. Freeman said machinists' union advisers plan to meet this week to try to draw up a blueprint for some form of recapitalization that could include a special dividend for shareholders, an employee stake and, perhaps, an equity investment by a friendly investor.
+#Gen.ADDR Pan Freeman řekl poradci odborové organizace mechaniků plánují tento týden schůzku #PersPron.ACT <kde> pokusí #Cor.ACT vypracovat návrh určité formy rekapitalizace která zahrnovat , speciální dividendu akcionáře zaměstnanecký podíl a možná zahrnovat investici akciového kapitálu spřáteleného investora
+Mr. Freeman said #Gen.ADDR machinists union advisers plan #Cor.ACT meet #Rcp.PAT this week <#Cor.ACT> try #Cor.ACT draw blueprint some form recapitalization that include special dividend shareholders employee stake and perhaps equity investment friendly investor
+ERR:
+
+tmp/robust_ali/wsj_0464.final.streex##31.T-wsj0464-001-p1s30a18
+Čistou ztrátu za toto čtvrtletí zapříčinily výdaje za třetí čtvrtletí ve výši 3.5 milionu dolarů, které se vztahují k plánovanému uzavření restaurací. 
+A third-quarter charge of $3.5 million related to planned restaurant closings resulted in a net loss for the quarter.
+Čistou ztrátu toto čtvrtletí zapříčinily čtvrtletí třetí výši výdaje 3.5 milionu dolarů <které> vztahují #PersPron.ACT plánovanému uzavření restaurací
+third-quarter charge $ 3.5 million related #Gen.ACT planned #Cor.PAT restaurant closings resulted net loss quarter
+ERR:
+
+tmp/robust_ali/wsj_1875.final.streex##13.T-wsj1875-001-p1s12a23
+Agentura ADN uvedla, že Honecker, nekompromisní stalinista, který v roce 1961 dohlížel na stavbu Berlínské zdi, byl také zbaven funkce hlavy státu a pozice velitele ozbrojených sil. 
+ADN said Mr. Honecker, a hard-line Stalinist who in 1961 supervised the construction of the Berlin Wall, also was relieved of his title as head of state and his position as chief of the military.
+Agentura ADN uvedla #PersPron.ACT Honecker , nekompromisní stalinista <který> roce 1961 dohlížel stavbu Berlínské zdi také zbaven funkce hlavy státu a pozice velitele ozbrojených sil
+#Gen.ADDR ADN said Mr. Honecker , hard-line Stalinist <who> 1961 supervised construction Berlin Wall also relieved #Gen.ACT his title head state and his position chief military
+ERR:
+
+tmp/robust_ali/wsj_1286.final.streex##16.T-wsj1286-001-p1s15a9
+Budoucnost amerického vzdělávání bude záležet na stupni, kdy - my všichni - necháme tento zdravý rozum převládnout nad iluzemi, které také sdílíme. 
+American education's future will be determined by the degree to which we -- all of us -- allow this common sense to prevail over the illusions that we also share .
+#Gen.ACT Budoucnost amerického vzdělávání #Gen.PAT záležet stupni <kdy> my všichni necháme tento zdravý rozum #Cor.ACT převládnout iluzemi #Gen.ADDR #PersPron.ACT které také sdílíme
+American education future determined degree <which> degree we -- all us allow this common sense prevail illusions that we share #Rcp.ADDR also
+ERR:
+
+tmp/robust_ali/wsj_0975.final.streex##46.T-wsj0975-001-p1s45a19
+14. září nechal Harvard kolovat prohlášení o postupu v případě střetu zájmů, které vlastně věrně naplňuje směrnice NIH. 
+On Sept. 14, Harvard began circulating a conflict-of-interest policy statement that, in effect, would follow the NIH guidelines faithfully.
+14 září nechal Harvard kolovat prohlášení #Gen.ACT postupu střetu zájmů <které> vlastně věrně naplňuje směrnice #Idph.RSTR NIH
+Sept. 14 Harvard began #Cor.ACT circulating conflict-of-interest policy statement <that> effect follow NIH guidelines faithfully
+ERR:
+
+tmp/robust_ali/wsj_1464.final.streex##32.T-wsj1464-001-p1s31a17
+Společnost Resolution Funding Corp., znamá jako Refcorp, divize nové vládní agentury, která byla zřízená k záchraně problémy zmítaných spořitelních a úvěrových sdružení v zemi, bude pořádat svoji první aukci obligací ve středu, kdy nabídne k prodeji 30leté obligace za 4.5 miliardy dolarů. 
+Resolution Funding Corp., known as Refcorp, a division of a new government agency created to bail out the nation's troubled savings and loan associations, will hold its first bond auction Wednesday, when it will sell $4.5 billion of 30-year bonds .
+Společnost #Forn.ID Resolution Funding Corp . znamá #Forn.EFF Refcorp , divize nové vládní agentury <která> zřízená #Gen.ACT záchraně problémy zmítaných spořitelních a úvěrových sdružení zemi pořádat svoji první aukci obligací středu #Gen.ADDR #PersPron.ACT kdy nabídne prodeji 30leté 30leté obligace 4.5 miliardy dolarů
+Resolution Funding Corp. known #Gen.ACT #Cor.PAT Refcorp , division new government agency #Gen.ACT created #Cor.PAT #Cor.ACT bail nation troubled savings and loan associations hold its first bond auction Wednesday when it sell $ 4.5 billion 30-year bonds
+ERR:
+
+tmp/robust_ali/wsj_0049.final.streex##17.T-wsj0049-001-p1s16a8
+Newyorský právník Michael Ross, který je v čele výboru velké poroty ABA, řekl, že právníkům zakazuje etický zákoník ABA poskytovat informace o klientech, kromě případů, kdy to nařídí soud, nebo má-li se zamezit tomu, aby klient spáchal trestný čin, který by mohl mít za následek smrt. 
+Michael Ross, a New York lawyer who heads the ABA's grand jury committee, said that lawyers are prohibited by the ABA's code of ethics from disclosing information about a client except where a court orders it or to prevent the client from committing a criminal act that could result in death.
+#Gen.ADDR Newyorský právník Michael Ross <který> je řekl výboru velké poroty #Idph.RSTR ABA právníkům zakazuje etický zákoník #Idph.RSTR ABA #Gen.ADDR #Cor.ACT poskytovat informace klientech #Total.TWHEN případů #PersPron.ADDR nařídí nebo kdy to soud #Gen.ACT zamezit klient spáchal trestný čin který mít následek smrt
+Michael Ross , New York lawyer <who> heads ABA grand jury #Forn.RSTR committee said #Gen.ADDR lawyers prohibited #Gen.ACT ABA code ethics disclosing #Gen.ADDR #Cor.ACT information client court orders #PersPron.ADDR it or #Cor.ACT prevent client #Cor.ACT committing criminal act that result death
+ERR:
+
+tmp/robust_ali/wsj_0049.final.streex##5.T-wsj0049-001-p1s4a10
+Nevyplnění formuláře mohlo být do loňského listopadu, kdy Kongres rozhodl, že je závažným trestným činem se sazbou do 10 let odnětí svobody, trestáno pouze jako přečin či méně závažný trestný čin. 
+Failure to complete the form had been punishable as a misdemeanor until last November, when Congress determined that the crime was a felony punishable by up to 10 years in prison .
+#PersPron.ACT formuláře Nevyplnění loňského <kdy> listopadu rozhodl Kongres #PersPron.ACT závažným je činem trestným 10 sazbou let #Gen.ACT odnětí svobody trestáno #Gen.ACT přečin pouze či méně závažný čin trestný
+#Gen.ACT Failure #Cor.ACT complete form been punishable misdemeanor last November Congress <determined> crime was felony punishable up 10 years prison
+ERR:
+
+tmp/robust_ali/wsj_0465.final.streex##25.T-wsj0465-001-p1s24a8
+Byl to vůbec první test, který spolehlivě předpověděl, zda je u jedince možné předpokládat rozvoj rakoviny. 
+This test was the first to predict reliably whether an individual could expect to develop cancer.
+to Byl vůbec první test <který> spolehlivě předpověděl jedince je možné #Benef.BEN #Cor.ACT předpokládat rozvoj rakoviny
+This test was first predict reliably individual expect #Cor.ACT develop cancer
+ERR:
+
+tmp/robust_ali/wsj_0118.final.streex##36.T-wsj0118-001-p1s35a26
+Jenže vedení Newyorské burzy cenných papírů - navzdory protestům specialistů - před dvěma týdny zahájilo obchodování nového "košíkového" produktu akciového trhu, který má podpořit programové obchodování. 
+But the Big Board's leadership -- over the specialists' protests -- two weeks ago began trading a new stock ``basket'' product designed to facilitate program trading.
+Jenže vedení Newyorské burzy cenných papírů protestům specialistů dvěma týdny zahájilo #Cor.ACT obchodování nového košíkového produktu akciového trhu <který> podpořit #Gen.PAT #Gen.ACT programové obchodování
+But Big Board leadership specialists protests two weeks began #Cor.ACT trading new stock basket product #Cor.PAT designed #Gen.ACT <#Cor.ACT> facilitate program trading
+ERR:
+
