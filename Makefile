@@ -96,5 +96,5 @@ en_perspron_stats :
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_en_counterparts" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/en_counterparts.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_tlemma" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/tlemma.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_ante_agree" | cut -f2 | scripts/eval.pl | sed 's/PRE/ali\/cs/' | sed 's/REC/ali\/en/' | sed '/ACC/d;sed/F-M/d' > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.all.scores
-	cat tmp/stats/en_perspron.all | grep "^en_perspron_cs_counterparts" | cut -f2 | distr > analysis/en.perspron/$(DATA_SET).$(DATA_ID)/cs.counterparts.freq
+	cat tmp/stats/en_perspron.all | grep "^en_perspron_cs_counterparts" | cut -f2 | distr > analysis/en.perspron/$(DATA_SET).$(DATA_ID)/cs.$(ALIGN_SELECTOR).counterparts.freq
 
