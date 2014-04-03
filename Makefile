@@ -83,12 +83,13 @@ cs_relpron_stats :
 		My::BitextCorefStats::AddRobustAlignmentRelpron selector=ref \
 		My::BitextCorefStats::CsRelpron selector=ref to='.' substitute='{^.*/([^\/]*)}{tmp/stats/cs_relpron/$$1.txt}'
 	find tmp/stats/cs_relpron -path "*.txt" -exec cat {} \; > tmp/stats/cs_relpron.all
-	cat tmp/stats/cs_relpron.all | grep "^coref_cover" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/coref_cover.ref.freq
+	#cat tmp/stats/cs_relpron.all | grep "^coref_cover" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/coref_cover.ref.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2,3 | grep "^0" | cut -f2 > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/nodes.0_ref.list
-	cat tmp/stats/cs_relpron.all | grep "^en_counterparts" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/en_counterparts.ref.freq
+	#cat tmp/stats/cs_relpron.all | grep "^en_counterparts" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/en_counterparts.ref.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_tlemma" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/tlemma.freq
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_ante_agree" | cut -f2 | scripts/eval.pl | sed 's/PRE/ali\/cs/' | sed 's/REC/ali\/en/' | sed '/ACC/d;sed/F-M/d' > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.all.scores
+	cat tmp/stats/cs_relpron.all | grep "^ante_agree" | cut -f2 | distr > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.ref.freq
 
 en_perspron_stats :
 	-treex $(LRC_FLAGS) -Len -Ssrc \

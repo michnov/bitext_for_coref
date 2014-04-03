@@ -38,11 +38,13 @@ sub process_tnode {
     #($result, $errors) = $self->print_cs_relpron_tlemma($tnode);
     #$self->print_info("cs_relpron_tlemma", $address, $result, $errors);
     
-    ($result, $errors) = $self->print_en_counterparts($tnode);
-    $self->print_info("en_counterparts", $address, $result, $errors);
+    my @en_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [$EN_ROBUST_FILTER]);
+    my $en_class;
+    ($en_class, $errors) = $self->print_en_counterparts($tnode, @en_tnodes);
+    $self->print_info("en_counterparts", $address, $en_class, $errors);
     
-    ($result, $errors) = $self->print_cs_relpron_ante_agree($tnode);
-    $self->print_info("cs_relpron_ante_agree", $address, $result, $errors);
+    ($result, $errors) = $self->print_ante_agree($tnode, $en_class, @en_tnodes);
+    $self->print_info("ante_agree", $address, $result, $errors);
 
     #my $err_msg;
     
@@ -86,12 +88,10 @@ sub print_cs_relpron_scores {
 }
 
 sub print_en_counterparts {
-    my ($self, $cs_tnode) = @_;
+    my ($self, $cs_tnode, @en_tnodes) = @_;
     
-    return (undef, ["NO_CS_TNODE"]) if (!defined $cs_tnode);
+    #return (undef, ["NO_CS_TNODE"]) if (!defined $cs_tnode);
     
-    my @en_tnodes = Treex::Tool::Align::Utils::aligned_transitively([$cs_tnode], [$EN_ROBUST_FILTER]);
-
     my $robust_align_err = $cs_tnode->wild->{align_robust_err};
     #log_info "ERROR_READ: " . $cs_tnode->id . " " . (defined $robust_align_err ? "1" : "0");
     if (defined $robust_align_err) {
@@ -100,14 +100,17 @@ sub print_en_counterparts {
             $assoc_anode_str =~ s/^WH_PRON_ANODE=//;
             my @assoc_anodes = map {$cs_tnode->get_document->get_node_by_id($_)} split /,/, $assoc_anode_str;
             #return "ANODE:" . join ",", (map {$_->lemma} @assoc_anodes);
-            return join ",", (map {$_->lemma} @assoc_anodes);
+            return @assoc_anodes[0]->lemma;
         }
         return "V" if any {$_ =~ /^V /} @$robust_align_err;
         return "N" if any {$_ =~ /^N /} @$robust_align_err;
         return "APPOS" if any {$_ =~ /^APPOS/} @$robust_align_err;
     }
     if (@en_tnodes) {
-        return join ",", (map {$_->t_lemma} @en_tnodes);
+        if (Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($en_tnodes[0])) {
+            return "RELPRON";
+        }
+        return $en_tnodes[0]->t_lemma;
     }
     else {
         return "UNKNOWN";
@@ -115,31 +118,38 @@ sub print_en_counterparts {
     }
 }
 
-sub print_cs_relpron_ante_agree {
-    my ($self, $cs_ref_tnode) = @_;
-    
-    return "0 0 0" if (!defined $cs_ref_tnode);
+sub print_ante_agree {
+    my ($self, $cs_tnode, $en_class, @en_tnodes) = @_;
 
-    my @en_ref_antes = ();
-    my $en_ref_tnode = $cs_ref_tnode->wild->{en_counterpart};
-    if (defined $en_ref_tnode && $en_ref_tnode->get_layer eq "t") {
-        @en_ref_antes = $en_ref_tnode->get_coref_nodes();
+    my @cs_ante = $cs_tnode->get_coref_nodes;
+
+    return "NONCOREF" if (!@cs_ante);
+
+    my $category = 
+        (any {$en_class eq $_} qw/V N/) ? "DEP" :
+        ($en_class eq "APPOS") ? "APPOS" :
+        ($en_class eq "UNKNOWN") ? "UNK" : 
+                                 "COREF";
+
+    my @en_ante;
+    if ($category eq "COREF") {
+        @en_ante = map {$_->get_coref_nodes} @en_tnodes;
     }
-    #return "NO_EN_REF_TNODE" if (!defined $cs_ref_tnode->wild->{en_counterpart});
-    #return "NO_EN_REF_ANTES" if (!@en_ref_antes);
+    elsif ($category eq "DEP") {
+        @en_ante = @en_tnodes;
+    }
+    elsif ($category eq "APPOS") {
+        @en_ante = map {$_->get_children} @en_tnodes;
+    }
+    my @cs_en_ante = Treex::Tool::Align::Utils::aligned_transitively(\@en_ante, [$CS_ROBUST_FILTER]);
+    my @eq_ante = Treex::Block::My::BitextCorefStats::intersect(\@cs_ante, \@cs_en_ante);
+    
+    my $ante_eq_category =
+        !@en_ante ? "NONANTE" :
+        !@eq_ante ? "ANTE<>" :
+                    "ANTE==";
 
-    my @cs_ref_antes = $cs_ref_tnode->get_coref_nodes();
-    return sprintf("%d %d 0", scalar @en_ref_antes, scalar @cs_ref_antes) if (!@cs_ref_antes || !@en_ref_antes);
-    
-    my @en_ref_projected_antes = Treex::Tool::Align::Utils::aligned_transitively(\@cs_ref_antes, [$EN_ROBUST_FILTER]);
-    
-    #print STDERR $tnode->get_address . "\n";
-    #print STDERR join ", ", (map {$_->id} @en_ref_projected_antes);
-    #print STDERR "\n";
-    #print STDERR join ", ", (map {$_->id} @en_ref_antes);
-    #print STDERR "\n";
-    my @prf_counts = get_prf_counts(\@en_ref_projected_antes, \@en_ref_antes);
-    return join " ", @prf_counts;
+    return $category . " " . $ante_eq_category;
 }
 
 ########################### OLD STUFF - TO BE REFACTORED #########################################3
