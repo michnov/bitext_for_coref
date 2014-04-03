@@ -4,7 +4,7 @@ use Moose;
 use Treex::Tool::Align::Utils;
 use Treex::Core::Common;
 use List::MoreUtils qw/any/;
-use Treex::Tool::Coreference::CS::RelPronAnaphFilter;
+use Treex::Tool::Coreference::NodeFilter::RelPron;
 
 # TODO: refactor this to comply with BitextCorefStats and using Treex::Tool::Align::Utils::aligned_robust
 extends 'Treex::Block::My::BitextCorefStats';
@@ -21,7 +21,7 @@ sub process_tnode {
     log_fatal "Language must be 'cs'" if ($self->language ne 'cs');
     log_fatal "Selector must be 'src'" if ($self->selector ne 'src');
     
-    return if (!Treex::Tool::Coreference::CS::RelPronAnaphFilter::is_relat($src_tnode));
+    return if (!Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($src_tnode));
 
     my $address = $src_tnode->get_address;
     my ($result, $errors);
@@ -94,10 +94,20 @@ sub print_cs_relpron_en_counterparts {
             my @assoc_anodes = map {$cs_tnode->get_document->get_node_by_id($_)} split /,/, $assoc_anode_str;
             return "ANODE:" . join ",", (map {$_->lemma} @assoc_anodes);
         }
+        my ($no_cor_child_str) = grep {$_ =~ /^NO_COR_CHILDREN/} @$robust_align_err;
+        if ($no_cor_child_str) {
+            $no_cor_child_str =~ s/^NO_COR_CHILDREN=//;
+            return "EN_REF_PAR:" . $no_cor_child_str;
+        }
         return "NOUN_ANTE_ATTR" if any {$_ eq "NOUN_ANTE_ATTR"} @$robust_align_err;
         return "EMPVERB_APPOS" if any {$_ eq "EMPVERB_APPOS"} @$robust_align_err;
     }
-    return join ",", (map {$_->t_lemma} @en_tnodes); 
+    if (@en_tnodes) {
+        return join ",", (map {$_->t_lemma} @en_tnodes);
+    }
+    else {
+        return join ",", @$robust_align_err;
+    }
 }
 
 sub print_cs_relpron_ante_agree {

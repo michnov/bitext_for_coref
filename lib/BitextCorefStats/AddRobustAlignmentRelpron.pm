@@ -5,13 +5,14 @@ use Treex::Tool::Align::Utils;
 use Treex::Core::Common;
 
 use Treex::Block::My::BitextCorefStats;
-use Treex::Tool::Coreference::CS::RelPronAnaphFilter;
+use Treex::Tool::Coreference::NodeFilter::RelPron;
 
 extends 'Treex::Core::Block';
 
 has '_align_zone' => (is => 'ro', isa => 'HashRef[Str]', builder => '_build_align_zone', lazy => 1);
 
 has 'type' => (is => 'ro', isa => 'Str', default => 'robust');
+has 'replace' => (is => 'ro', isa => 'Bool', required => 1, default => 1);
 
 sub BUILD {
     my ($self) = @_;
@@ -23,12 +24,23 @@ sub _build_align_zone {
     return {language => 'en', selector => $self->selector};
 }
 
+after 'process_zone' => sub {
+    my ($self, $zone) = @_;
+
+    my $align_filter = { %{$self->_align_zone}, rel_types => ['^(?!robust)'] };
+
+    foreach my $tnode ($zone->get_ttree->get_descendants) {
+        if (defined $tnode->wild->{align_robust_err}) {
+            Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($tnode, $align_filter);
+        }
+    }
+};
+
 
 sub process_tnode {
     my ($self, $tnode) = @_;
 
-    # only for 3rd person non-reflexive personal pronouns
-    return if (!Treex::Tool::Coreference::CS::RelPronAnaphFilter::is_relat($tnode));
+    return if (!Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($tnode));
     
     my $sieves = [ 
         'self', 
@@ -50,8 +62,7 @@ sub process_tnode {
     #log_info "ERROR_WRITE: " . $tnode->id . " " . (defined $errors ? "1" : "0");
     if (defined $result_nodes) {
         foreach (@$result_nodes) {
-            Treex::Tool::Align::Utils::remove_alignments($tnode, $self->_align_zone);
-            Treex::Tool::Align::Utils::add_aligned($tnode, $_, $self->type);
+            Treex::Tool::Align::Utils::add_aligned_node($tnode, $_, $self->type);
         }
     }
 }
@@ -91,7 +102,7 @@ sub filter_anodes {
 
 sub filter_self {
     my ($aligned, $tnode, $errors) = @_;
-    my @filtered = grep {Treex::Tool::Coreference::CS::RelPronAnaphFilter::is_relat($_)} @$aligned;
+    my @filtered = grep {Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($_)} @$aligned;
     if (!@filtered) {
         push @$errors, "NORELAT_EN_REF_TNODE";
         return;
@@ -107,7 +118,7 @@ sub filter_eparents {
         return filter_by_coref($aligned, $errors);
     }
     my @filtered_functor_tnodes = grep {
-        Treex::Tool::Coreference::CS::RelPronAnaphFilter::is_relat($_) || 
+        Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($_) || 
         $_->t_lemma eq "#Cor" || $_->t_lemma eq "#PersPron"
     } @functor_tnodes;
     if (!@filtered_functor_tnodes) {
@@ -147,13 +158,13 @@ sub filter_siblings {
         return $par;
     }
     if ($formeme =~ /^v/) {
-        my ($relat_child) = grep {Treex::Tool::Coreference::CS::RelPronAnaphFilter::is_relat($_)} $par->get_children();
+        my ($relat_child) = grep {Treex::Tool::Coreference::NodeFilter::RelPron::is_relat($_)} $par->get_children();
         if (defined $relat_child) {
             return $relat_child;
         }
         my @cor_children = grep {$_->t_lemma eq "#Cor"} $par->get_children();
         if (@cor_children == 0) {
-            push @$errors, "NO_COR_CHILDREN";
+            push @$errors, "NO_COR_CHILDREN=" . $formeme;
             #return "EN_REF_PAR:" . $formeme;
             return;
         }

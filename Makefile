@@ -90,9 +90,12 @@ bitext_coref_stats :
 	cat stats/bitext_coref_stats | grep "^en_perspron_cs_counterparts" | cut -f2 | distr > analysis/en.perspron/$(DATA_SET).$(DATA_ID)/cs.counterparts.freq
 
 cs_relpron_stats :
-	-treex $(LRC_FLAGS) -Lcs -Ssrc \
+	-treex $(LRC_FLAGS) -Lcs \
 		Read::Treex from=@$(DATA_DIR)/list \
+		Util::SetGlobal selector=ref \
+		Project::Attributes layer=t alignment_type=monolingual alignment_direction=trg2src attributes=gram/indeftype \
 		My::BitextCorefStats::AddRobustAlignmentRelpron selector=ref \
+		Util::SetGlobal selector=src \
 		My::BitextCorefStats::CsRelpron to='.' substitute='{^.*/([^\/]*)}{tmp/stats/cs_relpron/$$1.txt}'
 	find tmp/stats/cs_relpron -path "*.txt" -exec cat {} \; > tmp/stats/cs_relpron.all
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all
