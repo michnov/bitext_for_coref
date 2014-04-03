@@ -1,3 +1,5 @@
 * what are the Czech counterparts of English persprons
     * excluding pleonastic usages
-
+* annotation errors, shouldn't it be ... ?:
+    * #Cor
+        * data/analysed/pcedt/train/0001/wsj_0359.final.treex.gz##36.t_tree-cs_src-s36-n1341
