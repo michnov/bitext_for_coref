@@ -6,10 +6,10 @@ use Treex::Core::Common;
 
 extends 'Treex::Core::Block';
 
-has '_align_lang' => (is => 'ro', isa => 'Str', required => 1, builder => '_build_align_lang');
+has '_align_lang' => (is => 'ro', isa => 'Str', required => 1);
 has '_align_zone' => (is => 'ro', isa => 'HashRef[Str]', builder => '_build_align_zone', lazy => 1);
 
-#has 'type' => (is => 'ro', isa => 'Str', default => 'robust');
+has 'type' => (is => 'ro', isa => 'Str', default => 'robust');
 
 sub BUILD {
     my ($self) = @_;
@@ -30,7 +30,8 @@ sub _build_align_zone {
 after 'process_zone' => sub {
     my ($self, $zone) = @_;
 
-    my $align_filter = { %{$self->_align_zone}, rel_types => ['^(?!robust)'] };
+    my $robust_label = $self->type;
+    my $align_filter = { %{$self->_align_zone}, rel_types => ["^(?!$robust_label)"] };
 
     foreach my $tnode ($zone->get_ttree->get_descendants) {
         if (defined $tnode->wild->{align_robust_err}) {

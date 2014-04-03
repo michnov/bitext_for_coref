@@ -7,7 +7,7 @@ use Treex::Core::Common;
 use Treex::Tool::Align::Robust::CS::RelPron;
 use Treex::Tool::Coreference::NodeFilter::RelPron;
 
-extends 'Treex::Core::Block';
+extends 'Treex::Block::My::AddRobustAlignment';
 
 has '+_align_lang' => (default => 'en');
 has '_align_zone' => (is => 'ro', isa => 'HashRef[Str]', builder => '_build_align_zone', lazy => 1);

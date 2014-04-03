@@ -7,8 +7,20 @@ use Treex::Tool::Coreference::NodeFilter::RelPron;
 use Treex::Tool::Align::Utils;
 
 extends 'Treex::Block::Write::BaseTextWriter';
-    
-my $EN_ROBUST_FILTER = { language => 'en', rel_types => ['robust','.*'] };
+
+has 'align_lang' => (is => 'ro', isa => 'Str', required => 1);
+
+has 'robust_align_filter' => (is => 'ro', isa => 'HashRef', builder => '_build_raf');
+
+sub BUILD {
+    my ($self) = @_;
+    $self->robust_align_filter;
+}
+
+sub _build_raf {
+    my ($self) = @_;
+    return { language => $self->align_lang, rel_types => ['robust','.*'] };
+}
 
 sub _linearize_tnode {
     my ($tnode, @highlight) = @_;
@@ -42,22 +54,22 @@ sub _linearize_ttree {
 }
 
 sub process_tnode {
-    my ($self, $tnode) = @_;
+    my ($self, $l1_tnode) = @_;
 
-    log_fatal "Must be run on 'cs_ref' zone."
-        if ($self->selector ne "ref" && $self->language ne "cs");
+    log_fatal "Must be run on 'ref'."
+        if ($self->selector ne "ref");
 
-    log_info $tnode->id;
-    my ($en_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$tnode], [$EN_ROBUST_FILTER]);
+    log_info $l1_tnode->id;
+    my ($l2_tnode) = Treex::Tool::Align::Utils::aligned_transitively([$l1_tnode], [$self->robust_align_filter]);
 
-    my $cs_zone = $tnode->get_zone;
-    my $en_zone = $tnode->get_bundle->get_zone("en","ref");
+    my $l1_zone = $l1_tnode->get_zone;
+    my $l2_zone = $l1_tnode->get_bundle->get_zone($self->align_lang, "ref");
 
-    print {$self->_file_handle} $tnode->get_address . "\n";
-    print {$self->_file_handle} $cs_zone->sentence . "\n";
-    print {$self->_file_handle} $en_zone->sentence . "\n";
-    print {$self->_file_handle} _linearize_ttree($cs_zone->get_ttree, $tnode) . "\n";
-    print {$self->_file_handle} _linearize_ttree($en_zone->get_ttree, $en_tnode) . "\n";
+    print {$self->_file_handle} $l1_tnode->get_address . "\n";
+    print {$self->_file_handle} $l1_zone->sentence . "\n";
+    print {$self->_file_handle} $l2_zone->sentence . "\n";
+    print {$self->_file_handle} _linearize_ttree($l1_zone->get_ttree, $l1_tnode) . "\n";
+    print {$self->_file_handle} _linearize_ttree($l2_zone->get_ttree, $l2_tnode) . "\n";
     print {$self->_file_handle} "ERR:\n";
     print {$self->_file_handle} "\n";
 }
