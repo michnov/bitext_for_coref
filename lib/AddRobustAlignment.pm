@@ -31,7 +31,7 @@ after 'process_zone' => sub {
     my ($self, $zone) = @_;
 
     my $robust_label = $self->type;
-    my $align_filter = { %{$self->_align_zone}, rel_types => ["^(?!$robust_label)"] };
+    my $align_filter = { %{$self->_align_zone}, rel_types => ["!$robust_label", '.*'] };
 
     foreach my $tnode ($zone->get_ttree->get_descendants) {
         if (defined $tnode->wild->{align_robust_err}) {
