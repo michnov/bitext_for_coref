@@ -20,7 +20,7 @@ endif
 
 #==================================== ML =========================================
 
-LANGUAGE=cs
+LANGUAGE=en
 
 #----------------------------- data extraction -----------------------------------
 
@@ -30,6 +30,8 @@ ifeq ($(DATA_ID),pcedt)
 DATA_ID_FOR_EXTRACT = pcedt_bi
 endif
 
+COREF_PRINTER_PARAMS=aligned_feats=0
+
 extract_data :
 	$(MAKE) -C $(DATA_EXTRACT_DIR) train_table \
 		DATA_SOURCE=$(DATA_ID_FOR_EXTRACT) \
@@ -37,8 +39,9 @@ extract_data :
 		ANOT=analysed \
 		LANGUAGE=$(LANGUAGE) \
 		DATA_TABLE_SCENARIO=/home/mnovak/projects/coref_bitext/scenarios/before_data_table.scen \
+		COREF_PRINTER_PARAMS=$(COREF_PRINTER_PARAMS) \
 		LRC=$(LRC) \
-		DESC=$(D)
+		DESC="$(DESC)"
 
 #----------------------------- train, test, eval ----------------------------------
 
