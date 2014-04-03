@@ -1,0 +1,67 @@
+SHELL=/bin/bash
+
+#DATA_SET = train
+DATA_SET=train_00-18
+DATA_ID = pcedt
+
+DATA_VERSION := $(shell cat data/analysed/$(DATA_ID)/$(DATA_SET)/last_id 2> /dev/null || echo 0000)
+DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)/$(DATA_VERSION)
+
+JOBS_NUM = 50
+
+ifeq (${DATA_SET}, train)
+JOBS_NUM = 100
+endif
+
+LRC=1
+ifeq (${LRC}, 1)
+LRC_FLAGS = -p --qsub '-hard -l mem_free=8G -l act_mem_free=8G -l h_vmem=8G' --jobs ${JOBS_NUM}
+endif
+
+#==================================== ML =========================================
+
+LANGUAGE=cs
+
+#----------------------------- data extraction -----------------------------------
+
+DATA_EXTRACT_DIR=/home/mnovak/projects/czeng_coref
+
+ifeq ($(DATA_ID),pcedt)
+DATA_ID_FOR_EXTRACT = pcedt_bi
+endif
+
+extract_data :
+	$(MAKE) -C $(DATA_EXTRACT_DIR) train_table \
+		DATA_SOURCE=$(DATA_ID_FOR_EXTRACT) \
+		DATA_SET=$(DATA_SET) \
+		ANOT=analysed \
+		LANGUAGE=$(LANGUAGE) \
+		DATA_TABLE_SCENARIO=/home/mnovak/projects/coref_bitext/scenarios/before_data_table.scen \
+		LRC=$(LRC) \
+		DESC=$(D)
+
+#----------------------------- train, test, eval ----------------------------------
+
+ML_FRAMEWORK=/home/mnovak/projects/ml_framework
+
+RUNS_DIR=tmp/ml
+
+tte_feats :
+	$(MAKE) -C $(ML_FRAMEWORK) tte_feats \
+		DATA_ID=$(DATA_ID).$(PRON_TYPE) \
+		DATA_DIR=$(PWD)/$(DATA_DIR) \
+		RUNS_DIR=$(PWD)/$(RUNS_DIR) \
+		FEATSET_LIST=$(PWD)/$(FEATSET_LIST) \
+		STATS_FILE=$(PWD)/$(STATS_FILE)
+
+
+#============================ STANFORD COREF =======================================
+
+stanford_coref_sents :
+	-treex $(LRC_FLAGS) -Len -Ssrc \
+		Read::Treex from=@$(DATA_DIR)/list \
+		A2T::EN::MarkTextCoref \
+		A2T::SetDocOrds \
+		A2T::RearrangeCorefLinks retain_cataphora=1 \
+		Project::CoreferenceToALayer \
+		Print::CorefSentences path=tmp/pcedt_stanford_coref
