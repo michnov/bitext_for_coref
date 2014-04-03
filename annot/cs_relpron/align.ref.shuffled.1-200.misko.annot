@@ -98,9 +98,9 @@ ERR:	ALIGN=OK APPOS
 
 tmp/robust_ali/wsj_1790.final.streex##13.T-wsj1790-001-p1s12a13
 Přesvědčuje klienty, aby zahájili "detoxifikační" fázi, ve které zredukují společenské a jiné neproduktivní činnosti a vyhradí si čas pro sebe. 
-She <urges> client couples to begin a ``detoxification'' period, purging social and other nonproductive activities and setting time apart for themselves.
+She urges client couples to begin a ``detoxification'' period, purging social and other nonproductive activities and setting time apart for themselves.
 #PersPron.ACT Přesvědčuje klienty #PersPron.ACT zahájili detoxifikační fázi <které> zredukují společenské a jiné neproduktivní činnosti #PersPron.ACT a vyhradí si čas sebe
-She urges client couples #Cor.ACT begin detoxification period #Cor.ACT purging social and other nonproductive activities and setting time themselves
+She <urges> client couples #Cor.ACT begin detoxification period #Cor.ACT purging social and other nonproductive activities and setting time themselves
 ERR:	ALIGN=ANTE V 	COMPL.v:ger
 
 tmp/robust_ali/wsj_1389.final.streex##22.T-wsj1389-001-p1s21a10
@@ -1024,7 +1024,7 @@ tmp/robust_ali/wsj_0771.final.streex##45.T-wsj0771-001-p1s44a14
 Obecněji řečeno Boren doufá, že Panama připraví Washingtonu šok, díky němuž se zbaví strachu z použití vojenské síly. 
 More broadly, Mr. Boren hopes that Panama will shock Washington out of its fear of using military power.
 #Gen.EFF #Gen.ADDR #Gen.ACT Obecněji řečeno Boren doufá Panama připraví Washingtonu šok #PersPron.ACT <němuž> zbaví strachu #PersPron.ACT použití vojenské síly
-broadly Mr. Boren hopes Panama shock Washington its fear #Cor.ACT using military power
+broadly Mr. Boren hopes Panama <shock> Washington its fear #Cor.ACT using military power
 ERR:	ALIGN=ANTE V 	DIR1.n:out_of+X
 
 tmp/robust_ali/wsj_0022.final.streex##2.T-wsj0022-001-p1s1a6
