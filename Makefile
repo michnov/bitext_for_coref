@@ -98,3 +98,31 @@ en_perspron_stats :
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_ante_agree" | cut -f2 | scripts/eval.pl | sed 's/PRE/ali\/cs/' | sed 's/REC/ali\/en/' | sed '/ACC/d;sed/F-M/d' > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/ante_agree.all.scores
 	cat tmp/stats/en_perspron.all | grep "^en_perspron_cs_counterparts" | cut -f2 | distr > analysis/en.perspron/$(DATA_SET).$(DATA_ID)/cs.$(ALIGN_SELECTOR).counterparts.freq
 
+#==================================== ML =========================================
+
+LANGUAGE=cs
+
+#----------------------------- data extraction -----------------------------------
+
+DATA_EXTRACT_DIR=/home/mnovak/projects/czeng_coref
+
+extract_data :
+	$(MAKE) -C $(DATA_EXTRACT_DIR) train_table \
+		DATA_SOURCE=$(DATA_ID) \
+		DATA_SET=$(DATA_SET) \
+		ANOT=analysed \
+		LANGUAGE=$(LANGUAGE)
+
+#----------------------------- train, test, eval ----------------------------------
+
+ML_FRAMEWORK=/home/mnovak/projects/ml_framework
+
+RUNS_DIR=tmp/ml
+
+tte_feats :
+	$(MAKE) -C $(ML_FRAMEWORK) tte_feats \
+		DATA_ID=$(DATA_ID).$(PRON_TYPE) \
+		DATA_DIR=$(PWD)/$(DATA_DIR) \
+		RUNS_DIR=$(PWD)/$(RUNS_DIR) \
+		FEATSET_LIST=$(PWD)/$(FEATSET_LIST) \
+		STATS_FILE=$(PWD)/$(STATS_FILE)
