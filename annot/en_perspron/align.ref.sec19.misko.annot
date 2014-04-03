@@ -1570,14 +1570,14 @@ ERR:
 What is certain is that if Americans allow another happening like the degrading Bork confirmation circus, it will be at their peril.
 Jisté je, že pokud Američané připustí další událost, jako byl potupný cirkus kolem schválení jmenování Borka, učiní tak na vlastní nebezpečí. 
 What is certain is Americans allow another happening degrading Bork confirmation circus <it> be their peril
-Jisté je <#PersPron.ACT> Američané připustí další událost #Equal.RSTR byl událost potupný cirkus #Gen.ACT schválení #Gen.ACT jmenování #PersPron.EFF Borka učiní tak vlastní nebezpečí
-ERR:
+Jisté je #PersPron.ACT Američané připustí další událost #Equal.RSTR byl událost potupný cirkus #Gen.ACT schválení #Gen.ACT jmenování #PersPron.EFF Borka učiní <tak> vlastní nebezpečí
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##31.EnglishT-wsj_1927-s31-t1
 He would discover it also in Alexander Bickel, a subtle constitutional scholar, Mr. Bork's closest friend at Yale, whose influence on the judge goes well beyond Mr. Bronner's reporting.
 To samé by zjistil i u Alexandera Bickela, bystrého ústavního odborníka a nejbližšího přítele Roberta Borka na univerzitě v Yale, jehož vliv na tohoto soudce je mnohem větší, než uvádí pan Bronner. 
 <He> discover it also Alexander Bickel , , subtle constitutional scholar Mr. Bork closest friend Yale whose influence judge goes well Mr. Bronner reporting
-#PersPron.ACT <To> samé zjistil i , Alexandera Bickela bystrého ústavního odborníka a nejbližšího přítele Roberta Borka univerzitě #Forn.LOC Yale jehož vliv tohoto soudce je mnohem větší uvádí #Some.PAT pan Bronner
+<#PersPron.ACT> To samé zjistil i , Alexandera Bickela bystrého ústavního odborníka a nejbližšího přítele Roberta Borka univerzitě #Forn.LOC Yale jehož vliv tohoto soudce je mnohem větší uvádí #Some.PAT pan Bronner
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##24.EnglishT-wsj_1927-s24-t10
@@ -1587,7 +1587,7 @@ Mr. Bork opponents chose battlefield held <it> and kept it
 Oponenti soudce Borka zvolili bojiště drželi <ho> a udrželi si ho
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##34.EnglishT-wsj_1927-s34-t30
++annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##34.EnglishT-wsj_1927-s34-t30
 Unfortunately, Mr. Bork failed to distinguish between such pressures and the emergence of great issues critical to a society that must be settled judicially if it is to cohere.
 Soudce Bork bohužel nedokázal rozlišovat mezi těmito vlivy a naléhavostí závažných případů klíčových pro společnost, které musejí být pro zachování soudržnosti řešeny soudní cestou. 
 Unfortunately Mr. Bork failed #Cor.ACT distinguish #Rcp.ORIG such pressures and emergence great issues critical society that settled #Gen.ACT judicially <it> is #Cor.ACT cohere
@@ -1626,7 +1626,7 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##39.EnglishT-wsj_19
 What is certain is that if Americans allow another happening like the degrading Bork confirmation circus, it will be at their peril.
 Jisté je, že pokud Američané připustí další událost, jako byl potupný cirkus kolem schválení jmenování Borka, učiní tak na vlastní nebezpečí. 
 What is certain is Americans allow another happening degrading Bork confirmation circus it be <their> peril
-Jisté je #PersPron.ACT Američané připustí další událost #Equal.RSTR byl událost potupný cirkus #Gen.ACT schválení #Gen.ACT jmenování #PersPron.EFF Borka učiní tak vlastní nebezpečí
+Jisté je #PersPron.ACT Američané připustí další událost #Equal.RSTR byl událost potupný cirkus #Gen.ACT schválení #Gen.ACT jmenování #PersPron.EFF Borka učiní tak <vlastní> nebezpečí
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##3.EnglishT-wsj_1927-s3-t6
@@ -1641,7 +1641,7 @@ The word went forth to every law school that those with federal court ambitions 
 Do všech právnických škol pronikla informace, že jedinci s ambicemi dostat se k federálnímu soudu se musejí vydat po bezpečné ústavní cestě bez zanechávání písemných stop a kousavého jazyka nebo pera. 
 word those federal court ambitions travel safe constitutional journey no paper trail and no bite <their> tongue or pen went forth school every law
 všech právnických škol pronikla informace jedinci ambicemi #PersPron.ACT dostat federálnímu soudu vydat #Oblfm.DIR3 bezpečné ústavní cestě zanechávání #PersPron.ACT písemných stop a kousavého jazyka nebo pera
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##28.EnglishT-wsj_1927-s28-t16
 Unfortunately, the author simply doesn't supply the philosophical frame to sustain his reportorial talents.
@@ -1655,7 +1655,7 @@ In its basic structure and style the book is novelistic, with piquant character 
 Z hlediska základní struktury a stylu je kniha zpracovaná jako román s provokativním vylíčením charakterů, syrovým dějem a s nevyzpytatelnými intrikami takového typu, že bychom je očekávali spíše v dokumentárním dramatu o mocenském prostředí Washingtonu než v ústavní historii. 
 <its> basic structure and style book is novelistic piquant character portrayal hard-wire action and devious intrigue sort likely more #Gen.ACT encountered #Cor.PAT encountered Washington docudrama #Gen.ACT constitutional #PersPron.PAT history
 základní struktury a stylu je kniha zpracovaná je zpracovaná román provokativním vylíčením #PersPron.ACT charakterů syrovým dějem a nevyzpytatelnými intrikami takového typu #PersPron.ACT je očekávali spíše očekávali #PersPron.PAT #PersPron.ACT dokumentárním dramatu mocenském prostředí Washingtonu ústavní historii
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##12.EnglishT-wsj_1928-s12-t16
 Diana D. Brooks, president of Sotheby's North America division, vehemently denies it offered the Dorrance heirs a money-back guarantee, calling such reports ``inaccurate.''
@@ -1671,18 +1671,18 @@ Explains #Gen.ADDR Sotheby spokeswoman statement means exactly what <it> says #G
 Mluvčí společnosti #Forn.ID Sotheby ' s #Gen.ADDR vysvětluje toto prohlášení vyjadřuje #PersPron.ACT přesně co <něm> stojí
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##30.EnglishT-wsj_1927-s30-t14
++annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##30.EnglishT-wsj_1927-s30-t14
 Probing more deeply into the doctrine of ``judicial restraint,'' he would have found a long history going back to the great decisions of Justice Holmes.
 Kdyby se ponořil hlouběji do doktríny "soudního sebeomezování", objevil by dlouhou historii sahající až k velkým rozhodnutím soudce Holmese. 
 #Cor.ACT Probing deeply doctrine judicial restraint <he> found long history #Cor.ACT going back great decisions Justice Holmes
 #PersPron.ACT <#PersPron.ACT> ponořil hlouběji doktríny soudního sebeomezování #Gen.ACT objevil dlouhou historii sahající #Gen.PAT až velkým rozhodnutím soudce Holmese
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##4.EnglishT-wsj_1927-s4-t28
++annot/en_perspron/../../tmp/robust_ali/wsj_1927.final.streex##4.EnglishT-wsj_1927-s4-t28
 What shook America was not a battle for justice but for naked power, in which an army of judicial activists rolled over a judge they had demonized .
 To, co otřáslo Amerikou, nebyla bitva za spravedlnost, ale za pouhou moc, v jejímž rámci zástup soudních aktivistů převálcoval soudce, z kterého dříve udělali démona. 
 What shook America was not battle justice but naked power which army judicial activists rolled judge <they> demonized #Cor.PAT
-#Neg.CM co otřáslo Amerikou nebyla #Neg.RHEM bitva spravedlnost ale pouhou moc jejímž zástup soudních aktivistů převálcoval soudce #PersPron.ACT kterého dříve udělali démona
+#Neg.CM co otřáslo Amerikou nebyla #Neg.RHEM bitva spravedlnost ale pouhou moc jejímž zástup soudních aktivistů převálcoval soudce <#PersPron.ACT> kterého dříve udělali démona
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##18.EnglishT-wsj_1928-s18-t18
@@ -1731,8 +1731,8 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##22.EnglishT-wsj_19
 It was the highest bid in history for a work of art.
 Jednalo se o historicky nejvyšší nabídku za umělecké dílo. 
 <It> was highest bid history work art
-Jednalo historicky nejvyšší <nabídku> umělecké dílo
-ERR:
+Jednalo historicky nejvyšší nabídku umělecké dílo
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##26.EnglishT-wsj_1928-s26-t16
 The competition gives the seller the ability to cut a better deal,'' he says .
@@ -1746,7 +1746,7 @@ Sotheby's is offering such deals because it's an art sellers' market, at least w
 Společnost Sotheby's nabízí takovéto dohody, protože jde o trh prodejců umění, kde se alespoň jedná o nejlepší díla, říká Ralph Lerner, právní zástupce a autor knihy "Art Law (Právo umění)". 
 Sotheby offering #Gen.ADDR such deals <it> 's art sellers market least where best works #Gen.ACT concerned says #Gen.ADDR Ralph Lerner attorney and , author book Art Law
 #Gen.ADDR Společnost #Forn.ID Sotheby ' s nabízí takovéto dohody jde trh prodejců umění kde alespoň jedná nejlepší díla #Gen.ADDR říká Ralph Lerner , právní zástupce a autor knihy Art Law ( Právo umění
-ERR:
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##23.EnglishT-wsj_1928-s23-t10
 But two weeks ago, Sotheby's said that it has the painting under lock and key because the loan had not been fully repaid .
@@ -1759,7 +1759,7 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##30.EnglishT-wsj_19
 At a news conference last May announcing plans for the auction, Sotheby's estimated its value in excess of $100 million.
 Vloni v květnu na tiskové konferenci, kde společnost Sotheby's oznámila plány ohledně aukce, odhadla hodnotu majetku na více než 100 milionů dolarů. 
 news conference May last #Cor.ACT announcing #Gen.ADDR plans auction Sotheby estimated <its> value excess $ 100 million
-Vloni květnu tiskové konferenci kde společnost #Forn.ID Sotheby ' s oznámila plány aukce odhadla #PersPron.ACT hodnotu majetku více 100 milionů dolarů
+Vloni květnu tiskové konferenci kde společnost #Forn.ID Sotheby ' s oznámila plány aukce odhadla #PersPron.ACT hodnotu <majetku> více 100 milionů dolarů
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##37.EnglishT-wsj_1928-s37-t5
@@ -1809,21 +1809,21 @@ A Christie's spokeswoman said that while the auction house sometimes waives its 
 Mluvčí společnosti Christie's řekla, že ačkoli se aukční dům někdy vzdá provize prodejce, aby získal umělecká díla - přičemž stejně dostane provizi od kupce -, společnost Christie's finanční záruky nabízet nebude, protože "společnost Christie's se domnívá, že její hlavní úlohou je být aukčním domem, tedy zprostředkovatelem (pro kupce a prodejce), nikoli být bankou. 
 Christie spokeswoman said #Gen.ADDR auction house sometimes waives <its> seller commission #Cor.ACT attract art works it still gets commission buyer Christie n't offer #Gen.ADDR financial guarantees Christie believes its primary role is auction house and therefore agent buyer and seller , not bank
 #Gen.ADDR Mluvčí společnosti #Forn.ID Christie ' s řekla aukční dům někdy vzdá provize prodejce #PersPron.ACT získal umělecká díla přičemž stejně dostane #PersPron.ACT provizi kupce společnost #Forn.ID Christie ' s finanční záruky #Gen.ADDR nabízet #Neg.RHEM společnost #Forn.ID Christie ' s domnívá její hlavní úlohou je #Cor.ACT být aukčním domem , tedy zprostředkovatelem kupce a prodejce , nikoli být bankou
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##20.EnglishT-wsj_1928-s20-t6
 Collectors who have made their money on Wall Street have become an increasingly important part of the art business and their money has helped fuel the art boom, but recently it appears Sotheby's has been returning the compliment.
 Sběratelé, kteří si vydělali peníze na Wall Street, se stali více a více důležitou součástí obchodu s uměním a jejich peníze přispěly k urychlení rozvoje umění, avšak v poslední době se zdá, že jim společnost Sotheby's přízeň oplácí. 
 Collectors who made <their> money Wall Street become increasingly important part art business and their money helped #Gen.ADDR #Gen.ACT fuel art boom but recently appears #Gen.PAT Sotheby returning #PersPron.ADDR compliment
 Sběratelé kteří <si> vydělali peníze #Forn.LOC Wall Street stali více a více důležitou součástí obchodu uměním a jejich peníze přispěly #Gen.ACT urychlení rozvoje umění avšak #Gen.ACT poslední době zdá jim společnost #Forn.ID Sotheby ' s přízeň oplácí
-ERR:
+ERR:IDIOM
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##41.EnglishT-wsj_1928-s41-t26
 Dealers and auction houses ``know if they don't lay out a half a million for this, another one will ; it's that competitive.''
 Obchodníci a aukční domy "vědí, že když za to nenabídnou půl milionu, udělá to někdo jiný, protože až tak velká je konkurence". 
 Dealers and auction houses know they n't lay lay #PersPron.PAT half million this another one ; <it> 's that competitive
-Obchodníci a aukční domy vědí #Neg.RHEM #Gen.ADDR #PersPron.ACT to nenabídnou půl milionu udělá <to> někdo jiný až tak velká je konkurence
-ERR:
+Obchodníci a aukční domy vědí #Neg.RHEM #Gen.ADDR #PersPron.ACT to nenabídnou půl milionu udělá to někdo jiný až tak velká je konkurence
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##38.EnglishT-wsj_1928-s38-t5
 In such situations, he says, the house ``is going to put the best light on things.''
@@ -1886,16 +1886,16 @@ Of course East Germany, true to its tradition, could tighten its borders yet fur
 Východní Německo by samozřejmě v souladu se svou tradicí mohlo upevnit hranice ještě více. 
 course East Germany true its tradition tighten <its> borders yet further
 Východní Německo samozřejmě svou tradicí upevnit hranice ještě více
-ERR:
+ERR:NULL_POSS
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##6.EnglishT-wsj_1928-s6-t20
++annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##6.EnglishT-wsj_1928-s6-t20
 If the investment bank can sell the securities at a higher price than it paid the issuer , it makes a profit.
 Pokud by investiční banka dokázala prodat cenné papíry za vyšší cenu, než kolik zaplatila emitentovi, bude mít zisk. 
 investment bank sell securities higher price it paid #Cor.PAT issuer <it> makes profit
 investiční banka dokázala #Gen.ADDR #Cor.ACT prodat cenné papíry vyšší cenu kolik zaplatila #PersPron.ACT emitentovi <#PersPron.ACT> mít zisk
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##6.EnglishT-wsj_1928-s6-t14
++annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##6.EnglishT-wsj_1928-s6-t14
 If the investment bank can sell the securities at a higher price than it paid the issuer , it makes a profit.
 Pokud by investiční banka dokázala prodat cenné papíry za vyšší cenu, než kolik zaplatila emitentovi, bude mít zisk. 
 investment bank sell securities higher price <it> paid #Cor.PAT issuer it makes profit
@@ -1906,10 +1906,10 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1928.final.streex##41.EnglishT-wsj_19
 Dealers and auction houses ``know if they don't lay out a half a million for this, another one will ; it's that competitive.''
 Obchodníci a aukční domy "vědí, že když za to nenabídnou půl milionu, udělá to někdo jiný, protože až tak velká je konkurence". 
 Dealers and auction houses know <they> n't lay lay #PersPron.PAT half million this another one ; it 's that competitive
-Obchodníci a aukční domy vědí #Neg.RHEM #Gen.ADDR #PersPron.ACT to nenabídnou půl milionu udělá to někdo jiný až tak velká je konkurence
+Obchodníci a aukční domy vědí #Neg.RHEM #Gen.ADDR <#PersPron.ACT> to nenabídnou půl milionu udělá to někdo jiný až tak velká je konkurence
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##17.EnglishT-wsj_1929-s17-t23
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##17.EnglishT-wsj_1929-s17-t23
 But with world-wide opinion -- even, apparently in Moscow -- against East Germany, the country would have to turn itself into an Albania to clamp down further on refugees.
 Avšak v důsledku celosvětového postoje - zdá se, že i ze strany Moskvy - proti Východnímu Německu by se tato země musela proměnit v Albánii, aby proti emigrantům zakročila ještě přísněji. 
 But world-wide opinion even apparently Moscow East Germany country have #Cor.ACT turn <itself> Albania #Cor.ACT clamp further refugees
@@ -1923,7 +1923,7 @@ Abandoning #Gen.ACT socialism means #Gen.ACT abandoning East German state reason
 #Gen.ACT Vzdát socialismu znamená #Gen.ACT vzdát důvodu existence východoněmeckého státu a tím vzdát i oprávněnosti jeho přísných kontrol i <jeho> Berlínské zdi
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##19.EnglishT-wsj_1929-s19-t4
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##19.EnglishT-wsj_1929-s19-t4
 But even if he effects a Hyde-to-Jekyll transformation, he will face a serious ideological crisis and Reunification Scenario Two.
 Avšak i když se z Hydea promění v Jekylla, bude stát před vážnou ideologickou krizí a scénářem sjednocení číslo dvě. 
 But even <he> effects Hyde-to-Jekyll transformation he face serious ideological crisis and Reunification Scenario Two
@@ -1958,7 +1958,7 @@ been , some reports Mr. Krenz moving #PersPron.ACT soften his reputation notably
 Objevilo několik zpráv Krenz svoji pověst vylepšit , především jedná zvěsti právě <on> začátku tohoto měsíce udržel oslavách neveselého 40 výročí východoněmeckou státní policii dál zad protestujících
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##21.EnglishT-wsj_1929-s21-t9
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##21.EnglishT-wsj_1929-s21-t9
 When Poland moves to reform , it can at least lean on its past: However flawed and short-lived Joseph Pilsudski's interwar republic , it was a nonsocialist democracy.
 Když se Polsko rozhodne pro reformu, může se přinejmenším opřít o svoji minulost: Ať již byla meziválečná republika Josepha Pilsudskiho jakkoli nedokonalá a krátkodobá, byla to nesocialistická demokracie. 
 Poland moves #PersPron.ACT reform #Rcp.PAT <it> least lean its past : flawed and short-lived #EmpVerb.CNCS Joseph Pilsudski interwar republic it was nonsocialist democracy
@@ -1976,17 +1976,17 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##25.EnglishT-wsj_19
 Beyond that, it has to compete with West Germany for a claim to the German identity.
 Kromě toho musí soupeřit se Západním Německem ohledně nároku na německou identitu. 
 that <it> has #Cor.ACT compete West Germany claim German identity
-#PersPron.ACT toho soupeřit Západním Německem nároku německou identitu
+<#PersPron.ACT> toho soupeřit Západním Německem nároku německou identitu
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##20.EnglishT-wsj_1929-s20-t22
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##20.EnglishT-wsj_1929-s20-t22
 The problem is one that East Germany shares with other half-states, such as North Korea, but one it must shoulder alone in the East Bloc.
 Východní Německo sice tento problém sdílí s dalšími státy rozdělenými na dvě poloviny, například se Severní Koreou, ale ve východním bloku mu musí čelit samo. 
 problem is one East Germany shares as other half-states North Korea but one <it> shoulder #Cor.PAT alone East Bloc
 Východní <Německo> sice tento problém sdílí dalšími státy rozdělenými dvě poloviny , například Severní Koreou ale východním bloku mu čelit samo
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##19.EnglishT-wsj_1929-s19-t10
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##19.EnglishT-wsj_1929-s19-t10
 But even if he effects a Hyde-to-Jekyll transformation, he will face a serious ideological crisis and Reunification Scenario Two.
 Avšak i když se z Hydea promění v Jekylla, bude stát před vážnou ideologickou krizí a scénářem sjednocení číslo dvě. 
 But even he effects Hyde-to-Jekyll transformation <he> face serious ideological crisis and Reunification Scenario Two
@@ -1998,7 +1998,7 @@ Without Moscow's military and party behind it, East Germany runs the risk of dis
 Bez vojenské a stranické podpory z Moskvy hrozí Východnímu Německu riziko dezintegrace. 
 Moscow military and party <it> East Germany runs risk disintegrating #Cor.ACT
 vojenské a stranické podpory Moskvy hrozí Východnímu Německu riziko dezintegrace
-ERR:
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##22.EnglishT-wsj_1929-s22-t13
 Czech reformers can recall the Wilsonian ideals of the same period in their country.
@@ -2007,49 +2007,49 @@ Czech reformers recall Wilsonian ideals same period <their> country
 Čeští reformátoři si <své> zemi stejné doby připomenout Wilsonovy ideály
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t16
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t16
 If it goes capitalist, and increases trade with West Germany, it will convert itself, willy-nilly, into an economic annex of the Federal Republic.
 Pokud se promění v kapitalistickou zemi a posílí obchody se Západním Německem, chtě nechtě se promění v ekonomický přívažek spolkové republiky. 
 it goes capitalist and increases trade West Germany it convert <itself> willy-nilly economic annex Federal Republic
 #PersPron.ACT #PersPron.ACT promění kapitalistickou zemi a posílí obchody Západním Německem chtě nechtě promění ekonomický přívažek spolkové republiky
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##27.EnglishT-wsj_1929-s27-t19
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##27.EnglishT-wsj_1929-s27-t19
 With talk today of a second economic miracle in West Germany, East Germany no longer can content itself with being the economic star in a loser league.
 Východní Německo se již nemůže spokojit s pozicí ekonomické hvězdy v lize poražených, když se teď mluví o druhém ekonomickém zázraku v Západním Německu. 
 talk today second economic miracle West Germany East Germany longer content <itself> being #Cor.ACT economic star loser league
 Východní Německo již spokojit #Neg.RHEM pozicí ekonomické hvězdy lize poražených #Gen.ACT teď mluví druhém ekonomickém zázraku Západním Německu
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##2.EnglishT-wsj_1929-s2-t20
+*annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##2.EnglishT-wsj_1929-s2-t20
 But unlike the other new leaders in the East Bloc, Mr. Krenz will face an immediate threat to his nation's very existence: German reunification.
 Avšak na rozdíl od nových vládních představitelů východního bloku čelí Egon Krenz bezprostřední hrozbě týkající se samotné existence jeho národa: sjednocení Německa. 
 But other new leaders East Bloc Mr. Krenz face immediate threat <his> nation very existence : German reunification
 Avšak nových vládních představitelů východního bloku čelí Egon Krenz bezprostřední hrozbě týkající samotné existence <jeho> národa : sjednocení #Rcp.PAT Německa
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t13
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t13
 If it goes capitalist, and increases trade with West Germany, it will convert itself, willy-nilly, into an economic annex of the Federal Republic.
 Pokud se promění v kapitalistickou zemi a posílí obchody se Západním Německem, chtě nechtě se promění v ekonomický přívažek spolkové republiky. 
 it goes capitalist and increases trade West Germany <it> convert itself willy-nilly economic annex Federal Republic
 #PersPron.ACT #PersPron.ACT promění kapitalistickou zemi a posílí obchody Západním Německem chtě nechtě promění ekonomický přívažek spolkové republiky
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t2
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##29.EnglishT-wsj_1929-s29-t2
 If it goes capitalist, and increases trade with West Germany, it will convert itself, willy-nilly, into an economic annex of the Federal Republic.
 Pokud se promění v kapitalistickou zemi a posílí obchody se Západním Německem, chtě nechtě se promění v ekonomický přívažek spolkové republiky. 
 <it> goes capitalist and increases trade West Germany it convert itself willy-nilly economic annex Federal Republic
 <#PersPron.ACT> #PersPron.ACT promění kapitalistickou zemi a posílí obchody Západním Německem chtě nechtě promění ekonomický přívažek spolkové republiky
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##33.EnglishT-wsj_1929-s33-t24
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##33.EnglishT-wsj_1929-s33-t24
 The protesters who greeted Mikhail Gorbachev at East Berlin's airport earlier this month weren't shouting ``Go U.S.A'' -- they were chanting ``Gorby, Help Us.''
 Protestující, kteří na začátku měsíce vítali Michaila Gorbačova na východoberlínském letišti, nekřičeli "Za Amerikou" - skandovali "Gorby, pomoz nám". 
 protesters who greeted Mikhail Gorbachev East Berlin airport earlier this month n't shouting Go #PersPron.ACT U.S.A -- <they> chanting Gorby Help #Gen.PAT #PersPron.ACT Us
 <Protestující> kteří začátku měsíce vítali Michaila Gorbačova východoberlínském letišti #Neg.RHEM nekřičeli #EmpVerb.PAT Amerikou - skandovali Gorby pomoz nám
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##36.EnglishT-wsj_1929-s36-t18
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##36.EnglishT-wsj_1929-s36-t18
 But within the government and in the think tanks outside it, many West Germans maintain that they don't want immediate reunification.
 Jenže řada západních Němců ve vládě i mimo ni ve společnostech provádějících průzkumy tvrdí, že si okamžité sjednocení nepřeje. 
 But government and tanks it many West Germans maintain <they> n't want immediate reunification
@@ -2084,7 +2084,7 @@ What kind right #Gen.ACT #Cor.ACT exist <he> asked #Gen.ADDR capitalist German D
 Jaké právo existenci #Gen.ADDR <#PersPron.ACT> ptal měla kapitalistická Německá demokratická republika kapitalistické Spolkové republiky
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t3
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t3
 Even if he were to change his stripes and become another Milton Friedman, however, he would still stand a good chance of losing a country.
 I kdyby převlékl kabát a stal se dalším Miltonem Friedmanem, přesto by se stále musel potýkat s velkým rizikem, že zemi ztratí. 
 Even <he> were #Cor.ACT change his stripes and become another Milton Friedman however he still stand good chance #Cor.ACT losing country
@@ -2105,21 +2105,21 @@ Mr. Krenz almost certainly be younger version Erich Honecker , <his> rigid prede
 Krenz bude největší pravděpodobností mladší verzí Ericha Honeckera , <svého> nekompromisního předchůdce a diktátora
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t18
++annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t18
 Even if he were to change his stripes and become another Milton Friedman, however, he would still stand a good chance of losing a country.
 I kdyby převlékl kabát a stal se dalším Miltonem Friedmanem, přesto by se stále musel potýkat s velkým rizikem, že zemi ztratí. 
 Even he were #Cor.ACT change his stripes and become another Milton Friedman however <he> still stand good chance #Cor.ACT losing country
 #PersPron.ACT převlékl kabát a #PersPron.ACT stal dalším Miltonem Friedmanem přesto stále potýkat velkým rizikem #PersPron.ACT zemi ztratí
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t8
+*annot/en_perspron/../../tmp/robust_ali/wsj_1929.final.streex##4.EnglishT-wsj_1929-s4-t8
 Even if he were to change his stripes and become another Milton Friedman, however, he would still stand a good chance of losing a country.
 I kdyby převlékl kabát a stal se dalším Miltonem Friedmanem, přesto by se stále musel potýkat s velkým rizikem, že zemi ztratí. 
 Even he were #Cor.ACT change <his> stripes and become another Milton Friedman however he still stand good chance #Cor.ACT losing country
 #PersPron.ACT převlékl kabát a #PersPron.ACT stal dalším Miltonem Friedmanem přesto stále potýkat velkým rizikem #PersPron.ACT zemi ztratí
-ERR:
+ERR:NULL_POSS,IDIOM
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##15.EnglishT-wsj_1930-s15-t5
++annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##15.EnglishT-wsj_1930-s15-t5
 British Airways said it is seeking improved terms and a sharply lower price in any revised bid for United Air's parent.
 Společnost British Airways uvedla, že u jakékoli revidované nabídky na mateřskou společnost společnosti United Air usiluje o zlepšení podmínek a podstatně nižší cenu. 
 British Airways said #Gen.ADDR <it> seeking improved terms and sharply lower price any #Gen.ACT revised #Cor.PAT bid United Air parent
@@ -2131,7 +2131,7 @@ Faced with another Mr. Honecker, so many despairing East Germans are likely to f
 Je pravděpodobné, že tváří v tvář dalšímu Honeckerovi uprchne tolik zoufalých východních Němců, že tyto dva německé národy budou opětovně spojeny de facto na západoněmeckém podkladě. 
 #Cor.ADDR Faced #Gen.ACT another Mr. Honecker are flee despairing East Germans many so two German peoples get <their> reunification facto West German ground likely
 Je pravděpodobné dalšímu Honeckerovi uprchne tolik zoufalých východních Němců tyto dva německé národy opětovně spojeny #Gen.ACT #Rcp.ADDR facto západoněmeckém podkladě
-ERR:
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##11.EnglishT-wsj_1930-s11-t12
 IBM plans to buy back $1 billion of its common shares, a move likely to help the computer giant's battered stock.
@@ -2154,11 +2154,11 @@ WCRS Group announced #Gen.ADDR major restructuring that largely removes <it> adv
 Skupina WCRS #Forn.ID oznámila Group významnou restrukturalizaci která <ji> odsune části velké reklamního obchodu
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##16.EnglishT-wsj_1930-s16-t7
++annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##16.EnglishT-wsj_1930-s16-t7
 The British carrier also confirmed it isn't committed to going forward with any new bid.
 Tento britský dopravce také potvrdil, že není odhodlaný přikročit k žádné nové nabídce. 
 British carrier also confirmed <it> n't committed #Gen.ACT going #Cor.ACT any new bid
-Tento britský dopravce také potvrdil #Neg.RHEM #PersPron.ACT není odhodlaný #Cor.ACT přikročit žádné nové nabídce
+Tento britský dopravce také potvrdil #Neg.RHEM <#PersPron.ACT> není odhodlaný #Cor.ACT přikročit žádné nové nabídce
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##21.EnglishT-wsj_1930-s21-t7
@@ -2194,7 +2194,7 @@ Commodore International expects to post its second consecutive quarterly loss be
 Společnost Commodore International očekává, že v důsledku slabého prodeje osobních počítačů na některých trzích zveřejní již podruhé za sebou čtvrtletní ztrátu. 
 Commodore International expects #Cor.ACT post <its> second consecutive quarterly loss weak personal computer sales some markets
 Společnost Commodore #Forn.ID International očekává #PersPron.ACT slabého počítačů prodeje osobních některých zveřejní trzích již podruhé sebou čtvrtletní ztrátu
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##29.EnglishT-wsj_1930-s29-t5
 Whitbread of Britain put its spirits division up for sale, setting off a scramble among distillers.
@@ -2210,7 +2210,7 @@ Tvrdí, že fakt, že zemětřesení zabránilo mnohým bankám běžet na plný
 <#PersPron.ACT> Tvrdí fakt zemětřesení zabránilo mnohým bankám #Cor.ACT běžet plný výkon dal Federální rezervní bance další důvod #PersPron.ACT držela likviditu vysoké úrovni
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##8.EnglishT-wsj_1930-s8-t6
+*annot/en_perspron/../../tmp/robust_ali/wsj_1930.final.streex##8.EnglishT-wsj_1930-s8-t6
 But Secretary Skinner said he would urge Bush to veto the bill.
 Ministr Skinner však řekl, že bude naléhat na Bushe, aby návrh vetoval. 
 But Secretary Skinner said #Gen.ADDR <he> urge Bush #Cor.ACT veto bill
@@ -2224,7 +2224,7 @@ Poznamenávají, že dolar je nadále extrémně citlivý na jakékoli špatné 
 <#PersPron.ACT> Poznamenávají dolar je nadále extrémně citlivý jakékoli špatné zprávy burzy
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1931.final.streex##7.EnglishT-wsj_1931-s7-t26
++annot/en_perspron/../../tmp/robust_ali/wsj_1931.final.streex##7.EnglishT-wsj_1931-s7-t26
 While Mr. Woodland doesn't predict a significant climb for the U.S. unit in light of recent moves in interest rates around the world, he noted that ``its downside potential is surprisingly and -- for dollar bulls -- ``impressively'' limited.
 Zatímco Woodland na základě nedávných změn úrokových sazeb ve světě nepředvídá významný růst americké měny, poznamenal, že "její možnost poklesu je překvapivě a - pro spekulanty na vzestup dolaru - "pozoruhodně" omezená. 
 Mr. Woodland n't predict significant climb U.S. unit light recent moves interest rates world <he> noted its downside potential is surprisingly and dollar bulls impressively limited
@@ -2257,7 +2257,7 @@ Most said they shut down their petroleum pipeline operations as a precaution but
 Většina provozovatelů oznámila, že preventivně uzavřeli provoz ropovodu, ale nenašli žádné okamžité škody. 
 Most said #Gen.ADDR they shut <their> petroleum pipeline operations precaution but n't see any immediate damage
 #Gen.ADDR Většina provozovatelů oznámila #PersPron.ACT preventivně uzavřeli provoz ropovodu ale #Neg.RHEM nenašli žádné okamžité škody
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##28.EnglishT-wsj_1932-s28-t1
 He added that, while there hasn't been any official announcement as yet, the Highland Valley mine strike in British Columbia, which has lasted more than three months, is regarded as settled .
@@ -2305,14 +2305,14 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##10.EnglishT-wsj_19
 ``We consider it a life-saving drug, like one for AIDS,'' said Dr. John Fung, an immunologist at the University of Pittsburgh.
 "Považujeme ho za lék zachraňující život, jako lék na AIDS," řekl dr. John Fung, imunolog na Pittsburské univerzitě. 
 We consider <it> life-saving drug one AIDS said #Gen.ADDR Dr. John Fung , immunologist University Pittsburgh
-#PersPron.ACT #Gen.ADDR Považujeme ho lék #Equal.MANN zachraňující #PersPron.ACT #PersPron.EFF život Považujeme <lék> #Idph.AIM AIDS řekl dr John Fung , imunolog Pittsburské univerzitě
+#PersPron.ACT #Gen.ADDR Považujeme <ho> lék #Equal.MANN zachraňující #PersPron.ACT #PersPron.EFF život Považujeme lék #Idph.AIM AIDS řekl dr John Fung , imunolog Pittsburské univerzitě
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##41.EnglishT-wsj_1932-s41-t9
++annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##41.EnglishT-wsj_1932-s41-t9
 According to one dealer, Japan said it has only 40,000 tons of sugar remaining to be shipped to it this year by Cuba under current commitments.
 Podle jednoho obchodníka Japonsko řeklo, že letos zbývá pouhých 40000 tun cukru, které má podle současných závazků dostat z Kuby. 
 one dealer Japan said #Gen.ADDR <it> has only 40,000 tons sugar remaining #Cor.ACT shipped it this year Cuba current commitments
-#Gen.ADDR jednoho obchodníka Japonsko řeklo letos zbývá pouhých 40000 <tun> cukru #PersPron.ACT které současných závazků dostat Kuby
+#Gen.ADDR jednoho obchodníka Japonsko řeklo letos zbývá pouhých 40000 tun cukru #PersPron.ACT které současných závazků dostat Kuby
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##36.EnglishT-wsj_1932-s36-t1
@@ -2336,7 +2336,7 @@ dealer said #Gen.ADDR quantity mentioned #Gen.ACT #Cor.PAT Japanese announcement
 Tento obchodník uvedl množství zmíněné #Gen.PAT japonském ohlášení je tak malé je <#PersPron.ACT> bezvýznamné
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##47.EnglishT-wsj_1932-s47-t17
++annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##47.EnglishT-wsj_1932-s47-t17
 ``It 's known they need the sugar, and the expectation that they will come in is apparently giving the market its principal support,'' the dealer said .
 "Je známo, že cukr potřebují, a očekávání, že vstoupí na trh, mu očividně dává podstatnou podporu," řekl prodejce. 
 known #Gen.ACT they need sugar and expectation <they> come apparently giving market its principal support dealer said #Gen.ADDR
@@ -2347,7 +2347,7 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##26.EnglishT-wsj_19
 According to one analyst, workers at the Cananea copper mine in Mexico, which hasn't been operating since it was declared bankrupt by the Mexican government in late August, are set to return to work.
 Podle jednoho analytika se pracovníci dolu na měď ve městě Cananea v Mexiku, který byl mimo provoz od konce srpna, kdy mexická vláda oznámila jeho krach, mají vracet do práce. 
 one analyst workers Cananea copper mine Mexico which n't operating <it> declared bankrupt Mexican government late August set #Cor.ACT return work
-jednoho analytika pracovníci dolu měď městě Cananea Mexiku který byl provoz konce srpna #Gen.ADDR kdy mexická vláda oznámila jeho <krach> vracet práce
+jednoho analytika pracovníci dolu měď městě Cananea Mexiku který byl provoz konce srpna #Gen.ADDR kdy mexická vláda oznámila <jeho> krach vracet práce
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##12.EnglishT-wsj_1934-s12-t1
@@ -2357,11 +2357,11 @@ Povzbuzují je také relativně mírné vedlejší účinky léku FK-506 ve srov
 Povzbuzují <je> také relativně mírné vedlejší účinky léku #Forn.ID FK - 506 cyklosporinem který způsobit ledvinové selhání nemocnost nevolnost a jiné problémy
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##41.EnglishT-wsj_1932-s41-t23
++annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##41.EnglishT-wsj_1932-s41-t23
 According to one dealer, Japan said it has only 40,000 tons of sugar remaining to be shipped to it this year by Cuba under current commitments.
 Podle jednoho obchodníka Japonsko řeklo, že letos zbývá pouhých 40000 tun cukru, které má podle současných závazků dostat z Kuby. 
 one dealer Japan said #Gen.ADDR it has only 40,000 tons sugar remaining #Cor.ACT shipped <it> this year Cuba current commitments
-#Gen.ADDR jednoho obchodníka Japonsko řeklo letos zbývá pouhých 40000 tun cukru #PersPron.ACT které současných závazků dostat Kuby
+#Gen.ADDR jednoho obchodníka Japonsko řeklo letos zbývá pouhých 40000 tun cukru <#PersPron.ACT> které současných závazků dostat Kuby
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##30.EnglishT-wsj_1932-s30-t29
@@ -2378,7 +2378,7 @@ One analyst said #Gen.ADDR <he> thought market continued supported #Cor.PAT some
 #Gen.ADDR Jeden analytik řekl <#PersPron.ACT> myslí trh jisté míry žít zpoždění kubánské sklizně cukru způsobeného nepříznivým počasím
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##16.EnglishT-wsj_1934-s16-t18
++annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##16.EnglishT-wsj_1934-s16-t18
 Researchers couldn't estimate the cost of the drug when it reaches the market , but they said FK-506 will enable patients to cut hospital stays by 50% and reduce the number of blood tests used to monitor the dosage of cyclosporine and other drugs among transplant recipients.
 Výzkumníci nedokázali odhadnout cenu léku, až vstoupí na trh, ale uvedli, že FK-506 umožní zkrátit pobyt pacientů v nemocnici o 50 % a u příjemců transplantátů snížit počet krevních testů, které se používají ke sledování dávek cyklosporinu a dalších léků. 
 Researchers n't estimate cost drug when it reaches market but <they> said #Gen.ADDR FK-506 enable patients #Cor.ACT cut hospital stays 50 % and reduce number blood tests #Gen.ACT used #Cor.PAT #PersPron.ACT monitor dosage cyclosporine and other drugs transplant recipients
@@ -2400,7 +2400,7 @@ known #Gen.ACT <they> need sugar and expectation they come apparently giving mar
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##16.EnglishT-wsj_1934-s16-t11
-Researchers couldn't estimate the cost of the drug when it reaches the market , but they said FK-506 will enable patients to cut hospital stays by 50% and reduce the number of blood tests used to monitor the dosage of cyclosporine and other drugs among transplant recipients.
++Researchers couldn't estimate the cost of the drug when it reaches the market , but they said FK-506 will enable patients to cut hospital stays by 50% and reduce the number of blood tests used to monitor the dosage of cyclosporine and other drugs among transplant recipients.
 Výzkumníci nedokázali odhadnout cenu léku, až vstoupí na trh, ale uvedli, že FK-506 umožní zkrátit pobyt pacientů v nemocnici o 50 % a u příjemců transplantátů snížit počet krevních testů, které se používají ke sledování dávek cyklosporinu a dalších léků. 
 Researchers n't estimate cost drug when <it> reaches market but they said #Gen.ADDR FK-506 enable patients #Cor.ACT cut hospital stays 50 % and reduce number blood tests #Gen.ACT used #Cor.PAT #PersPron.ACT monitor dosage cyclosporine and other drugs transplant recipients
 #Neg.RHEM Výzkumníci nedokázali #Cor.ACT odhadnout cenu léku vstoupí <#PersPron.ACT> trh ale uvedli FK - 506 #Forn.ACT umožní #Gen.ADDR #Cor.ACT zkrátit pobyt pacientů nemocnici 50 % a příjemců transplantátů snížit počet krevních testů #Gen.ACT které používají #Gen.ACT sledování dávek cyklosporinu a dalších léků
@@ -2432,14 +2432,14 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1934.final.streex##13.EnglishT-wsj_19
 "Za úspěch se draze platí vedlejšími účinky [cyklosporinu]," řekl dr. Starzl. 
 side effects cyclosporine made penalty <its> success rather high Dr. Starzl said #Gen.ADDR
 úspěch draze platí #Gen.PAT #Gen.ACT vedlejšími účinky cyklosporinu #Gen.ADDR řekl dr Starzl
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##47.EnglishT-wsj_1932-s47-t26
 ``It 's known they need the sugar, and the expectation that they will come in is apparently giving the market its principal support,'' the dealer said .
 "Je známo, že cukr potřebují, a očekávání, že vstoupí na trh, mu očividně dává podstatnou podporu," řekl prodejce. 
 known #Gen.ACT they need sugar and expectation they come apparently giving market <its> principal support dealer said #Gen.ADDR
-#Gen.ADDR Je známo #PersPron.ACT cukr potřebují a #Gen.ACT očekávání #PersPron.ACT vstoupí trh <mu> očividně dává podstatnou podporu řekl prodejce
-ERR:
+#Gen.ADDR Je známo #PersPron.ACT cukr potřebují a #Gen.ACT očekávání #PersPron.ACT vstoupí trh mu očividně dává podstatnou podporu řekl prodejce
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1932.final.streex##9.EnglishT-wsj_1932-s9-t36
 But yesterday, as the morning wore on, some major West Coast refinery operators -- including Chevron Corp., Exxon Corp. and the Shell Oil Co. unit of Royal Dutch\/Shell Group -- said their refineries weren't damaged and were continuing to operate normally.
@@ -2462,7 +2462,7 @@ South Carolina deserves A <its> quick and timely relief efforts
 Jižní Karolína <svoji> rychlou a dobře načasovanou snahu pomoc zaslouží jedničku
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##13.EnglishT-wsj_1935-s13-t16
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##13.EnglishT-wsj_1935-s13-t16
 These latter-day scalawags would be ill-advised to take advantage of the situation, if they ever expect to face the people of South Carolina again.
 Tito novodobí darebáci by byli nerozumní, kdyby situace nevyužili, pokud vůbec očekávají, že se s lidmi z Jižní Karolíny ještě někdy uvidí. 
 These latter-day scalawags be #Cor.ACT ill-advised #Cor.ACT take advantage situation <they> ever expect #Cor.ACT face people South Carolina again
@@ -2504,7 +2504,7 @@ I 'm surprised <he> n't advocate letting #Gen.ACT people loot #Cor.ACT that also
 #PersPron.PAT překvapena #Neg.RHEM <#PersPron.ACT> neobhajoval #Gen.ACT #Cor.ACT možnost nechat lidi rabovat #Gen.PAT #PersPron.ACT toto chování lze #Benef.BEN katastrofě #Cor.ACT také předvídat a každý jednotlivec má důvod #Cor.ACT upravit #Gen.ACT rozdělení příjmu svůj prospěch
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##28.EnglishT-wsj_1935-s28-t35
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##28.EnglishT-wsj_1935-s28-t35
 Mr. Laband described one of the more insidious threats we face when dealing with disasters such as Hugo -- anti-profiteering ordinances such as that by the Charleston City Council as it thrashed about trying to Do Something.
 Pan Laband popsal jednu ze záludnějších hrozeb, jimž čelíme, když se vyrovnáváme s katastrofami, jako je Hugo - vyhlášky proti černému obchodu, jako je například ta od rady města Charleston, která sebou zmítala ve snaze udělat aspoň něco. 
 Mr. Laband described -- one insidious threats we face #Cor.PAT when dealing #Cor.ACT as disasters Hugo anti-profiteering ordinances as that Charleston City Council <it> thrashed about #Cor.ACT trying #Cor.ACT Do Something
@@ -2515,17 +2515,17 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##17.EnglishT-wsj_19
 Give him an F for his failure to understand the ethics of economic equity.
 Dejte mu pětku za neschopnost porozumět etice ekonomické rovnosti. 
 Give #PersPron.ACT him F <his> failure #Cor.ACT understand ethics economic equity
-#PersPron.ACT Dejte <mu> pětku neschopnost #PersPron.ACT porozumět etice ekonomické rovnosti
-ERR:
+#PersPron.ACT Dejte mu pětku neschopnost #PersPron.ACT porozumět etice ekonomické rovnosti
+ERR:NULL_POSS
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##29.EnglishT-wsj_1935-s29-t12
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##29.EnglishT-wsj_1935-s29-t12
 Since he concentrated on the economic folly of such ordinances, he didn't mention certain other of their effects.
 Jelikož se soustředil na ekonomickou naivitu takových vyhlášek, nezmínil se o některých jiných účincích, které mají. 
 he concentrated economic folly such ordinances <he> n't mention certain other their effects
 #Neg.RHEM #PersPron.ACT <#PersPron.ACT> soustředil ekonomickou naivitu takových vyhlášek nezmínil některých jiných účincích které mají #PersPron.ACT
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##29.EnglishT-wsj_1935-s29-t2
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##29.EnglishT-wsj_1935-s29-t2
 Since he concentrated on the economic folly of such ordinances, he didn't mention certain other of their effects.
 Jelikož se soustředil na ekonomickou naivitu takových vyhlášek, nezmínil se o některých jiných účincích, které mají. 
 <he> concentrated economic folly such ordinances he n't mention certain other their effects
@@ -2565,7 +2565,7 @@ Since he concentrated on the economic folly of such ordinances, he didn't mentio
 Jelikož se soustředil na ekonomickou naivitu takových vyhlášek, nezmínil se o některých jiných účincích, které mají. 
 he concentrated economic folly such ordinances he n't mention certain other <their> effects
 #Neg.RHEM #PersPron.ACT #PersPron.ACT soustředil ekonomickou naivitu takových vyhlášek nezmínil některých jiných účincích které mají #PersPron.ACT
-ERR:
+ERR:SUBCLAUSE
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##32.EnglishT-wsj_1935-s32-t9
 And they, or even the prospect of them, discourage disaster preparedness in the form of speculative advance stocking of supplies by merchants.
@@ -2581,11 +2581,11 @@ Mr. Laband also suggest #Gen.ADDR Red Cross Salvation Army military units police
 #Gen.ADDR Navrhl pan Laband také Červený kříž Armáda spásy vojenské jednotky policie hasiči záchranné jednotky a jednotliví občané zastavili své úsilí pomoci obětem hurikánu Hugo #PersPron.ACT překážejí <jeho> koncepci volného trhu
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##30.EnglishT-wsj_1935-s30-t9
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##30.EnglishT-wsj_1935-s30-t9
 They divert law-enforcement resources at a time they are most needed for protecting lives and property .
 Zákonem prosazené zdroje odvádí v době, kdy jsou nejvíce potřebné pro záchranu životů a majetku. 
 They divert #Oblfm.DIR1 #Oblfm.DIR3 law-enforcement resources time <they> most #Gen.ACT needed protecting #Cor.ACT lives and property
-#PersPron.ACT Zákonem prosazené zdroje odvádí #Oblfm.DIR1 době #PersPron.ACT kdy jsou nejvíce potřebné záchranu životů a majetku
+#PersPron.ACT Zákonem prosazené zdroje odvádí #Oblfm.DIR1 době <#PersPron.ACT> kdy jsou nejvíce potřebné záchranu životů a majetku
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##37.EnglishT-wsj_1935-s37-t12
@@ -2602,7 +2602,7 @@ Also rather increase #PersPron.ACT supplies they reduce <them> and encourage hoa
 #PersPron.ACT Také dodávky zvýšily sníží <je> a #PersPron.ACT podpoří hromadění zásob
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##31.EnglishT-wsj_1935-s31-t9
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##31.EnglishT-wsj_1935-s31-t9
 Also, rather than increase supplies, they reduce them and encourage hoarding.
 Také namísto toho, aby dodávky zvýšily, sníží je a podpoří hromadění zásob. 
 Also rather increase #PersPron.ACT supplies <they> reduce them and encourage hoarding
@@ -2721,7 +2721,7 @@ I have question Mr. Laband How I explain single mother three standing line next 
 #PersPron.ACT Mám pana Labanda otázku #PersPron.ACT Jak vysvětlím svobodné matce tří dětí která stojí mě více tři hodiny frontě ty dvě tašky ledu <#PersPron.ACT> které potřebuje potraviny její děti zůstaly poživatelné ji stát posledních 20 dolarů
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##59.EnglishT-wsj_1935-s59-t5
++annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##59.EnglishT-wsj_1935-s59-t5
 I'm sure she'll appreciate what an efficient reaction to her problems the price system has created .
 Jsem si jist, že ocení, jakou efektivní reakci na její problémy jí vytvořil cenový systém. 
 I 'm sure <she> appreciate what efficient reaction her problems price system created
@@ -2732,14 +2732,14 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##57.EnglishT-wsj_19
 Perhaps, considering the value of our time, we will be unable to patronize their establishments in the post-Hugo era.
 Možná, zvážíme-li hodnotu našeho času, nedokážeme v éře po hurikánu Hugo jejich podniky chránit. 
 Perhaps #Cor.ACT considering value our time we be unable #Cor.ACT #Cor.ACT patronize <their> establishments post-Hugo era
-#Neg.RHEM #PersPron.ACT Možná #PersPron.ACT zvážíme hodnotu našeho času nedokážeme éře hurikánu Hugo #Cor.ACT jejich podniky chránit
+#Neg.RHEM #PersPron.ACT Možná #PersPron.ACT zvážíme hodnotu našeho času nedokážeme éře hurikánu Hugo #Cor.ACT <jejich> podniky chránit
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##58.EnglishT-wsj_1935-s58-t50
 I have a question for Mr. Laband: How do I explain to the single mother of three standing in line next to me for the past three hours that the two bags of ice she needs to keep her children's food edible will take her last $20 ?
 Mám pro pana Labanda otázku: Jak vysvětlím svobodné matce tří dětí, která stojí vedle mě více než tři hodiny ve frontě, že ty dvě tašky ledu, které potřebuje, aby potraviny pro její děti zůstaly poživatelné, ji budou stát posledních 20 dolarů? 
 I have question Mr. Laband How I explain single mother three standing line next me past three hours two bags ice she needs #Cor.PAT #Cor.ACT keep her children food edible take <her> last $ 20
-#PersPron.ACT Mám pana Labanda otázku #PersPron.ACT Jak vysvětlím svobodné matce tří dětí která stojí mě více tři hodiny frontě ty dvě tašky ledu #PersPron.ACT které potřebuje potraviny její děti zůstaly poživatelné ji stát posledních 20 dolarů
+#PersPron.ACT Mám pana Labanda otázku #PersPron.ACT Jak vysvětlím svobodné matce tří dětí která stojí mě více tři hodiny frontě ty dvě tašky ledu #PersPron.ACT které potřebuje potraviny její děti zůstaly poživatelné <ji> stát posledních 20 dolarů
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##59.EnglishT-wsj_1935-s59-t13
@@ -2767,8 +2767,8 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##6.EnglishT-wsj_193
 But not because resources are going to their most efficient use, leaving scarce goods ``allocated to those buyers who place the highest value on them.''
 Ale ne proto, že prostředky budou využity nejefektivněji, když bude vzácné zboží "zanecháno těm kupujícím, kteří za ně nabídnou nejvyšší hodnotu". 
 But not #EmpVerb.PRED resources going <their> efficient use leaving #Cor.ACT scarce goods allocated #Cor.PAT #Gen.ACT those buyers who place highest value them
-Ale #EmpVerb.PRED ne #Gen.ACT <prostředky> využity nejefektivněji vzácné zboží #Gen.ACT zanecháno kupujícím #Gen.ADDR kteří ně nabídnou nejvyšší hodnotu
-ERR:
+Ale #EmpVerb.PRED ne #Gen.ACT prostředky využity nejefektivněji vzácné zboží #Gen.ACT zanecháno kupujícím #Gen.ADDR kteří ně nabídnou nejvyšší hodnotu
+ERR:REWORD
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1935.final.streex##5.EnglishT-wsj_1935-s5-t16
 Allowing uncontrolled prices for necessities would indeed shorten the lines at stores, as he contends .
@@ -2817,7 +2817,7 @@ If this version, with its references to Steven Spielberg, Spago and ``thirtysome
 Pokud tato verze s narážkami na Stevena Spielberga, restauraci Spago a "třicátníky" přiláká mladší publikum, které se od klasické verze drží spíš zpátky, pak budou pánové Bartlett a Falls omluveni za to, že se odchýlili od Wilbura. 
 this version <its> references Steven Spielberg Spago and thirtysomething attracts younger audiences who stay away classical version then Messrs. Bartlett and Falls are justified #Cor.PAT #Cor.ACT abandoning Mr. Wilbur
 tato verze narážkami Stevena Spielberga restauraci Spago a třicátníky přiláká mladší publikum které klasické verze drží spíš zpátky #Gen.ACT pak pánové Bartlett a Falls omluveni #PersPron.ACT odchýlili Wilbura
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##16.EnglishT-wsj_1936-s16-t14
 Mr. Bartlett had slimmed Moliere's cast of characters to six and set them in the London media world of Thatcherite Britain.
@@ -2844,7 +2844,7 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##30.EnglishT-wsj_19
 Also, it was not a funny time over here, what with the Vietnam War, the '68 Democratic convention, assassinations and riots.
 Kromě toho to tady kvůli vietnamské válce, sjezdu Demokratické strany v roce 68, atentátům a nepokojům nebyly veselé časy. 
 Also <it> was not funny time here Vietnam War '68 Democratic convention assassinations and riots
-#Neg.RHEM <toho> tady to vietnamské válce sjezdu Demokratické strany roce 68 atentátům a nepokojům nebyly veselé časy
+#Neg.RHEM toho tady <to> vietnamské válce sjezdu Demokratické strany roce 68 atentátům a nepokojům nebyly veselé časy
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##34.EnglishT-wsj_1936-s34-t9
@@ -2859,7 +2859,7 @@ It's currently forced to turn away many potential subscribers beyond the 13,000 
 Teď je divadlo nuceno odmítat mnoho potenciálních předplatitelů kromě těch 13000, které lze do současného podnájmu posadit. 
 It currently forced #Gen.ACT #Cor.ACT turn many potential subscribers 13,000 who accommodated #Gen.ACT <its> present digs
 #Gen.ACT Teď divadlo nuceno #Cor.ACT odmítat mnoho potenciálních předplatitelů těch 13000 #Cor.ACT které lze #Benef.BEN současného podnájmu posadit
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##42.EnglishT-wsj_1936-s42-t4
 We have seen her develop within a few hours from a shy and unknown in-law to a goddess of the flesh who will replace the dead mother, and then some.
@@ -2887,7 +2887,7 @@ The play concerns Teddy's homecoming with his wife of six years, Ruth.
 Hra se soustředí na Teddyho návrat domů s manželkou Ruth, se kterou je již šest let. 
 play concerns Teddy homecoming , <his> wife six years Ruth
 Hra soustředí Teddyho návrat domů manželkou Ruth #PersPron.ACT kterou je již šest let
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##43.EnglishT-wsj_1936-s43-t20
 While Steppenwolf was in London with ``The Grapes of Wrath,'' Bruce Sagan, the president of its board of directors, quietly returned to Chicago to buy a piece of real estate in the city's rapidly reviving North Halsted Street restaurant and theater district.
@@ -2908,7 +2908,7 @@ Though it's clearly Max's wife who held sway here until her death, now none of t
 Ačkoli je jasné, že hlavou rodiny byla až do smrti Maxova žena, žádný z obyvatel mužského pohlaví v této špatné domácnosti se nyní nedokáže Maxovi postavit. 
 's clearly Max wife who held sway here <her> death now none other male residents this misbegotten household challenge Max
 #Neg.RHEM je jasné hlavou rodiny byla až smrti Maxova žena žádný obyvatel obyvatel mužského pohlaví této špatné domácnosti #Cor.ACT nyní nedokáže Maxovi postavit
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##17.EnglishT-wsj_1937-s17-t17
 Frank Gilmartin, a trader who follows insurance stocks for Fox-Pitt Kelton, said his strategy was to sell early.
@@ -2924,7 +2924,7 @@ Then stocks fell sharply he planned #Cor.ACT begin buying #Cor.ACT <them> aggres
 #PersPron.ACT potom akcie prudce klesly měl úmyslu <je> #Cor.ACT aktivně nakupovat teorie společnosti které pojišťují #Gen.PAT majetkovým škodám a nehodám nakonec zvýšit sazby #PersPron.ACT uhradit pojistné škody #PersPron.ACT které vyplatí obětem zemětřesení a obětem hurikánu Huga minulého měsíce
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##22.EnglishT-wsj_1937-s22-t15
++annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##22.EnglishT-wsj_1937-s22-t15
 ``The companies just gave back what they had reserved for ,'' he said .
 "Společnosti jen vrátily to, co si dříve našetřily," řekl. 
 companies just gave #Gen.ADDR what they reserved <he> said #Gen.ADDR
@@ -2945,11 +2945,11 @@ Mr. Sagan , former publisher and real estate developer put $ 8 million financial
 Sagan , bývalý vydavatel a stavební investor dal dohromady finanční balík hodnotě 8 milionů dolarů který obsahuje nezdanitelné dluhopisy přibližné hodnotě 4 miliony dolarů vydané státem Illinois to je poprvé nějaký stát využil <své> právo vzdělávací instituce podporu stavby divadla a přibližně 1 milion dolarů příspěvcích Národní umělecké nadace MacArthurovy nadace a několika dalších organizací velkými finančními zdroji
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##18.EnglishT-wsj_1937-s18-t9
++annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##18.EnglishT-wsj_1937-s18-t9
 Then, if the stocks fell sharply, he planned to begin buying them aggressively, on the theory that the companies that insure against property damage and accidents will have to raise rates eventually to compensate for the claims they will pay to earthquake victims and victims of last month's Hurricane Hugo.
 Kdyby potom akcie prudce klesly, měl v úmyslu je aktivně nakupovat na základě teorie, že společnosti, které pojišťují proti majetkovým škodám a nehodám, budou nakonec muset zvýšit sazby, aby mohly uhradit pojistné škody, které vyplatí obětem zemětřesení a obětem hurikánu Huga z minulého měsíce. 
 Then stocks fell sharply <he> planned #Cor.ACT begin buying #Cor.ACT them aggressively theory companies that insure #Gen.PAT property damage and accidents raise rates eventually #Cor.ACT compensate #Gen.ADDR claims they pay #Cor.PAT earthquake victims and victims last month Hurricane Hugo
-#PersPron.ACT potom akcie prudce klesly měl úmyslu je #Cor.ACT aktivně nakupovat teorie společnosti které pojišťují #Gen.PAT majetkovým škodám a nehodám nakonec zvýšit sazby #PersPron.ACT uhradit pojistné škody #PersPron.ACT které vyplatí obětem zemětřesení a obětem hurikánu Huga minulého měsíce
+<#PersPron.ACT> potom akcie prudce klesly měl úmyslu je #Cor.ACT aktivně nakupovat teorie společnosti které pojišťují #Gen.PAT majetkovým škodám a nehodám nakonec zvýšit sazby #PersPron.ACT uhradit pojistné škody #PersPron.ACT které vyplatí obětem zemětřesení a obětem hurikánu Huga minulého měsíce
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##6.EnglishT-wsj_1936-s6-t20
@@ -2985,7 +2985,7 @@ Twenty-five years ago the poet Richard Wilbur modernized this 17th-century comed
 Tuto komedii ze 17. století zmodernizoval před pětadvaceti lety básník Richard Wilbur prostě tak, že vynechal "strašnou spoustu věcí", jak napsal v předmluvě. 
 years Twenty-five poet Richard Wilbur modernized this 17th-century comedy merely avoiding #Cor.ACT zounds sort thing he wrote #PersPron.EFF <his> introduction
 Tuto komedii 17 století zmodernizoval pětadvaceti lety básník Richard Wilbur prostě #PersPron.ACT vynechal strašnou spoustu věcí #PersPron.EFF #PersPron.ACT napsal předmluvě
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##23.EnglishT-wsj_1937-s23-t4
 ``Now, they'll have to increase their coffers to protect for the future and that means rate increases.''
@@ -3005,7 +3005,7 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##3.EnglishT-wsj_193
 It rose more than the New York Stock Exchange Composite, which improved 0.2%.
 Vzrostl více než kompozitní index Newyorské burzy cenných papírů, který se zvýšil o 0.2 %. 
 <It> rose more rose New York Stock Exchange Composite which improved 0.2 %
-Vzrostl #PersPron.ACT více Vzrostl kompozitní <index> Newyorské burzy cenných papírů který zvýšil 0.2 %
+Vzrostl <#PersPron.ACT> více Vzrostl kompozitní index Newyorské burzy cenných papírů který zvýšil 0.2 %
 ERR:
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1936.final.streex##9.EnglishT-wsj_1936-s9-t25
@@ -3055,14 +3055,14 @@ Analysts in London believe investors, despite their stampede to dump takeover st
 Ve sloupku těchto novin s názvem Říká se bylo včera uvedeno, že analytikové v Londýně jsou přesvědčeni, že investoři navzdory masové snaze srazit akcie pro převzetí budou nadále akcie společnosti Jaguár držet pevně. 
 Analysts London believe investors their stampede #Cor.ACT dump takeover stocks hold tight <their> Jaguar shares this newspaper Heard #Gen.PAT #Gen.ACT Street column said #Gen.ADDR yesterday
 #Gen.EFF #Gen.ADDR #Gen.ACT #Gen.ACT sloupku těchto novin názvem Říká včera uvedeno analytikové Londýně jsou přesvědčeni investoři masové snaze srazit #PersPron.ACT akcie #Gen.ACT převzetí #Gen.PAT nadále akcie společnosti Jaguár držet pevně
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##23.EnglishT-wsj_1937-s23-t10
 ``Now, they'll have to increase their coffers to protect for the future and that means rate increases.''
 "Nyní budou muset zvýšit rezervy, aby se chránily do budoucna, a to znamená, že sazby vzrostou." 
 Now they increase <their> coffers #Cor.ACT protect #PersPron.PAT future and that means rate increases
 #PersPron.ACT Nyní zvýšit rezervy #PersPron.ACT chránily se budoucna a to znamená sazby vzrostou
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1938.final.streex##3.EnglishT-wsj_1938-s3-t2
 But they said the C$ 30-a-share bid, which was due to expire Monday, may still be extended or varied .
@@ -3076,7 +3076,7 @@ The companies earlier said they didn't want to raise their offer to match a riva
 Tyto společnosti dříve řekly, že nechtějí nabídku zvýšit, aby se vyrovnaly konkurenční nabídce od Institutu Merieux S. A. za 37 kanadských dolarů za akcii, což činí 942 milionů kanadských dolarů. 
 companies earlier said #Gen.ADDR they n't want #Cor.ACT raise <their> offer #PersPron.ACT match rival bid Institut Merieux S.A. C$ 37 share or C$ 942 million
 #Gen.ADDR Tyto společnosti dříve řekly #PersPron.ACT nabídku zvýšit #Neg.RHEM #PersPron.ACT vyrovnaly konkurenční nabídce Institutu #Forn.ID Merieux S . A . 37 kanadských dolarů akcii , což činí 942 milionů kanadských dolarů
-ERR:
+ERR:NULL_POSS
 
 annot/en_perspron/../../tmp/robust_ali/wsj_1937.final.streex##52.EnglishT-wsj_1937-s52-t13
 Analysts figure Amgen could benefit as a result of troubles facing its competitor, Genetics Institute, over the anti-anemia drug EPO.
@@ -3089,10 +3089,10 @@ annot/en_perspron/../../tmp/robust_ali/wsj_1938.final.streex##8.EnglishT-wsj_193
 Institut Merieux's bid for Toronto-based Connaught has run into problems with the Canadian government, which told Merieux last week that it wasn't convinced that the proposed acquisition would be of ``net benefit'' to Canada.
 Nabídka Institutu Merieux na Connaught sídlící v Torontu se dostala do problémů s kanadskou vládou, která minulý týden sdělila společnosti Merieux, že není přesvědčena, že navržená transakce by přinesla Kanadě "pouze prospěch". 
 Institut Merieux bid Toronto-based Connaught run problems Canadian government which told Merieux last week <it> n't convinced #Gen.ACT proposed acquisition be net benefit Canada
-Nabídka Institutu Merieux #Forn.RSTR Connaught sídlící Torontu dostala problémů kanadskou vládou která minulý týden sdělila společnosti Merieux není #PersPron.ACT #Neg.RHEM navržená přesvědčena transakce přinesla Kanadě pouze prospěch
+Nabídka Institutu Merieux #Forn.RSTR Connaught sídlící Torontu dostala problémů kanadskou vládou která minulý týden sdělila společnosti Merieux není <#PersPron.ACT> #Neg.RHEM navržená přesvědčena transakce přinesla Kanadě pouze prospěch
 ERR:
 
-annot/en_perspron/../../tmp/robust_ali/wsj_1938.final.streex##2.EnglishT-wsj_1938-s2-t6
+*annot/en_perspron/../../tmp/robust_ali/wsj_1938.final.streex##2.EnglishT-wsj_1938-s2-t6
 The companies earlier said they didn't want to raise their offer to match a rival bid by Institut Merieux S.A. of C$ 37 a share, or C$ 942 million.
 Tyto společnosti dříve řekly, že nechtějí nabídku zvýšit, aby se vyrovnaly konkurenční nabídce od Institutu Merieux S. A. za 37 kanadských dolarů za akcii, což činí 942 milionů kanadských dolarů. 
 companies earlier said #Gen.ADDR <they> n't want #Cor.ACT raise their offer #PersPron.ACT match rival bid Institut Merieux S.A. C$ 37 share or C$ 942 million
