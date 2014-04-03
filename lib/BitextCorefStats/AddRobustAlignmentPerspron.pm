@@ -68,7 +68,9 @@ sub access_via_ancestor {
         push @$errors, "NO_CS_REF_VERB_PAR";
         return;
     }
-    return @aligned_verb_par;
+
+    my @aligned_kids = map {$_->get_echildren({or_topological => 1})} @aligned_verb_par;
+    return @aligned_kids;
 }
 
 sub filter_self {
@@ -101,11 +103,10 @@ sub filter_siblings {
 sub filter_ancestor {
     my ($aligned, $tnode, $errors) = @_;
 
-    my $aligned_first = shift @$aligned;
     my ($aligned_dative_child) = grep {
         my $anode = $_->get_lex_anode; 
         if (defined $anode) {$anode->tag =~ /^P...3/}
-    } $aligned_first->get_echildren({or_topological => 1});
+    } @$aligned;
     
     if (!defined $aligned_dative_child) {
         push @$errors, "NO_CS_REF_DATIVE_CHILD";
