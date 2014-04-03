@@ -1,3 +1,28 @@
+* how to define Czech relative pronouns?
+    * using 'gram/indeftype' = 'relat'
+        * original PCEDT 2.0 does not contain annotation of this attribute
+        * a block A2T::CS::SetGrammatemes is responsible for filling this attribute:
+            * it can be copied from 'cs_src' zone, but it relies on automatically analysed data
+            * this block can be run on the 'cs_ref' zone, but there is a problem that it's dependend on coreference annotation
+                * acceptable for "ref" zone
+                * unaccaptable for "src" zone, where we aim to make use of just the opposite dependence
+    * using an approximation drawing all neccessary info from the layers lower than the tectogrammatical one
+        * Tool::Coreference::NodeFilter::RelPron::is_relat for a Czech node
+            * its subpos must be one of these: 149EJKQ?
+            * or its lemma is "kde" or "kdy"
+        * compared with the 'gram/indeftype' = 'relat' annotated by A2T::CS::SetGrammatemes on 'cs_ref' as the gold annotation:
+            P: 92.30 (12626 / 13680)
+            R: 98.19 (12626 / 12859)
+            F: 95.15
+
+* how many Czech relative pronouns are coreferential?
+    91.65   91.65   50.00   12538   coref
+    8.35    100.00  100.00  1142    non-coref
+    --------------------------------------------------
+                         13680  TOTAL
+
+
+
 * Czech relative pronouns (gram_indeftype eq "relat") can be expressed in English by the following means:
     * 'ref' zones are under investigation here
         * but the set of instances is defined by being a relative pronoun in 'src' zone
