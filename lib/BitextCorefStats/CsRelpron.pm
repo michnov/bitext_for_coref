@@ -92,7 +92,8 @@ sub print_cs_relpron_en_counterparts {
         if ($assoc_anode_str) {
             $assoc_anode_str =~ s/^WH_PRON_ANODE=//;
             my @assoc_anodes = map {$cs_tnode->get_document->get_node_by_id($_)} split /,/, $assoc_anode_str;
-            return "ANODE:" . join ",", (map {$_->lemma} @assoc_anodes);
+            #return "ANODE:" . join ",", (map {$_->lemma} @assoc_anodes);
+            return join ",", (map {$_->lemma} @assoc_anodes);
         }
         my ($no_cor_child_str) = grep {$_ =~ /^NO_COR_CHILDREN/} @$robust_align_err;
         if ($no_cor_child_str) {
