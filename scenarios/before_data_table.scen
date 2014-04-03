@@ -1,2 +1,4 @@
 #My::BitextCorefStats::AddRobustAlignmentPerspron align_lang=cs align_selector=src
-My::AlignmentResolver align_language=cs model_path=/home/mnovak/projects/align_resolver/model/train.pcedt_19.7cbcc9894a.vw.ranking.4d7ef.model
+#My::AlignmentResolver align_language=cs model_path=/home/mnovak/projects/align_resolver/model/train.pcedt_19.giza_on_train-pcedt.7cbcc9894a.vw.ranking.4d7ef.model
+#My::AlignmentResolver align_language=cs model_path=/home/mnovak/projects/align_resolver/model/train.pcedt_19.mgiza_on_czeng.2ebbf04c6a.vw.ranking.4d7ef.model
+My::AlignmentResolver align_language=cs model_path=/home/mnovak/projects/align_resolver/model/train.pcedt_19.mgiza_on_czeng.19b6cae385.vw.ranking.4d7ef.model
