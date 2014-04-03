@@ -153,3 +153,15 @@ tte_feats :
 		RUNS_DIR=$(PWD)/$(RUNS_DIR) \
 		FEATSET_LIST=$(PWD)/$(FEATSET_LIST) \
 		STATS_FILE=$(PWD)/$(STATS_FILE)
+
+
+#============================ STANFORD COREF =======================================
+
+stanford_coref_sents :
+	-treex $(LRC_FLAGS) -Len -Ssrc \
+		Read::Treex from=@$(DATA_DIR)/list \
+		A2T::EN::MarkTextCoref \
+		A2T::SetDocOrds \
+		A2T::RearrangeCorefLinks retain_cataphora=1 \
+		Project::CoreferenceToALayer \
+		Print::CorefSentences path=tmp/pcedt_stanford_coref
