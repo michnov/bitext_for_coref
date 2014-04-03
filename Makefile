@@ -3,6 +3,9 @@ SHELL=/bin/bash
 DATA_SET = train
 DATA_ID = pcedt
 
+DATA_VERSION := $(shell cat data/analysed/$(DATA_ID)/$(DATA_SET)/last_id 2> /dev/null || echo 0000)
+DATA_DIR=data/analysed/$(DATA_ID)/$(DATA_SET)/$(DATA_VERSION)
+
 JOBS_NUM = 50
 
 ifeq (${DATA_SET}, train)
@@ -88,7 +91,7 @@ bitext_coref_stats :
 
 en_perspron_stats :
 	-treex $(LRC_FLAGS) -Len -Ssrc \
-		Read::Treex from=@data/$(DATA_SET).$(DATA_ID).analysed.list \
+		Read::Treex from=@$(DATA_DIR)/list \
 		My::BitextCorefStats::EnPerspron align_selector=$(ALIGN_SELECTOR) to='.' substitute='{^.*train/(.*)}{tmp/stats/en_perspron/$$1.txt}'
 	find tmp/stats/en_perspron -path "*.txt" -exec cat {} \; > tmp/stats/en_perspron.all
 	#cat stats/bitext_coref_stats | grep "^cs_relpron_scores" | cut -f2 | scripts/eval.pl > analysis/cs.relpron/$(DATA_SET).$(DATA_ID)/scores.all
