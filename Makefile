@@ -106,18 +106,32 @@ en_perspron_stats :
 #=================================== ANNOTATION ==================================
 
 add_robust_ali :
-	-treex $(LRC_FLAGS) -Lcs -Sref \
+	-treex $(LRC_FLAGS) -Sref \
 		Read::Treex from=@$(DATA_DIR)/list \
+		Util::SetGlobal language=cs \
 		Project::Attributes layer=t alignment_type=monolingual alignment_direction=trg2src attributes=gram/indeftype \
-		My::BitextCorefStats::AddRobustAlignmentRelpron \
+		My::AddRobustAlignment::CsRelpron \
+		Util::SetGlobal language=en \
+		My::AddRobustAlignment::EnPerspron \
 		Write::Treex storable=1 to='.' substitute='{^.*/([^\/]*)}{tmp/robust_ali/$$1}'
 	find tmp/robust_ali -path "*.streex" | sort | sed 's/^.*\///' > tmp/robust_ali/list
 
-prepare_annot_cs_relpron :
-	-treex $(LRC_FLAGS) -Lcs -Sref \
-		Read::Treex from=@cs_relpron.is_relat.ref.shuffled.1-200.list \
-		My::AnnotAlignWrite to='.' substitute='{^.*/([^\/]*)}{tmp/annot/cs_relpron/$$1}' extension='.txt'
-	find tmp/annot/cs_relpron -path "*.txt" -exec cat {} \; > tmp/annot/cs_relpron.all
+#ALIGN_ANNOT_LIST=cs_relpron.is_relat.ref.shuffled.1-200.list
+ALIGN_ANNOT_LIST=annot/en_perspron/is_relat.ref.sec19.list
+ALIGN_ANNOT_TYPE=$(shell echo $(ALIGN_ANNOT_LIST) | cut -d'/' -f2)
+ALIGN_ANNOT_LANG=$(shell echo $(ALIGN_ANNOT_TYPE) | cut -d'_' -f1)
+
+ifeq ($(ALIGN_ANNOT_LANG),en)
+ALIGN_ANNOT_LANG2=cs
+else
+ALIGN_ANNOT_LANG2=en
+endif
+
+prepare_align_annot :
+	-treex $(LRC_FLAGS) -L$(ALIGN_ANNOT_LANG) -Sref \
+		Read::Treex from=@$(ALIGN_ANNOT_LIST) \
+		My::AnnotAlignWrite align_lang=$(ALIGN_ANNOT_LANG2) to='.' substitute='{^.*/([^\/]*)}{tmp/annot/$(ALIGN_ANNOT_TYPE)/$$1}' extension='.txt'
+	find tmp/annot/$(ALIGN_ANNOT_TYPE) -path "*.txt" -exec cat {} \; > tmp/annot/$(ALIGN_ANNOT_TYPE).all
 
 #==================================== ML =========================================
 
