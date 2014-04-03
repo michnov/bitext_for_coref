@@ -8,3 +8,43 @@
     - Czech relative pronoun coreference resolver does not check agreement in gender and number
         - data/analysed/pcedt/train/wsj_0003.final.treex.gz##1, kteri
         - TODO: fix it
+
+14-16.2.2014
+----------------------
+- back to bitext_coref resolution
+- preparing experiments for ACL2014 paper - perspron bitext coref resolution
+    - supervised alignment
+        - scripts for generating the data
+        - annotating training data
+            - from PCEDT Section 19
+            - annot/en_perspron/align.ref.sec19.misko.annot
+            - stopped at the line matching "^\*"
+            - TODO: check trees for "^[+?]" files
+
+17.2.2014
+----------------------
+- generating tables for ML
+    - English coreference resolution (ranking)
+        - anaphor candidates: English personal pronouns (including the reflexives)
+    - train_00-18: PCEDT Sections 00-18
+        - in /home/mnovak/projects/czeng_coref/data/en/train_00-18.pcedt_bi.en.analysed.table
+
+18.2.2014
+----------------------
+- ML loops
+    - in /home/mnovak/projects/czeng_coref
+- discussing with Zdenek
+    - the drop after adding Charniak's features is strange
+        - there was a bug
+            - conflicts in files named using a hash of the current date
+        - TODO: should be checked by cross-validation
+    - another baseline experiment
+        - just copy Czech links to English
+        - Loganathan's experiment: Tamil text -> MT -> English transl -> parser -> English tree -> projection -> Tamil projected tree
+            - bad performance
+            - however, if a parser was trained on the Tamil projected tree, they got an 8% improvement
+
+19.2.2014
+---------------------
+- fixed the ML framework bug
+    - tmp files are named after process id $$, not the current date
