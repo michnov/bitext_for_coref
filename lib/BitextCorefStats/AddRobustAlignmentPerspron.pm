@@ -8,7 +8,7 @@ use Treex::Block::My::BitextCorefStats;
 
 extends 'Treex::Core::Block';
 
-has 'align_lang' => (is => 'ro', isa => 'Treex::Type::LangCode', required => 1);
+has 'align_lang' => (is => 'ro', isa => 'Treex::Type::LangCode', required => 1, default => 'cs');
 has 'align_selector' => (is => 'ro', isa => 'Treex::Type::Selector', required => 1);
 
 has '_align_zone' => (is => 'ro', isa => 'HashRef[Str]', builder => '_build_align_zone', lazy => 1);
