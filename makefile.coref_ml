@@ -29,6 +29,8 @@ DATA_EXTRACT_DIR=/home/mnovak/projects/czeng_coref
 
 ifeq ($(DATA_ID),pcedt)
 DATA_ID_FOR_EXTRACT = pcedt_bi
+else
+DATA_ID_FOR_EXTRACT := $(DATA_ID)
 endif
 
 COREF_PRINTER_PARAMS=aligned_feats=1
