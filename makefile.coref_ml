@@ -44,7 +44,7 @@ extract_data :
 		DATA_TABLE_SCENARIO=/home/mnovak/projects/coref_bitext/scenarios/before_data_table.scen \
 		COREF_PRINTER_PARAMS=$(COREF_PRINTER_PARAMS) \
 		LRC=$(LRC) \
-		DESC="$(DESC)"
+		DESC="$(D)"
 
 #----------------------------- coreference projection ----------------------------
 
