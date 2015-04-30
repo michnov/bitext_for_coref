@@ -56,7 +56,7 @@ projection_eval :
 	mkdir -p tmp/projection_eval
 	-treex $(LRC_FLAGS) -Len -Ssrc \
 		Read::Treex from=@$(DATA_DIR)/list \
-		A2T::StripCoref type=text language=$(LANGUAGE) \
+		Coref::RemoveLinks type=text language=$(LANGUAGE) \
 		My::AlignmentResolver align_language=$(ALIGNED_LANGUAGE) model_path=/home/mnovak/projects/align_resolver/model/train.pcedt_19.mgiza_on_czeng.19b6cae385.vw.ranking.4d7ef.model \
 		My::ProjectCoreference language=$(ALIGNED_LANGUAGE) trg_language=$(LANGUAGE) \
 		My::EvalCoref language=$(LANGUAGE) to='.' substitute='{^.*/([^\/]*)}{tmp/projection_eval/$$1.$(DATA_SET).txt}'
