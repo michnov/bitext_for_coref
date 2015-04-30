@@ -70,6 +70,6 @@ stanford_coref_sents :
 		Read::Treex from=@$(DATA_DIR)/list \
 		A2T::EN::MarkTextCoref \
 		A2T::SetDocOrds \
-		A2T::RearrangeCorefLinks retain_cataphora=1 \
+		Coref::RearrangeLinks retain_cataphora=1 \
 		Coref::MarkMentionsForScorer \
 		Print::CorefSentences path=tmp/pcedt_stanford_coref

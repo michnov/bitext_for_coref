@@ -53,7 +53,7 @@ A2T::EN::AddCorAct
 T2T::SetClauseNumber
 A2T::SetDocOrds
 A2T::EN::MarkTextPronCoref
-A2T::RearrangeCorefLinks retain_cataphora=1
+Coref::RearrangeLinks retain_cataphora=1
 
 ################# Czech analysis #################################
 Util::SetGlobal selector=src language=cs
@@ -110,7 +110,7 @@ T2T::SetClauseNumber
 A2T::CS::MarkReflpronCoref
 A2T::SetDocOrds
 A2T::CS::MarkTextPronCoref
-A2T::RearrangeCorefLinks retain_cataphora=1
+Coref::RearrangeLinks retain_cataphora=1
 
 # David Marecek's t-aligner (tectogrammatical node-alignment with Giza features)
 Align::T::CopyAlignmentFromAlayer selector=src language=cs to_selector=src to_language=en
