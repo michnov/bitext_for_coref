@@ -71,5 +71,5 @@ stanford_coref_sents :
 		A2T::EN::MarkTextCoref \
 		A2T::SetDocOrds \
 		A2T::RearrangeCorefLinks retain_cataphora=1 \
-		A2T::MarkCorefMentions \
+		Coref::MarkMentionsForScorer \
 		Print::CorefSentences path=tmp/pcedt_stanford_coref
