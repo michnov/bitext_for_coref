@@ -68,7 +68,7 @@ projection_eval :
 stanford_coref_sents :
 	-treex $(LRC_FLAGS) -Len -Ssrc \
 		Read::Treex from=@$(DATA_DIR)/list \
-		A2T::EN::MarkTextCoref \
+		Coref::EN::ResolveStanfordCoreNLP \
 		A2T::SetDocOrds \
 		Coref::RearrangeLinks retain_cataphora=1 \
 		Coref::MarkMentionsForScorer \
