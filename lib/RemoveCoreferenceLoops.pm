@@ -3,8 +3,6 @@ package Treex::Block::My::RemoveCoreferenceLoops;
 use Moose;
 use Treex::Core::Common;
 
-use Treex::Tool::Align::Utils;
-
 extends 'Treex::Core::Block';
 
 sub process_tnode {

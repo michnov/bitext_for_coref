@@ -10,7 +10,7 @@ extends 'Treex::Core::Block';
 sub process_anode {
     my ($self, $anode) = @_;
 
-    my ($nodes, $types) = Treex::Tool::Align::Utils::get_aligned_nodes_by_filter($anode, {language => "en", selector => "src"});
+    my ($nodes, $types) = $anode->get_undirected_aligned_nodes({language => "en", selector => "src"});
     my %id_to_type = ();
     foreach my $i (0 .. $#$nodes) {
         if (!defined $id_to_type{$nodes->[$i]->id}) {
@@ -27,7 +27,7 @@ sub process_anode {
     }
     my %id_to_node = map {$_->id => $_} @$nodes;
     
-    Treex::Tool::Align::Utils::remove_aligned_nodes_by_filter($anode, {language => "en", selector => "src"});
+    $anode->delete_aligned_nodes_by_filter({language => "en", selector => "src"});
 
     foreach my $id (keys %id_to_type) {
         my $node = $id_to_node{$id};
