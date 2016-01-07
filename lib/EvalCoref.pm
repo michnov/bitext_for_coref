@@ -1,3 +1,7 @@
+##########################################
+#### THIS MODULE IS PROBABLY OBSOLETE ####
+########### SHOULD BE DELETED ############
+##########################################
 package Treex::Block::My::EvalCoref;
 
 # TODO: this should probably do the same thing as Treex::Block::Eval::Coref - unify it
@@ -21,6 +25,7 @@ sub _build_sent_window {
 
 sub _build_acf {
     my ($self) = @_;
+# TODO this module can be no longer instantiated
     my $acf = Treex::Tool::Coreference::NodeFilter::PersPron->new({
         args => {
                 # including reflexive pronouns
